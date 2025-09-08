@@ -21,9 +21,9 @@ class HeartbeatReceiver:
     def create(
         cls,
         connection: mavutil.mavfile,
-        args,  # Put your own arguments here
+        args: object,  # Put your own arguments here
         local_logger: logger.Logger,
-    ):
+    ) -> "tuple[bool, HeartbeatReceiver | None]":
         """
         Falliable create (instantiation) method to create a HeartbeatReceiver object.
         """
@@ -38,7 +38,7 @@ class HeartbeatReceiver:
         self,
         key: object,
         connection: mavutil.mavfile,
-        args,  # Put your own arguments here  # pylint: disable=unused-argument
+        args: object,  # Put your own arguments here  # pylint: disable=unused-argument
     ) -> None:
         assert key is HeartbeatReceiver.__private_key, "Use create() method"
 
@@ -51,7 +51,7 @@ class HeartbeatReceiver:
         self,
         period_seconds: float,
         disconnect_threshold: int,
-    ):
+    ) -> str:
         """
         Attempt to recieve a heartbeat message.
         If disconnected for over a threshold number of periods,

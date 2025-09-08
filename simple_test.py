@@ -15,7 +15,7 @@ from modules.command.command import Command, Position
 from modules.common.modules.logger import logger
 
 
-def test_heartbeat_sender():
+def test_heartbeat_sender() -> bool:
     """Test HeartbeatSender creation"""
     print("Testing HeartbeatSender...")
 
@@ -23,7 +23,7 @@ def test_heartbeat_sender():
     class MockConnection:
         class mav:
             @staticmethod
-            def heartbeat_send(*args):
+            def heartbeat_send(*args: object) -> bool:
                 print(f"  Mock heartbeat sent with args: {args}")
                 return True
 
@@ -42,7 +42,7 @@ def test_heartbeat_sender():
         return False
 
 
-def test_telemetry_data():
+def test_telemetry_data() -> bool:
     """Test TelemetryData creation"""
     print("Testing TelemetryData...")
 
@@ -70,23 +70,23 @@ def test_telemetry_data():
         return False
 
 
-def test_command():
+def test_command() -> bool:
     """Test Command creation and logic"""
     print("Testing Command...")
 
     # Mock logger
     class MockLogger:
-        def info(self, msg):
+        def info(self, msg: str) -> None:
             print(f"    LOG: {msg}")
 
-        def error(self, msg):
+        def error(self, msg: str) -> None:
             print(f"    ERROR: {msg}")
 
     # Mock connection
     class MockConnection:
         class mav:
             @staticmethod
-            def command_long_send(*args):
+            def command_long_send(*args: object) -> bool:
                 print(f"    Mock command sent: {args}")
                 return True
 
@@ -125,7 +125,7 @@ def test_command():
         return False
 
 
-def main():
+def main() -> bool:
     """Run all tests"""
     print("=== Simple Worker Tests ===")
 
