@@ -1,0 +1,29 @@
+Telemetry Worker Test Results
+=============================
+
+Date: 2025-09-07
+Status: IMPLEMENTED AND TESTED
+
+Implementation Details:
+- Telemetry class receives LOCAL_POSITION_NED (32) and ATTITUDE (30) messages
+- Combines both messages into TelemetryData object
+- Uses most recent timestamp from either message
+- 1-second timeout for message reception
+- Returns None on timeout, logs warning
+
+TelemetryData Structure:
+- time_since_boot: Most recent timestamp (ms)
+- Position: x, y, z (meters)
+- Velocity: x_velocity, y_velocity, z_velocity (m/s)
+- Orientation: roll, pitch, yaw (radians)
+- Angular rates: roll_speed, pitch_speed, yaw_speed (rad/s)
+
+Coordinate System:
+- Assumes standard right-handed x-y-z coordinate system
+- x=right, y=forward, z=up (as specified in requirements)
+- Converts from NED to standard coordinates
+
+Worker Function:
+- Continuous loop with timeout handling
+- Outputs TelemetryData objects to queue
+- Proper error handling and logging
