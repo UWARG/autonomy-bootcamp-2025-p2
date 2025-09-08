@@ -2,8 +2,6 @@
 Telemetry gathering logic.
 """
 
-import time
-
 from pymavlink import mavutil
 
 from ..common.modules.logger import logger
@@ -82,31 +80,66 @@ class Telemetry:
         """
         Falliable create (instantiation) method to create a Telemetry object.
         """
-        pass  # Create a Telemetry object
+        try:
+            instance = Telemetry(Telemetry.__private_key, connection, args, local_logger)
+            return True, instance
+        except Exception:  # pylint: disable=broad-except
+            local_logger.error("Failed to create Telemetry")
+            return False, None
 
     def __init__(
         self,
         key: object,
         connection: mavutil.mavfile,
-        args,  # Put your own arguments here
+        args,  # Put your own arguments here  # pylint: disable=unused-argument
         local_logger: logger.Logger,
     ) -> None:
         assert key is Telemetry.__private_key, "Use create() method"
 
         # Do any intializiation here
+        self._connection = connection
+        self._logger = local_logger
 
     def run(
         self,
-        args,  # Put your own arguments here
+        timeout_seconds: float = 1.0,
     ):
         """
         Receive LOCAL_POSITION_NED and ATTITUDE messages from the drone,
         combining them together to form a single TelemetryData object.
         """
         # Read MAVLink message LOCAL_POSITION_NED (32)
+        position_msg = self._connection.recv_match(
+            type="LOCAL_POSITION_NED", blocking=True, timeout=timeout_seconds
+        )
+
         # Read MAVLink message ATTITUDE (30)
-        # Return the most recent of both, and use the most recent message's timestamp
-        pass
+        attitude_msg = self._connection.recv_match(
+            type="ATTITUDE", blocking=True, timeout=timeout_seconds
+        )
+
+        if not position_msg or not attitude_msg:
+            self._logger.warning("Timeout receiving telemetry messages")
+            return None
+
+        # Use most recent timestamp
+        most_recent_time = max(position_msg.time_boot_ms, attitude_msg.time_boot_ms)
+
+        return TelemetryData(
+            time_since_boot=most_recent_time,
+            x=position_msg.x,
+            y=position_msg.y,
+            z=position_msg.z,
+            x_velocity=position_msg.vx,
+            y_velocity=position_msg.vy,
+            z_velocity=position_msg.vz,
+            roll=attitude_msg.roll,
+            pitch=attitude_msg.pitch,
+            yaw=attitude_msg.yaw,
+            roll_speed=attitude_msg.rollspeed,
+            pitch_speed=attitude_msg.pitchspeed,
+            yaw_speed=attitude_msg.yawspeed,
+        )
 
 
 # =================================================================================================

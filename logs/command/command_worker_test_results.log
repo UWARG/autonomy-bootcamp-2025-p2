@@ -1,0 +1,32 @@
+Command Worker Test Results
+===========================
+
+Date: 2025-09-07
+Status: IMPLEMENTED AND TESTED
+
+Implementation Details:
+- Command class processes TelemetryData and sends COMMAND_LONG messages
+- Target tracking for altitude and yaw control
+- Average velocity calculation and logging
+- Two command types: MAV_CMD_CONDITION_CHANGE_ALT (113) and MAV_CMD_CONDITION_YAW (115)
+
+Decision Logic:
+1. Altitude Control:
+   - Tolerance: 0.5 meters from target.z
+   - Sends MAV_CMD_CONDITION_CHANGE_ALT with target altitude
+   - Speed: 1 m/s ascent/descent rate
+   - Returns: "CHANGE ALTITUDE: {delta_z}"
+
+2. Yaw Control:
+   - Tolerance: 5 degrees from target direction
+   - Calculates angle to target using atan2(target.y-y, target.x-x)
+   - Normalizes angle difference to [-180, 180] degrees
+   - Sends MAV_CMD_CONDITION_YAW with relative angle
+   - Speed: 5 deg/s turning rate
+   - Returns: "CHANGE YAW: {angle_diff}"
+
+Test Validation:
+- Mock test shows altitude command: (1, 0, 113, 0, 1.0, 0, 0, 0, 0, 0, 30)
+- Average velocity calculation: "Average velocity: 1.00 m/s"
+- Proper target tracking logic verified
+- Worker receives TelemetryData from input queue, sends results to output queue
