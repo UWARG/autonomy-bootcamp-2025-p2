@@ -1,0 +1,11 @@
+21:28:03: [INFO] [/home/ryan/Downloads/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver_worker.py | heartbeat_receiver_worker | 50] Logger initialized
+21:28:03: [WARNING] [/home/ryan/Downloads/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 59] Missed Heartbeat 1
+21:28:09: [WARNING] [/home/ryan/Downloads/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 59] Missed Heartbeat 1
+21:28:10: [WARNING] [/home/ryan/Downloads/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 59] Missed Heartbeat 2
+21:28:11: [WARNING] [/home/ryan/Downloads/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 59] Missed Heartbeat 3
+21:28:12: [WARNING] [/home/ryan/Downloads/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 59] Missed Heartbeat 4
+21:28:13: [WARNING] [/home/ryan/Downloads/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 59] Missed Heartbeat 5
+21:28:14: [WARNING] [/home/ryan/Downloads/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 59] Missed Heartbeat 6
+21:28:15: [WARNING] [/home/ryan/Downloads/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 59] Missed Heartbeat 7
+21:28:16: [WARNING] [/home/ryan/Downloads/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 59] Missed Heartbeat 8
+21:28:22: [WARNING] [/home/ryan/Downloads/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 59] Missed Heartbeat 1

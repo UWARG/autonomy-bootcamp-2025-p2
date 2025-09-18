@@ -31,7 +31,7 @@ def add_random_worker(
     process_id = os.getpid()
     result, local_logger = logger.Logger.create(f"{worker_name}_{process_id}", True)
     if not result:
-        print("ERROR: Worker failed to create logger")
+        local_logger.error("ERROR: Worker failed to create logger")
         return
 
     # Get Pylance to stop complaining

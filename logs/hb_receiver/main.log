@@ -1,0 +1,17 @@
+21:28:03: [INFO] [/home/ryan/Downloads/autonomy-bootcamp-2025-p2/modules/common/modules/logger/logger_main_setup.py | setup_main_logger | 62] main logger initialized
+21:28:03: [INFO] [/home/ryan/Downloads/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | main | 116] Connected!
+21:28:04: [INFO] [/home/ryan/Downloads/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 75] Connected
+21:28:05: [INFO] [/home/ryan/Downloads/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 75] Connected
+21:28:06: [INFO] [/home/ryan/Downloads/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 75] Connected
+21:28:07: [INFO] [/home/ryan/Downloads/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 75] Connected
+21:28:08: [INFO] [/home/ryan/Downloads/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 75] Connected
+21:28:13: [INFO] [/home/ryan/Downloads/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 73] Disconnected
+21:28:14: [INFO] [/home/ryan/Downloads/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 73] Disconnected
+21:28:15: [INFO] [/home/ryan/Downloads/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 73] Disconnected
+21:28:16: [INFO] [/home/ryan/Downloads/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 73] Disconnected
+21:28:17: [INFO] [/home/ryan/Downloads/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 75] Connected
+21:28:18: [INFO] [/home/ryan/Downloads/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 75] Connected
+21:28:19: [INFO] [/home/ryan/Downloads/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 75] Connected
+21:28:20: [INFO] [/home/ryan/Downloads/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 75] Connected
+21:28:21: [INFO] [/home/ryan/Downloads/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 75] Connected
+21:28:23: [INFO] [/home/ryan/Downloads/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 75] Connected
