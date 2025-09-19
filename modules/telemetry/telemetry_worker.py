@@ -4,7 +4,7 @@ Telemtry worker that gathers GPS data.
 
 import os
 import pathlib
-
+import time
 from pymavlink import mavutil
 
 from utilities.workers import queue_proxy_wrapper
@@ -18,13 +18,16 @@ from ..common.modules.logger import logger
 # =================================================================================================
 def telemetry_worker(
     connection: mavutil.mavfile,
-    args,  # Place your own arguments here
+    controller: worker_controller.WorkerController,
+    queue = queue_proxy_wrapper.QueueProxyWrapper
     # Add other necessary worker arguments here
 ) -> None:
     """
     Worker process.
 
-    args... describe what the arguments are
+    connection is the activate mavLINK connection to the drone and GCS 
+    controller manages worker process, when a worker should exit, etc
+    queue is where worker communication happens
     """
     # =============================================================================================
     #                          ↑ BOOTCAMPERS MODIFY ABOVE THIS COMMENT ↑
@@ -47,8 +50,29 @@ def telemetry_worker(
     #                          ↓ BOOTCAMPERS MODIFY BELOW THIS COMMENT ↓
     # =============================================================================================
     # Instantiate class object (telemetry.Telemetry)
+    results, tele = telemetry.Telemetry.create(connection, local_logger)
 
     # Main loop: do work.
+    if not results: 
+        local_logger.error("Error running telemetry worker, failed to create.")
+        return
+
+    while not controller.is_exit_requested():
+        try:
+            info = tele.run(local_logger)
+            if info: 
+                local_logger.info(f"Telemetry data queued: {info}", True)
+                queue.queue.put(info)
+            else: 
+                local_logger.error("Telemetry run failed", True)
+        except Exception as e:
+            local_logger.error(f"Error when running telemetry object {e}", True)
+        
+        time.sleep(1)
+# include any telemtry related commands
+
+    local_logger.info("Worker has stopped.", True)
+    
 
 
 # =================================================================================================

@@ -99,7 +99,8 @@ def main() -> int:
 
     # Stop the processes
 
-    main_logger.info("Requested exit")
+    main_logger.info("Requested " \
+    "")
 
     # Fill and drain queues from END TO START
 

@@ -19,8 +19,9 @@ from ..common.modules.logger import logger
 def command_worker(
     connection: mavutil.mavfile,
     target: command.Position,
-    args,  # Place your own arguments here
-    # Add other necessary worker arguments here
+    controller: worker_controller.WorkerController,   # Add other necessary worker arguments here
+    dataq = queue_proxy_wrapper.QueueProxyWrapper,
+    outputq = queue_proxy_wrapper.QueueProxyWrapper,
 ) -> None:
     """
     Worker process.
@@ -49,7 +50,27 @@ def command_worker(
     # =============================================================================================
     # Instantiate class object (command.Command)
 
+    result, cmd = command.Command.create(connection=connection, local_logger=local_logger, target=target)
+
     # Main loop: do work.
+
+    if not result: 
+        local_logger.error("Failure with command worker")
+        return
+
+    while not controller.is_exit_requested():
+        try:
+            data = dataq.queue.queue.get(timeout=1)
+            if data:
+                messages = cmd.run(data)
+                for info in messages: 
+                    outputq.queue.get(info)
+
+        except Exception as e:
+            local_logger.error(f"Error in worker loop: {e}", True )
+
+            # add any command specific 
+        local_logger.info(f"Command worker has stopped working: {e}")
 
 
 # =================================================================================================

@@ -13,18 +13,23 @@ from . import heartbeat_receiver
 from ..common.modules.logger import logger
 
 
+
 # =================================================================================================
 #                            ↓ BOOTCAMPERS MODIFY BELOW THIS COMMENT ↓
 # =================================================================================================
 def heartbeat_receiver_worker(
     connection: mavutil.mavfile,
-    args,  # Place your own arguments here
+    controller: worker_controller.WorkerController,
+    args=None,
+    queue = queue_proxy_wrapper.QueueProxyWrapper
     # Add other necessary worker arguments here
 ) -> None:
     """
     Worker process.
 
-    args... describe what the arguments are
+    connection is the activate mavLINK connection to the drone and GCS 
+    controller manages worker process, when a worker should exit, etc
+    queue is where worker communication happens
     """
     # =============================================================================================
     #                          ↑ BOOTCAMPERS MODIFY ABOVE THIS COMMENT ↑
@@ -48,7 +53,24 @@ def heartbeat_receiver_worker(
     # =============================================================================================
     # Instantiate class object (heartbeat_receiver.HeartbeatReceiver)
 
+    result, receiver = heartbeat_receiver.HeartbeatReceiver.create( connection, local_logger
+    )
+
     # Main loop: do work.
+
+    if not result:
+        local_logger.error("Error with configuring the heartbeat receiver worker")
+
+
+    while not controller.is_exit_requested():
+        try:
+            receiver.run(local_logger=local_logger)
+            status = receiver.status
+            queue.queue.put(status)
+        except Exception as e:
+            local_logger.error(f"Error with receiver: {e}", True)
+        return
+    
 
 
 # =================================================================================================
