@@ -1,0 +1,2 @@
+14:06:51: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\tests\integration\mock_drones\heartbeat_sender_drone.py | main | 40] Logger initialized
+14:06:52: [ERROR] [C:\Users\User\autonomy-bootcamp-2025-p2\tests\integration\mock_drones\heartbeat_sender_drone.py | main | 69] Drone: Sent incorrect contents within heartbeat message.
