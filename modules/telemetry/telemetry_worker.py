@@ -54,15 +54,15 @@ def telemetry_worker(
     if not result:
         local_logger.error("Failed to create Telemetry", True)
         return
-    
+
     assert telem is not None
-    
+
     local_logger.info("Telemetry created", True)
-    
+
     # Main loop: do work.
     while not controller.is_exit_requested():
         result, telemetry_data = telem.run()
-        
+
         if result:
             # Successfully got telemetry data, send to queue
             telemetry_queue.queue.put(telemetry_data)

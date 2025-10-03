@@ -56,11 +56,12 @@ class Command:  # pylint: disable=too-many-instance-attributes
         self.connection = connection
         self.target = target
         self.local_logger = local_logger
-        
+
         # Thresholds
+        # pylint: disable=invalid-name
         self.HEIGHT_TOLERANCE = 0.5  # meters
         self.ANGLE_TOLERANCE = math.radians(5)  # 5 degrees in radians
-        
+
         # For average velocity calculation
         self.velocity_sum_x = 0.0
         self.velocity_sum_y = 0.0
@@ -68,16 +69,15 @@ class Command:  # pylint: disable=too-many-instance-attributes
         self.data_count = 0
 
     def run(
-        self,
-        telemetry_data: telemetry.TelemetryData  
+        self, telemetry_data: telemetry.TelemetryData
     ) -> "tuple[True, str] | tuple[False, None]":
         """
         Make a decision based on received telemetry data.
 
         Returns (True, action_string) if a command was sent, (False, None) otherwise.
         """
-        
-        #Update average velocity tracking
+
+        # Update average velocity tracking
         if telemetry_data.x_velocity is not None:
             self.velocity_sum_x += telemetry_data.x_velocity
         if telemetry_data.y_velocity is not None:
@@ -85,20 +85,22 @@ class Command:  # pylint: disable=too-many-instance-attributes
         if telemetry_data.z_velocity is not None:
             self.velocity_sum_z += telemetry_data.z_velocity
         self.data_count += 1
-        
+
         # Calculate and log average velocity
         avg_vx = self.velocity_sum_x / self.data_count
         avg_vy = self.velocity_sum_y / self.data_count
         avg_vz = self.velocity_sum_z / self.data_count
         self.local_logger.info(
-            f"Average velocity: ({avg_vx:.2f}, {avg_vy:.2f}, {avg_vz:.2f}) m/s",
-            True
+            f"Average velocity: ({avg_vx:.2f}, {avg_vy:.2f}, {avg_vz:.2f}) m/s", True
         )
-        
+
         # Check altitude
-        if telemetry_data.z is not None and abs(telemetry_data.z - self.target.z) > self.HEIGHT_TOLERANCE:
+        if (
+            telemetry_data.z is not None
+            and abs(telemetry_data.z - self.target.z) > self.HEIGHT_TOLERANCE
+        ):
             delta_z = self.target.z - telemetry_data.z
-            
+
             # Send altitude change command
             self.connection.mav.command_long_send(
                 1,  # target_system
@@ -113,31 +115,31 @@ class Command:  # pylint: disable=too-many-instance-attributes
                 0,  # param6
                 self.target.z,  # param7 (target altitude)
             )
-            
+
             action = f"CHANGE ALTITUDE: {delta_z:.2f}"
             self.local_logger.info(action, True)
             return True, action
-        
+
         # Check yaw (orientation)
         if telemetry_data.yaw is not None:
             # Calculate required yaw to face target
             dx = self.target.x - telemetry_data.x
             dy = self.target.y - telemetry_data.y
             required_yaw = math.atan2(dy, dx)
-            
+
             # Calculate angle difference (handling wraparound)
             angle_diff = required_yaw - telemetry_data.yaw
-            
+
             # Normalize to [-π, π]
             while angle_diff > math.pi:
                 angle_diff -= 2 * math.pi
             while angle_diff < -math.pi:
                 angle_diff += 2 * math.pi
-            
+
             if abs(angle_diff) > self.ANGLE_TOLERANCE:
                 # Convert to degrees for command
                 angle_diff_deg = math.degrees(angle_diff)
-                
+
                 # Send yaw change command (relative)
                 self.connection.mav.command_long_send(
                     1,  # target_system
@@ -152,13 +154,14 @@ class Command:  # pylint: disable=too-many-instance-attributes
                     0,  # param6
                     0,  # param7
                 )
-                
+
                 action = f"CHANGE YAW: {angle_diff_deg:.2f}"
                 self.local_logger.info(action, True)
                 return True, action
-        
+
         # No action needed
         return False, None
+
 
 # =================================================================================================
 #                            ↑ BOOTCAMPERS MODIFY ABOVE THIS COMMENT ↑

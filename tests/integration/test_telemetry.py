@@ -58,6 +58,7 @@ def stop(
     controller.request_exit()
     telemetry_queue.fill_and_drain_queue()
 
+
 def read_queue(
     telemetry_queue: queue_proxy_wrapper.QueueProxyWrapper,
     controller: worker_controller.WorkerController,
@@ -71,7 +72,6 @@ def read_queue(
             telemetry_data = telemetry_queue.queue.get()
             main_logger.info(f"Received telemetry: {telemetry_data}", True)
         time.sleep(0.1)
-
 
 
 # =================================================================================================
@@ -129,7 +129,9 @@ def main() -> int:
     telemetry_queue = queue_proxy_wrapper.QueueProxyWrapper(mp_manager, TELEMETRY_QUEUE_MAX_SIZE)
 
     # Just set a timer to stop the worker after a while, since the worker infinite loops
-    threading.Timer(TELEMETRY_PERIOD * NUM_TRIALS * 2 + NUM_FAILS, stop, (controller, telemetry_queue)).start()
+    threading.Timer(
+        TELEMETRY_PERIOD * NUM_TRIALS * 2 + NUM_FAILS, stop, (controller, telemetry_queue)
+    ).start()
 
     # Read the main queue (worker outputs)
     threading.Thread(target=read_queue, args=(telemetry_queue, controller, main_logger)).start()

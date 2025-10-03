@@ -4,6 +4,7 @@ Command worker to make decisions based on Telemetry Data.
 
 import os
 import pathlib
+import time
 
 from pymavlink import mavutil
 
@@ -11,7 +12,6 @@ from utilities.workers import queue_proxy_wrapper
 from utilities.workers import worker_controller
 from . import command
 from ..common.modules.logger import logger
-import time
 
 
 # =================================================================================================
@@ -58,19 +58,19 @@ def command_worker(
     if not result:
         local_logger.error("Failed to create Command", True)
         return
-    
+
     assert cmd is not None
-    
+
     local_logger.info("Command created", True)
-    
+
     # Main loop: do work.
     while not controller.is_exit_requested():
         if not telemetry_queue.queue.empty():
             telemetry_data = telemetry_queue.queue.get()
             local_logger.info(f"Received telemetry: {telemetry_data}", True)
-            
+
             result, action = cmd.run(telemetry_data)
-            
+
             if result and action is not None:
                 # Send action string to report queue
                 report_queue.queue.put(action)

@@ -1,0 +1,28 @@
+16:33:27: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\common\modules\logger\logger_main_setup.py | setup_main_logger | 62] main logger initialized
+16:33:27: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | main | 139] Connected!
+16:33:28: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 82] Command action: CHANGE ALTITUDE: 1.00
+16:33:28: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 82] Command action: CHANGE ALTITUDE: -1.00
+16:33:31: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 82] Command action: CHANGE YAW: 63.43
+16:33:32: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 82] Command action: CHANGE YAW: 90.00
+16:33:32: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 82] Command action: CHANGE YAW: 116.57
+16:33:33: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 82] Command action: CHANGE YAW: 45.00
+16:33:33: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 82] Command action: CHANGE YAW: 63.43
+16:33:34: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 82] Command action: CHANGE YAW: 90.00
+16:33:34: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 82] Command action: CHANGE YAW: 26.57
+16:33:35: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 82] Command action: CHANGE YAW: 45.00
+16:33:35: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 82] Command action: CHANGE YAW: 90.00
+16:33:36: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 82] Command action: CHANGE YAW: 45.00
+16:33:36: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 82] Command action: CHANGE YAW: 90.00
+16:33:37: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 82] Command action: CHANGE YAW: 135.00
+16:33:37: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 82] Command action: CHANGE YAW: -26.57
+16:33:38: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 82] Command action: CHANGE YAW: -45.00
+16:33:38: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 82] Command action: CHANGE YAW: -90.00
+16:33:39: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 82] Command action: CHANGE YAW: -45.00
+16:33:39: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 82] Command action: CHANGE YAW: -90.00
+16:33:40: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 82] Command action: CHANGE YAW: -135.00
+16:33:40: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 82] Command action: CHANGE YAW: -63.43
+16:33:41: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 82] Command action: CHANGE YAW: -90.00
+16:33:41: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 82] Command action: CHANGE YAW: -116.57
+16:33:42: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 82] Command action: CHANGE YAW: -45.00
+16:33:42: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 82] Command action: CHANGE YAW: -63.43
+16:33:43: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 82] Command action: CHANGE YAW: -90.00

@@ -40,7 +40,8 @@ class HeartbeatReceiver:
         self.local_logger = local_logger
         self.missed_heartbeats = 0
         self.status = "Connected"  # Start as Connected
-        self.DISCONNECT_THRESHOLD = 5 # Number of missed heartbeats before considering disconnected
+        # pylint: disable=invalid-name
+        self.DISCONNECT_THRESHOLD = 5  # Number of missed heartbeats before considering disconnected
 
     def run(
         self,
@@ -52,9 +53,9 @@ class HeartbeatReceiver:
 
         Returns the current connection status as a string.
         """
-                # Try to receive a HEARTBEAT message with 1 second timeout
-        msg = self.connection.recv_match(type='HEARTBEAT', blocking=True, timeout=1.0)
-        
+        # Try to receive a HEARTBEAT message with 1 second timeout
+        msg = self.connection.recv_match(type="HEARTBEAT", blocking=True, timeout=1.0)
+
         if msg and msg.get_type() == "HEARTBEAT":
             # Received heartbeat successfully
             self.missed_heartbeats = 0
@@ -64,12 +65,15 @@ class HeartbeatReceiver:
             # Missed a heartbeat
             self.missed_heartbeats += 1
             self.local_logger.warning(f"Missed heartbeat (count: {self.missed_heartbeats})", True)
-            
+
             if self.missed_heartbeats >= self.DISCONNECT_THRESHOLD:
                 self.status = "Disconnected"
-                self.local_logger.error(f"Connection lost after {self.missed_heartbeats} missed heartbeats", True)
-        
+                self.local_logger.error(
+                    f"Connection lost after {self.missed_heartbeats} missed heartbeats", True
+                )
+
         return self.status
+
 
 # =================================================================================================
 #                            ↑ BOOTCAMPERS MODIFY ABOVE THIS COMMENT ↑

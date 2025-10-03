@@ -1,0 +1,550 @@
+16:33:28: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 51] Logger initialized
+16:33:28: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 64] Command created
+16:33:28: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 70] Received telemetry: {
+            time_since_boot: None,
+            x: 0,
+            y: 0,
+            z: 29,
+            x_velocity: 0,
+            y_velocity: 0,
+            z_velocity: 4,
+            roll: None,
+            pitch: None,
+            yaw: 0,
+            roll_speed: None,
+            pitch_speed: None,
+            yaw_speed: None
+        }
+16:33:28: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 93] Average velocity: (0.00, 0.00, 4.00) m/s
+16:33:28: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 120] CHANGE ALTITUDE: 1.00
+16:33:28: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 77] Action taken: CHANGE ALTITUDE: 1.00
+16:33:28: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 70] Received telemetry: {
+            time_since_boot: None,
+            x: 0,
+            y: 0,
+            z: 31,
+            x_velocity: 0,
+            y_velocity: 0,
+            z_velocity: -2,
+            roll: None,
+            pitch: None,
+            yaw: 0,
+            roll_speed: None,
+            pitch_speed: None,
+            yaw_speed: None
+        }
+16:33:28: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 93] Average velocity: (0.00, 0.00, 1.00) m/s
+16:33:28: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 120] CHANGE ALTITUDE: -1.00
+16:33:28: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 77] Action taken: CHANGE ALTITUDE: -1.00
+16:33:29: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 70] Received telemetry: {
+            time_since_boot: None,
+            x: 0,
+            y: 0,
+            z: 30.2,
+            x_velocity: 0,
+            y_velocity: 0,
+            z_velocity: 0,
+            roll: None,
+            pitch: None,
+            yaw: 1.1071487177940904,
+            roll_speed: None,
+            pitch_speed: None,
+            yaw_speed: None
+        }
+16:33:29: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 93] Average velocity: (0.00, 0.00, 0.67) m/s
+16:33:29: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 70] Received telemetry: {
+            time_since_boot: None,
+            x: 0,
+            y: 0,
+            z: 29.8,
+            x_velocity: 0,
+            y_velocity: 0,
+            z_velocity: 0,
+            roll: None,
+            pitch: None,
+            yaw: 1.1071487177940904,
+            roll_speed: None,
+            pitch_speed: None,
+            yaw_speed: None
+        }
+16:33:29: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 93] Average velocity: (0.00, 0.00, 0.50) m/s
+16:33:30: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 70] Received telemetry: {
+            time_since_boot: None,
+            x: 0,
+            y: 0,
+            z: 30,
+            x_velocity: 0,
+            y_velocity: 0,
+            z_velocity: 0,
+            roll: None,
+            pitch: None,
+            yaw: 1.1071487177940904,
+            roll_speed: None,
+            pitch_speed: None,
+            yaw_speed: None
+        }
+16:33:30: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 93] Average velocity: (0.00, 0.00, 0.40) m/s
+16:33:30: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 70] Received telemetry: {
+            time_since_boot: None,
+            x: 0,
+            y: 0,
+            z: 30,
+            x_velocity: 0,
+            y_velocity: 0,
+            z_velocity: 0,
+            roll: None,
+            pitch: None,
+            yaw: 1.142055302833977,
+            roll_speed: None,
+            pitch_speed: None,
+            yaw_speed: None
+        }
+16:33:30: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 93] Average velocity: (0.00, 0.00, 0.33) m/s
+16:33:31: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 70] Received telemetry: {
+            time_since_boot: None,
+            x: 0,
+            y: 0,
+            z: 30,
+            x_velocity: 0,
+            y_velocity: 0,
+            z_velocity: 0,
+            roll: None,
+            pitch: None,
+            yaw: 1.072242132754204,
+            roll_speed: None,
+            pitch_speed: None,
+            yaw_speed: None
+        }
+16:33:31: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 93] Average velocity: (0.00, 0.00, 0.29) m/s
+16:33:31: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 70] Received telemetry: {
+            time_since_boot: None,
+            x: 0,
+            y: 0,
+            z: 30,
+            x_velocity: 0,
+            y_velocity: 20,
+            z_velocity: 0,
+            roll: None,
+            pitch: None,
+            yaw: 0,
+            roll_speed: None,
+            pitch_speed: None,
+            yaw_speed: None
+        }
+16:33:31: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 93] Average velocity: (0.00, 2.50, 0.25) m/s
+16:33:31: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 159] CHANGE YAW: 63.43
+16:33:31: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 77] Action taken: CHANGE YAW: 63.43
+16:33:32: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 70] Received telemetry: {
+            time_since_boot: None,
+            x: 10,
+            y: 0,
+            z: 30,
+            x_velocity: 0,
+            y_velocity: 20,
+            z_velocity: 0,
+            roll: None,
+            pitch: None,
+            yaw: 0,
+            roll_speed: None,
+            pitch_speed: None,
+            yaw_speed: None
+        }
+16:33:32: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 93] Average velocity: (0.00, 4.44, 0.22) m/s
+16:33:32: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 159] CHANGE YAW: 90.00
+16:33:32: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 77] Action taken: CHANGE YAW: 90.00
+16:33:32: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 70] Received telemetry: {
+            time_since_boot: None,
+            x: 20,
+            y: 0,
+            z: 30,
+            x_velocity: 0,
+            y_velocity: 20,
+            z_velocity: 0,
+            roll: None,
+            pitch: None,
+            yaw: 0,
+            roll_speed: None,
+            pitch_speed: None,
+            yaw_speed: None
+        }
+16:33:32: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 93] Average velocity: (0.00, 6.00, 0.20) m/s
+16:33:32: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 159] CHANGE YAW: 116.57
+16:33:32: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 77] Action taken: CHANGE YAW: 116.57
+16:33:33: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 70] Received telemetry: {
+            time_since_boot: None,
+            x: 30,
+            y: 0,
+            z: 30,
+            x_velocity: 20,
+            y_velocity: 0,
+            z_velocity: 0,
+            roll: None,
+            pitch: None,
+            yaw: 1.5707963267948966,
+            roll_speed: None,
+            pitch_speed: None,
+            yaw_speed: None
+        }
+16:33:33: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 93] Average velocity: (1.82, 5.45, 0.18) m/s
+16:33:33: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 159] CHANGE YAW: 45.00
+16:33:33: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 77] Action taken: CHANGE YAW: 45.00
+16:33:33: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 70] Received telemetry: {
+            time_since_boot: None,
+            x: 30,
+            y: 10,
+            z: 30,
+            x_velocity: 20,
+            y_velocity: 0,
+            z_velocity: 0,
+            roll: None,
+            pitch: None,
+            yaw: 1.5707963267948966,
+            roll_speed: None,
+            pitch_speed: None,
+            yaw_speed: None
+        }
+16:33:33: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 93] Average velocity: (3.33, 5.00, 0.17) m/s
+16:33:33: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 159] CHANGE YAW: 63.43
+16:33:33: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 77] Action taken: CHANGE YAW: 63.43
+16:33:34: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 70] Received telemetry: {
+            time_since_boot: None,
+            x: 30,
+            y: 20,
+            z: 30,
+            x_velocity: 20,
+            y_velocity: 0,
+            z_velocity: 0,
+            roll: None,
+            pitch: None,
+            yaw: 1.5707963267948966,
+            roll_speed: None,
+            pitch_speed: None,
+            yaw_speed: None
+        }
+16:33:34: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 93] Average velocity: (4.62, 4.62, 0.15) m/s
+16:33:34: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 159] CHANGE YAW: 90.00
+16:33:34: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 77] Action taken: CHANGE YAW: 90.00
+16:33:34: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 70] Received telemetry: {
+            time_since_boot: None,
+            x: 30,
+            y: 30,
+            z: 30,
+            x_velocity: 0,
+            y_velocity: -20,
+            z_velocity: 0,
+            roll: None,
+            pitch: None,
+            yaw: 3.141592653589793,
+            roll_speed: None,
+            pitch_speed: None,
+            yaw_speed: None
+        }
+16:33:34: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 93] Average velocity: (4.29, 2.86, 0.14) m/s
+16:33:34: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 159] CHANGE YAW: 26.57
+16:33:34: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 77] Action taken: CHANGE YAW: 26.57
+16:33:35: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 70] Received telemetry: {
+            time_since_boot: None,
+            x: 20,
+            y: 30,
+            z: 30,
+            x_velocity: 0,
+            y_velocity: -20,
+            z_velocity: 0,
+            roll: None,
+            pitch: None,
+            yaw: -3.141592653589793,
+            roll_speed: None,
+            pitch_speed: None,
+            yaw_speed: None
+        }
+16:33:35: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 93] Average velocity: (4.00, 1.33, 0.13) m/s
+16:33:35: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 159] CHANGE YAW: 45.00
+16:33:35: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 77] Action taken: CHANGE YAW: 45.00
+16:33:35: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 70] Received telemetry: {
+            time_since_boot: None,
+            x: 10,
+            y: 30,
+            z: 30,
+            x_velocity: 0,
+            y_velocity: -20,
+            z_velocity: 0,
+            roll: None,
+            pitch: None,
+            yaw: 3.141592653589793,
+            roll_speed: None,
+            pitch_speed: None,
+            yaw_speed: None
+        }
+16:33:35: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 93] Average velocity: (3.75, 0.00, 0.12) m/s
+16:33:35: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 159] CHANGE YAW: 90.00
+16:33:35: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 77] Action taken: CHANGE YAW: 90.00
+16:33:36: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 70] Received telemetry: {
+            time_since_boot: None,
+            x: 0,
+            y: 30,
+            z: 30,
+            x_velocity: -20,
+            y_velocity: 0,
+            z_velocity: 0,
+            roll: None,
+            pitch: None,
+            yaw: -1.5707963267948966,
+            roll_speed: None,
+            pitch_speed: None,
+            yaw_speed: None
+        }
+16:33:36: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 93] Average velocity: (2.35, 0.00, 0.12) m/s
+16:33:36: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 159] CHANGE YAW: 45.00
+16:33:36: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 77] Action taken: CHANGE YAW: 45.00
+16:33:36: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 70] Received telemetry: {
+            time_since_boot: None,
+            x: 0,
+            y: 20,
+            z: 30,
+            x_velocity: -20,
+            y_velocity: 0,
+            z_velocity: 0,
+            roll: None,
+            pitch: None,
+            yaw: -1.5707963267948966,
+            roll_speed: None,
+            pitch_speed: None,
+            yaw_speed: None
+        }
+16:33:36: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 93] Average velocity: (1.11, 0.00, 0.11) m/s
+16:33:36: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 159] CHANGE YAW: 90.00
+16:33:36: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 77] Action taken: CHANGE YAW: 90.00
+16:33:37: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 70] Received telemetry: {
+            time_since_boot: None,
+            x: 0,
+            y: 10,
+            z: 30,
+            x_velocity: -20,
+            y_velocity: 0,
+            z_velocity: 0,
+            roll: None,
+            pitch: None,
+            yaw: -1.5707963267948966,
+            roll_speed: None,
+            pitch_speed: None,
+            yaw_speed: None
+        }
+16:33:37: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 93] Average velocity: (0.00, 0.00, 0.11) m/s
+16:33:37: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 159] CHANGE YAW: 135.00
+16:33:37: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 77] Action taken: CHANGE YAW: 135.00
+16:33:37: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 70] Received telemetry: {
+            time_since_boot: None,
+            x: 0,
+            y: 0,
+            z: 30,
+            x_velocity: 0,
+            y_velocity: 20,
+            z_velocity: 0,
+            roll: None,
+            pitch: None,
+            yaw: 1.5707963267948966,
+            roll_speed: None,
+            pitch_speed: None,
+            yaw_speed: None
+        }
+16:33:37: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 93] Average velocity: (0.00, 1.00, 0.10) m/s
+16:33:37: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 159] CHANGE YAW: -26.57
+16:33:37: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 77] Action taken: CHANGE YAW: -26.57
+16:33:38: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 70] Received telemetry: {
+            time_since_boot: None,
+            x: 0,
+            y: 10,
+            z: 30,
+            x_velocity: 0,
+            y_velocity: 20,
+            z_velocity: 0,
+            roll: None,
+            pitch: None,
+            yaw: 1.5707963267948966,
+            roll_speed: None,
+            pitch_speed: None,
+            yaw_speed: None
+        }
+16:33:38: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 93] Average velocity: (0.00, 1.90, 0.10) m/s
+16:33:38: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 159] CHANGE YAW: -45.00
+16:33:38: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 77] Action taken: CHANGE YAW: -45.00
+16:33:38: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 70] Received telemetry: {
+            time_since_boot: None,
+            x: 0,
+            y: 20,
+            z: 30,
+            x_velocity: 0,
+            y_velocity: 20,
+            z_velocity: 0,
+            roll: None,
+            pitch: None,
+            yaw: 1.5707963267948966,
+            roll_speed: None,
+            pitch_speed: None,
+            yaw_speed: None
+        }
+16:33:38: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 93] Average velocity: (0.00, 2.73, 0.09) m/s
+16:33:38: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 159] CHANGE YAW: -90.00
+16:33:38: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 77] Action taken: CHANGE YAW: -90.00
+16:33:39: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 70] Received telemetry: {
+            time_since_boot: None,
+            x: 0,
+            y: 30,
+            z: 30,
+            x_velocity: 20,
+            y_velocity: 0,
+            z_velocity: 0,
+            roll: None,
+            pitch: None,
+            yaw: 0,
+            roll_speed: None,
+            pitch_speed: None,
+            yaw_speed: None
+        }
+16:33:39: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 93] Average velocity: (0.87, 2.61, 0.09) m/s
+16:33:39: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 159] CHANGE YAW: -45.00
+16:33:39: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 77] Action taken: CHANGE YAW: -45.00
+16:33:39: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 70] Received telemetry: {
+            time_since_boot: None,
+            x: 10,
+            y: 30,
+            z: 30,
+            x_velocity: 20,
+            y_velocity: 0,
+            z_velocity: 0,
+            roll: None,
+            pitch: None,
+            yaw: 0,
+            roll_speed: None,
+            pitch_speed: None,
+            yaw_speed: None
+        }
+16:33:39: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 93] Average velocity: (1.67, 2.50, 0.08) m/s
+16:33:39: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 159] CHANGE YAW: -90.00
+16:33:39: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 77] Action taken: CHANGE YAW: -90.00
+16:33:40: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 70] Received telemetry: {
+            time_since_boot: None,
+            x: 20,
+            y: 30,
+            z: 30,
+            x_velocity: 20,
+            y_velocity: 0,
+            z_velocity: 0,
+            roll: None,
+            pitch: None,
+            yaw: 0,
+            roll_speed: None,
+            pitch_speed: None,
+            yaw_speed: None
+        }
+16:33:40: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 93] Average velocity: (2.40, 2.40, 0.08) m/s
+16:33:40: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 159] CHANGE YAW: -135.00
+16:33:40: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 77] Action taken: CHANGE YAW: -135.00
+16:33:40: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 70] Received telemetry: {
+            time_since_boot: None,
+            x: 30,
+            y: 30,
+            z: 30,
+            x_velocity: 0,
+            y_velocity: -20,
+            z_velocity: 0,
+            roll: None,
+            pitch: None,
+            yaw: -1.5707963267948966,
+            roll_speed: None,
+            pitch_speed: None,
+            yaw_speed: None
+        }
+16:33:40: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 93] Average velocity: (2.31, 1.54, 0.08) m/s
+16:33:40: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 159] CHANGE YAW: -63.43
+16:33:40: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 77] Action taken: CHANGE YAW: -63.43
+16:33:41: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 70] Received telemetry: {
+            time_since_boot: None,
+            x: 30,
+            y: 20,
+            z: 30,
+            x_velocity: 0,
+            y_velocity: -20,
+            z_velocity: 0,
+            roll: None,
+            pitch: None,
+            yaw: -1.5707963267948966,
+            roll_speed: None,
+            pitch_speed: None,
+            yaw_speed: None
+        }
+16:33:41: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 93] Average velocity: (2.22, 0.74, 0.07) m/s
+16:33:41: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 159] CHANGE YAW: -90.00
+16:33:41: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 77] Action taken: CHANGE YAW: -90.00
+16:33:41: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 70] Received telemetry: {
+            time_since_boot: None,
+            x: 30,
+            y: 10,
+            z: 30,
+            x_velocity: 0,
+            y_velocity: -20,
+            z_velocity: 0,
+            roll: None,
+            pitch: None,
+            yaw: -1.5707963267948966,
+            roll_speed: None,
+            pitch_speed: None,
+            yaw_speed: None
+        }
+16:33:41: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 93] Average velocity: (2.14, 0.00, 0.07) m/s
+16:33:41: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 159] CHANGE YAW: -116.57
+16:33:41: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 77] Action taken: CHANGE YAW: -116.57
+16:33:42: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 70] Received telemetry: {
+            time_since_boot: None,
+            x: 30,
+            y: 0,
+            z: 30,
+            x_velocity: -20,
+            y_velocity: 0,
+            z_velocity: 0,
+            roll: None,
+            pitch: None,
+            yaw: -3.141592653589793,
+            roll_speed: None,
+            pitch_speed: None,
+            yaw_speed: None
+        }
+16:33:42: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 93] Average velocity: (1.38, 0.00, 0.07) m/s
+16:33:42: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 159] CHANGE YAW: -45.00
+16:33:42: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 77] Action taken: CHANGE YAW: -45.00
+16:33:42: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 70] Received telemetry: {
+            time_since_boot: None,
+            x: 20,
+            y: 0,
+            z: 30,
+            x_velocity: -20,
+            y_velocity: 0,
+            z_velocity: 0,
+            roll: None,
+            pitch: None,
+            yaw: 3.141592653589793,
+            roll_speed: None,
+            pitch_speed: None,
+            yaw_speed: None
+        }
+16:33:42: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 93] Average velocity: (0.67, 0.00, 0.07) m/s
+16:33:42: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 159] CHANGE YAW: -63.43
+16:33:42: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 77] Action taken: CHANGE YAW: -63.43
+16:33:43: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 70] Received telemetry: {
+            time_since_boot: None,
+            x: 10,
+            y: 0,
+            z: 30,
+            x_velocity: -20,
+            y_velocity: 0,
+            z_velocity: 0,
+            roll: None,
+            pitch: None,
+            yaw: -3.141592653589793,
+            roll_speed: None,
+            pitch_speed: None,
+            yaw_speed: None
+        }
+16:33:43: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 93] Average velocity: (0.00, 0.00, 0.06) m/s
+16:33:43: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 159] CHANGE YAW: -90.00
+16:33:43: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 77] Action taken: CHANGE YAW: -90.00

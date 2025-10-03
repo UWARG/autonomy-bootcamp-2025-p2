@@ -29,7 +29,7 @@ class HeartbeatSender:
         self,
         key: object,
         connection: mavutil.mavfile,
-    ):
+    ) -> None:
         assert key is HeartbeatSender.__private_key, "Use create() method"
 
         self.connection = connection
@@ -43,8 +43,11 @@ class HeartbeatSender:
             mavutil.mavlink.MAV_AUTOPILOT_INVALID,
             0,  # base_mode
             0,  # custom_mode
-            mavutil.mavlink.MAV_STATE_ACTIVE  # Change this from 0
-       )
+            mavutil.mavlink.MAV_STATE_ACTIVE,  # Change this from 0
+        )
+
+    def __str__(self) -> str:
+        return f"HeartbeatSender(connection={self.connection})"
 
 
 # =================================================================================================

@@ -60,7 +60,6 @@ def stop(
     report_queue.fill_and_drain_queue()
 
 
-
 def read_queue(
     report_queue: queue_proxy_wrapper.QueueProxyWrapper,
     controller: worker_controller.WorkerController,

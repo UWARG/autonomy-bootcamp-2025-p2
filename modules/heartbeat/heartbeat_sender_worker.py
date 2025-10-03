@@ -51,9 +51,9 @@ def heartbeat_sender_worker(
     if not result:
         local_logger.error("Failed to create HeartbeatSender", True)
         return
-    
+
     assert sender is not None
-    
+
     local_logger.info("HeartbeatSender created", True)
 
     # Main loop: do work.
@@ -61,9 +61,8 @@ def heartbeat_sender_worker(
         sender.run()
         local_logger.info("Heartbeat sent", True)
         time.sleep(1)  # Send once per second
-    
-    local_logger.info("Worker exiting", True)
 
+    local_logger.info("Worker exiting", True)
 
 
 # =================================================================================================

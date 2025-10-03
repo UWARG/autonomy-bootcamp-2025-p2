@@ -93,6 +93,7 @@ class Telemetry:
 
         self.connection = connection
         self.local_logger = local_logger
+        # pylint: disable=invalid-name
         self.TIMEOUT = 1.0  # 1 second timeout
 
     def run(
@@ -105,31 +106,31 @@ class Telemetry:
         Returns (True, TelemetryData) on success, (False, None) on timeout.
         """
         start_time = time.time()
-        
+
         position_msg = None
         attitude_msg = None
-        
+
         # Try to receive both messages within timeout
         while time.time() - start_time < self.TIMEOUT:
             # Try to get LOCAL_POSITION_NED if we don't have it yet
             if position_msg is None:
-                msg = self.connection.recv_match(type='LOCAL_POSITION_NED', blocking=False)
-                if msg and msg.get_type() == 'LOCAL_POSITION_NED':
+                msg = self.connection.recv_match(type="LOCAL_POSITION_NED", blocking=False)
+                if msg and msg.get_type() == "LOCAL_POSITION_NED":
                     position_msg = msg
                     self.local_logger.info("Received LOCAL_POSITION_NED", True)
-            
+
             # Try to get ATTITUDE if we don't have it yet
             if attitude_msg is None:
-                msg = self.connection.recv_match(type='ATTITUDE', blocking=False)
-                if msg and msg.get_type() == 'ATTITUDE':
+                msg = self.connection.recv_match(type="ATTITUDE", blocking=False)
+                if msg and msg.get_type() == "ATTITUDE":
                     attitude_msg = msg
                     self.local_logger.info("Received ATTITUDE", True)
-            
+
             # If we have both, create TelemetryData
             if position_msg is not None and attitude_msg is not None:
                 # Use the most recent timestamp
                 most_recent_time = max(position_msg.time_boot_ms, attitude_msg.time_boot_ms)
-                
+
                 telemetry_data = TelemetryData(
                     time_since_boot=most_recent_time,
                     x=position_msg.x,
@@ -145,16 +146,17 @@ class Telemetry:
                     pitch_speed=attitude_msg.pitchspeed,
                     yaw_speed=attitude_msg.yawspeed,
                 )
-                
+
                 self.local_logger.info("Created TelemetryData", True)
                 return True, telemetry_data
-            
+
             # Small sleep to avoid busy waiting
             time.sleep(0.01)
-        
+
         # Timeout - didn't receive both messages
         self.local_logger.error("Timeout: Did not receive both messages within 1 second", True)
         return False, None
+
 
 # =================================================================================================
 #                            ↑ BOOTCAMPERS MODIFY ABOVE THIS COMMENT ↑
