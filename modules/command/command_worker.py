@@ -73,8 +73,8 @@ def command_worker(
         except TimeoutError:
             continue
 
-        response = command_instance.run(current_telemetry)
-        output_queue.queue.put(response, timeout=0.5)
+        # response = command_instance.run(current_telemetry)
+        output_queue.queue.put(command_instance.run(current_telemetry), timeout=0.5)
 
 
 # =================================================================================================
