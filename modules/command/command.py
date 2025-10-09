@@ -43,14 +43,10 @@ class Command:  # pylint: disable=too-many-instance-attributes
         turning_speed: float,
         local_logger: logger.Logger,
     ) -> "tuple[bool, Command | None]":
-        """
-        Falliable create (instantiation) method to create a Command object.
-        """
-        # Validate inputs
+        """create command processor"""
         if connection is None or local_logger is None:
             return False, None
 
-        # Create and return Command object
         return True, Command(
             cls.__private_key,
             connection,
@@ -74,7 +70,6 @@ class Command:  # pylint: disable=too-many-instance-attributes
         local_logger: logger.Logger,
     ) -> None:
         assert key is Command.__private_key, "Use create() method"
-
         self.__connection = connection
         self.__target = target
         self.__height_tolerance = height_tolerance
@@ -82,8 +77,6 @@ class Command:  # pylint: disable=too-many-instance-attributes
         self.__angle_tolerance = angle_tolerance
         self.__turning_speed = turning_speed
         self.__logger = local_logger
-
-        # Track velocities for average calculation
         self.__velocity_sum_x = 0.0
         self.__velocity_sum_y = 0.0
         self.__velocity_sum_z = 0.0
@@ -93,10 +86,7 @@ class Command:  # pylint: disable=too-many-instance-attributes
         self: "Command",
         telemetry_data: telemetry.TelemetryData,
     ) -> "tuple[bool, str | None]":
-        """
-        Make a decision based on received telemetry data.
-        """
-        # Update average velocity calculation
+        """process telemetry and send commands"""
         self.__velocity_sum_x += telemetry_data.x_velocity
         self.__velocity_sum_y += telemetry_data.y_velocity
         self.__velocity_sum_z += telemetry_data.z_velocity
@@ -106,17 +96,14 @@ class Command:  # pylint: disable=too-many-instance-attributes
         avg_vel_y = self.__velocity_sum_y / self.__data_count
         avg_vel_z = self.__velocity_sum_z / self.__data_count
 
-        # Log average velocity
         self.__logger.info(
-            f"Average velocity: ({avg_vel_x:.2f}, "
-            f"{avg_vel_y:.2f}, {avg_vel_z:.2f})",
+            f"Average velocity: ({avg_vel_x:.2f}, {avg_vel_y:.2f}, "
+            f"{avg_vel_z:.2f})",
             True,
         )
 
-        # Check altitude difference
         altitude_diff = self.__target.z - telemetry_data.z
         if abs(altitude_diff) > self.__height_tolerance:
-            # Adjust altitude using MAV_CMD_CONDITION_CHANGE_ALT (113)
             self.__connection.mav.command_long_send(
                 target_system=1,
                 target_component=0,
@@ -132,33 +119,28 @@ class Command:  # pylint: disable=too-many-instance-attributes
             )
             return True, f"CHANGE ALTITUDE: {altitude_diff}"
 
-        # Calculate angle to target
         dx = self.__target.x - telemetry_data.x
         dy = self.__target.y - telemetry_data.y
         target_yaw = math.atan2(dy, dx)
 
-        # Calculate yaw difference (normalized to [-pi, pi])
         yaw_diff = target_yaw - telemetry_data.yaw
-        # Normalize to [-pi, pi]
         while yaw_diff > math.pi:
             yaw_diff -= 2 * math.pi
         while yaw_diff < -math.pi:
             yaw_diff += 2 * math.pi
 
-        # Convert to degrees
         yaw_diff_deg = math.degrees(yaw_diff)
 
         if abs(yaw_diff_deg) > self.__angle_tolerance:
-            # Adjust yaw using MAV_CMD_CONDITION_YAW (115)
             self.__connection.mav.command_long_send(
                 target_system=1,
                 target_component=0,
                 command=mavutil.mavlink.MAV_CMD_CONDITION_YAW,
                 confirmation=0,
-                param1=yaw_diff_deg,  # Target angle (relative)
-                param2=self.__turning_speed,  # Turning speed
-                param3=1,  # Direction: 1 = shortest path
-                param4=1,  # Relative angle (1 = yes, 0 = no)
+                param1=yaw_diff_deg,
+                param2=self.__turning_speed,
+                param3=1,
+                param4=1,
                 param5=0,
                 param6=0,
                 param7=0,

@@ -80,19 +80,10 @@ class Telemetry:
         timeout: float,
         local_logger: logger.Logger,
     ) -> "tuple[True, Telemetry] | tuple[False, None]":
-        """
-        Falliable create (instantiation) method to create a
-        Telemetry object.
-
-        connection: MAVLink connection to receive telemetry from
-        timeout: Timeout in seconds for receiving messages
-        local_logger: Logger instance for logging
-        """
-        # Validate inputs
+        """create telemetry reader"""
         if connection is None or local_logger is None:
             return False, None
 
-        # Create and return Telemetry object
         return True, Telemetry(
             cls.__private_key, connection, timeout, local_logger
         )
@@ -105,8 +96,6 @@ class Telemetry:
         local_logger: logger.Logger,
     ) -> None:
         assert key is Telemetry.__private_key, "Use create() method"
-
-        # Store connection and logger
         self.__connection = connection
         self.__logger = local_logger
         self.__timeout = timeout
@@ -114,23 +103,12 @@ class Telemetry:
     def run(
         self: "Telemetry",
     ) -> "tuple[bool, TelemetryData | None]":
-        """
-        Receive LOCAL_POSITION_NED and ATTITUDE messages from the drone,
-        combining them together to form a single TelemetryData object.
-
-        Returns: (success, TelemetryData or None)
-        """
-        # Read MAVLink message LOCAL_POSITION_NED (32)
-        # Read MAVLink message ATTITUDE (30)
-        # Return the most recent of both, and use most recent timestamp
-
+        """receive position and attitude messages"""
         start_time = time.time()
         attitude_msg = None
         position_msg = None
 
-        # Try to receive both messages within timeout
         while time.time() - start_time < self.__timeout:
-            # Try to get ATTITUDE message
             if attitude_msg is None:
                 msg = self.__connection.recv_match(
                     type="ATTITUDE", blocking=False
@@ -139,20 +117,15 @@ class Telemetry:
                     attitude_msg = msg
                     self.__logger.debug("Received ATTITUDE", True)
 
-            # Try to get LOCAL_POSITION_NED message
             if position_msg is None:
                 msg = self.__connection.recv_match(
                     type="LOCAL_POSITION_NED", blocking=False
                 )
                 if msg:
                     position_msg = msg
-                    self.__logger.debug(
-                        "Received LOCAL_POSITION_NED", True
-                    )
+                    self.__logger.debug("Received LOCAL_POSITION_NED", True)
 
-            # If we have both messages, create TelemetryData
             if attitude_msg and position_msg:
-                # Use most recent timestamp
                 time_boot = max(
                     attitude_msg.time_boot_ms, position_msg.time_boot_ms
                 )
@@ -174,10 +147,8 @@ class Telemetry:
                 )
                 return True, telemetry_data
 
-            # Small sleep to avoid busy waiting
             time.sleep(0.01)
 
-        # Timeout - didn't receive both messages
         if attitude_msg is None and position_msg is None:
             self.__logger.warning("Timeout: No telemetry received")
         elif attitude_msg is None:
