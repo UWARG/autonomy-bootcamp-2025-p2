@@ -19,7 +19,8 @@ from utilities.workers import worker_controller
 MOCK_DRONE_MODULE = "tests.integration.mock_drones.heartbeat_receiver_drone"
 CONNECTION_STRING = "tcp:localhost:12345"
 
-# Please do not modify these, these are for the test cases (but do take note of them!)
+# Please do not modify these, these are for the test cases
+# (but do take note of them!)
 HEARTBEAT_PERIOD = 1
 NUM_TRIALS = 5
 NUM_DISCONNECTS = 3
@@ -42,29 +43,45 @@ def start_drone() -> None:
     """
     Start the mocked drone.
     """
-    subprocess.run(["python", "-m", MOCK_DRONE_MODULE], shell=True, check=False)
+    subprocess.run(
+        ["python", "-m", MOCK_DRONE_MODULE], shell=True, check=False
+    )
 
 
 # =================================================================================================
 #                            ↓ BOOTCAMPERS MODIFY BELOW THIS COMMENT ↓
 # =================================================================================================
 def stop(
-    args,  # Add any necessary arguments
+    controller: worker_controller.WorkerController,
 ) -> None:
     """
     Stop the workers.
+
+    controller: Worker controller to signal exit
     """
-    pass  # Add logic to stop your worker
+    controller.request_exit()
 
 
 def read_queue(
-    args,  # Add any necessary arguments
+    output_queue: queue_proxy_wrapper.QueueProxyWrapper,
+    controller: worker_controller.WorkerController,
     main_logger: logger.Logger,
 ) -> None:
     """
     Read and print the output queue.
+
+    output_queue: Queue to read connection status from
+    controller: Worker controller to check if exit requested
+    main_logger: Logger to print queue contents
     """
-    pass  # Add logic to read from your worker's output queue and print it using the logger
+    while not controller.is_exit_requested():
+        try:
+            # Get status from queue with timeout
+            status = output_queue.queue.get(timeout=0.1)
+            main_logger.info(f"Queue: {status}")
+        except Exception:  # pylint: disable=broad-except
+            # Queue is empty or timeout, continue
+            continue
 
 
 # =================================================================================================
@@ -94,7 +111,8 @@ def main() -> int:
     # Get Pylance to stop complaining
     assert main_logger is not None
 
-    # Mocked GCS, connect to mocked drone which is listening at CONNECTION_STRING
+    # Mocked GCS, connect to mocked drone which is listening
+    # at CONNECTION_STRING
     # source_system = 255 (groundside)
     # source_component = 0 (ground control station)
     connection = mavutil.mavlink_connection(CONNECTION_STRING)
@@ -113,23 +131,32 @@ def main() -> int:
     # =============================================================================================
     # Mock starting a worker, since cannot actually start a new process
     # Create a worker controller for your worker
+    controller = worker_controller.WorkerController()
 
     # Create a multiprocess manager for synchronized queues
+    mp_manager = mp.Manager()
 
     # Create your queues
+    output_queue = queue_proxy_wrapper.QueueProxyWrapper(mp_manager, 10)
 
-    # Just set a timer to stop the worker after a while, since the worker infinite loops
-    threading.Timer(
-        HEARTBEAT_PERIOD * (NUM_TRIALS * 2 + DISCONNECT_THRESHOLD + NUM_DISCONNECTS + 2),
-        stop,
-        (args,),
-    ).start()
+    # Just set a timer to stop the worker after a while,
+    # since the worker infinite loops
+    total_time = HEARTBEAT_PERIOD * (
+        NUM_TRIALS * 2 + DISCONNECT_THRESHOLD + NUM_DISCONNECTS + 2
+    )
+    threading.Timer(total_time, stop, (controller,)).start()
 
     # Read the main queue (worker outputs)
-    threading.Thread(target=read_queue, args=(args, main_logger)).start()
+    threading.Thread(
+        target=read_queue, args=(output_queue, controller, main_logger)
+    ).start()
 
     heartbeat_receiver_worker.heartbeat_receiver_worker(
-        # Place your own arguments here
+        connection,
+        HEARTBEAT_PERIOD,
+        DISCONNECT_THRESHOLD,
+        output_queue,
+        controller,
     )
     # =============================================================================================
     #                          ↑ BOOTCAMPERS MODIFY ABOVE THIS COMMENT ↑
