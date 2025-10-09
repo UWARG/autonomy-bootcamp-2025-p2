@@ -93,8 +93,8 @@ def command_worker(
             local_logger.error("Command run failed")
             continue
 
-        # If there's a command to output, send it to the output queue
-        if command_str is not None:
+        # Send command to output queue if there is one
+        if command_str:
             output_queue.queue.put(command_str)
 
 

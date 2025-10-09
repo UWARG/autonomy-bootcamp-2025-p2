@@ -66,7 +66,7 @@ def telemetry_worker(
 
         # Get telemetry data
         result, telemetry_data = telemetry_instance.run()
-        if not result or telemetry_data is None:
+        if not result:
             local_logger.warning("Failed to get telemetry data")
             continue
 

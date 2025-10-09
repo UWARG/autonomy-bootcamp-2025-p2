@@ -289,10 +289,10 @@ def main() -> int:
     controller.request_exit()
     main_logger.info("Requested exit")
 
-    # drain queues
-    telemetry_to_command_queue.fill_and_drain_queue()
-    heartbeat_to_main_queue.fill_and_drain_queue()
+    # drain queues (from end to start)
     command_to_main_queue.fill_and_drain_queue()
+    heartbeat_to_main_queue.fill_and_drain_queue()
+    telemetry_to_command_queue.fill_and_drain_queue()
 
     main_logger.info("Queues cleared")
 
