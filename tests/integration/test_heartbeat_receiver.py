@@ -43,9 +43,7 @@ def start_drone() -> None:
     """
     Start the mocked drone.
     """
-    subprocess.run(
-        ["python", "-m", MOCK_DRONE_MODULE], shell=True, check=False
-    )
+    subprocess.run(["python", "-m", MOCK_DRONE_MODULE], shell=True, check=False)
 
 
 # =================================================================================================
@@ -141,15 +139,11 @@ def main() -> int:
 
     # Just set a timer to stop the worker after a while,
     # since the worker infinite loops
-    total_time = HEARTBEAT_PERIOD * (
-        NUM_TRIALS * 2 + DISCONNECT_THRESHOLD + NUM_DISCONNECTS + 2
-    )
+    total_time = HEARTBEAT_PERIOD * (NUM_TRIALS * 2 + DISCONNECT_THRESHOLD + NUM_DISCONNECTS + 2)
     threading.Timer(total_time, stop, (controller,)).start()
 
     # Read the main queue (worker outputs)
-    threading.Thread(
-        target=read_queue, args=(output_queue, controller, main_logger)
-    ).start()
+    threading.Thread(target=read_queue, args=(output_queue, controller, main_logger)).start()
 
     heartbeat_receiver_worker.heartbeat_receiver_worker(
         connection,

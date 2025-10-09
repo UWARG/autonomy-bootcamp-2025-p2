@@ -152,22 +152,14 @@ def main() -> int:
     mp_manager = mp.Manager()
 
     # Create your queues
-    input_queue = queue_proxy_wrapper.QueueProxyWrapper(
-        mp_manager, 100
-    )
-    output_queue = queue_proxy_wrapper.QueueProxyWrapper(
-        mp_manager, 100
-    )
+    input_queue = queue_proxy_wrapper.QueueProxyWrapper(mp_manager, 100)
+    output_queue = queue_proxy_wrapper.QueueProxyWrapper(mp_manager, 100)
 
     # Test cases, DO NOT EDIT!
     path = [
         # Test singular points
-        telemetry.TelemetryData(
-            x=0, y=0, z=29, yaw=0, x_velocity=0, y_velocity=0, z_velocity=4
-        ),
-        telemetry.TelemetryData(
-            x=0, y=0, z=31, yaw=0, x_velocity=0, y_velocity=0, z_velocity=-2
-        ),
+        telemetry.TelemetryData(x=0, y=0, z=29, yaw=0, x_velocity=0, y_velocity=0, z_velocity=4),
+        telemetry.TelemetryData(x=0, y=0, z=31, yaw=0, x_velocity=0, y_velocity=0, z_velocity=-2),
         telemetry.TelemetryData(
             x=0,
             y=0,
@@ -214,15 +206,9 @@ def main() -> int:
             z_velocity=0,
         ),  # -2 degrees
         # Fly a 30x30 square counter-clockwise
-        telemetry.TelemetryData(
-            x=0, y=0, z=30, yaw=0, x_velocity=0, y_velocity=20, z_velocity=0
-        ),
-        telemetry.TelemetryData(
-            x=10, y=0, z=30, yaw=0, x_velocity=0, y_velocity=20, z_velocity=0
-        ),
-        telemetry.TelemetryData(
-            x=20, y=0, z=30, yaw=0, x_velocity=0, y_velocity=20, z_velocity=0
-        ),
+        telemetry.TelemetryData(x=0, y=0, z=30, yaw=0, x_velocity=0, y_velocity=20, z_velocity=0),
+        telemetry.TelemetryData(x=10, y=0, z=30, yaw=0, x_velocity=0, y_velocity=20, z_velocity=0),
+        telemetry.TelemetryData(x=20, y=0, z=30, yaw=0, x_velocity=0, y_velocity=20, z_velocity=0),
         telemetry.TelemetryData(
             x=30,
             y=0,
@@ -332,15 +318,9 @@ def main() -> int:
             y_velocity=20,
             z_velocity=0,
         ),
-        telemetry.TelemetryData(
-            x=0, y=30, z=30, yaw=0, x_velocity=20, y_velocity=0, z_velocity=0
-        ),
-        telemetry.TelemetryData(
-            x=10, y=30, z=30, yaw=0, x_velocity=20, y_velocity=0, z_velocity=0
-        ),
-        telemetry.TelemetryData(
-            x=20, y=30, z=30, yaw=0, x_velocity=20, y_velocity=0, z_velocity=0
-        ),
+        telemetry.TelemetryData(x=0, y=30, z=30, yaw=0, x_velocity=20, y_velocity=0, z_velocity=0),
+        telemetry.TelemetryData(x=10, y=30, z=30, yaw=0, x_velocity=20, y_velocity=0, z_velocity=0),
+        telemetry.TelemetryData(x=20, y=30, z=30, yaw=0, x_velocity=20, y_velocity=0, z_velocity=0),
         telemetry.TelemetryData(
             x=30,
             y=30,
@@ -399,19 +379,13 @@ def main() -> int:
 
     # Just set a timer to stop the worker after a while,
     # since the worker infinite loops
-    threading.Timer(
-        TELEMETRY_PERIOD * len(path), stop, (controller,)
-    ).start()
+    threading.Timer(TELEMETRY_PERIOD * len(path), stop, (controller,)).start()
 
     # Put items into input queue
-    threading.Thread(
-        target=put_queue, args=(input_queue, path, controller)
-    ).start()
+    threading.Thread(target=put_queue, args=(input_queue, path, controller)).start()
 
     # Read the main queue (worker outputs)
-    threading.Thread(
-        target=read_queue, args=(output_queue, controller, main_logger)
-    ).start()
+    threading.Thread(target=read_queue, args=(output_queue, controller, main_logger)).start()
 
     command_worker.command_worker(
         connection,

@@ -37,9 +37,7 @@ def telemetry_worker(
     # Instantiate logger
     worker_name = pathlib.Path(__file__).stem
     process_id = os.getpid()
-    result, local_logger = logger.Logger.create(
-        f"{worker_name}_{process_id}", True
-    )
+    result, local_logger = logger.Logger.create(f"{worker_name}_{process_id}", True)
     if not result:
         print("ERROR: Worker failed to create logger")
         return
@@ -53,9 +51,7 @@ def telemetry_worker(
     #                          ↓ BOOTCAMPERS MODIFY BELOW THIS COMMENT ↓
     # =============================================================================================
     # Instantiate class object (telemetry.Telemetry)
-    result, telemetry_instance = telemetry.Telemetry.create(
-        connection, timeout, local_logger
-    )
+    result, telemetry_instance = telemetry.Telemetry.create(connection, timeout, local_logger)
     if not result:
         local_logger.error("Failed to create Telemetry instance")
         return

@@ -42,9 +42,7 @@ def start_drone() -> None:
     """
     Start the mocked drone.
     """
-    subprocess.run(
-        ["python", "-m", MOCK_DRONE_MODULE], shell=True, check=False
-    )
+    subprocess.run(["python", "-m", MOCK_DRONE_MODULE], shell=True, check=False)
 
 
 # =================================================================================================
@@ -144,9 +142,7 @@ def main() -> int:
     threading.Timer(total_time, stop, (controller,)).start()
 
     # Read the main queue (worker outputs)
-    threading.Thread(
-        target=read_queue, args=(output_queue, controller, main_logger)
-    ).start()
+    threading.Thread(target=read_queue, args=(output_queue, controller, main_logger)).start()
 
     telemetry_worker.telemetry_worker(
         connection,

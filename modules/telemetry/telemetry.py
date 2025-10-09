@@ -84,9 +84,7 @@ class Telemetry:
         if connection is None or local_logger is None:
             return False, None
 
-        return True, Telemetry(
-            cls.__private_key, connection, timeout, local_logger
-        )
+        return True, Telemetry(cls.__private_key, connection, timeout, local_logger)
 
     def __init__(
         self: "Telemetry",
@@ -110,25 +108,19 @@ class Telemetry:
 
         while time.time() - start_time < self.__timeout:
             if attitude_msg is None:
-                msg = self.__connection.recv_match(
-                    type="ATTITUDE", blocking=False
-                )
+                msg = self.__connection.recv_match(type="ATTITUDE", blocking=False)
                 if msg:
                     attitude_msg = msg
                     self.__logger.debug("Received ATTITUDE", True)
 
             if position_msg is None:
-                msg = self.__connection.recv_match(
-                    type="LOCAL_POSITION_NED", blocking=False
-                )
+                msg = self.__connection.recv_match(type="LOCAL_POSITION_NED", blocking=False)
                 if msg:
                     position_msg = msg
                     self.__logger.debug("Received LOCAL_POSITION_NED", True)
 
             if attitude_msg and position_msg:
-                time_boot = max(
-                    attitude_msg.time_boot_ms, position_msg.time_boot_ms
-                )
+                time_boot = max(attitude_msg.time_boot_ms, position_msg.time_boot_ms)
 
                 telemetry_data = TelemetryData(
                     time_since_boot=time_boot,
@@ -154,9 +146,7 @@ class Telemetry:
         elif attitude_msg is None:
             self.__logger.warning("Timeout: Missing ATTITUDE message")
         else:
-            self.__logger.warning(
-                "Timeout: Missing LOCAL_POSITION_NED message"
-            )
+            self.__logger.warning("Timeout: Missing LOCAL_POSITION_NED message")
 
         return False, None
 

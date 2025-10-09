@@ -51,9 +51,7 @@ class HeartbeatReceiver:
         timeout: float,
     ) -> "tuple[bool, str]":
         """receive heartbeat and track connection"""
-        msg = self.__connection.recv_match(
-            type="HEARTBEAT", blocking=True, timeout=timeout
-        )
+        msg = self.__connection.recv_match(type="HEARTBEAT", blocking=True, timeout=timeout)
 
         if msg and msg.get_type() == "HEARTBEAT":
             if not self.__is_connected:
@@ -68,15 +66,12 @@ class HeartbeatReceiver:
         if self.__missed_heartbeats >= self.__disconnect_threshold:
             if self.__is_connected:
                 self.__logger.warning(
-                    f"Disconnected: missed {self.__missed_heartbeats} "
-                    f"heartbeats"
+                    f"Disconnected: missed {self.__missed_heartbeats} " f"heartbeats"
                 )
                 self.__is_connected = False
             return True, "Disconnected"
 
-        self.__logger.warning(
-            f"Warning: missed {self.__missed_heartbeats} heartbeat(s)"
-        )
+        self.__logger.warning(f"Warning: missed {self.__missed_heartbeats} heartbeat(s)")
         return True, "Connected"
 
 

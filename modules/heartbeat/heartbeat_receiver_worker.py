@@ -39,9 +39,7 @@ def heartbeat_receiver_worker(
     # Instantiate logger
     worker_name = pathlib.Path(__file__).stem
     process_id = os.getpid()
-    result, local_logger = logger.Logger.create(
-        f"{worker_name}_{process_id}", True
-    )
+    result, local_logger = logger.Logger.create(f"{worker_name}_{process_id}", True)
     if not result:
         print("ERROR: Worker failed to create logger")
         return
@@ -58,13 +56,9 @@ def heartbeat_receiver_worker(
     (
         result,
         heartbeat_receiver_instance,
-    ) = heartbeat_receiver.HeartbeatReceiver.create(
-        connection, disconnect_threshold, local_logger
-    )
+    ) = heartbeat_receiver.HeartbeatReceiver.create(connection, disconnect_threshold, local_logger)
     if not result:
-        local_logger.error(
-            "Failed to create HeartbeatReceiver instance"
-        )
+        local_logger.error("Failed to create HeartbeatReceiver instance")
         return
 
     # Get Pylance to stop complaining
