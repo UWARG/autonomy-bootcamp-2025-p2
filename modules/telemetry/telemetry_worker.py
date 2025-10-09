@@ -4,6 +4,7 @@ Telemtry worker that gathers GPS data.
 
 import os
 import pathlib
+import time
 
 from pymavlink import mavutil
 
@@ -73,6 +74,8 @@ def telemetry_worker(
         # Put telemetry data into output queue
         output_queue.queue.put(telemetry_data)
         local_logger.debug(f"Telemetry: {telemetry_data}", True)
+
+        time.sleep(0.1)
 
 
 # =================================================================================================

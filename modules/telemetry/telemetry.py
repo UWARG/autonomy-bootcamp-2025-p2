@@ -97,57 +97,64 @@ class Telemetry:
         self.__connection = connection
         self.__logger = local_logger
         self.__timeout = timeout
+        self.__last_attitude = None
+        self.__last_position = None
+        self.__last_time = time.time()
 
     def run(
         self: "Telemetry",
     ) -> "tuple[bool, TelemetryData | None]":
         """receive position and attitude messages"""
-        start_time = time.time()
-        attitude_msg = None
-        position_msg = None
+        self.__last_time = time.time()
 
-        while time.time() - start_time < self.__timeout:
-            if attitude_msg is None:
-                msg = self.__connection.recv_match(type="ATTITUDE", blocking=False)
-                if msg:
-                    attitude_msg = msg
-                    self.__logger.debug("Received ATTITUDE", True)
+        while (time.time() - self.__last_time) < self.__timeout:
+            msg = self.__connection.recv_match(blocking=False)
+            if msg is None:
+                continue
 
-            if position_msg is None:
-                msg = self.__connection.recv_match(type="LOCAL_POSITION_NED", blocking=False)
-                if msg:
-                    position_msg = msg
-                    self.__logger.debug("Received LOCAL_POSITION_NED", True)
+            if msg.get_type() == "LOCAL_POSITION_NED":
+                self.__last_position = msg
+                self.__last_time = time.time()
+                self.__logger.debug("Received LOCAL_POSITION_NED", True)
+            elif msg.get_type() == "ATTITUDE":
+                self.__last_attitude = msg
+                self.__last_time = time.time()
+                self.__logger.debug("Received ATTITUDE", True)
 
-            if attitude_msg and position_msg:
-                time_boot = max(attitude_msg.time_boot_ms, position_msg.time_boot_ms)
+            # only return if we have both types
+            if not self.__last_position or not self.__last_attitude:
+                continue
 
+            position = self.__last_position
+            attitude = self.__last_attitude
+            if position is not None and attitude is not None:
                 telemetry_data = TelemetryData(
-                    time_since_boot=time_boot,
-                    x=position_msg.x,
-                    y=position_msg.y,
-                    z=position_msg.z,
-                    x_velocity=position_msg.vx,
-                    y_velocity=position_msg.vy,
-                    z_velocity=position_msg.vz,
-                    roll=attitude_msg.roll,
-                    pitch=attitude_msg.pitch,
-                    yaw=attitude_msg.yaw,
-                    roll_speed=attitude_msg.rollspeed,
-                    pitch_speed=attitude_msg.pitchspeed,
-                    yaw_speed=attitude_msg.yawspeed,
+                    time_since_boot=max(
+                        self.__last_attitude.time_boot_ms,
+                        self.__last_position.time_boot_ms,
+                    ),
+                    x=position.x,
+                    y=position.y,
+                    z=position.z,
+                    x_velocity=position.vx,
+                    y_velocity=position.vy,
+                    z_velocity=position.vz,
+                    roll=attitude.roll,
+                    pitch=attitude.pitch,
+                    yaw=attitude.yaw,
+                    roll_speed=attitude.rollspeed,
+                    pitch_speed=attitude.pitchspeed,
+                    yaw_speed=attitude.yawspeed,
                 )
+                # reset messages after returning
+                self.__last_attitude = None
+                self.__last_position = None
                 return True, telemetry_data
 
-            time.sleep(0.01)
-
-        if attitude_msg is None and position_msg is None:
-            self.__logger.warning("Timeout: No telemetry received")
-        elif attitude_msg is None:
-            self.__logger.warning("Timeout: Missing ATTITUDE message")
-        else:
-            self.__logger.warning("Timeout: Missing LOCAL_POSITION_NED message")
-
+        # reset messages on timeout
+        self.__last_attitude = None
+        self.__last_position = None
+        self.__logger.warning("Timeout: No complete telemetry pair received")
         return False, None
 
 
