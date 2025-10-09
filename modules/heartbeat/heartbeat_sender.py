@@ -33,7 +33,7 @@ class HeartbeatSender:
         key: object,
         connection: mavutil.mavfile,
         # args  Put your own arguments here
-    ):
+    ) -> None :
         assert key is HeartbeatSender.__private_key, "Use create() method"
 
         self.connection = connection
@@ -42,7 +42,7 @@ class HeartbeatSender:
     def run(
         self,
         # args,  # Put your own arguments here
-    ):
+    ) -> None :
         """
         Attempt to send a heartbeat message.
         """

@@ -39,7 +39,7 @@ class Command:  # pylint: disable=too-many-instance-attributes
         target: Position,
         # args,  # Put your own arguments here
         local_logger: logger.Logger,
-    ):
+    ) -> tuple:
         """
         Falliable create (instantiation) method to create a Command object.
         """
@@ -68,7 +68,7 @@ class Command:  # pylint: disable=too-many-instance-attributes
         self,
         current_telemetry: telemetry.TelemetryData,
         # args,  # Put your own arguments here
-    ):
+    ) -> str :
         """
         Make a decision based on received telemetry data.
         """

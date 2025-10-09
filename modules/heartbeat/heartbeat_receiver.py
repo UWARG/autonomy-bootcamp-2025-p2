@@ -23,7 +23,7 @@ class HeartbeatReceiver:
         connection: mavutil.mavfile,
         # args  Put your own arguments here
         local_logger: logger.Logger,
-    ):
+    )-> tuple :
         """
         Falliable create (instantiation) method to create a HeartbeatReceiver object.
         """
@@ -49,7 +49,7 @@ class HeartbeatReceiver:
     def run(
         self,
         # args Put your own arguments here
-    ):
+    ) -> None:
 
         msg = self.connection.recv_match(type="HEARTBEAT", blocking=False)
 

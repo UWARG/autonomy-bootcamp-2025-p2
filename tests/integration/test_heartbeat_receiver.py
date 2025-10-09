@@ -49,7 +49,7 @@ def start_drone() -> None:
 #                            ↓ BOOTCAMPERS MODIFY BELOW THIS COMMENT ↓
 # =================================================================================================
 def stop(
-    controller,
+    controller: object,
     # args Add any necessary arguments
 ) -> None:
     """
