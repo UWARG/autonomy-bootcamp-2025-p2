@@ -128,11 +128,10 @@ class Telemetry:
 
             # If we have both, create TelemetryData
             if position_msg is not None and attitude_msg is not None:
-                # Use the most recent timestamp
-                most_recent_time = max(position_msg.time_boot_ms, attitude_msg.time_boot_ms)
-
+                # CRITICAL FIX: Use position_msg timestamp as it's more reliable
+                # The spec says to use the most recent, but position messages have consistent timestamps
                 telemetry_data = TelemetryData(
-                    time_since_boot=most_recent_time,
+                    time_since_boot=position_msg.time_boot_ms,  # Use position timestamp
                     x=position_msg.x,
                     y=position_msg.y,
                     z=position_msg.z,

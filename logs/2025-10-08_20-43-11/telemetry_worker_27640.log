@@ -1,0 +1,71 @@
+20:43:12: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry_worker.py | telemetry_worker | 46] Logger initialized
+20:43:12: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry_worker.py | telemetry_worker | 60] Telemetry created
+20:43:12: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 119] Received LOCAL_POSITION_NED
+20:43:12: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 125] Received ATTITUDE
+20:43:12: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 148] Created TelemetryData
+20:43:12: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry_worker.py | telemetry_worker | 70] Sent telemetry data: {
+            time_since_boot: 333,
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            x_velocity: 1.0,
+            y_velocity: 0.0,
+            z_velocity: 0.0,
+            roll: 0.0,
+            pitch: 0.0,
+            yaw: 1.0471975803375244,
+            roll_speed: 0.0,
+            pitch_speed: 0.0,
+            yaw_speed: 3.1415927410125732
+        }
+20:43:12: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 119] Received LOCAL_POSITION_NED
+20:43:13: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 119] Received LOCAL_POSITION_NED
+20:43:13: [ERROR] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 155] Timeout: Did not receive both messages within 1 second
+20:43:13: [WARNING] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry_worker.py | telemetry_worker | 73] Telemetry timeout, restarting
+20:43:13: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 119] Received LOCAL_POSITION_NED
+20:43:14: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 119] Received LOCAL_POSITION_NED
+20:43:14: [ERROR] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 155] Timeout: Did not receive both messages within 1 second
+20:43:14: [WARNING] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry_worker.py | telemetry_worker | 73] Telemetry timeout, restarting
+20:43:14: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 119] Received LOCAL_POSITION_NED
+20:43:15: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 119] Received LOCAL_POSITION_NED
+20:43:15: [ERROR] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 155] Timeout: Did not receive both messages within 1 second
+20:43:15: [WARNING] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry_worker.py | telemetry_worker | 73] Telemetry timeout, restarting
+20:43:15: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 119] Received LOCAL_POSITION_NED
+20:43:16: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 119] Received LOCAL_POSITION_NED
+20:43:16: [ERROR] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 155] Timeout: Did not receive both messages within 1 second
+20:43:16: [WARNING] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry_worker.py | telemetry_worker | 73] Telemetry timeout, restarting
+20:43:16: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 119] Received LOCAL_POSITION_NED
+20:43:17: [ERROR] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 155] Timeout: Did not receive both messages within 1 second
+20:43:17: [WARNING] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry_worker.py | telemetry_worker | 73] Telemetry timeout, restarting
+20:43:18: [ERROR] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 155] Timeout: Did not receive both messages within 1 second
+20:43:18: [WARNING] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry_worker.py | telemetry_worker | 73] Telemetry timeout, restarting
+20:43:19: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 119] Received LOCAL_POSITION_NED
+20:43:19: [ERROR] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 155] Timeout: Did not receive both messages within 1 second
+20:43:19: [WARNING] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry_worker.py | telemetry_worker | 73] Telemetry timeout, restarting
+20:43:20: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 119] Received LOCAL_POSITION_NED
+20:43:20: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 119] Received LOCAL_POSITION_NED
+20:43:20: [ERROR] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 155] Timeout: Did not receive both messages within 1 second
+20:43:20: [WARNING] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry_worker.py | telemetry_worker | 73] Telemetry timeout, restarting
+20:43:20: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 119] Received LOCAL_POSITION_NED
+20:43:21: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 119] Received LOCAL_POSITION_NED
+20:43:21: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 119] Received LOCAL_POSITION_NED
+20:43:21: [ERROR] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 155] Timeout: Did not receive both messages within 1 second
+20:43:21: [WARNING] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry_worker.py | telemetry_worker | 73] Telemetry timeout, restarting
+20:43:22: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 119] Received LOCAL_POSITION_NED
+20:43:22: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 119] Received LOCAL_POSITION_NED
+20:43:22: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 119] Received LOCAL_POSITION_NED
+20:43:22: [ERROR] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 155] Timeout: Did not receive both messages within 1 second
+20:43:22: [WARNING] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry_worker.py | telemetry_worker | 73] Telemetry timeout, restarting
+20:43:22: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 119] Received LOCAL_POSITION_NED
+20:43:23: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 119] Received LOCAL_POSITION_NED
+20:43:23: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 119] Received LOCAL_POSITION_NED
+20:43:23: [ERROR] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 155] Timeout: Did not receive both messages within 1 second
+20:43:23: [WARNING] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry_worker.py | telemetry_worker | 73] Telemetry timeout, restarting
+20:43:23: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 119] Received LOCAL_POSITION_NED
+20:43:24: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 119] Received LOCAL_POSITION_NED
+20:43:24: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 119] Received LOCAL_POSITION_NED
+20:43:24: [ERROR] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 155] Timeout: Did not receive both messages within 1 second
+20:43:24: [WARNING] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry_worker.py | telemetry_worker | 73] Telemetry timeout, restarting
+20:43:24: [INFO] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 119] Received LOCAL_POSITION_NED
+20:43:25: [ERROR] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 155] Timeout: Did not receive both messages within 1 second
+20:43:25: [WARNING] [C:\Users\User\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry_worker.py | telemetry_worker | 73] Telemetry timeout, restarting
