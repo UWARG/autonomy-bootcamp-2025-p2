@@ -23,7 +23,7 @@ class HeartbeatReceiver:
         connection: mavutil.mavfile,
         # args  Put your own arguments here
         local_logger: logger.Logger,
-    )-> tuple :
+    ) -> tuple:
         """
         Falliable create (instantiation) method to create a HeartbeatReceiver object.
         """

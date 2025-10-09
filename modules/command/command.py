@@ -68,7 +68,7 @@ class Command:  # pylint: disable=too-many-instance-attributes
         self,
         current_telemetry: telemetry.TelemetryData,
         # args,  # Put your own arguments here
-    ) -> str :
+    ) -> str:
         """
         Make a decision based on received telemetry data.
         """
