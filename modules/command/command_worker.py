@@ -95,7 +95,6 @@ def command_worker(
 
         # If there's a command to output, send it to the output queue
         if command_str is not None:
-            local_logger.debug(f"Command: {command_str}", True)
             output_queue.queue.put(command_str)
 
 
