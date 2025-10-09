@@ -1,0 +1,58 @@
+14:18:27: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 60] Logger initialized
+14:18:27: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 110] Average velocity: (0.00, 0.00, 4.00)
+14:18:27: [DEBUG] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 100] Command: CHANGE ALTITUDE: 1
+14:18:27: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 110] Average velocity: (0.00, 0.00, 1.00)
+14:18:27: [DEBUG] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 100] Command: CHANGE ALTITUDE: -1
+14:18:28: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 110] Average velocity: (0.00, 0.00, 0.67)
+14:18:28: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 110] Average velocity: (0.00, 0.00, 0.50)
+14:18:29: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 110] Average velocity: (0.00, 0.00, 0.40)
+14:18:29: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 110] Average velocity: (0.00, 0.00, 0.33)
+14:18:30: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 110] Average velocity: (0.00, 0.00, 0.29)
+14:18:30: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 110] Average velocity: (0.00, 2.50, 0.25)
+14:18:30: [DEBUG] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 100] Command: CHANGE YAW: 63.43494882292201
+14:18:31: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 110] Average velocity: (0.00, 4.44, 0.22)
+14:18:31: [DEBUG] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 100] Command: CHANGE YAW: 90.0
+14:18:31: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 110] Average velocity: (0.00, 6.00, 0.20)
+14:18:31: [DEBUG] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 100] Command: CHANGE YAW: 116.56505117707799
+14:18:32: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 110] Average velocity: (1.82, 5.45, 0.18)
+14:18:32: [DEBUG] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 100] Command: CHANGE YAW: 45.0
+14:18:32: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 110] Average velocity: (3.33, 5.00, 0.17)
+14:18:32: [DEBUG] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 100] Command: CHANGE YAW: 63.43494882292201
+14:18:33: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 110] Average velocity: (4.62, 4.62, 0.15)
+14:18:33: [DEBUG] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 100] Command: CHANGE YAW: 90.0
+14:18:33: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 110] Average velocity: (4.29, 2.86, 0.14)
+14:18:33: [DEBUG] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 100] Command: CHANGE YAW: 26.565051177077994
+14:18:34: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 110] Average velocity: (4.00, 1.33, 0.13)
+14:18:34: [DEBUG] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 100] Command: CHANGE YAW: 45.0
+14:18:34: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 110] Average velocity: (3.75, 0.00, 0.12)
+14:18:34: [DEBUG] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 100] Command: CHANGE YAW: 90.0
+14:18:35: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 110] Average velocity: (2.35, 0.00, 0.12)
+14:18:35: [DEBUG] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 100] Command: CHANGE YAW: 45.0
+14:18:36: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 110] Average velocity: (1.11, 0.00, 0.11)
+14:18:36: [DEBUG] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 100] Command: CHANGE YAW: 90.0
+14:18:36: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 110] Average velocity: (0.00, 0.00, 0.11)
+14:18:36: [DEBUG] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 100] Command: CHANGE YAW: 135.0
+14:18:37: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 110] Average velocity: (0.00, 1.00, 0.10)
+14:18:37: [DEBUG] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 100] Command: CHANGE YAW: -26.565051177077994
+14:18:37: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 110] Average velocity: (0.00, 1.90, 0.10)
+14:18:37: [DEBUG] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 100] Command: CHANGE YAW: -45.0
+14:18:38: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 110] Average velocity: (0.00, 2.73, 0.09)
+14:18:38: [DEBUG] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 100] Command: CHANGE YAW: -90.0
+14:18:38: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 110] Average velocity: (0.87, 2.61, 0.09)
+14:18:38: [DEBUG] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 100] Command: CHANGE YAW: -45.0
+14:18:39: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 110] Average velocity: (1.67, 2.50, 0.08)
+14:18:39: [DEBUG] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 100] Command: CHANGE YAW: -90.0
+14:18:39: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 110] Average velocity: (2.40, 2.40, 0.08)
+14:18:39: [DEBUG] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 100] Command: CHANGE YAW: -135.0
+14:18:40: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 110] Average velocity: (2.31, 1.54, 0.08)
+14:18:40: [DEBUG] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 100] Command: CHANGE YAW: -63.43494882292201
+14:18:40: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 110] Average velocity: (2.22, 0.74, 0.07)
+14:18:40: [DEBUG] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 100] Command: CHANGE YAW: -90.0
+14:18:41: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 110] Average velocity: (2.14, 0.00, 0.07)
+14:18:41: [DEBUG] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 100] Command: CHANGE YAW: -116.56505117707799
+14:18:41: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 110] Average velocity: (1.38, 0.00, 0.07)
+14:18:41: [DEBUG] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 100] Command: CHANGE YAW: -45.0
+14:18:42: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 110] Average velocity: (0.67, 0.00, 0.07)
+14:18:42: [DEBUG] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 100] Command: CHANGE YAW: -63.43494882292201
+14:18:42: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 110] Average velocity: (0.00, 0.00, 0.06)
+14:18:42: [DEBUG] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 100] Command: CHANGE YAW: -90.0

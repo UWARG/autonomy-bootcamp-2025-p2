@@ -1,0 +1,28 @@
+14:18:27: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/modules/common/modules/logger/logger_main_setup.py | setup_main_logger | 62] main logger initialized
+14:18:27: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | main | 141] Connected!
+14:18:27: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 81] Queue: CHANGE ALTITUDE: 1
+14:18:27: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 81] Queue: CHANGE ALTITUDE: -1
+14:18:30: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 81] Queue: CHANGE YAW: 63.43494882292201
+14:18:31: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 81] Queue: CHANGE YAW: 90.0
+14:18:31: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 81] Queue: CHANGE YAW: 116.56505117707799
+14:18:32: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 81] Queue: CHANGE YAW: 45.0
+14:18:32: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 81] Queue: CHANGE YAW: 63.43494882292201
+14:18:33: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 81] Queue: CHANGE YAW: 90.0
+14:18:33: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 81] Queue: CHANGE YAW: 26.565051177077994
+14:18:34: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 81] Queue: CHANGE YAW: 45.0
+14:18:34: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 81] Queue: CHANGE YAW: 90.0
+14:18:35: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 81] Queue: CHANGE YAW: 45.0
+14:18:36: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 81] Queue: CHANGE YAW: 90.0
+14:18:36: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 81] Queue: CHANGE YAW: 135.0
+14:18:37: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 81] Queue: CHANGE YAW: -26.565051177077994
+14:18:37: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 81] Queue: CHANGE YAW: -45.0
+14:18:38: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 81] Queue: CHANGE YAW: -90.0
+14:18:38: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 81] Queue: CHANGE YAW: -45.0
+14:18:39: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 81] Queue: CHANGE YAW: -90.0
+14:18:39: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 81] Queue: CHANGE YAW: -135.0
+14:18:40: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 81] Queue: CHANGE YAW: -63.43494882292201
+14:18:40: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 81] Queue: CHANGE YAW: -90.0
+14:18:41: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 81] Queue: CHANGE YAW: -116.56505117707799
+14:18:41: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 81] Queue: CHANGE YAW: -45.0
+14:18:42: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 81] Queue: CHANGE YAW: -63.43494882292201
+14:18:42: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 81] Queue: CHANGE YAW: -90.0

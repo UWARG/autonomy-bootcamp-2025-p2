@@ -15,7 +15,7 @@ class Position:
     3D vector struct.
     """
 
-    def __init__(self, x: float, y: float, z: float) -> None:
+    def __init__(self: "Position", x: float, y: float, z: float) -> None:
         self.x = x
         self.y = y
         self.z = z
@@ -34,47 +34,138 @@ class Command:  # pylint: disable=too-many-instance-attributes
 
     @classmethod
     def create(
-        cls,
+        cls: "type[Command]",
         connection: mavutil.mavfile,
         target: Position,
-        args,  # Put your own arguments here
+        height_tolerance: float,
+        z_speed: float,
+        angle_tolerance: float,
+        turning_speed: float,
         local_logger: logger.Logger,
-    ):
+    ) -> "tuple[bool, Command | None]":
         """
         Falliable create (instantiation) method to create a Command object.
         """
-        pass  #  Create a Command object
+        # Validate inputs
+        if connection is None or local_logger is None:
+            return False, None
+
+        # Create and return Command object
+        return True, Command(
+            cls.__private_key,
+            connection,
+            target,
+            height_tolerance,
+            z_speed,
+            angle_tolerance,
+            turning_speed,
+            local_logger,
+        )
 
     def __init__(
-        self,
+        self: "Command",
         key: object,
         connection: mavutil.mavfile,
         target: Position,
-        args,  # Put your own arguments here
+        height_tolerance: float,
+        z_speed: float,
+        angle_tolerance: float,
+        turning_speed: float,
         local_logger: logger.Logger,
     ) -> None:
         assert key is Command.__private_key, "Use create() method"
 
-        # Do any intializiation here
+        self.__connection = connection
+        self.__target = target
+        self.__height_tolerance = height_tolerance
+        self.__z_speed = z_speed
+        self.__angle_tolerance = angle_tolerance
+        self.__turning_speed = turning_speed
+        self.__logger = local_logger
+
+        # Track velocities for average calculation
+        self.__velocity_sum_x = 0.0
+        self.__velocity_sum_y = 0.0
+        self.__velocity_sum_z = 0.0
+        self.__data_count = 0
 
     def run(
-        self,
-        args,  # Put your own arguments here
-    ):
+        self: "Command",
+        telemetry_data: telemetry.TelemetryData,
+    ) -> "tuple[bool, str | None]":
         """
         Make a decision based on received telemetry data.
         """
-        # Log average velocity for this trip so far
+        # Update average velocity calculation
+        self.__velocity_sum_x += telemetry_data.x_velocity
+        self.__velocity_sum_y += telemetry_data.y_velocity
+        self.__velocity_sum_z += telemetry_data.z_velocity
+        self.__data_count += 1
 
-        # Use COMMAND_LONG (76) message, assume the target_system=1 and target_componenet=0
-        # The appropriate commands to use are instructed below
+        avg_vel_x = self.__velocity_sum_x / self.__data_count
+        avg_vel_y = self.__velocity_sum_y / self.__data_count
+        avg_vel_z = self.__velocity_sum_z / self.__data_count
 
-        # Adjust height using the comand MAV_CMD_CONDITION_CHANGE_ALT (113)
-        # String to return to main: "CHANGE_ALTITUDE: {amount you changed it by, delta height in meters}"
+        # Log average velocity
+        self.__logger.info(
+            f"Average velocity: ({avg_vel_x:.2f}, "
+            f"{avg_vel_y:.2f}, {avg_vel_z:.2f})",
+            True,
+        )
 
-        # Adjust direction (yaw) using MAV_CMD_CONDITION_YAW (115). Must use relative angle to current state
-        # String to return to main: "CHANGING_YAW: {degree you changed it by in range [-180, 180]}"
-        # Positive angle is counter-clockwise as in a right handed system
+        # Check altitude difference
+        altitude_diff = self.__target.z - telemetry_data.z
+        if abs(altitude_diff) > self.__height_tolerance:
+            # Adjust altitude using MAV_CMD_CONDITION_CHANGE_ALT (113)
+            self.__connection.mav.command_long_send(
+                target_system=1,
+                target_component=0,
+                command=mavutil.mavlink.MAV_CMD_CONDITION_CHANGE_ALT,
+                confirmation=0,
+                param1=self.__z_speed,  # Ascent/descent speed
+                param2=0,
+                param3=0,
+                param4=0,
+                param5=0,
+                param6=0,
+                param7=self.__target.z,  # Target altitude
+            )
+            return True, f"CHANGE ALTITUDE: {altitude_diff}"
+
+        # Calculate angle to target
+        dx = self.__target.x - telemetry_data.x
+        dy = self.__target.y - telemetry_data.y
+        target_yaw = math.atan2(dy, dx)
+
+        # Calculate yaw difference (normalized to [-pi, pi])
+        yaw_diff = target_yaw - telemetry_data.yaw
+        # Normalize to [-pi, pi]
+        while yaw_diff > math.pi:
+            yaw_diff -= 2 * math.pi
+        while yaw_diff < -math.pi:
+            yaw_diff += 2 * math.pi
+
+        # Convert to degrees
+        yaw_diff_deg = math.degrees(yaw_diff)
+
+        if abs(yaw_diff_deg) > self.__angle_tolerance:
+            # Adjust yaw using MAV_CMD_CONDITION_YAW (115)
+            self.__connection.mav.command_long_send(
+                target_system=1,
+                target_component=0,
+                command=mavutil.mavlink.MAV_CMD_CONDITION_YAW,
+                confirmation=0,
+                param1=yaw_diff_deg,  # Target angle (relative)
+                param2=self.__turning_speed,  # Turning speed
+                param3=1,  # Direction: 1 = shortest path
+                param4=1,  # Relative angle (1 = yes, 0 = no)
+                param5=0,
+                param6=0,
+                param7=0,
+            )
+            return True, f"CHANGE YAW: {yaw_diff_deg}"
+
+        return True, None
 
 
 # =================================================================================================
