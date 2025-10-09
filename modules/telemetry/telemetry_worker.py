@@ -18,13 +18,17 @@ from ..common.modules.logger import logger
 # =================================================================================================
 def telemetry_worker(
     connection: mavutil.mavfile,
-    args,  # Place your own arguments here
-    # Add other necessary worker arguments here
+    timeout: float,
+    output_queue: queue_proxy_wrapper.QueueProxyWrapper,
+    controller: worker_controller.WorkerController,
 ) -> None:
     """
     Worker process.
 
-    args... describe what the arguments are
+    connection: MAVLink connection to receive telemetry from
+    timeout: Timeout in seconds for receiving both messages
+    output_queue: Queue to send TelemetryData objects
+    controller: Worker controller to handle pause/exit requests
     """
     # =============================================================================================
     #                          ↑ BOOTCAMPERS MODIFY ABOVE THIS COMMENT ↑
@@ -33,7 +37,9 @@ def telemetry_worker(
     # Instantiate logger
     worker_name = pathlib.Path(__file__).stem
     process_id = os.getpid()
-    result, local_logger = logger.Logger.create(f"{worker_name}_{process_id}", True)
+    result, local_logger = logger.Logger.create(
+        f"{worker_name}_{process_id}", True
+    )
     if not result:
         print("ERROR: Worker failed to create logger")
         return
@@ -47,8 +53,30 @@ def telemetry_worker(
     #                          ↓ BOOTCAMPERS MODIFY BELOW THIS COMMENT ↓
     # =============================================================================================
     # Instantiate class object (telemetry.Telemetry)
+    result, telemetry_instance = telemetry.Telemetry.create(
+        connection, timeout, local_logger
+    )
+    if not result:
+        local_logger.error("Failed to create Telemetry instance")
+        return
+
+    # Get Pylance to stop complaining
+    assert telemetry_instance is not None
 
     # Main loop: do work.
+    while not controller.is_exit_requested():
+        # Method blocks worker if pause has been requested
+        controller.check_pause()
+
+        # Get telemetry data
+        result, telemetry_data = telemetry_instance.run()
+        if not result or telemetry_data is None:
+            local_logger.warning("Failed to get telemetry data")
+            continue
+
+        # Put telemetry data into output queue
+        output_queue.queue.put(telemetry_data)
+        local_logger.debug(f"Telemetry: {telemetry_data}", True)
 
 
 # =================================================================================================
