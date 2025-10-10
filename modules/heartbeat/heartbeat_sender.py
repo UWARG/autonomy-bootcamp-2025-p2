@@ -36,7 +36,7 @@ class HeartbeatSender:
 
     def run(
         self: "HeartbeatSender",
-    ) -> "tuple[bool, None]":
+    ) -> bool:
         """send heartbeat"""
         try:
             self.__connection.mav.heartbeat_send(
@@ -46,9 +46,9 @@ class HeartbeatSender:
                 0,  # custom_mode
                 0,  # system_status
             )
-            return True, None
+            return True
         except Exception:  # pylint: disable=broad-except
-            return False, None
+            return False
 
 
 # =================================================================================================

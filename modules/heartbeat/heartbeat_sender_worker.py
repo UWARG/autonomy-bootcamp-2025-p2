@@ -66,7 +66,7 @@ def heartbeat_sender_worker(
         controller.check_pause()
 
         # Send heartbeat
-        result, _ = heartbeat_sender_instance.run()
+        result = heartbeat_sender_instance.run()
         if not result:
             local_logger.error("Failed to send heartbeat")
             continue
