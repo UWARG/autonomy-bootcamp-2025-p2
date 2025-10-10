@@ -3,6 +3,7 @@ Command worker to make decisions based on Telemetry Data.
 """
 
 import os
+import queue
 import pathlib
 
 from pymavlink import mavutil
@@ -83,8 +84,11 @@ def command_worker(
 
         # Get telemetry data from input queue
         try:
-            telemetry_data = input_queue.queue.get(timeout=0.1)
-        except:  # noqa: E722  # pylint: disable=bare-except
+            if input_queue.queue.empty():
+                continue
+            telemetry_data = input_queue.queue.get_nowait()
+        except (queue.Empty, OSError, ValueError, EOFError) as e:
+            local_logger.error(f"Queue error: {e}")
             continue
 
         # Process telemetry data and get command decision

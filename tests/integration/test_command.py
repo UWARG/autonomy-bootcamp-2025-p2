@@ -3,6 +3,7 @@ Test the command worker with a mocked drone.
 """
 
 import math
+import queue
 import multiprocessing as mp
 import subprocess
 import threading
@@ -77,9 +78,9 @@ def read_queue(
     """
     while not controller.is_exit_requested():
         try:
-            command_str = output_queue.queue.get(timeout=0.1)
+            command_str = output_queue.queue.get_nowait()
             main_logger.info(f"Queue: {command_str}")
-        except:  # noqa: E722  # pylint: disable=bare-except
+        except queue.Empty:
             continue
 
 
