@@ -1,6 +1,6 @@
-19:38:53: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/modules/common/modules/logger/logger_main_setup.py | setup_main_logger | 62] main logger initialized
-19:38:53: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | main | 123] Connected!
-19:38:54: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 78] Queue: {
+10:15:49: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/modules/common/modules/logger/logger_main_setup.py | setup_main_logger | 62] main logger initialized
+10:15:49: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | main | 123] Connected!
+10:15:49: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 78] Queue: {
             time_since_boot: 0,
             x: 0.0,
             y: 0.0,
@@ -15,7 +15,7 @@
             pitch_speed: 0.0,
             yaw_speed: 3.1415927410125732
         }
-19:38:54: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 78] Queue: {
+10:15:50: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 78] Queue: {
             time_since_boot: 500,
             x: 0.5,
             y: 0.0,
@@ -30,7 +30,7 @@
             pitch_speed: 0.0,
             yaw_speed: 3.1415927410125732
         }
-19:38:54: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 78] Queue: {
+10:15:50: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 78] Queue: {
             time_since_boot: 1000,
             x: 1.0,
             y: 0.0,
@@ -45,7 +45,7 @@
             pitch_speed: 0.0,
             yaw_speed: 3.1415927410125732
         }
-19:38:55: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 78] Queue: {
+10:15:51: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 78] Queue: {
             time_since_boot: 1500,
             x: 1.5,
             y: 0.0,
@@ -60,7 +60,7 @@
             pitch_speed: 0.0,
             yaw_speed: 3.1415927410125732
         }
-19:38:55: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 78] Queue: {
+10:15:51: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 78] Queue: {
             time_since_boot: 2000,
             x: 2.0,
             y: 0.0,
@@ -75,7 +75,7 @@
             pitch_speed: 0.0,
             yaw_speed: 3.1415927410125732
         }
-19:38:56: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 78] Queue: {
+10:15:52: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 78] Queue: {
             time_since_boot: 2500,
             x: 2.5,
             y: 0.0,
@@ -90,7 +90,7 @@
             pitch_speed: 0.0,
             yaw_speed: 3.1415927410125732
         }
-19:38:56: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 78] Queue: {
+10:15:52: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 78] Queue: {
             time_since_boot: 3000,
             x: 3.0,
             y: 0.0,
@@ -105,7 +105,7 @@
             pitch_speed: 0.0,
             yaw_speed: 3.1415927410125732
         }
-19:38:57: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 78] Queue: {
+10:15:53: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 78] Queue: {
             time_since_boot: 3500,
             x: 3.5,
             y: 0.0,
@@ -120,7 +120,7 @@
             pitch_speed: 0.0,
             yaw_speed: 3.1415927410125732
         }
-19:38:57: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 78] Queue: {
+10:15:53: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 78] Queue: {
             time_since_boot: 4000,
             x: 4.0,
             y: 0.0,
@@ -135,7 +135,7 @@
             pitch_speed: 0.0,
             yaw_speed: 3.1415927410125732
         }
-19:38:58: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 78] Queue: {
+10:15:54: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 78] Queue: {
             time_since_boot: 4500,
             x: 4.5,
             y: 0.0,
@@ -150,7 +150,7 @@
             pitch_speed: 0.0,
             yaw_speed: 3.1415927410125732
         }
-19:39:01: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 78] Queue: {
+10:15:57: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 78] Queue: {
             time_since_boot: 0,
             x: 0.0,
             y: 0.0,
@@ -165,7 +165,7 @@
             pitch_speed: 0.0,
             yaw_speed: 3.1415927410125732
         }
-19:39:02: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 78] Queue: {
+10:15:58: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 78] Queue: {
             time_since_boot: 500,
             x: 0.3333333432674408,
             y: 0.0,
@@ -180,7 +180,7 @@
             pitch_speed: 0.0,
             yaw_speed: 3.1415927410125732
         }
-19:39:02: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 78] Queue: {
+10:15:58: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 78] Queue: {
             time_since_boot: 1000,
             x: 0.6666666865348816,
             y: 0.0,
@@ -195,7 +195,7 @@
             pitch_speed: 0.0,
             yaw_speed: 3.1415927410125732
         }
-19:39:03: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 78] Queue: {
+10:15:59: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 78] Queue: {
             time_since_boot: 1500,
             x: 1.3333333730697632,
             y: 0.0,
@@ -210,7 +210,7 @@
             pitch_speed: 0.0,
             yaw_speed: 3.1415927410125732
         }
-19:39:03: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 78] Queue: {
+10:15:59: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 78] Queue: {
             time_since_boot: 2000,
             x: 1.6666666269302368,
             y: 0.0,
@@ -225,7 +225,7 @@
             pitch_speed: 0.0,
             yaw_speed: 3.1415927410125732
         }
-19:39:04: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 78] Queue: {
+10:16:00: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 78] Queue: {
             time_since_boot: 2500,
             x: 2.3333332538604736,
             y: 0.0,
@@ -240,7 +240,7 @@
             pitch_speed: 0.0,
             yaw_speed: 3.1415927410125732
         }
-19:39:04: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 78] Queue: {
+10:16:00: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 78] Queue: {
             time_since_boot: 3000,
             x: 2.6666667461395264,
             y: 0.0,
@@ -255,7 +255,7 @@
             pitch_speed: 0.0,
             yaw_speed: 3.1415927410125732
         }
-19:39:05: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 78] Queue: {
+10:16:01: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 78] Queue: {
             time_since_boot: 3500,
             x: 3.3333332538604736,
             y: 0.0,
@@ -270,7 +270,7 @@
             pitch_speed: 0.0,
             yaw_speed: 3.1415927410125732
         }
-19:39:05: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 78] Queue: {
+10:16:01: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 78] Queue: {
             time_since_boot: 4000,
             x: 3.6666667461395264,
             y: 0.0,
@@ -285,7 +285,7 @@
             pitch_speed: 0.0,
             yaw_speed: 3.1415927410125732
         }
-19:39:06: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 78] Queue: {
+10:16:02: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | read_queue | 78] Queue: {
             time_since_boot: 4500,
             x: 4.333333492279053,
             y: 0.0,

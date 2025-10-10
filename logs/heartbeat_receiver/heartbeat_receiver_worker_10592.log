@@ -1,0 +1,46 @@
+10:15:09: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver_worker.py | heartbeat_receiver_worker | 50] Logger initialized
+10:15:09: [DEBUG] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver_worker.py | heartbeat_receiver_worker | 80] Status: Connected
+10:15:10: [DEBUG] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver_worker.py | heartbeat_receiver_worker | 80] Status: Connected
+10:15:11: [WARNING] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 74] Warning: missed 1 heartbeat(s)
+10:15:11: [DEBUG] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver_worker.py | heartbeat_receiver_worker | 80] Status: Connected
+10:15:11: [DEBUG] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver_worker.py | heartbeat_receiver_worker | 80] Status: Connected
+10:15:12: [WARNING] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 74] Warning: missed 1 heartbeat(s)
+10:15:12: [DEBUG] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver_worker.py | heartbeat_receiver_worker | 80] Status: Connected
+10:15:12: [DEBUG] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver_worker.py | heartbeat_receiver_worker | 80] Status: Connected
+10:15:13: [WARNING] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 74] Warning: missed 1 heartbeat(s)
+10:15:13: [DEBUG] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver_worker.py | heartbeat_receiver_worker | 80] Status: Connected
+10:15:13: [DEBUG] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver_worker.py | heartbeat_receiver_worker | 80] Status: Connected
+10:15:14: [WARNING] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 74] Warning: missed 1 heartbeat(s)
+10:15:14: [DEBUG] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver_worker.py | heartbeat_receiver_worker | 80] Status: Connected
+10:15:15: [WARNING] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 74] Warning: missed 2 heartbeat(s)
+10:15:15: [DEBUG] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver_worker.py | heartbeat_receiver_worker | 80] Status: Connected
+10:15:16: [WARNING] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 74] Warning: missed 3 heartbeat(s)
+10:15:16: [DEBUG] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver_worker.py | heartbeat_receiver_worker | 80] Status: Connected
+10:15:17: [WARNING] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 74] Warning: missed 4 heartbeat(s)
+10:15:17: [DEBUG] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver_worker.py | heartbeat_receiver_worker | 80] Status: Connected
+10:15:18: [WARNING] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 68] Disconnected: missed 5 heartbeats
+10:15:18: [DEBUG] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver_worker.py | heartbeat_receiver_worker | 80] Status: Disconnected
+10:15:19: [DEBUG] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver_worker.py | heartbeat_receiver_worker | 80] Status: Disconnected
+10:15:20: [DEBUG] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver_worker.py | heartbeat_receiver_worker | 80] Status: Disconnected
+10:15:21: [DEBUG] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver_worker.py | heartbeat_receiver_worker | 80] Status: Disconnected
+10:15:22: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 58] Reconnected to drone
+10:15:22: [DEBUG] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver_worker.py | heartbeat_receiver_worker | 80] Status: Connected
+10:15:23: [WARNING] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 74] Warning: missed 1 heartbeat(s)
+10:15:23: [DEBUG] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver_worker.py | heartbeat_receiver_worker | 80] Status: Connected
+10:15:23: [DEBUG] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver_worker.py | heartbeat_receiver_worker | 80] Status: Connected
+10:15:24: [WARNING] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 74] Warning: missed 1 heartbeat(s)
+10:15:24: [DEBUG] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver_worker.py | heartbeat_receiver_worker | 80] Status: Connected
+10:15:24: [DEBUG] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver_worker.py | heartbeat_receiver_worker | 80] Status: Connected
+10:15:25: [WARNING] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 74] Warning: missed 1 heartbeat(s)
+10:15:25: [DEBUG] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver_worker.py | heartbeat_receiver_worker | 80] Status: Connected
+10:15:25: [DEBUG] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver_worker.py | heartbeat_receiver_worker | 80] Status: Connected
+10:15:26: [WARNING] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 74] Warning: missed 1 heartbeat(s)
+10:15:26: [DEBUG] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver_worker.py | heartbeat_receiver_worker | 80] Status: Connected
+10:15:26: [DEBUG] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver_worker.py | heartbeat_receiver_worker | 80] Status: Connected
+10:15:27: [WARNING] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 74] Warning: missed 1 heartbeat(s)
+10:15:27: [DEBUG] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver_worker.py | heartbeat_receiver_worker | 80] Status: Connected
+10:15:28: [DEBUG] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver_worker.py | heartbeat_receiver_worker | 80] Status: Connected
+10:15:29: [WARNING] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 74] Warning: missed 1 heartbeat(s)
+10:15:29: [DEBUG] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver_worker.py | heartbeat_receiver_worker | 80] Status: Connected
+10:15:30: [WARNING] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 74] Warning: missed 2 heartbeat(s)
+10:15:30: [DEBUG] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver_worker.py | heartbeat_receiver_worker | 80] Status: Connected

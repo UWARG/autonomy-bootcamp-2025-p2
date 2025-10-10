@@ -1,5 +1,0 @@
-18:42:46: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver_worker.py | heartbeat_receiver_worker | 50] Logger initialized
-18:42:47: [WARNING] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 74] Warning: missed 1 heartbeat(s)
-18:42:47: [DEBUG] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver_worker.py | heartbeat_receiver_worker | 80] Status: Connected
-18:42:48: [WARNING] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 74] Warning: missed 2 heartbeat(s)
-18:42:48: [DEBUG] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver_worker.py | heartbeat_receiver_worker | 80] Status: Connected

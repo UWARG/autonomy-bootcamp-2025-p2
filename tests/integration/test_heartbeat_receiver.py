@@ -76,7 +76,7 @@ def read_queue(
         try:
             # Get status from queue with timeout
             status = output_queue.queue.get(timeout=0.1)
-            main_logger.info(f"Queue: {status}")
+            main_logger.info(status)
         except Exception:  # pylint: disable=broad-except
             # Queue is empty or timeout, continue
             continue

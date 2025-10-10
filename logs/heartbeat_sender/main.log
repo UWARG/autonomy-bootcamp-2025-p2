@@ -1,2 +1,2 @@
-18:50:22: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/modules/common/modules/logger/logger_main_setup.py | setup_main_logger | 62] main logger initialized
-18:50:22: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_sender.py | main | 92] Connected!
+10:14:44: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/modules/common/modules/logger/logger_main_setup.py | setup_main_logger | 62] main logger initialized
+10:14:44: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_sender.py | main | 92] Connected!

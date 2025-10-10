@@ -1,4 +1,30 @@
-18:42:46: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/modules/common/modules/logger/logger_main_setup.py | setup_main_logger | 62] main logger initialized
-18:42:46: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | main | 124] Connected!
-18:42:47: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 79] Queue: Connected
-18:42:48: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 79] Queue: Connected
+10:15:09: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/modules/common/modules/logger/logger_main_setup.py | setup_main_logger | 62] main logger initialized
+10:15:09: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | main | 124] Connected!
+10:15:09: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 79] Connected
+10:15:10: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 79] Connected
+10:15:11: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 79] Connected
+10:15:11: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 79] Connected
+10:15:12: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 79] Connected
+10:15:12: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 79] Connected
+10:15:13: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 79] Connected
+10:15:13: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 79] Connected
+10:15:14: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 79] Connected
+10:15:15: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 79] Connected
+10:15:16: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 79] Connected
+10:15:17: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 79] Connected
+10:15:18: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 79] Disconnected
+10:15:19: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 79] Disconnected
+10:15:20: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 79] Disconnected
+10:15:21: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 79] Disconnected
+10:15:22: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 79] Connected
+10:15:23: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 79] Connected
+10:15:23: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 79] Connected
+10:15:24: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 79] Connected
+10:15:24: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 79] Connected
+10:15:25: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 79] Connected
+10:15:25: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 79] Connected
+10:15:26: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 79] Connected
+10:15:26: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 79] Connected
+10:15:27: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 79] Connected
+10:15:28: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 79] Connected
+10:15:29: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 79] Connected

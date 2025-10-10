@@ -1,0 +1,12 @@
+10:14:38: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/tests/integration/mock_drones/heartbeat_sender_drone.py | main | 40] Logger initialized
+10:14:45: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/tests/integration/mock_drones/heartbeat_sender_drone.py | main | 71] Drone: Recieved heartbeat!
+10:14:46: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/tests/integration/mock_drones/heartbeat_sender_drone.py | main | 71] Drone: Recieved heartbeat!
+10:14:47: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/tests/integration/mock_drones/heartbeat_sender_drone.py | main | 71] Drone: Recieved heartbeat!
+10:14:48: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/tests/integration/mock_drones/heartbeat_sender_drone.py | main | 71] Drone: Recieved heartbeat!
+10:14:49: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/tests/integration/mock_drones/heartbeat_sender_drone.py | main | 71] Drone: Recieved heartbeat!
+10:14:50: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/tests/integration/mock_drones/heartbeat_sender_drone.py | main | 71] Drone: Recieved heartbeat!
+10:14:51: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/tests/integration/mock_drones/heartbeat_sender_drone.py | main | 71] Drone: Recieved heartbeat!
+10:14:52: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/tests/integration/mock_drones/heartbeat_sender_drone.py | main | 71] Drone: Recieved heartbeat!
+10:14:53: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/tests/integration/mock_drones/heartbeat_sender_drone.py | main | 71] Drone: Recieved heartbeat!
+10:14:54: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/tests/integration/mock_drones/heartbeat_sender_drone.py | main | 71] Drone: Recieved heartbeat!
+10:14:55: [INFO] [/Users/rickytang/Coding/github/autonomy-bootcamp-2025-p2/tests/integration/mock_drones/heartbeat_sender_drone.py | main | 80] Passed!
