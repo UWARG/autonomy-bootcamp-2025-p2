@@ -3,6 +3,7 @@ Test the telemetry worker with a mocked drone.
 """
 
 import multiprocessing as mp
+import queue
 import subprocess
 import threading
 
@@ -76,7 +77,7 @@ def read_queue(
             # Get telemetry data from queue with timeout
             telemetry_data = output_queue.queue.get(timeout=0.1)
             main_logger.info(f"Queue: {telemetry_data}")
-        except Exception:  # pylint: disable=broad-except
+        except queue.Empty:
             # Queue is empty or timeout, continue
             continue
 

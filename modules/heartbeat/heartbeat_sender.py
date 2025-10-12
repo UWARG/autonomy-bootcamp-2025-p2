@@ -47,7 +47,7 @@ class HeartbeatSender:
                 0,  # system_status
             )
             return True
-        except Exception:  # pylint: disable=broad-except
+        except (OSError, ValueError, EOFError) as e:
             return False
 
 
