@@ -47,7 +47,7 @@ class HeartbeatSender:
                 0,  # system_status
             )
             return True
-        except (OSError, ValueError, EOFError) as e:
+        except (OSError, ValueError, EOFError):
             return False
 
 
