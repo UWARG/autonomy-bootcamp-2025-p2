@@ -156,7 +156,7 @@ def main() -> int:
         target=command_worker.command_worker,  # What's the function that this worker runs
         work_arguments=(  # The function's arguments excluding input/output queues and controller
             connection,
-            TARGET
+            TARGET,
         ),
         input_queues=[
             telemetry_to_command_queue
