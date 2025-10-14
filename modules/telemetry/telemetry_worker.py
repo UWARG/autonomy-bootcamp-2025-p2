@@ -18,13 +18,15 @@ from ..common.modules.logger import logger
 # =================================================================================================
 def telemetry_worker(
     connection: mavutil.mavfile,
-    args,  # Place your own arguments here
-    # Add other necessary worker arguments here
+    controller: worker_controller.WorkerController,
+    output_queue: queue_proxy_wrapper.QueueProxyWrapper,
 ) -> None:
     """
     Worker process.
 
-    args... describe what the arguments are
+    connection is the connection to the drone. Gets passed to the heartbeat_sender.
+    controller is how the main process communicates to this worker process.
+    telemetry_queue is a queue of length 1 that contains the telemetry data
     """
     # =============================================================================================
     #                          ↑ BOOTCAMPERS MODIFY ABOVE THIS COMMENT ↑
@@ -46,9 +48,26 @@ def telemetry_worker(
     # =============================================================================================
     #                          ↓ BOOTCAMPERS MODIFY BELOW THIS COMMENT ↓
     # =============================================================================================
-    # Instantiate class object (telemetry.Telemetry)
+    # Instantiate class object
+    result, telemetry_instance = telemetry.Telemetry.create(connection, local_logger)
+    if not result:
+        local_logger.error("Worker failed to create telemetry_instance")
+        return
 
-    # Main loop: do work.
+    # Loop forever until exit has been requested (producer)
+    while not controller.is_exit_requested():
+        # Method blocks worker if pause has been requested
+        controller.check_pause()
+
+        # All of the work should be done within the class
+        # Getting the output is as easy as calling a single method
+        result, telemetry_data = telemetry_instance.run_receive_telemetry()
+
+        # Check result
+        if not result:
+            continue
+
+        output_queue.queue.put(telemetry_data)
 
 
 # =================================================================================================

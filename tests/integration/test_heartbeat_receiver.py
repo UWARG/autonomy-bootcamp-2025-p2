@@ -49,22 +49,36 @@ def start_drone() -> None:
 #                            ↓ BOOTCAMPERS MODIFY BELOW THIS COMMENT ↓
 # =================================================================================================
 def stop(
-    args,  # Add any necessary arguments
+    controller: worker_controller.WorkerController,
+    connection_status_queue: queue_proxy_wrapper.QueueProxyWrapper,
+    main_logger: logger.Logger,
 ) -> None:
     """
     Stop the workers.
     """
-    pass  # Add logic to stop your worker
+    controller.request_exit()
+    connection_status_queue.fill_and_drain_queue()
+    main_logger.info("Workers stopped", True)
 
 
 def read_queue(
-    args,  # Add any necessary arguments
+    connection_status_queue: queue_proxy_wrapper.QueueProxyWrapper,
+    controller: worker_controller.WorkerController,
     main_logger: logger.Logger,
 ) -> None:
     """
     Read and print the output queue.
     """
-    pass  # Add logic to read from your worker's output queue and print it using the logger
+
+    while not controller.is_exit_requested():
+        try:
+            connection_status = connection_status_queue.queue.get(block=True)
+            if not connection_status:
+                continue
+            main_logger.info(f"Drone connection status: {connection_status}")
+
+        except (AssertionError, TypeError, AttributeError):
+            print("error in reading queue")
 
 
 # =================================================================================================
@@ -113,23 +127,40 @@ def main() -> int:
     # =============================================================================================
     # Mock starting a worker, since cannot actually start a new process
     # Create a worker controller for your worker
+    controller = worker_controller.WorkerController()
 
     # Create a multiprocess manager for synchronized queues
+    mp_manager = mp.Manager()
 
     # Create your queues
+    connection_status_queue = queue_proxy_wrapper.QueueProxyWrapper(
+        mp_manager,
+        1,
+    )
 
     # Just set a timer to stop the worker after a while, since the worker infinite loops
     threading.Timer(
         HEARTBEAT_PERIOD * (NUM_TRIALS * 2 + DISCONNECT_THRESHOLD + NUM_DISCONNECTS + 2),
         stop,
-        (args,),
+        (
+            controller,
+            connection_status_queue,
+            main_logger,
+        ),
     ).start()
 
     # Read the main queue (worker outputs)
-    threading.Thread(target=read_queue, args=(args, main_logger)).start()
+    threading.Thread(
+        target=read_queue,
+        args=(
+            connection_status_queue,
+            controller,
+            main_logger,
+        ),
+    ).start()
 
     heartbeat_receiver_worker.heartbeat_receiver_worker(
-        # Place your own arguments here
+        connection, controller, connection_status_queue
     )
     # =============================================================================================
     #                          ↑ BOOTCAMPERS MODIFY ABOVE THIS COMMENT ↑

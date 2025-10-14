@@ -76,37 +76,84 @@ class Telemetry:
     def create(
         cls,
         connection: mavutil.mavfile,
-        args,  # Put your own arguments here
         local_logger: logger.Logger,
-    ):
+    ) -> "tuple[True, Telemetry] | tuple[False, None]":
         """
-        Falliable create (instantiation) method to create a Telemetry object.
+        Falliable create (instantiation) method to create a HeartbeatReceiver object.
         """
-        pass  # Create a Telemetry object
+        try:
+            # Create a Telemetry object
+            return (True, Telemetry(cls.__private_key, connection, local_logger))
+
+        except (AssertionError, TypeError, AttributeError):
+            return (False, None)
 
     def __init__(
         self,
         key: object,
         connection: mavutil.mavfile,
-        args,  # Put your own arguments here
         local_logger: logger.Logger,
     ) -> None:
         assert key is Telemetry.__private_key, "Use create() method"
 
-        # Do any intializiation here
+        self.connection = connection
+        self.local_logger = local_logger
 
-    def run(
+    def run_receive_telemetry(
         self,
-        args,  # Put your own arguments here
-    ):
+    ) -> "tuple[True, TelemetryData] | tuple[False, None]":
         """
         Receive LOCAL_POSITION_NED and ATTITUDE messages from the drone,
         combining them together to form a single TelemetryData object.
         """
-        # Read MAVLink message LOCAL_POSITION_NED (32)
-        # Read MAVLink message ATTITUDE (30)
-        # Return the most recent of both, and use the most recent message's timestamp
-        pass
+
+        # have an if statement or while loop to wait for 1 second
+        # once one second is up, just False
+        local_position = None
+        attitude = None
+
+        start = time.time()
+
+        try:
+            # while 1 second hasn't passed yet and local_position and attitude messages have not yet been received, keep polling
+            while ((time.time() - start) < 1) and not (local_position and attitude):
+                msg = self.connection.recv_match(blocking=False)
+
+                if msg:
+                    if msg.get_type() == "LOCAL_POSITION_NED":
+                        local_position = msg
+
+                    elif msg.get_type() == "ATTITUDE":
+                        attitude = msg
+
+            # if after while loop ends, local_position or attitude have still not been defined, return False
+            if not (local_position and attitude):
+                self.local_logger.info("No new telemetry data generated.")
+                return (False, None)
+
+            self.local_logger.info("New telemetry data generated.")
+            return (
+                True,
+                TelemetryData(
+                    max(attitude.time_boot_ms, local_position.time_boot_ms),  # use most recent time
+                    local_position.x,
+                    local_position.y,
+                    local_position.z,
+                    local_position.vx,
+                    local_position.vy,
+                    local_position.vz,
+                    attitude.roll,
+                    attitude.pitch,
+                    attitude.yaw,
+                    attitude.rollspeed,
+                    attitude.pitchspeed,
+                    attitude.yawspeed,
+                ),
+            )
+
+        except (AssertionError, TypeError, AttributeError):
+            self.local_logger.error("telemetry.py failed to receive & parse telemetry data")
+            return (False, None)
 
 
 # =================================================================================================

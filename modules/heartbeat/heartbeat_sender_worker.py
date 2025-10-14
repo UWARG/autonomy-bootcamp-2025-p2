@@ -18,13 +18,13 @@ from ..common.modules.logger import logger
 # =================================================================================================
 def heartbeat_sender_worker(
     connection: mavutil.mavfile,
-    args,  # Place your own arguments here
-    # Add other necessary worker arguments here
+    controller: worker_controller.WorkerController,
 ) -> None:
     """
     Worker process.
 
-    args... describe what the arguments are
+    connection is the connection to the drone. Gets passed to the heartbeat_sender.
+    controller is how the main process communicates to this worker process.
     """
     # =============================================================================================
     #                          ↑ BOOTCAMPERS MODIFY ABOVE THIS COMMENT ↑
@@ -46,9 +46,30 @@ def heartbeat_sender_worker(
     # =============================================================================================
     #                          ↓ BOOTCAMPERS MODIFY BELOW THIS COMMENT ↓
     # =============================================================================================
-    # Instantiate class object (heartbeat_sender.HeartbeatSender)
 
-    # Main loop: do work.
+    # Instantiate class object
+    result, heartbeat_instance = heartbeat_sender.HeartbeatSender.create(connection)
+    if not result:
+        local_logger.error("Worker failed to create heartbeat_instance")
+        return
+
+    # Loop forever until exit has been requested (producer)
+    while not controller.is_exit_requested():
+        # Method blocks worker if pause has been requested
+        controller.check_pause()
+
+        # All of the work should be done within the class
+        # Getting the output is as easy as calling a single method
+        success = heartbeat_instance.run_send_heartbeat()
+
+        # Check result
+        if not success:
+            local_logger.error("Heartbeat failed", True)
+            continue
+
+        local_logger.info("Heartbeat sent", True)
+
+        time.sleep(1)
 
 
 # =================================================================================================

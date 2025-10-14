@@ -1,0 +1,3 @@
+00:08:23: [INFO] [C:\Users\vidst\Documents\Coding\WARG\Bootcamp\autonomy-bootcamp-2025-p2\modules\common\modules\logger\logger_main_setup.py | setup_main_logger | 62] main logger initialized
+00:08:23: [INFO] [C:\Users\vidst\Documents\Coding\WARG\Bootcamp\autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_sender.py | main | 90] Connected!
+00:08:34: [INFO] [C:\Users\vidst\Documents\Coding\WARG\Bootcamp\autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_sender.py | stop | 55] Workers stopped

@@ -1,0 +1,60 @@
+00:44:14: [INFO] [C:\Users\vidst\Documents\Coding\WARG\Bootcamp\autonomy-bootcamp-2025-p2\modules\common\modules\logger\logger_main_setup.py | setup_main_logger | 62] main logger initialized
+00:44:14: [INFO] [C:\Users\vidst\Documents\Coding\WARG\Bootcamp\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | main | 146] Connected!
+00:44:15: [INFO] [C:\Users\vidst\Documents\Coding\WARG\Bootcamp\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | put_queue | 105] Added telemetry data to queue
+00:44:15: [INFO] [C:\Users\vidst\Documents\Coding\WARG\Bootcamp\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 84] CHANGE_ALTITUDE: 1
+00:44:16: [INFO] [C:\Users\vidst\Documents\Coding\WARG\Bootcamp\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | put_queue | 105] Added telemetry data to queue
+00:44:16: [INFO] [C:\Users\vidst\Documents\Coding\WARG\Bootcamp\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 84] CHANGE_ALTITUDE: 1
+00:44:16: [INFO] [C:\Users\vidst\Documents\Coding\WARG\Bootcamp\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | put_queue | 105] Added telemetry data to queue
+00:44:17: [INFO] [C:\Users\vidst\Documents\Coding\WARG\Bootcamp\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | put_queue | 105] Added telemetry data to queue
+00:44:17: [INFO] [C:\Users\vidst\Documents\Coding\WARG\Bootcamp\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | put_queue | 105] Added telemetry data to queue
+00:44:18: [INFO] [C:\Users\vidst\Documents\Coding\WARG\Bootcamp\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | put_queue | 105] Added telemetry data to queue
+00:44:18: [INFO] [C:\Users\vidst\Documents\Coding\WARG\Bootcamp\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | put_queue | 105] Added telemetry data to queue
+00:44:19: [INFO] [C:\Users\vidst\Documents\Coding\WARG\Bootcamp\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | put_queue | 105] Added telemetry data to queue
+00:44:19: [INFO] [C:\Users\vidst\Documents\Coding\WARG\Bootcamp\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 84] CHANGE_YAW: 63.434948822922024
+00:44:19: [INFO] [C:\Users\vidst\Documents\Coding\WARG\Bootcamp\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | put_queue | 105] Added telemetry data to queue
+00:44:19: [INFO] [C:\Users\vidst\Documents\Coding\WARG\Bootcamp\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 84] CHANGE_YAW: 90.0
+00:44:20: [INFO] [C:\Users\vidst\Documents\Coding\WARG\Bootcamp\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | put_queue | 105] Added telemetry data to queue
+00:44:20: [INFO] [C:\Users\vidst\Documents\Coding\WARG\Bootcamp\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 84] CHANGE_YAW: 116.56505117707798
+00:44:20: [INFO] [C:\Users\vidst\Documents\Coding\WARG\Bootcamp\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | put_queue | 105] Added telemetry data to queue
+00:44:20: [INFO] [C:\Users\vidst\Documents\Coding\WARG\Bootcamp\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 84] CHANGE_YAW: 45.0
+00:44:21: [INFO] [C:\Users\vidst\Documents\Coding\WARG\Bootcamp\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | put_queue | 105] Added telemetry data to queue
+00:44:21: [INFO] [C:\Users\vidst\Documents\Coding\WARG\Bootcamp\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 84] CHANGE_YAW: 63.434948822922024
+00:44:21: [INFO] [C:\Users\vidst\Documents\Coding\WARG\Bootcamp\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | put_queue | 105] Added telemetry data to queue
+00:44:21: [INFO] [C:\Users\vidst\Documents\Coding\WARG\Bootcamp\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 84] CHANGE_YAW: 90.0
+00:44:22: [INFO] [C:\Users\vidst\Documents\Coding\WARG\Bootcamp\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | put_queue | 105] Added telemetry data to queue
+00:44:22: [INFO] [C:\Users\vidst\Documents\Coding\WARG\Bootcamp\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 84] CHANGE_YAW: 26.565051177077976
+00:44:22: [INFO] [C:\Users\vidst\Documents\Coding\WARG\Bootcamp\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | put_queue | 105] Added telemetry data to queue
+00:44:22: [INFO] [C:\Users\vidst\Documents\Coding\WARG\Bootcamp\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 84] CHANGE_YAW: 45.0
+00:44:23: [INFO] [C:\Users\vidst\Documents\Coding\WARG\Bootcamp\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | put_queue | 105] Added telemetry data to queue
+00:44:23: [INFO] [C:\Users\vidst\Documents\Coding\WARG\Bootcamp\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 84] CHANGE_YAW: 90.0
+00:44:23: [INFO] [C:\Users\vidst\Documents\Coding\WARG\Bootcamp\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | put_queue | 105] Added telemetry data to queue
+00:44:23: [INFO] [C:\Users\vidst\Documents\Coding\WARG\Bootcamp\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 84] CHANGE_YAW: 45.0
+00:44:24: [INFO] [C:\Users\vidst\Documents\Coding\WARG\Bootcamp\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | put_queue | 105] Added telemetry data to queue
+00:44:24: [INFO] [C:\Users\vidst\Documents\Coding\WARG\Bootcamp\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 84] CHANGE_YAW: 90.0
+00:44:24: [INFO] [C:\Users\vidst\Documents\Coding\WARG\Bootcamp\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | put_queue | 105] Added telemetry data to queue
+00:44:24: [INFO] [C:\Users\vidst\Documents\Coding\WARG\Bootcamp\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 84] CHANGE_YAW: 135.0
+00:44:25: [INFO] [C:\Users\vidst\Documents\Coding\WARG\Bootcamp\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | put_queue | 105] Added telemetry data to queue
+00:44:25: [INFO] [C:\Users\vidst\Documents\Coding\WARG\Bootcamp\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 84] CHANGE_YAW: -26.565051177078004
+00:44:25: [INFO] [C:\Users\vidst\Documents\Coding\WARG\Bootcamp\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | put_queue | 105] Added telemetry data to queue
+00:44:25: [INFO] [C:\Users\vidst\Documents\Coding\WARG\Bootcamp\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 84] CHANGE_YAW: -45.0
+00:44:26: [INFO] [C:\Users\vidst\Documents\Coding\WARG\Bootcamp\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | put_queue | 105] Added telemetry data to queue
+00:44:26: [INFO] [C:\Users\vidst\Documents\Coding\WARG\Bootcamp\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 84] CHANGE_YAW: -90.0
+00:44:26: [INFO] [C:\Users\vidst\Documents\Coding\WARG\Bootcamp\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | put_queue | 105] Added telemetry data to queue
+00:44:26: [INFO] [C:\Users\vidst\Documents\Coding\WARG\Bootcamp\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 84] CHANGE_YAW: -45.0
+00:44:27: [INFO] [C:\Users\vidst\Documents\Coding\WARG\Bootcamp\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | put_queue | 105] Added telemetry data to queue
+00:44:27: [INFO] [C:\Users\vidst\Documents\Coding\WARG\Bootcamp\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 84] CHANGE_YAW: -90.0
+00:44:27: [INFO] [C:\Users\vidst\Documents\Coding\WARG\Bootcamp\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | put_queue | 105] Added telemetry data to queue
+00:44:27: [INFO] [C:\Users\vidst\Documents\Coding\WARG\Bootcamp\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 84] CHANGE_YAW: -135.0
+00:44:28: [INFO] [C:\Users\vidst\Documents\Coding\WARG\Bootcamp\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | put_queue | 105] Added telemetry data to queue
+00:44:28: [INFO] [C:\Users\vidst\Documents\Coding\WARG\Bootcamp\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 84] CHANGE_YAW: -63.43494882292201
+00:44:28: [INFO] [C:\Users\vidst\Documents\Coding\WARG\Bootcamp\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | put_queue | 105] Added telemetry data to queue
+00:44:28: [INFO] [C:\Users\vidst\Documents\Coding\WARG\Bootcamp\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 84] CHANGE_YAW: -90.0
+00:44:29: [INFO] [C:\Users\vidst\Documents\Coding\WARG\Bootcamp\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | put_queue | 105] Added telemetry data to queue
+00:44:29: [INFO] [C:\Users\vidst\Documents\Coding\WARG\Bootcamp\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 84] CHANGE_YAW: -116.56505117707798
+00:44:29: [INFO] [C:\Users\vidst\Documents\Coding\WARG\Bootcamp\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | put_queue | 105] Added telemetry data to queue
+00:44:29: [INFO] [C:\Users\vidst\Documents\Coding\WARG\Bootcamp\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 84] CHANGE_YAW: -45.0
+00:44:30: [INFO] [C:\Users\vidst\Documents\Coding\WARG\Bootcamp\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | put_queue | 105] Added telemetry data to queue
+00:44:30: [INFO] [C:\Users\vidst\Documents\Coding\WARG\Bootcamp\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 84] CHANGE_YAW: -63.43494882292201
+00:44:30: [INFO] [C:\Users\vidst\Documents\Coding\WARG\Bootcamp\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | put_queue | 105] Added telemetry data to queue
+00:44:30: [INFO] [C:\Users\vidst\Documents\Coding\WARG\Bootcamp\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 84] CHANGE_YAW: -90.0
+00:44:31: [INFO] [C:\Users\vidst\Documents\Coding\WARG\Bootcamp\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | stop | 68] Workers stopped

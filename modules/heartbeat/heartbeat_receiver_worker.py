@@ -1,5 +1,5 @@
 """
-Heartbeat worker that sends heartbeats periodically.
+Heartbeat worker that receives heartbeats periodically.
 """
 
 import os
@@ -18,13 +18,15 @@ from ..common.modules.logger import logger
 # =================================================================================================
 def heartbeat_receiver_worker(
     connection: mavutil.mavfile,
-    args,  # Place your own arguments here
-    # Add other necessary worker arguments here
+    controller: worker_controller.WorkerController,
+    output_queue: queue_proxy_wrapper.QueueProxyWrapper,
 ) -> None:
     """
     Worker process.
 
-    args... describe what the arguments are
+    connection is the connection to the drone. Gets passed to the heartbeat_sender.
+    controller is how the main process communicates to this worker process.
+    connection_status_queue is a queue of length 1 that contains the connection status
     """
     # =============================================================================================
     #                          ↑ BOOTCAMPERS MODIFY ABOVE THIS COMMENT ↑
@@ -46,9 +48,28 @@ def heartbeat_receiver_worker(
     # =============================================================================================
     #                          ↓ BOOTCAMPERS MODIFY BELOW THIS COMMENT ↓
     # =============================================================================================
-    # Instantiate class object (heartbeat_receiver.HeartbeatReceiver)
+    # Instantiate class object
+    result, heartbeat_instance = heartbeat_receiver.HeartbeatReceiver.create(
+        connection, local_logger
+    )
+    if not result:
+        local_logger.error("Worker failed to create heartbeat_instance")
+        return
 
-    # Main loop: do work.
+    # Loop forever until exit has been requested (producer)
+    while not controller.is_exit_requested():
+        # Method blocks worker if pause has been requested
+        controller.check_pause()
+
+        # All of the work should be done within the class
+        # Getting the output is as easy as calling a single method
+        result, connection_status = heartbeat_instance.run_receive_heartbeat()
+
+        # Check result
+        if not result:
+            continue
+
+        output_queue.queue.put(connection_status)
 
 
 # =================================================================================================
