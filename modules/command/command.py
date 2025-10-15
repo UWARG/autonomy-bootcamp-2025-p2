@@ -139,7 +139,7 @@ class Command:  # pylint: disable=too-many-instance-attributes
                     0,  # confirmation
                     abs(yaw_error),  # param1: yaw angle to turn (deg)
                     5,  # param2: yaw speed (deg/s)
-                    (1 if yaw_error > 0 else -1),  # param3: direction (1=ccw, -1=cw)
+                    0,  # 0 = shortest direction, as per mavlink's documentation
                     1,  # param4: set to relative
                     0,
                     0,
