@@ -84,7 +84,7 @@ def read_queue(
             main_logger.info(command_string)
 
         except (AssertionError, TypeError, AttributeError):
-            print("error in reading queue")
+            main_logger.error("error in reading queue")
 
 
 def put_queue(

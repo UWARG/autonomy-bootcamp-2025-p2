@@ -68,10 +68,6 @@ def command_worker(
         # until the queue is non-empty
         telemetry_data = input_queue.queue.get()
 
-        # Exit on sentinel
-        if telemetry_data is None:
-            break
-
         # All of the work should be done within the class
         # Getting the output is as easy as calling a single method
         result, string_command = command_instance.run_generate_command(telemetry_data)

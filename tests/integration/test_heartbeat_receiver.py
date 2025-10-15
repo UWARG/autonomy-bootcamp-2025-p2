@@ -78,7 +78,7 @@ def read_queue(
             main_logger.info(f"Drone connection status: {connection_status}")
 
         except (AssertionError, TypeError, AttributeError):
-            print("error in reading queue")
+            main_logger.error("error in reading queue")
 
 
 # =================================================================================================

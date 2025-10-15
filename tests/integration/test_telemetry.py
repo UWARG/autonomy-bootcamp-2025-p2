@@ -75,7 +75,7 @@ def read_queue(
             main_logger.info(f"New Telemetry Data: {telemetry_data}")
 
         except (AssertionError, TypeError, AttributeError):
-            print("error in reading queue")
+            main_logger.error("error in reading queue")
 
 
 # =================================================================================================
