@@ -1,3 +1,0 @@
-01:25:04: [INFO] [C:\Users\Happy\Desktop\WARG Autonomy Bootcamp\autonomy-bootcamp-2025-p2\tests\integration\mock_drones\telemetry_drone.py | main | 45] Logger initialized
-01:25:04: [INFO] [C:\Users\Happy\Desktop\WARG Autonomy Bootcamp\autonomy-bootcamp-2025-p2\tests\integration\mock_drones\telemetry_drone.py | send_telemetry | 75] Drone: Sent attitude 0
-01:25:04: [INFO] [C:\Users\Happy\Desktop\WARG Autonomy Bootcamp\autonomy-bootcamp-2025-p2\tests\integration\mock_drones\telemetry_drone.py | send_telemetry | 95] Drone: Sent position 0

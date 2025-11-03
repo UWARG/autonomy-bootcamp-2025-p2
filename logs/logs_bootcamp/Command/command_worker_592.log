@@ -1,0 +1,90 @@
+00:39:48: [INFO] [C:\Users\Happy\Desktop\WARG Autonomy Bootcamp\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 46] Logger initialized for Command Worker
+00:39:48: [INFO] [C:\Users\Happy\Desktop\WARG Autonomy Bootcamp\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 59] Command object created successfully
+00:39:48: [INFO] [C:\Users\Happy\Desktop\WARG Autonomy Bootcamp\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 72] Received telemetry: pos=(0.00, 0.00, 29.00), yaw=0.00
+00:39:48: [INFO] [C:\Users\Happy\Desktop\WARG Autonomy Bootcamp\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 80] Command output: CHANGE ALTITUDE: 1.00
+00:39:49: [INFO] [C:\Users\Happy\Desktop\WARG Autonomy Bootcamp\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 72] Received telemetry: pos=(0.00, 0.00, 31.00), yaw=0.00
+00:39:49: [INFO] [C:\Users\Happy\Desktop\WARG Autonomy Bootcamp\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 80] Command output: CHANGE ALTITUDE: -1.00
+00:39:49: [INFO] [C:\Users\Happy\Desktop\WARG Autonomy Bootcamp\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 72] Received telemetry: pos=(0.00, 0.00, 30.20), yaw=1.11
+00:39:50: [INFO] [C:\Users\Happy\Desktop\WARG Autonomy Bootcamp\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 72] Received telemetry: pos=(0.00, 0.00, 29.80), yaw=1.11
+00:39:50: [INFO] [C:\Users\Happy\Desktop\WARG Autonomy Bootcamp\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 90] Average velocity vector: (0.0, 0.0, 7.45) m/s
+00:39:50: [INFO] [C:\Users\Happy\Desktop\WARG Autonomy Bootcamp\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 72] Received telemetry: pos=(0.00, 0.00, 30.00), yaw=1.11
+00:39:50: [INFO] [C:\Users\Happy\Desktop\WARG Autonomy Bootcamp\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 90] Average velocity vector: (0.0, 0.0, 6.0) m/s
+00:39:51: [INFO] [C:\Users\Happy\Desktop\WARG Autonomy Bootcamp\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 72] Received telemetry: pos=(0.00, 0.00, 30.00), yaw=1.14
+00:39:51: [INFO] [C:\Users\Happy\Desktop\WARG Autonomy Bootcamp\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 90] Average velocity vector: (0.0, 0.0, 5.0) m/s
+00:39:51: [INFO] [C:\Users\Happy\Desktop\WARG Autonomy Bootcamp\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 72] Received telemetry: pos=(0.00, 0.00, 30.00), yaw=1.07
+00:39:51: [INFO] [C:\Users\Happy\Desktop\WARG Autonomy Bootcamp\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 90] Average velocity vector: (0.0, 0.0, 4.285714285714286) m/s
+00:39:52: [INFO] [C:\Users\Happy\Desktop\WARG Autonomy Bootcamp\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 72] Received telemetry: pos=(0.00, 0.00, 30.00), yaw=0.00
+00:39:52: [INFO] [C:\Users\Happy\Desktop\WARG Autonomy Bootcamp\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 90] Average velocity vector: (0.0, 0.0, 3.75) m/s
+00:39:52: [INFO] [C:\Users\Happy\Desktop\WARG Autonomy Bootcamp\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 80] Command output: CHANGE YAW: 63.43
+00:39:52: [INFO] [C:\Users\Happy\Desktop\WARG Autonomy Bootcamp\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 72] Received telemetry: pos=(10.00, 0.00, 30.00), yaw=0.00
+00:39:52: [INFO] [C:\Users\Happy\Desktop\WARG Autonomy Bootcamp\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 90] Average velocity vector: (1.1111111111111112, 0.0, 3.3333333333333335) m/s
+00:39:52: [INFO] [C:\Users\Happy\Desktop\WARG Autonomy Bootcamp\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 80] Command output: CHANGE YAW: 90.00
+00:39:53: [INFO] [C:\Users\Happy\Desktop\WARG Autonomy Bootcamp\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 72] Received telemetry: pos=(20.00, 0.00, 30.00), yaw=0.00
+00:39:53: [INFO] [C:\Users\Happy\Desktop\WARG Autonomy Bootcamp\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 90] Average velocity vector: (2.0, 0.0, 3.0) m/s
+00:39:53: [INFO] [C:\Users\Happy\Desktop\WARG Autonomy Bootcamp\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 80] Command output: CHANGE YAW: 116.57
+00:39:53: [INFO] [C:\Users\Happy\Desktop\WARG Autonomy Bootcamp\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 72] Received telemetry: pos=(30.00, 0.00, 30.00), yaw=1.57
+00:39:53: [INFO] [C:\Users\Happy\Desktop\WARG Autonomy Bootcamp\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 90] Average velocity vector: (2.727272727272727, 0.0, 2.727272727272727) m/s
+00:39:53: [INFO] [C:\Users\Happy\Desktop\WARG Autonomy Bootcamp\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 80] Command output: CHANGE YAW: 45.00
+00:39:54: [INFO] [C:\Users\Happy\Desktop\WARG Autonomy Bootcamp\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 72] Received telemetry: pos=(30.00, 10.00, 30.00), yaw=1.57
+00:39:54: [INFO] [C:\Users\Happy\Desktop\WARG Autonomy Bootcamp\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 90] Average velocity vector: (2.5, 0.8333333333333334, 2.5) m/s
+00:39:54: [INFO] [C:\Users\Happy\Desktop\WARG Autonomy Bootcamp\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 80] Command output: CHANGE YAW: 63.43
+00:39:54: [INFO] [C:\Users\Happy\Desktop\WARG Autonomy Bootcamp\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 72] Received telemetry: pos=(30.00, 20.00, 30.00), yaw=1.57
+00:39:54: [INFO] [C:\Users\Happy\Desktop\WARG Autonomy Bootcamp\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 90] Average velocity vector: (2.3076923076923075, 1.5384615384615385, 2.3076923076923075) m/s
+00:39:54: [INFO] [C:\Users\Happy\Desktop\WARG Autonomy Bootcamp\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 80] Command output: CHANGE YAW: 90.00
+00:39:55: [INFO] [C:\Users\Happy\Desktop\WARG Autonomy Bootcamp\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 72] Received telemetry: pos=(30.00, 30.00, 30.00), yaw=3.14
+00:39:55: [INFO] [C:\Users\Happy\Desktop\WARG Autonomy Bootcamp\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 90] Average velocity vector: (2.142857142857143, 2.142857142857143, 2.142857142857143) m/s
+00:39:55: [INFO] [C:\Users\Happy\Desktop\WARG Autonomy Bootcamp\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 80] Command output: CHANGE YAW: 26.57
+00:39:55: [INFO] [C:\Users\Happy\Desktop\WARG Autonomy Bootcamp\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 72] Received telemetry: pos=(20.00, 30.00, 30.00), yaw=-3.14
+00:39:55: [INFO] [C:\Users\Happy\Desktop\WARG Autonomy Bootcamp\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 90] Average velocity vector: (1.3333333333333333, 2.0, 2.0) m/s
+00:39:55: [INFO] [C:\Users\Happy\Desktop\WARG Autonomy Bootcamp\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 80] Command output: CHANGE YAW: 45.00
+00:39:56: [INFO] [C:\Users\Happy\Desktop\WARG Autonomy Bootcamp\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 72] Received telemetry: pos=(10.00, 30.00, 30.00), yaw=3.14
+00:39:56: [INFO] [C:\Users\Happy\Desktop\WARG Autonomy Bootcamp\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 90] Average velocity vector: (0.625, 1.875, 1.875) m/s
+00:39:56: [INFO] [C:\Users\Happy\Desktop\WARG Autonomy Bootcamp\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 80] Command output: CHANGE YAW: 90.00
+00:39:56: [INFO] [C:\Users\Happy\Desktop\WARG Autonomy Bootcamp\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 72] Received telemetry: pos=(0.00, 30.00, 30.00), yaw=-1.57
+00:39:56: [INFO] [C:\Users\Happy\Desktop\WARG Autonomy Bootcamp\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 90] Average velocity vector: (0.0, 1.7647058823529411, 1.7647058823529411) m/s
+00:39:56: [INFO] [C:\Users\Happy\Desktop\WARG Autonomy Bootcamp\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 80] Command output: CHANGE YAW: 45.00
+00:39:57: [INFO] [C:\Users\Happy\Desktop\WARG Autonomy Bootcamp\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 72] Received telemetry: pos=(0.00, 20.00, 30.00), yaw=-1.57
+00:39:57: [INFO] [C:\Users\Happy\Desktop\WARG Autonomy Bootcamp\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 90] Average velocity vector: (0.0, 1.1111111111111112, 1.6666666666666667) m/s
+00:39:57: [INFO] [C:\Users\Happy\Desktop\WARG Autonomy Bootcamp\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 80] Command output: CHANGE YAW: 90.00
+00:39:57: [INFO] [C:\Users\Happy\Desktop\WARG Autonomy Bootcamp\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 72] Received telemetry: pos=(0.00, 10.00, 30.00), yaw=-1.57
+00:39:57: [INFO] [C:\Users\Happy\Desktop\WARG Autonomy Bootcamp\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 90] Average velocity vector: (0.0, 0.5263157894736842, 1.5789473684210527) m/s
+00:39:57: [INFO] [C:\Users\Happy\Desktop\WARG Autonomy Bootcamp\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 80] Command output: CHANGE YAW: 135.00
+00:39:58: [INFO] [C:\Users\Happy\Desktop\WARG Autonomy Bootcamp\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 72] Received telemetry: pos=(0.00, 0.00, 30.00), yaw=1.57
+00:39:58: [INFO] [C:\Users\Happy\Desktop\WARG Autonomy Bootcamp\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 90] Average velocity vector: (0.0, 0.0, 1.5) m/s
+00:39:58: [INFO] [C:\Users\Happy\Desktop\WARG Autonomy Bootcamp\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 80] Command output: CHANGE YAW: -26.57
+00:39:58: [INFO] [C:\Users\Happy\Desktop\WARG Autonomy Bootcamp\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 72] Received telemetry: pos=(0.00, 10.00, 30.00), yaw=1.57
+00:39:58: [INFO] [C:\Users\Happy\Desktop\WARG Autonomy Bootcamp\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 90] Average velocity vector: (0.0, 0.47619047619047616, 1.4285714285714286) m/s
+00:39:58: [INFO] [C:\Users\Happy\Desktop\WARG Autonomy Bootcamp\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 80] Command output: CHANGE YAW: -45.00
+00:39:59: [INFO] [C:\Users\Happy\Desktop\WARG Autonomy Bootcamp\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 72] Received telemetry: pos=(0.00, 20.00, 30.00), yaw=1.57
+00:39:59: [INFO] [C:\Users\Happy\Desktop\WARG Autonomy Bootcamp\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 90] Average velocity vector: (0.0, 0.9090909090909091, 1.3636363636363635) m/s
+00:39:59: [INFO] [C:\Users\Happy\Desktop\WARG Autonomy Bootcamp\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 80] Command output: CHANGE YAW: -90.00
+00:39:59: [INFO] [C:\Users\Happy\Desktop\WARG Autonomy Bootcamp\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 72] Received telemetry: pos=(0.00, 30.00, 30.00), yaw=0.00
+00:39:59: [INFO] [C:\Users\Happy\Desktop\WARG Autonomy Bootcamp\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 90] Average velocity vector: (0.0, 1.3043478260869565, 1.3043478260869565) m/s
+00:39:59: [INFO] [C:\Users\Happy\Desktop\WARG Autonomy Bootcamp\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 80] Command output: CHANGE YAW: -45.00
+00:40:00: [INFO] [C:\Users\Happy\Desktop\WARG Autonomy Bootcamp\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 72] Received telemetry: pos=(10.00, 30.00, 30.00), yaw=0.00
+00:40:00: [INFO] [C:\Users\Happy\Desktop\WARG Autonomy Bootcamp\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 90] Average velocity vector: (0.4166666666666667, 1.25, 1.25) m/s
+00:40:00: [INFO] [C:\Users\Happy\Desktop\WARG Autonomy Bootcamp\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 80] Command output: CHANGE YAW: -90.00
+00:40:00: [INFO] [C:\Users\Happy\Desktop\WARG Autonomy Bootcamp\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 72] Received telemetry: pos=(20.00, 30.00, 30.00), yaw=0.00
+00:40:00: [INFO] [C:\Users\Happy\Desktop\WARG Autonomy Bootcamp\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 90] Average velocity vector: (0.8, 1.2, 1.2) m/s
+00:40:00: [INFO] [C:\Users\Happy\Desktop\WARG Autonomy Bootcamp\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 80] Command output: CHANGE YAW: -135.00
+00:40:01: [INFO] [C:\Users\Happy\Desktop\WARG Autonomy Bootcamp\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 72] Received telemetry: pos=(30.00, 30.00, 30.00), yaw=-1.57
+00:40:01: [INFO] [C:\Users\Happy\Desktop\WARG Autonomy Bootcamp\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 90] Average velocity vector: (1.1538461538461537, 1.1538461538461537, 1.1538461538461537) m/s
+00:40:01: [INFO] [C:\Users\Happy\Desktop\WARG Autonomy Bootcamp\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 80] Command output: CHANGE YAW: -63.43
+00:40:01: [INFO] [C:\Users\Happy\Desktop\WARG Autonomy Bootcamp\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 72] Received telemetry: pos=(30.00, 20.00, 30.00), yaw=-1.57
+00:40:01: [INFO] [C:\Users\Happy\Desktop\WARG Autonomy Bootcamp\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 90] Average velocity vector: (1.1111111111111112, 0.7407407407407407, 1.1111111111111112) m/s
+00:40:01: [INFO] [C:\Users\Happy\Desktop\WARG Autonomy Bootcamp\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 80] Command output: CHANGE YAW: -90.00
+00:40:02: [INFO] [C:\Users\Happy\Desktop\WARG Autonomy Bootcamp\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 72] Received telemetry: pos=(30.00, 10.00, 30.00), yaw=-1.57
+00:40:02: [INFO] [C:\Users\Happy\Desktop\WARG Autonomy Bootcamp\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 90] Average velocity vector: (1.0714285714285714, 0.35714285714285715, 1.0714285714285714) m/s
+00:40:02: [INFO] [C:\Users\Happy\Desktop\WARG Autonomy Bootcamp\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 80] Command output: CHANGE YAW: -116.57
+00:40:02: [INFO] [C:\Users\Happy\Desktop\WARG Autonomy Bootcamp\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 72] Received telemetry: pos=(30.00, 0.00, 30.00), yaw=-3.14
+00:40:02: [INFO] [C:\Users\Happy\Desktop\WARG Autonomy Bootcamp\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 90] Average velocity vector: (1.0344827586206897, 0.0, 1.0344827586206897) m/s
+00:40:02: [INFO] [C:\Users\Happy\Desktop\WARG Autonomy Bootcamp\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 80] Command output: CHANGE YAW: -45.00
+00:40:03: [INFO] [C:\Users\Happy\Desktop\WARG Autonomy Bootcamp\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 72] Received telemetry: pos=(20.00, 0.00, 30.00), yaw=3.14
+00:40:03: [INFO] [C:\Users\Happy\Desktop\WARG Autonomy Bootcamp\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 90] Average velocity vector: (0.6666666666666666, 0.0, 1.0) m/s
+00:40:03: [INFO] [C:\Users\Happy\Desktop\WARG Autonomy Bootcamp\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 80] Command output: CHANGE YAW: -63.43
+00:40:03: [INFO] [C:\Users\Happy\Desktop\WARG Autonomy Bootcamp\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 72] Received telemetry: pos=(10.00, 0.00, 30.00), yaw=-3.14
+00:40:03: [INFO] [C:\Users\Happy\Desktop\WARG Autonomy Bootcamp\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 90] Average velocity vector: (0.3225806451612903, 0.0, 0.967741935483871) m/s
+00:40:03: [INFO] [C:\Users\Happy\Desktop\WARG Autonomy Bootcamp\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 80] Command output: CHANGE YAW: -90.00
+00:40:04: [DEBUG] [C:\Users\Happy\Desktop\WARG Autonomy Bootcamp\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 83] Queue timeout or error: 
+00:40:04: [DEBUG] [C:\Users\Happy\Desktop\WARG Autonomy Bootcamp\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 83] Queue timeout or error: 
+00:40:04: [INFO] [C:\Users\Happy\Desktop\WARG Autonomy Bootcamp\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 86] Command worker stopped
