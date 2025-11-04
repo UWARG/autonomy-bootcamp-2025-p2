@@ -161,31 +161,37 @@ def main() -> int:
 
     # Create the workers (processes) and obtain their managers
 
-    result, heartbeat_sender_manager = worker_manager.WorkerManager.create(
+    result_heartbeat_sender, heartbeat_sender_manager = worker_manager.WorkerManager.create(
         heartbeat_sender_properties, main_logger
     )
-    result, heartbeat_receiver_manager = worker_manager.WorkerManager.create(
+    result_heartbeat_receiver, heartbeat_receiver_manager = worker_manager.WorkerManager.create(
         heartbeat_receiver_properties, main_logger
     )
-    result, telemetry_manager = worker_manager.WorkerManager.create(
+    result_telemetry, telemetry_manager = worker_manager.WorkerManager.create(
         telemetry_properties, main_logger
     )
-    result, command_manager = worker_manager.WorkerManager.create(command_properties, main_logger)
+    result_command, command_manager = worker_manager.WorkerManager.create(
+        command_properties, main_logger
+    )
 
     # Start worker processes
 
-    heartbeat_sender_manager.start_workers()
-    heartbeat_receiver_manager.start_workers()
-    telemetry_manager.start_workers()
-    command_manager.start_workers()
+    if result_heartbeat_sender:
+        heartbeat_sender_manager.start_workers()
+
+    if result_heartbeat_receiver:
+        heartbeat_receiver_manager.start_workers()
+    if result_telemetry:
+        telemetry_manager.start_workers()
+
+    if result_command:
+        command_manager.start_workers()
 
     main_logger.info("Started")
 
     # Main's work: read from all queues that output to main, and log any commands that we make
 
     start_time = time.time()
-    last_heartbeat_time = time.time()
-    heartbeat_timeout = 5.0
     # Continue running for 100 seconds or until the drone disconnects
 
     while time.time() - start_time < 100 and not controller.is_exit_requested():
@@ -193,21 +199,19 @@ def main() -> int:
 
         try:
             heartbeat_msg = heartbeat_output_queue.queue.get_nowait()
-            if heartbeat_msg is not None:
-                last_heartbeat_time = time.time()
-        except queue.Empty:
-            pass
+            if heartbeat_msg == "Disconnected":
+                controller.request_exit()
+                break
 
-        if time.time() - last_heartbeat_time > heartbeat_timeout:
-            main_logger.info("Drone Disconnected - No heartbeats")
-            break
-
-        try:
             cmd = command_output_queue.queue.get(timeout=0.5)
             if cmd is not None:
                 main_logger.info(f"Command issued: {cmd}")
         except queue.Empty:
-            continue
+            pass
+
+        # if time.time() - last_heartbeat_time > heartbeat_timeout:
+        #     main_logger.info("Drone Disconnected - No heartbeats")
+        #     break
 
     # Stop the processes
 

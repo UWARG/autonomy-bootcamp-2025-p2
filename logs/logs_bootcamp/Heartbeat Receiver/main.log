@@ -1,4 +1,0 @@
-00:34:45: [INFO] [C:\Users\Happy\Desktop\WARG Autonomy Bootcamp\autonomy-bootcamp-2025-p2\modules\common\modules\logger\logger_main_setup.py | setup_main_logger | 62] main logger initialized
-00:34:46: [INFO] [C:\Users\Happy\Desktop\WARG Autonomy Bootcamp\autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | main | 127] Connected!
-00:34:47: [INFO] [C:\Users\Happy\Desktop\WARG Autonomy Bootcamp\autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 80] Heartbeat Receiver Output: Connected
-00:34:47: [INFO] [C:\Users\Happy\Desktop\WARG Autonomy Bootcamp\autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 82] Still Connected

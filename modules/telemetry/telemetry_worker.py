@@ -49,20 +49,18 @@ def telemetry_worker(
     # =============================================================================================
     # Instantiate class object (telemetry.Telemetry)
     result, telemetry_instance = telemetry.Telemetry.create(connection, local_logger)
-    # local_logger.info(telemetry_instance)
+
     # Main loop: do work.
 
     if not result:
         local_logger.error("Failed to have telemetry data", True)
         return
 
-    # controller = worker_controller.WorkerController()
-    # local_logger.info("Info Made")
     while not controller.is_exit_requested():
         controller.check_pause()
         telemetry_data = telemetry_instance.run()
 
-        if telemetry_data is not None and result is not None:
+        if result and telemetry_data is not None:
             output_queue.queue.put(telemetry_data)
             local_logger.info(f"Queued telemetry: {telemetry_data}")
 

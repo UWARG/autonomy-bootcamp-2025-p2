@@ -55,28 +55,13 @@ def heartbeat_sender_worker(
         local_logger.error("Failed to create HeartbeatSender")
         return
 
-    # period = 1.0
-    # next_time = time.time() + period
-
     while not controller.is_exit_requested():
 
-        # controller.request_resume()
-
-        # while next_time > time.time():
         controller.check_pause()
-        # controller.request_resume()
 
         if heartbeat_sender_instance.run():
             local_logger.info("Heartbeat Sent")
         time.sleep(0.989999)
-
-        # controller.request_pause()
-
-        # sleep_time = max(0, next_time - time.time())
-        # time.sleep(sleep_time)
-        # next_time = time.time() + period
-
-        # controller.request_resume()
 
     return
 

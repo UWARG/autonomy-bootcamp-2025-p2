@@ -51,9 +51,6 @@ def stop(
     Stop the workers.
     """
 
-    # connection = mavutil.mavlink_connection(CONNECTION_STRING)
-    # # connection.recv_match(blocking=True)
-
     controller.request_exit()
     # Add logic to stop your worker
 

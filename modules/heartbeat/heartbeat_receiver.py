@@ -47,29 +47,40 @@ class HeartbeatReceiver:
 
     def run(
         self,
-    ) -> None:
+    ) -> tuple:
         "Runs Code"
+
         msg = self.connection.recv_match(type="HEARTBEAT", blocking=False)
 
         if msg is not None:
-            if self.state == "Disconnected":
-                self.main_logger.info("Connection Established")
-            self.state = "Connected"
             self.missed_heartbeats = 0
+            self.state = "Connected"
+            self.main_logger.info("Heartbeat Received")
+            # if self.state == "Disconnected":
+            #     self.main_logger.info("Connection Established")
+            # self.state = "Connected"
+            # self.missed_heartbeats = 0
 
-            self.main_logger.info("Heartbeat received")
-            return True, self.state
-
-        self.missed_heartbeats += 1
+            # self.main_logger.info("Heartbeat received")
+            # return True
+        else:
+            self.missed_heartbeats += 1
+            self.main_logger.warning("Missed Heartbeat")
 
         if self.missed_heartbeats >= 5:
             self.state = "Disconnected"
-            self.main_logger.info("Disconnected")
-            self.main_logger.info("Connection Lost: Missed 5 Heartbeats")
-            return False, self.state
+
+        return self.state
+
+        # self.missed_heartbeats += 1
+
+        # if self.missed_heartbeats >= 5:
+        #     self.state = "Disconnected"
+        #     self.main_logger.info("Disconnected")
+        #     self.main_logger.info("Connection Lost: Missed 5 Heartbeats")
+        #     return False
 
         # self.local_logger.info("Still Connected")
-        return True
         # """
         # Attempt to recieve a heartbeat message.
         # If disconnected for over a threshold number of periods,

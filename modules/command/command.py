@@ -87,28 +87,6 @@ class Command:  # pylint: disable=too-many-instance-attributes
 
             self.local_logger.info(f"Average velocity vector: {avg_vel} m/s")
 
-        # else:
-        #     if self.last_telemetry is None:
-        #         self.local_logger.debug("No previous telemetry for velocity calculation")
-        #     elif current_telemetry.time_since_boot is None:
-        #         self.local_logger.warning("Current telemetry time_since_boot is None")
-        #     elif self.last_telemetry.time_since_boot is None:
-        #         self.local_logger.warning("Last telemetry time_since_boot is None")
-        # if (
-        #     self.last_telemetry is not None
-        #     and current_telemetry.time_since_boot is not None
-        #     and self.last_telemetry.time_since_boot is not None
-        # ):
-        #     dx = current_telemetry.x - self.last_telemetry.x
-        #     dy = current_telemetry.y - self.last_telemetry.y
-        #     dz = current_telemetry.z - self.last_telemetry.z
-
-        #     dt = current_telemetry.time_since_boot - self.last_telemetry.time_since_boot
-
-        #     if dt > 0.5:
-        #         avg_vel = math.sqrt(dx**2 + dy**2 + dz**2) / dt
-        #         self.local_logger.info(f"Average velocity: {avg_vel: 2f} m/s")
-
         # Use COMMAND_LONG (76) message, assume the target_system=1 and target_componenet=0
         # The appropriate commands to use are instructed below
 
@@ -130,9 +108,9 @@ class Command:  # pylint: disable=too-many-instance-attributes
         delta_yaw_deg = math.degrees(delta_yaw_rad)
 
         if delta_yaw_deg >= 0:
-            direction = 1
-        else:
             direction = -1
+        else:
+            direction = 1
 
         delta_height = self.target.z - current_telemetry.z
 

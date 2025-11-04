@@ -52,7 +52,7 @@ def command_worker(
 
     result, command_instance = command.Command.create(connection, target, local_logger)
 
-    if not result or command_instance is None:
+    if not result:
         local_logger.error("Could not initialize Command object")
         return
 
@@ -69,15 +69,10 @@ def command_worker(
                 local_logger.warning("Received None from telemetry queue")
                 continue
 
-            local_logger.info(
-                f"Received telemetry: pos=({current_telemetry.x:.2f}, {current_telemetry.y:.2f}, {current_telemetry.z:.2f}), yaw={current_telemetry.yaw:.2f}"
-            )
-
             command_string = command_instance.run(current_telemetry)
 
             if command_string:
                 output_queue.queue.put(command_string)
-                local_logger.info(f"Command output: {command_string}")
 
         except TimeoutError:
             local_logger.debug("Queue timeout or error")
