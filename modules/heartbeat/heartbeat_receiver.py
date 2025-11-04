@@ -56,13 +56,7 @@ class HeartbeatReceiver:
             self.missed_heartbeats = 0
             self.state = "Connected"
             self.main_logger.info("Heartbeat Received")
-            # if self.state == "Disconnected":
-            #     self.main_logger.info("Connection Established")
-            # self.state = "Connected"
-            # self.missed_heartbeats = 0
 
-            # self.main_logger.info("Heartbeat received")
-            # return True
         else:
             self.missed_heartbeats += 1
             self.main_logger.warning("Missed Heartbeat")
@@ -71,21 +65,6 @@ class HeartbeatReceiver:
             self.state = "Disconnected"
 
         return self.state
-
-        # self.missed_heartbeats += 1
-
-        # if self.missed_heartbeats >= 5:
-        #     self.state = "Disconnected"
-        #     self.main_logger.info("Disconnected")
-        #     self.main_logger.info("Connection Lost: Missed 5 Heartbeats")
-        #     return False
-
-        # self.local_logger.info("Still Connected")
-        # """
-        # Attempt to recieve a heartbeat message.
-        # If disconnected for over a threshold number of periods,
-        # the connection is considered disconnected.
-        # """
 
 
 # =================================================================================================

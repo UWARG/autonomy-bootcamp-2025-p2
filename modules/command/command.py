@@ -78,10 +78,10 @@ class Command:  # pylint: disable=too-many-instance-attributes
         # Log average velocity for this trip so far
         self.counter += 1
         if self.last_telemetry is not None:
-            dx = current_telemetry.x  # - self.last_telemetry.x
-            dy = current_telemetry.y  # - self.last_telemetry.y
-            dz = current_telemetry.z  # - self.last_telemetry.z
-            # dt = (current_telemetry.time_since_boot - self.last_telemetry.time_since_boot) / 1000
+            dx = current_telemetry.x
+            dy = current_telemetry.y
+            dz = current_telemetry.z
+
             dt = self.counter
             avg_vel = (dx / dt, dy / dt, dz / dt)
 
@@ -128,7 +128,6 @@ class Command:  # pylint: disable=too-many-instance-attributes
                 param6=0,
                 param7=self.target.z,
             )
-            # self.local_logger.info(f"CHANGE ALTITUDE: {delta_height:.2f}")
             return f"CHANGE ALTITUDE: {delta_height:.2f}"
 
         if abs(delta_yaw_deg) > 5:
@@ -146,7 +145,6 @@ class Command:  # pylint: disable=too-many-instance-attributes
                 param7=0,
             )
 
-            # self.local_logger.info(f"CHANGE YAW: {delta_yaw_deg:.2f}")
             return f"CHANGE YAW: {delta_yaw_deg:.2f}"
 
         self.last_telemetry = current_telemetry

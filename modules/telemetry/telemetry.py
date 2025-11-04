@@ -109,47 +109,6 @@ class Telemetry:
         # Read MAVLink message ATTITUDE (30)
         # Return the most recent of both, and use the most recent message's timestamp
 
-        # start = time.time()
-        # end = start + self.read_timeout
-        # position_msg = None
-        # attitude_msg = None
-
-        # while time.time() < end:
-        #     remaining = end - time.time()
-        #     msg = self.connection.recv_match(
-        #         type=["LOCAL_POSITION_NED", "ATTITUDE"], blocking=True, timeout=remaining
-        #     )
-        #     if msg is None:
-        #         continue
-
-        #     if position_msg is None and msg.get_type() == "LOCAL_POSITION_NED":
-        #         position_msg = msg
-        #         self.logger.info("Received LOCAL_POSITION_NED", True)
-        #     if attitude_msg is None and msg.get_type() == "ATTITUDE":
-        #         attitude_msg = msg
-        #         self.logger.info("Received ATTITUDE", True)
-
-        #     if position_msg is not None and attitude_msg is not None:
-        #         telemetry_data = TelemetryData(
-        #             time_since_boot=max(attitude_msg.time_boot_ms, position_msg.time_boot_ms),
-        #             x=position_msg.x,
-        #             y=position_msg.y,
-        #             z=position_msg.z,
-        #             x_velocity=position_msg.vx,
-        #             y_velocity=position_msg.vy,
-        #             z_velocity=position_msg.vz,
-        #             roll=attitude_msg.roll,
-        #             pitch=attitude_msg.pitch,
-        #             yaw=attitude_msg.yaw,
-        #             roll_speed=attitude_msg.rollspeed,
-        #             pitch_speed=attitude_msg.pitchspeed,
-        #             yaw_speed=attitude_msg.yawspeed,
-        #         )
-        #         self.logger.info("Created TelemetryData", True)
-        #         return True, telemetry_data
-
-        # self.logger.error("Timeout: Did not receive both messages within 1 second", True)
-        # return False, None
         position_msg = self.connection.recv_match(type="LOCAL_POSITION_NED", blocking=True)
         attitude_msg = self.connection.recv_match(type="ATTITUDE", blocking=True)
 
