@@ -133,6 +133,8 @@ class Telemetry:
             )
             return f"Telemetry Data: {self.telemetry_data}"
 
+        return "Failed to Receive Data"
+
 
 # =================================================================================================
 #                            ↑ BOOTCAMPERS MODIFY ABOVE THIS COMMENT ↑
