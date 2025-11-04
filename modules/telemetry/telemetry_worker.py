@@ -63,8 +63,6 @@ def telemetry_worker(
         if telemetry_data is not None:
             output_queue.queue.put(telemetry_data)
             local_logger.info(f"Queued telemetry: {telemetry_data}")
-    
-     
 
 
 # =================================================================================================

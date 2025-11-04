@@ -112,7 +112,9 @@ class Telemetry:
         attitude_msg = self.connection.recv_match(type="ATTITUDE", blocking=True)
 
         if position_msg is not None:
-            self.telemetry_data.time_since_boot = max(attitude_msg.time_boot_ms, position_msg.time_boot_ms)
+            self.telemetry_data.time_since_boot = max(
+                attitude_msg.time_boot_ms, position_msg.time_boot_ms
+            )
             self.telemetry_data.x = position_msg.x
             self.telemetry_data.y = position_msg.y
             self.telemetry_data.z = position_msg.z
@@ -121,7 +123,9 @@ class Telemetry:
             self.telemetry_data.z_velocity = position_msg.vz
 
         if attitude_msg is not None:
-            self.telemetry_data.time_since_boot = max(attitude_msg.time_boot_ms, position_msg.time_boot_ms)
+            self.telemetry_data.time_since_boot = max(
+                attitude_msg.time_boot_ms, position_msg.time_boot_ms
+            )
             self.telemetry_data.roll = attitude_msg.roll
             self.telemetry_data.pitch = attitude_msg.pitch
             self.telemetry_data.yaw = attitude_msg.yaw
@@ -133,6 +137,7 @@ class Telemetry:
             return f"Telemetry Data: {self.telemetry_data}"
 
         return "Failed"
+
 
 # =================================================================================================
 #                            ↑ BOOTCAMPERS MODIFY ABOVE THIS COMMENT ↑
