@@ -2,11 +2,11 @@
 Telemetry gathering logic.
 """
 
+import time
+
 from pymavlink import mavutil
 
 from ..common.modules.logger import logger
-
-import time
 
 
 class TelemetryData:  # pylint: disable=too-many-instance-attributes
@@ -110,9 +110,9 @@ class Telemetry:
         # Read MAVLink message ATTITUDE (30)
         # Return the most recent of both, and use the most recent message's timestamp
 
-        initialTime = time.time()
-        while (time.time() - initialTime) < 1:
-            ()
+        initial_time = time.time()
+        while (time.time() - initial_time) < 1:
+            pass
 
         position_msg = self.connection.recv_match(type="LOCAL_POSITION_NED", blocking=True)
         attitude_msg = self.connection.recv_match(type="ATTITUDE", blocking=True)
