@@ -112,33 +112,30 @@ class Telemetry:
 
         initial_time = time.time()
         while (time.time() - initial_time) < 1:
-            pass
+            position_msg = self.connection.recv_match(type="LOCAL_POSITION_NED", blocking=True)
+            attitude_msg = self.connection.recv_match(type="ATTITUDE", blocking=True)
 
-        position_msg = self.connection.recv_match(type="LOCAL_POSITION_NED", blocking=True)
-        attitude_msg = self.connection.recv_match(type="ATTITUDE", blocking=True)
+            if position_msg is not None:
+                self.telemetry_data.x = position_msg.x
+                self.telemetry_data.y = position_msg.y
+                self.telemetry_data.z = position_msg.z
+                self.telemetry_data.x_velocity = position_msg.vx
+                self.telemetry_data.y_velocity = position_msg.vy
+                self.telemetry_data.z_velocity = position_msg.vz
 
-        if position_msg is not None:
-            self.telemetry_data.x = position_msg.x
-            self.telemetry_data.y = position_msg.y
-            self.telemetry_data.z = position_msg.z
-            self.telemetry_data.x_velocity = position_msg.vx
-            self.telemetry_data.y_velocity = position_msg.vy
-            self.telemetry_data.z_velocity = position_msg.vz
+            if attitude_msg is not None:
+                self.telemetry_data.roll = attitude_msg.roll
+                self.telemetry_data.pitch = attitude_msg.pitch
+                self.telemetry_data.yaw = attitude_msg.yaw
+                self.telemetry_data.roll_speed = attitude_msg.rollspeed
+                self.telemetry_data.pitch_speed = attitude_msg.pitchspeed
+                self.telemetry_data.yaw_speed = attitude_msg.yawspeed
 
-        if attitude_msg is not None:
-            self.telemetry_data.roll = attitude_msg.roll
-            self.telemetry_data.pitch = attitude_msg.pitch
-            self.telemetry_data.yaw = attitude_msg.yaw
-            self.telemetry_data.roll_speed = attitude_msg.rollspeed
-            self.telemetry_data.pitch_speed = attitude_msg.pitchspeed
-            self.telemetry_data.yaw_speed = attitude_msg.yawspeed
-
-        if attitude_msg is not None and position_msg is not None:
-            self.telemetry_data.time_since_boot = max(
-                attitude_msg.time_boot_ms, position_msg.time_boot_ms
-            )
-            return f"Telemetry Data: {self.telemetry_data}"
-            # return "Messages not received in time"
+            if attitude_msg is not None and position_msg is not None:
+                self.telemetry_data.time_since_boot = max(
+                    attitude_msg.time_boot_ms, position_msg.time_boot_ms
+                )
+                return f"Telemetry Data: {self.telemetry_data}"
 
         return "Failed to Receive Data"
 
