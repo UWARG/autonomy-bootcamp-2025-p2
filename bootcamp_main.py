@@ -5,6 +5,7 @@ Main process to setup and manage all the other working processes
 """
 
 import multiprocessing as mp
+
 # import queue
 import time
 
@@ -150,7 +151,10 @@ def main() -> int:
     result, command_properties = worker_manager.WorkerManager.create(
         COMMAND_WORKER_COUNT,  # How many workers
         command_worker.command_worker,  # What's the function that this worker runs
-        (connection, TARGET,),
+        (
+            connection,
+            TARGET,
+        ),
         [telemetry_to_command_queue],
         [command_to_main_queue],
         controller,  # Worker controller
