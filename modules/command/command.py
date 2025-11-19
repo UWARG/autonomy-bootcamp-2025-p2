@@ -82,9 +82,7 @@ class Command:  # pylint: disable=too-many-instance-attributes
         avg_vy = self.vyi / self.times_received
         avg_vz = self.vzi / self.times_received
 
-        self.local_logger.info(
-            f"Average velocity: ({avg_vx}, {avg_vy}, {avg_vz}) m/s"
-        )
+        self.local_logger.info(f"Average velocity: ({avg_vx}, {avg_vy}, {avg_vz}) m/s")
 
         # Use COMMAND_LONG (76) message, assume the target_system=1 and target_componenet=0
         # The appropriate commands to use are instructed below

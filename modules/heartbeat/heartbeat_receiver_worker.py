@@ -51,11 +51,12 @@ def heartbeat_receiver_worker(
     #                          ↓ BOOTCAMPERS MODIFY BELOW THIS COMMENT ↓
     # =============================================================================================
     # Instantiate class object (heartbeat_receiver.HeartbeatReceiver)
-    creation_status, receiver = heartbeat_receiver.HeartbeatReceiver(connection, local_logger)
+    creation_status, receiver = heartbeat_receiver.HeartbeatReceiver.create(
+        connection, local_logger
+    )
 
     if not creation_status:
         local_logger.error("Could not initialize Heartbeat Receiver")
-        pass
     local_logger.info("Could not initialize Heartbeat Receiver")
 
     # Main loop: do work.
@@ -63,6 +64,8 @@ def heartbeat_receiver_worker(
         controller.check_pause()
 
         value, status = receiver.run()
+        if not value:
+            local_logger.warning("Failed to receive Heartbeat")
         output_queue.queue.put(status)
 
 

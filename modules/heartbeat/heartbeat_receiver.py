@@ -24,7 +24,7 @@ class HeartbeatReceiver:
         """
         Falliable create (instantiation) method to create a HeartbeatReceiver object.
         """
-        return cls.__init__(cls.__private_key, connection, local_logger)
+        return True, cls(cls.__private_key, connection, local_logger)
 
     def __init__(
         self, key: object, connection: mavutil.mavfile, local_logger: logger.Logger
@@ -35,6 +35,7 @@ class HeartbeatReceiver:
         self.local_logger = local_logger
         self.status = "Connected"
         self.missed = 0
+        self.connection = connection
 
     def run(self) -> "tuple[bool, str]":
         """
@@ -50,7 +51,7 @@ class HeartbeatReceiver:
             self.local_logger.info("Heartbeat message received")
 
         else:
-            ++self.missed
+            self.missed += 1
             self.local_logger.warning(f"{self.missed} heartbeat(s) missed")
             if self.missed == 5:
                 self.status = "Disconnected"

@@ -53,9 +53,8 @@ def heartbeat_sender_worker(
 
     value, sender_instance = heartbeat_sender.HeartbeatSender.create(connection, local_logger)
     # Check if connection can be established
-    if not result:
+    if not value:
         local_logger.error("Failed to establish heartbeat sender", True)
-        pass
 
     # Main loop: do work.
     while not controller.is_exit_requested():
@@ -64,7 +63,7 @@ def heartbeat_sender_worker(
 
         # send heartbeat signal through running instance
         start = time.time()
-        result, value = sender_instance.run()
+        result = sender_instance.run()
         time_elapsed = time.time() - start
         local_logger.info("Heartbeat sent")
 
