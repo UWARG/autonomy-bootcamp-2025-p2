@@ -5,7 +5,7 @@ Main process to setup and manage all the other working processes
 """
 
 import multiprocessing as mp
-import queue
+# import queue
 import time
 
 from pymavlink import mavutil
@@ -106,15 +106,13 @@ def main() -> int:
     # Create worker properties for each worker type (what inputs it takes, how many workers)
     # Heartbeat sender
     result, sender_properties = worker_manager.WorkerManager.create(
-        count=HEARTBEAT_SENDER_WORKER_COUNT,  # How many workers
-        target=heartbeat_sender_worker.heartbeat_sender_worker,  # What's the function that this worker runs
-        work_arguments=(  # The function's arguments excluding input/output queues and controller
-            connection,
-        ),
-        input_queues=[],  # Note that input/output queues must be in the proper order
-        output_queues=[],
-        controller=controller,  # Worker controller
-        local_logger=main_logger,  # Main logger to log any failures during worker creation
+        HEARTBEAT_SENDER_WORKER_COUNT,  # How many workers
+        heartbeat_sender_worker.heartbeat_sender_worker,  # What's the function that this worker runs
+        (connection,),
+        [],  # Note that input/output queues must be in the proper order
+        [],
+        controller,  # Worker controller
+        main_logger,  # Main logger to log any failures during worker creation
     )
     if not result:
         print("Failed to create arguments for Sender")
@@ -122,15 +120,13 @@ def main() -> int:
 
     # Heartbeat receiver
     result, receiver_properties = worker_manager.WorkerManager.create(
-        count=HEARTBEAT_RECEIVER_WORKER_COUNT,  # How many workers
-        target=heartbeat_receiver_worker.heartbeat_receiver_worker,  # What's the function that this worker runs
-        work_arguments=(  # The function's arguments excluding input/output queues and controller
-            connection,
-        ),
-        input_queues=[],  # Note that input/output queues must be in the proper order
-        output_queues=[heartbeat_to_main_queue],
-        controller=controller,  # Worker controller
-        local_logger=main_logger,  # Main logger to log any failures during worker creation
+        HEARTBEAT_RECEIVER_WORKER_COUNT,  # How many workers
+        heartbeat_receiver_worker.heartbeat_receiver_worker,  # What's the function that this worker runs
+        (connection,),
+        [],  # Note that input/output queues must be in the proper order
+        [heartbeat_to_main_queue],
+        controller,  # Worker controller
+        main_logger,  # Main logger to log any failures during worker creation
     )
     if not result:
         print("Failed to create arguments for Receiver")
@@ -138,15 +134,13 @@ def main() -> int:
 
     # Telemetry
     result, telemetry_properties = worker_manager.WorkerManager.create(
-        count=TELEMETRY_WORKER_COUNT,  # How many workers
-        target=telemetry_worker.telemetry_worker,  # What's the function that this worker runs
-        work_arguments=(  # The function's arguments excluding input/output queues and controller
-            connection,
-        ),
-        input_queues=[],  # Note that input/output queues must be in the proper order
-        output_queues=[telemetry_to_command_queue],
-        controller=controller,  # Worker controller
-        local_logger=main_logger,  # Main logger to log any failures during worker creation
+        TELEMETRY_WORKER_COUNT,  # How many workers
+        telemetry_worker.telemetry_worker,  # What's the function that this worker runs
+        (connection,),
+        [],  # Note that input/output queues must be in the proper order
+        [telemetry_to_command_queue],
+        controller,  # Worker controller
+        main_logger,  # Main logger to log any failures during worker creation
     )
     if not result:
         print("Failed to create arguments for Telemetry")
@@ -154,18 +148,13 @@ def main() -> int:
 
     # Command
     result, command_properties = worker_manager.WorkerManager.create(
-        count=COMMAND_WORKER_COUNT,  # How many workers
-        target=command_worker.command_worker,  # What's the function that this worker runs
-        work_arguments=(  # The function's arguments excluding input/output queues and controller
-            connection,
-            TARGET,
-        ),
-        input_queues=[
-            telemetry_to_command_queue
-        ],  # Note that input/output queues must be in the proper order
-        output_queues=[command_to_main_queue],
-        controller=controller,  # Worker controller
-        local_logger=main_logger,  # Main logger to log any failures during worker creation
+        COMMAND_WORKER_COUNT,  # How many workers
+        command_worker.command_worker,  # What's the function that this worker runs
+        (connection, TARGET,),
+        [telemetry_to_command_queue],
+        [command_to_main_queue],
+        controller,  # Worker controller
+        main_logger,  # Main logger to log any failures during worker creation
     )
     if not result:
         print("Failed to create arguments for Command")
