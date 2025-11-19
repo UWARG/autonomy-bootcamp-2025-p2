@@ -54,6 +54,7 @@ def stop(
     """
     controller.request_exit()
 
+
 def read_queue(
     queue: queue_proxy_wrapper.QueueProxyWrapper,
     controller: worker_controller.WorkerController,
@@ -67,6 +68,7 @@ def read_queue(
         if not queue.queue.empty():
             data = queue.queue.get(timeout=1)
             main_logger.info(f"Telemetry data {data}")
+
 
 # =================================================================================================
 #                            ↑ BOOTCAMPERS MODIFY ABOVE THIS COMMENT ↑
@@ -114,23 +116,28 @@ def main() -> int:
     # =============================================================================================
     # Mock starting a worker, since cannot actually start a new process
     # Create a worker controller for your worker
-    controller = worker_controller.WorkerController
+    controller = worker_controller.WorkerController()
 
     # Create a multiprocess manager for synchronized queues
     manager = mp.Manger()
 
     # Create your queues
-    queue = queue_proxy_wrapper.QueueProxyWrapper
+    queue = queue_proxy_wrapper.QueueProxyWrapper()
 
     # Just set a timer to stop the worker after a while, since the worker infinite loops
-    threading.Timer(TELEMETRY_PERIOD * NUM_TRIALS * 2 + NUM_FAILS, stop, (controller,queue)).start()
+    threading.Timer(
+        TELEMETRY_PERIOD * NUM_TRIALS * 2 + NUM_FAILS, stop, (controller, queue)
+    ).start()
 
     # Read the main queue (worker outputs)
     threading.Thread(target=read_queue, args=(controller, queue, main_logger)).start()
 
     telemetry_worker.telemetry_worker(
         # Put your own arguments here
-        connection, controller, main_logger, queue
+        connection,
+        controller,
+        main_logger,
+        queue,
     )
     # =============================================================================================
     #                          ↑ BOOTCAMPERS MODIFY ABOVE THIS COMMENT ↑

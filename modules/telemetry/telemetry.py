@@ -81,7 +81,7 @@ class Telemetry:
         """
         Falliable create (instantiation) method to create a Telemetry object.
         """
-        return True, cls(cls.__private_key, connection, local_logger) 
+        return True, cls(cls.__private_key, connection, local_logger)
 
     def __init__(
         self,
@@ -108,8 +108,8 @@ class Telemetry:
         position_msg = None
 
         while start_time + self.timeout > time.time():
-            msg = self.connection.recv_match(type = ("LOCAL_POSITION_NED","ATTITUDE"), blocking = True)
-        
+            msg = self.connection.recv_match(type=("LOCAL_POSITION_NED", "ATTITUDE"), blocking=True)
+
             # Read MAVLink message LOCAL_POSITION_NED (32)
             if msg.get_type() == "LOCAL_POSITION_NED":
                 position_msg = msg

@@ -20,7 +20,7 @@ def telemetry_worker(
     connection: mavutil.mavfile,
     controller: worker_controller.WorkerController,
     local_logger: logger.Logger,
-    output: queue_proxy_wrapper.QueueProxyWrapper
+    output: queue_proxy_wrapper.QueueProxyWrapper,
 ) -> None:
     """
     Worker process.
@@ -67,6 +67,7 @@ def telemetry_worker(
             local_logger.warning("Telemetry data not received, timed out")
         else:
             output.queue.put(data)
+
 
 # =================================================================================================
 #                            ↑ BOOTCAMPERS MODIFY ABOVE THIS COMMENT ↑

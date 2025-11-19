@@ -19,13 +19,13 @@ from ..common.modules.logger import logger
 def heartbeat_sender_worker(
     connection: mavutil.mavfile,
     controller: worker_controller.WorkerController,
-    local_logger: logger.Logger
+    local_logger: logger.Logger,
     # Add other necessary worker arguments here
 ) -> None:
     """
     Worker process.
 
-    connection: Establishes communication between workers using pymavlink library 
+    connection: Establishes communication between workers using pymavlink library
     controller: How the main process communicates with the workers
     local_logger: Logs the results of heartbeat messages in log files
     """
@@ -56,7 +56,7 @@ def heartbeat_sender_worker(
     if not result:
         local_logger.error("Failed to establish heartbeat sender", True)
         pass
-    
+
     # Main loop: do work.
     while not controller.is_exit_requested():
         # check if controller is paused
@@ -71,6 +71,7 @@ def heartbeat_sender_worker(
         # create a system for time to be exactly one second
         sleep_time = 1 - time_elapsed
         time.sleep(sleep_time)
+
 
 # =================================================================================================
 #                            ↑ BOOTCAMPERS MODIFY ABOVE THIS COMMENT ↑

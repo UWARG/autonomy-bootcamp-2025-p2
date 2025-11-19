@@ -19,9 +19,7 @@ class HeartbeatReceiver:
 
     @classmethod
     def create(
-        cls,
-        connection: mavutil.mavfile,
-        local_logger: logger.Logger
+        cls, connection: mavutil.mavfile, local_logger: logger.Logger
     ) -> "tuple [True, HeartbeatReceiver] | tuple [False, None]":
         """
         Falliable create (instantiation) method to create a HeartbeatReceiver object.
@@ -29,10 +27,7 @@ class HeartbeatReceiver:
         return cls.__init__(cls.__private_key, connection, local_logger)
 
     def __init__(
-        self,
-        key: object,
-        connection: mavutil.mavfile,
-        local_logger: logger.Logger
+        self, key: object, connection: mavutil.mavfile, local_logger: logger.Logger
     ) -> None:
         assert key is HeartbeatReceiver.__private_key, "Use create() method"
 
@@ -41,23 +36,15 @@ class HeartbeatReceiver:
         self.status = "Connected"
         self.missed = 0
 
-
-
-    def run(
-        self
-    ) -> "tuple[bool, str]":
+    def run(self) -> "tuple[bool, str]":
         """
         Attempt to recieve a heartbeat message.
         If disconnected for over a threshold number of periods,
         the connection is considered disconnected.
         """
-        message = self.connection.recv_match(
-            type = 'HEARTBEAT',
-            blocking = True,
-            timeout = 2
-        )
+        message = self.connection.recv_match(type="HEARTBEAT", blocking=True, timeout=2)
 
-        if message == 'HEARTBEAT':
+        if message == "HEARTBEAT":
             self.status = "Connected"
             self.missed = 0
             self.local_logger.info("Heartbeat message received")

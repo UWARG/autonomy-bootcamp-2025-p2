@@ -22,7 +22,7 @@ def command_worker(
     output_queue: queue_proxy_wrapper.QueueProxyWrapper,
     local_logger: logger.Logger,
     controller: worker_controller.WorkerController,
-    telemetry_queue: queue_proxy_wrapper.QueueProxyWrapper
+    telemetry_queue: queue_proxy_wrapper.QueueProxyWrapper,
 ) -> None:
     """
     Worker process.

@@ -38,12 +38,13 @@ class Command:  # pylint: disable=too-many-instance-attributes
         connection: mavutil.mavfile,
         target: Position,
         local_logger: logger.Logger,
-
     ) -> "tuple [True, Command] | [False, None]":
         """
         Falliable create (instantiation) method to create a Command object.
         """
-        return True, cls(cls.__private_key, connection, target, local_logger)  #  Create a Command object
+        return True, cls(
+            cls.__private_key, connection, target, local_logger
+        )  #  Create a Command object
 
     def __init__(
         self,
@@ -67,11 +68,7 @@ class Command:  # pylint: disable=too-many-instance-attributes
         self.vzi = 0
         self.times_received = 0
 
-
-    def run(
-        self,
-        data: telemetry.TelemetryData
-    ) -> "tuple[True, str] | tuple [False, None]":
+    def run(self, data: telemetry.TelemetryData) -> "tuple[True, str] | tuple [False, None]":
         """
         Make a decision based on received telemetry data.
         """
@@ -81,11 +78,13 @@ class Command:  # pylint: disable=too-many-instance-attributes
         self.vzi += data.z_velocity
         self.times_received += 1
 
-        self.avg_vx = self.vxi/self.times_received
-        self.avg_vy = self.vyi/self.times_received
-        self.avg_vz = self.vzi/self.times_received
+        self.avg_vx = self.vxi / self.times_received
+        self.avg_vy = self.vyi / self.times_received
+        self.avg_vz = self.vzi / self.times_received
 
-        self.local_logger.info(f"Average velocity: ({self.avg_vx}, {self.avg_vy}, {self.avg_vz}) m/s")
+        self.local_logger.info(
+            f"Average velocity: ({self.avg_vx}, {self.avg_vy}, {self.avg_vz}) m/s"
+        )
 
         # Use COMMAND_LONG (76) message, assume the target_system=1 and target_componenet=0
         # The appropriate commands to use are instructed below
@@ -116,9 +115,7 @@ class Command:  # pylint: disable=too-many-instance-attributes
         if data.yaw is not None:
             dx = self.target.x - data.x
             dy = self.target.y - data.y
-            yaw_diff = (math.atan2(dy, dx) - data.yaw + math.pi) % (
-                2 * math.pi
-            ) - math.pi
+            yaw_diff = (math.atan2(dy, dx) - data.yaw + math.pi) % (2 * math.pi) - math.pi
 
             if abs(yaw_diff) > self.max_angle:
                 yaw_diff_deg = math.degrees(yaw_diff)
@@ -141,7 +138,7 @@ class Command:  # pylint: disable=too-many-instance-attributes
                 )
                 self.local_logger.info(f"CHANGING_YAW {yaw_diff_deg:.2f}")
                 return True, f"CHANGING YAW {yaw_diff_deg:.2f}"
-        
+
         self.local_logger.error("Could not run command")
         return False, None
 

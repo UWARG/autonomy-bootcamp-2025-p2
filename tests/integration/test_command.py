@@ -79,6 +79,7 @@ def read_queue(
             command = queue.queue.get()
             main_logger.info(command)
 
+
 def put_queue(
     telemetry_queue: queue_proxy_wrapper.QueueProxyWrapper,
     controller: worker_controller.WorkerController,
@@ -92,6 +93,7 @@ def put_queue(
             break
         telemetry_queue.queue.put(telemetry_data)
         time.sleep(TELEMETRY_PERIOD)
+
 
 # =================================================================================================
 #                            ↑ BOOTCAMPERS MODIFY ABOVE THIS COMMENT ↑
@@ -233,7 +235,9 @@ def main() -> int:
     ]
 
     # Just set a timer to stop the worker after a while, since the worker infinite loops
-    threading.Timer(TELEMETRY_PERIOD * len(path), stop, (telemetry_queue, output_queue, controller)).start()
+    threading.Timer(
+        TELEMETRY_PERIOD * len(path), stop, (telemetry_queue, output_queue, controller)
+    ).start()
 
     # Put items into input queue
     threading.Thread(target=put_queue, args=(telemetry_queue, controller, path)).start()
@@ -248,7 +252,7 @@ def main() -> int:
         output_queue,
         main_logger,
         controller,
-        telemetry_queue
+        telemetry_queue,
     )
     # =============================================================================================
     #                          ↑ BOOTCAMPERS MODIFY ABOVE THIS COMMENT ↑

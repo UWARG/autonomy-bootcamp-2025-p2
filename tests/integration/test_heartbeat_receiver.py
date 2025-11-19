@@ -48,18 +48,17 @@ def start_drone() -> None:
 # =================================================================================================
 #                            ↓ BOOTCAMPERS MODIFY BELOW THIS COMMENT ↓
 # =================================================================================================
-def stop(
-    controller: worker_controller.WorkerController  # Add any necessary arguments
-) -> None:
+def stop(controller: worker_controller.WorkerController) -> None:  # Add any necessary arguments
     """
     Stop the workers.
     """
     controller.request_exit()
 
+
 def read_queue(
     queue: queue_proxy_wrapper.QueueProxyWrapper,
     main_logger: logger.Logger,
-    controller: worker_controller.WorkerController
+    controller: worker_controller.WorkerController,
 ) -> None:
     """
     Read and print the output queue.
@@ -68,6 +67,7 @@ def read_queue(
         if not queue.queue.empty():
             status = queue.queue.get(timeout=1)
             main_logger.info(f"Heartbeat status {status}")
+
 
 # =================================================================================================
 #                            ↑ BOOTCAMPERS MODIFY ABOVE THIS COMMENT ↑
@@ -115,13 +115,13 @@ def main() -> int:
     # =============================================================================================
     # Mock starting a worker, since cannot actually start a new process
     # Create a worker controller for your worker
-    controller = worker_controller.WorkerController
+    controller = worker_controller.WorkerController()
 
     # Create a multiprocess manager for synchronized queues
     manager = mp.Manager()
 
     # Create your queues
-    queue = queue_proxy_wrapper.QueueProxyWrapper
+    queue = queue_proxy_wrapper.QueueProxyWrapper()
 
     # Just set a timer to stop the worker after a while, since the worker infinite loops
     threading.Timer(
@@ -133,12 +133,7 @@ def main() -> int:
     # Read the main queue (worker outputs)
     threading.Thread(target=read_queue, args=(queue, controller, main_logger)).start()
 
-    heartbeat_receiver_worker.heartbeat_receiver_worker(
-        connection,
-        main_logger,
-        queue,
-        controller
-    )
+    heartbeat_receiver_worker.heartbeat_receiver_worker(connection, main_logger, queue, controller)
     # =============================================================================================
     #                          ↑ BOOTCAMPERS MODIFY ABOVE THIS COMMENT ↑
     # =============================================================================================

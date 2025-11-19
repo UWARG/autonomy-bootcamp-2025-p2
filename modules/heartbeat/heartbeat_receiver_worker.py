@@ -20,7 +20,7 @@ def heartbeat_receiver_worker(
     connection: mavutil.mavfile,
     local_logger: logger.Logger,
     output_queue: queue_proxy_wrapper.QueueProxyWrapper,
-    controller: worker_controller.WorkerController
+    controller: worker_controller.WorkerController,
 ) -> None:
     """
     Worker process.
@@ -52,7 +52,7 @@ def heartbeat_receiver_worker(
     # =============================================================================================
     # Instantiate class object (heartbeat_receiver.HeartbeatReceiver)
     creation_status, receiver = heartbeat_receiver.HeartbeatReceiver(connection, local_logger)
-    
+
     if not creation_status:
         local_logger.error("Could not initialize Heartbeat Receiver")
         pass
@@ -61,9 +61,10 @@ def heartbeat_receiver_worker(
     # Main loop: do work.
     while not controller.is_exit_requested:
         controller.check_pause()
-        
+
         value, status = receiver.run()
         output_queue.queue.put(status)
+
 
 # =================================================================================================
 #                            ↑ BOOTCAMPERS MODIFY ABOVE THIS COMMENT ↑
