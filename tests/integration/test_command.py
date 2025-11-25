@@ -7,6 +7,7 @@ import multiprocessing as mp
 import subprocess
 import threading
 import time
+import sys
 
 from pymavlink import mavutil
 
@@ -35,6 +36,7 @@ TURNING_SPEED = 5  # deg/s
 #                            ↓ BOOTCAMPERS MODIFY BELOW THIS COMMENT ↓
 # =================================================================================================
 # Add your own constants here
+TELEMETRY_PERIOD_S = TELEMETRY_PERIOD
 
 # =================================================================================================
 #                            ↑ BOOTCAMPERS MODIFY ABOVE THIS COMMENT ↑
@@ -47,38 +49,49 @@ def start_drone() -> None:
     """
     Start the mocked drone.
     """
-    subprocess.run(["python", "-m", MOCK_DRONE_MODULE], shell=True, check=False)
+    subprocess.run([sys.executable, "-m", MOCK_DRONE_MODULE], check=False)
 
 
 # =================================================================================================
 #                            ↓ BOOTCAMPERS MODIFY BELOW THIS COMMENT ↓
 # =================================================================================================
 def stop(
-    args,  # Add any necessary arguments
+    controller: worker_controller.WorkerController,
 ) -> None:
     """
     Stop the workers.
     """
-    pass  # Add logic to stop your worker
+    controller.request_exit()
 
 
 def read_queue(
-    args,  # Add any necessary arguments
+    output_queue: queue_proxy_wrapper.QueueProxyWrapper,
     main_logger: logger.Logger,
 ) -> None:
     """
     Read and print the output queue.
     """
-    pass  # Add logic to read from your worker's output queue and print it using the logger
+    while True:
+        try:
+            item = output_queue.queue.get(timeout=TELEMETRY_PERIOD_S * 2)
+        except Exception:  # pylint: disable=broad-except
+            break
+        if item is None:
+            continue
+        main_logger.info(str(item))
 
 
 def put_queue(
-    args,  # Add any necessary arguments
+    input_queue: queue_proxy_wrapper.QueueProxyWrapper,
+    items: list[telemetry.TelemetryData],
 ) -> None:
     """
     Place mocked inputs into the input queue periodically with period TELEMETRY_PERIOD.
     """
-    pass  # Add logic to place the mocked inputs into your worker's input queue periodically
+    for item in items:
+        input_queue.queue.put(item)
+        time.sleep(TELEMETRY_PERIOD_S)
+    input_queue.queue.put(None)
 
 
 # =================================================================================================
@@ -111,7 +124,16 @@ def main() -> int:
     # Mocked GCS, connect to mocked drone which is listening at CONNECTION_STRING
     # source_system = 255 (groundside)
     # source_component = 0 (ground control station)
-    connection = mavutil.mavlink_connection(CONNECTION_STRING)
+    # Retry a few times to allow the mock drone to start listening
+    for _ in range(10):
+        try:
+            connection = mavutil.mavlink_connection(CONNECTION_STRING)
+            break
+        except Exception:  # pylint: disable=broad-except
+            time.sleep(0.2)
+    else:
+        main_logger.error("Failed to create connection to mock drone")
+        return -1
     connection.mav.heartbeat_send(
         mavutil.mavlink.MAV_TYPE_GCS,
         mavutil.mavlink.MAV_AUTOPILOT_INVALID,
@@ -127,10 +149,14 @@ def main() -> int:
     # =============================================================================================
     # Mock starting a worker, since cannot actually start a new process
     # Create a worker controller for your worker
+    controller = worker_controller.WorkerController()
 
     # Create a multiprocess manager for synchronized queues
+    mp_manager = mp.Manager()
 
     # Create your queues
+    input_queue = queue_proxy_wrapper.QueueProxyWrapper(mp_manager, maxsize=128)
+    main_queue = queue_proxy_wrapper.QueueProxyWrapper(mp_manager, maxsize=128)
 
     # Test cases, DO NOT EDIT!
     path = [
@@ -217,16 +243,24 @@ def main() -> int:
     ]
 
     # Just set a timer to stop the worker after a while, since the worker infinite loops
-    threading.Timer(TELEMETRY_PERIOD * len(path), stop, (args,)).start()
+    threading.Timer(TELEMETRY_PERIOD * len(path), stop, (controller,)).start()
 
     # Put items into input queue
-    threading.Thread(target=put_queue, args=(args,)).start()
+    threading.Thread(target=put_queue, args=(input_queue, path)).start()
 
     # Read the main queue (worker outputs)
-    threading.Thread(target=read_queue, args=(args, main_logger)).start()
+    threading.Thread(target=read_queue, args=(main_queue, main_logger)).start()
 
     command_worker.command_worker(
-        # Place your own arguments here
+        connection,
+        TARGET,
+        TELEMETRY_PERIOD_S,
+        Z_SPEED,
+        ANGLE_TOLERANCE,
+        HEIGHT_TOLERANCE,
+        input_queue,
+        main_queue,
+        controller,
     )
     # =============================================================================================
     #                          ↑ BOOTCAMPERS MODIFY ABOVE THIS COMMENT ↑

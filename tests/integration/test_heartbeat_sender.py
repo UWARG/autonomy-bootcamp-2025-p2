@@ -5,6 +5,8 @@ Test the heartbeat sender worker with a mocked drone.
 import multiprocessing as mp
 import subprocess
 import threading
+import time
+import sys
 
 from pymavlink import mavutil
 
@@ -26,6 +28,7 @@ NUM_TRIALS = 10
 #                            ↓ BOOTCAMPERS MODIFY BELOW THIS COMMENT ↓
 # =================================================================================================
 # Add your own constants here
+HEARTBEAT_PERIOD_S = HEARTBEAT_PERIOD
 
 # =================================================================================================
 #                            ↑ BOOTCAMPERS MODIFY ABOVE THIS COMMENT ↑
@@ -38,19 +41,19 @@ def start_drone() -> None:
     """
     Start the mocked drone.
     """
-    subprocess.run(["python", "-m", MOCK_DRONE_MODULE], shell=True, check=False)
+    subprocess.run([sys.executable, "-m", MOCK_DRONE_MODULE], check=False)
 
 
 # =================================================================================================
 #                            ↓ BOOTCAMPERS MODIFY BELOW THIS COMMENT ↓
 # =================================================================================================
 def stop(
-    args,  # Add any necessary arguments
+    controller: worker_controller.WorkerController,
 ) -> None:
     """
     Stop the workers.
     """
-    pass  # Add logic to stop your worker
+    controller.request_exit()
 
 
 # =================================================================================================
@@ -83,7 +86,16 @@ def main() -> int:
     # Mocked GCS, connect to mocked drone which is listening at CONNECTION_STRING
     # source_system = 255 (groundside)
     # source_component = 0 (ground control station)
-    connection = mavutil.mavlink_connection(CONNECTION_STRING)
+    # Retry a few times to allow the mock drone to start listening
+    for _ in range(10):
+        try:
+            connection = mavutil.mavlink_connection(CONNECTION_STRING)
+            break
+        except Exception:  # pylint: disable=broad-except
+            time.sleep(0.2)
+    else:
+        main_logger.error("Failed to create connection to mock drone")
+        return -1
     # Don't send another heartbeat since the worker will do so
     main_logger.info("Connected!")
     # pylint: enable=duplicate-code
@@ -93,12 +105,15 @@ def main() -> int:
     # =============================================================================================
     # Mock starting a worker, since cannot actually start a new process
     # Create a worker controller for your worker
+    controller = worker_controller.WorkerController()
 
     # Just set a timer to stop the worker after a while, since the worker infinite loops
-    threading.Timer(HEARTBEAT_PERIOD * NUM_TRIALS, stop, (args,)).start()
+    threading.Timer(HEARTBEAT_PERIOD * NUM_TRIALS, stop, (controller,)).start()
 
     heartbeat_sender_worker.heartbeat_sender_worker(
-        # Place your own arguments here
+        connection,
+        HEARTBEAT_PERIOD_S,
+        controller,
     )
     # =============================================================================================
     #                          ↑ BOOTCAMPERS MODIFY ABOVE THIS COMMENT ↑
