@@ -48,9 +48,7 @@ def start_drone() -> None:
 # =================================================================================================
 #                            ↓ BOOTCAMPERS MODIFY BELOW THIS COMMENT ↓
 # =================================================================================================
-def stop(
-    controller: worker_controller.WorkerController, queue: queue_proxy_wrapper.QueueProxyWrapper
-) -> None:  # Add any necessary arguments
+def stop(controller: worker_controller.WorkerController) -> None:  # Add any necessary arguments
     """
     Stop the workers.
     """
@@ -65,13 +63,9 @@ def read_queue(
     """
     Read and print the output queue.
     """
-    while True:
-        try:
-            status = queue.queue.get(timeout=1)
-            main_logger.info(f"Heartbeat status: {status}")
-        except:
-            if controller.is_exit_requested() and queue.queue.empty():
-                break
+    while not controller.is_exit_requested() and not queue.queue.empty():
+        status = queue.queue.get(timeout=1)
+        main_logger.info(f"Heartbeat status: {status}")
 
 
 # =================================================================================================
