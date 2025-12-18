@@ -56,6 +56,7 @@ def stop(
     """
     controller.request_exit()
 
+
 def read_queue(
     queue: queue_proxy_wrapper.QueueProxyWrapper,
     main_logger: logger.Logger,

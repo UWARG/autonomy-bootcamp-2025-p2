@@ -55,11 +55,11 @@ class HeartbeatReceiver:
         except Exception as e:
             self.local_logger.warning(f"Connection error: {e}")
             self.missed += 1
-    
+
         if self.missed >= 5:
             self.status = "Disconnected"
             self.local_logger.warning("Drone Disconnected")
-    
+
         return True, self.status
 
 
