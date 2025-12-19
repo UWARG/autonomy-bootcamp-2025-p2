@@ -1,4 +1,0 @@
-14:00:21: [INFO] [C:\Coding\WARG Autonomy\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry_worker.py | telemetry_worker | 48] Logger initialized
-14:00:21: [INFO] [C:\Coding\WARG Autonomy\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry_worker.py | telemetry_worker | 59] Telemetry instance created
-14:00:23: [ERROR] [C:\Coding\WARG Autonomy\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 149] Did not receive telemetry data within timeout frame
-14:00:23: [WARNING] [C:\Coding\WARG Autonomy\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry_worker.py | telemetry_worker | 67] Telemetry data not received, timed out

@@ -1,0 +1,98 @@
+14:31:59: [INFO] [C:\Coding\WARG Autonomy\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry_worker.py | telemetry_worker | 48] Logger initialized
+14:31:59: [INFO] [C:\Coding\WARG Autonomy\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry_worker.py | telemetry_worker | 59] Telemetry instance created
+14:31:59: [INFO] [C:\Coding\WARG Autonomy\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 127] Received attitude
+14:31:59: [INFO] [C:\Coding\WARG Autonomy\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 122] Received position
+14:31:59: [INFO] [C:\Coding\WARG Autonomy\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 146] Created telemetry data
+14:31:59: [INFO] [C:\Coding\WARG Autonomy\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry_worker.py | telemetry_worker | 70] <bound method TelemetryData.__str__ of <modules.telemetry.telemetry.TelemetryData object at 0x000001BFB0779710>>
+14:31:59: [INFO] [C:\Coding\WARG Autonomy\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 127] Received attitude
+14:31:59: [INFO] [C:\Coding\WARG Autonomy\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 122] Received position
+14:31:59: [INFO] [C:\Coding\WARG Autonomy\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 146] Created telemetry data
+14:31:59: [INFO] [C:\Coding\WARG Autonomy\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry_worker.py | telemetry_worker | 70] <bound method TelemetryData.__str__ of <modules.telemetry.telemetry.TelemetryData object at 0x000001BFB0779F90>>
+14:32:00: [INFO] [C:\Coding\WARG Autonomy\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 127] Received attitude
+14:32:00: [INFO] [C:\Coding\WARG Autonomy\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 127] Received attitude
+14:32:00: [INFO] [C:\Coding\WARG Autonomy\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 122] Received position
+14:32:00: [INFO] [C:\Coding\WARG Autonomy\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 146] Created telemetry data
+14:32:00: [INFO] [C:\Coding\WARG Autonomy\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry_worker.py | telemetry_worker | 70] <bound method TelemetryData.__str__ of <modules.telemetry.telemetry.TelemetryData object at 0x000001BFAD961D50>>
+14:32:00: [INFO] [C:\Coding\WARG Autonomy\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 127] Received attitude
+14:32:00: [INFO] [C:\Coding\WARG Autonomy\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 122] Received position
+14:32:00: [INFO] [C:\Coding\WARG Autonomy\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 146] Created telemetry data
+14:32:00: [INFO] [C:\Coding\WARG Autonomy\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry_worker.py | telemetry_worker | 70] <bound method TelemetryData.__str__ of <modules.telemetry.telemetry.TelemetryData object at 0x000001BFB077A310>>
+14:32:01: [INFO] [C:\Coding\WARG Autonomy\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 127] Received attitude
+14:32:01: [INFO] [C:\Coding\WARG Autonomy\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 127] Received attitude
+14:32:01: [INFO] [C:\Coding\WARG Autonomy\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 122] Received position
+14:32:01: [INFO] [C:\Coding\WARG Autonomy\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 146] Created telemetry data
+14:32:01: [INFO] [C:\Coding\WARG Autonomy\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry_worker.py | telemetry_worker | 70] <bound method TelemetryData.__str__ of <modules.telemetry.telemetry.TelemetryData object at 0x000001BFB077A810>>
+14:32:01: [INFO] [C:\Coding\WARG Autonomy\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 127] Received attitude
+14:32:01: [INFO] [C:\Coding\WARG Autonomy\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 122] Received position
+14:32:01: [INFO] [C:\Coding\WARG Autonomy\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 146] Created telemetry data
+14:32:01: [INFO] [C:\Coding\WARG Autonomy\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry_worker.py | telemetry_worker | 70] <bound method TelemetryData.__str__ of <modules.telemetry.telemetry.TelemetryData object at 0x000001BFB077A5D0>>
+14:32:02: [INFO] [C:\Coding\WARG Autonomy\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 127] Received attitude
+14:32:02: [INFO] [C:\Coding\WARG Autonomy\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 127] Received attitude
+14:32:02: [INFO] [C:\Coding\WARG Autonomy\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 122] Received position
+14:32:02: [INFO] [C:\Coding\WARG Autonomy\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 146] Created telemetry data
+14:32:02: [INFO] [C:\Coding\WARG Autonomy\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry_worker.py | telemetry_worker | 70] <bound method TelemetryData.__str__ of <modules.telemetry.telemetry.TelemetryData object at 0x000001BFB0779E50>>
+14:32:02: [INFO] [C:\Coding\WARG Autonomy\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 127] Received attitude
+14:32:02: [INFO] [C:\Coding\WARG Autonomy\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 122] Received position
+14:32:02: [INFO] [C:\Coding\WARG Autonomy\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 146] Created telemetry data
+14:32:02: [INFO] [C:\Coding\WARG Autonomy\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry_worker.py | telemetry_worker | 70] <bound method TelemetryData.__str__ of <modules.telemetry.telemetry.TelemetryData object at 0x000001BFB077B010>>
+14:32:03: [INFO] [C:\Coding\WARG Autonomy\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 127] Received attitude
+14:32:03: [INFO] [C:\Coding\WARG Autonomy\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 127] Received attitude
+14:32:03: [INFO] [C:\Coding\WARG Autonomy\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 122] Received position
+14:32:03: [INFO] [C:\Coding\WARG Autonomy\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 146] Created telemetry data
+14:32:03: [INFO] [C:\Coding\WARG Autonomy\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry_worker.py | telemetry_worker | 70] <bound method TelemetryData.__str__ of <modules.telemetry.telemetry.TelemetryData object at 0x000001BFB077B4D0>>
+14:32:03: [INFO] [C:\Coding\WARG Autonomy\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 127] Received attitude
+14:32:03: [INFO] [C:\Coding\WARG Autonomy\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 122] Received position
+14:32:03: [INFO] [C:\Coding\WARG Autonomy\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 146] Created telemetry data
+14:32:03: [INFO] [C:\Coding\WARG Autonomy\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry_worker.py | telemetry_worker | 70] <bound method TelemetryData.__str__ of <modules.telemetry.telemetry.TelemetryData object at 0x000001BFB077B3D0>>
+14:32:04: [INFO] [C:\Coding\WARG Autonomy\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 127] Received attitude
+14:32:05: [INFO] [C:\Coding\WARG Autonomy\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 127] Received attitude
+14:32:06: [INFO] [C:\Coding\WARG Autonomy\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 122] Received position
+14:32:06: [INFO] [C:\Coding\WARG Autonomy\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 146] Created telemetry data
+14:32:06: [INFO] [C:\Coding\WARG Autonomy\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry_worker.py | telemetry_worker | 70] <bound method TelemetryData.__str__ of <modules.telemetry.telemetry.TelemetryData object at 0x000001BFAD9589D0>>
+14:32:07: [INFO] [C:\Coding\WARG Autonomy\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 127] Received attitude
+14:32:07: [INFO] [C:\Coding\WARG Autonomy\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 122] Received position
+14:32:07: [INFO] [C:\Coding\WARG Autonomy\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 146] Created telemetry data
+14:32:07: [INFO] [C:\Coding\WARG Autonomy\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry_worker.py | telemetry_worker | 70] <bound method TelemetryData.__str__ of <modules.telemetry.telemetry.TelemetryData object at 0x000001BFB0736490>>
+14:32:07: [INFO] [C:\Coding\WARG Autonomy\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 122] Received position
+14:32:07: [INFO] [C:\Coding\WARG Autonomy\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 127] Received attitude
+14:32:07: [INFO] [C:\Coding\WARG Autonomy\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 146] Created telemetry data
+14:32:07: [INFO] [C:\Coding\WARG Autonomy\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry_worker.py | telemetry_worker | 70] <bound method TelemetryData.__str__ of <modules.telemetry.telemetry.TelemetryData object at 0x000001BFB077B610>>
+14:32:08: [INFO] [C:\Coding\WARG Autonomy\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 122] Received position
+14:32:08: [INFO] [C:\Coding\WARG Autonomy\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 127] Received attitude
+14:32:08: [INFO] [C:\Coding\WARG Autonomy\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 146] Created telemetry data
+14:32:08: [INFO] [C:\Coding\WARG Autonomy\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry_worker.py | telemetry_worker | 70] <bound method TelemetryData.__str__ of <modules.telemetry.telemetry.TelemetryData object at 0x000001BFB077B690>>
+14:32:08: [INFO] [C:\Coding\WARG Autonomy\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 122] Received position
+14:32:08: [INFO] [C:\Coding\WARG Autonomy\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 122] Received position
+14:32:08: [INFO] [C:\Coding\WARG Autonomy\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 127] Received attitude
+14:32:08: [INFO] [C:\Coding\WARG Autonomy\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 146] Created telemetry data
+14:32:08: [INFO] [C:\Coding\WARG Autonomy\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry_worker.py | telemetry_worker | 70] <bound method TelemetryData.__str__ of <modules.telemetry.telemetry.TelemetryData object at 0x000001BFB077BC90>>
+14:32:09: [INFO] [C:\Coding\WARG Autonomy\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 122] Received position
+14:32:09: [INFO] [C:\Coding\WARG Autonomy\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 127] Received attitude
+14:32:09: [INFO] [C:\Coding\WARG Autonomy\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 146] Created telemetry data
+14:32:09: [INFO] [C:\Coding\WARG Autonomy\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry_worker.py | telemetry_worker | 70] <bound method TelemetryData.__str__ of <modules.telemetry.telemetry.TelemetryData object at 0x000001BFB0788E50>>
+14:32:09: [INFO] [C:\Coding\WARG Autonomy\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 122] Received position
+14:32:09: [INFO] [C:\Coding\WARG Autonomy\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 122] Received position
+14:32:09: [INFO] [C:\Coding\WARG Autonomy\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 127] Received attitude
+14:32:09: [INFO] [C:\Coding\WARG Autonomy\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 146] Created telemetry data
+14:32:09: [INFO] [C:\Coding\WARG Autonomy\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry_worker.py | telemetry_worker | 70] <bound method TelemetryData.__str__ of <modules.telemetry.telemetry.TelemetryData object at 0x000001BFB077BE90>>
+14:32:10: [INFO] [C:\Coding\WARG Autonomy\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 122] Received position
+14:32:10: [INFO] [C:\Coding\WARG Autonomy\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 127] Received attitude
+14:32:10: [INFO] [C:\Coding\WARG Autonomy\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 146] Created telemetry data
+14:32:10: [INFO] [C:\Coding\WARG Autonomy\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry_worker.py | telemetry_worker | 70] <bound method TelemetryData.__str__ of <modules.telemetry.telemetry.TelemetryData object at 0x000001BFB0736710>>
+14:32:10: [INFO] [C:\Coding\WARG Autonomy\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 122] Received position
+14:32:10: [INFO] [C:\Coding\WARG Autonomy\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 122] Received position
+14:32:10: [INFO] [C:\Coding\WARG Autonomy\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 127] Received attitude
+14:32:10: [INFO] [C:\Coding\WARG Autonomy\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 146] Created telemetry data
+14:32:10: [INFO] [C:\Coding\WARG Autonomy\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry_worker.py | telemetry_worker | 70] <bound method TelemetryData.__str__ of <modules.telemetry.telemetry.TelemetryData object at 0x000001BFB077B7D0>>
+14:32:11: [INFO] [C:\Coding\WARG Autonomy\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 122] Received position
+14:32:11: [INFO] [C:\Coding\WARG Autonomy\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 127] Received attitude
+14:32:11: [INFO] [C:\Coding\WARG Autonomy\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 146] Created telemetry data
+14:32:11: [INFO] [C:\Coding\WARG Autonomy\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry_worker.py | telemetry_worker | 70] <bound method TelemetryData.__str__ of <modules.telemetry.telemetry.TelemetryData object at 0x000001BFB0788850>>
+14:32:11: [INFO] [C:\Coding\WARG Autonomy\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 122] Received position
+14:32:11: [INFO] [C:\Coding\WARG Autonomy\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 122] Received position
+14:32:11: [INFO] [C:\Coding\WARG Autonomy\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 127] Received attitude
+14:32:11: [INFO] [C:\Coding\WARG Autonomy\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 146] Created telemetry data
+14:32:11: [INFO] [C:\Coding\WARG Autonomy\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry_worker.py | telemetry_worker | 70] <bound method TelemetryData.__str__ of <modules.telemetry.telemetry.TelemetryData object at 0x000001BFAD961D50>>
+14:32:12: [INFO] [C:\Coding\WARG Autonomy\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 122] Received position
+14:32:14: [ERROR] [C:\Coding\WARG Autonomy\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 149] Did not receive telemetry data within timeout frame
+14:32:14: [WARNING] [C:\Coding\WARG Autonomy\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry_worker.py | telemetry_worker | 67] Telemetry data not received, timed out

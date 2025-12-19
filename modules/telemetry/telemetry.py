@@ -94,7 +94,7 @@ class Telemetry:
         # Do any intializiation here
         self.connection = connection
         self.local_logger = local_logger
-        self.timeout = 1
+        self.timeout = 3
 
     def run(
         self,
@@ -108,9 +108,7 @@ class Telemetry:
         position_msg = None
 
         while start_time + self.timeout > time.time():
-            msg = self.connection.recv_match(
-                type=("LOCAL_POSITION_NED", "ATTITUDE"), blocking=True, timeout=2
-            )
+            msg = self.connection.recv_match(blocking=True, timeout=0.1)
 
             # if message is none
             if msg is None:
@@ -143,7 +141,7 @@ class Telemetry:
                     pitch_speed=attitude_msg.pitchspeed,
                     yaw_speed=attitude_msg.yawspeed,
                 )
-                self.logger.info("Created telemetry data")
+                self.local_logger.info("Created telemetry data")
                 return True, tel_data
         # message could not be received in time range
         self.local_logger.error("Did not receive telemetry data within timeout frame")
