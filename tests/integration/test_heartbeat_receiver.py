@@ -6,6 +6,7 @@ import multiprocessing as mp
 import subprocess
 import threading
 
+
 from pymavlink import mavutil
 
 from modules.common.modules.logger import logger
@@ -14,7 +15,6 @@ from modules.common.modules.read_yaml import read_yaml
 from modules.heartbeat import heartbeat_receiver_worker
 from utilities.workers import queue_proxy_wrapper
 from utilities.workers import worker_controller
-
 
 MOCK_DRONE_MODULE = "tests.integration.mock_drones.heartbeat_receiver_drone"
 CONNECTION_STRING = "tcp:localhost:12345"
@@ -29,7 +29,7 @@ ERROR_TOLERANCE = 1e-2
 # =================================================================================================
 #                            ↓ BOOTCAMPERS MODIFY BELOW THIS COMMENT ↓
 # =================================================================================================
-# Add your own constants here
+controller = worker_controller.WorkerController()
 
 # =================================================================================================
 #                            ↑ BOOTCAMPERS MODIFY ABOVE THIS COMMENT ↑
@@ -49,22 +49,29 @@ def start_drone() -> None:
 #                            ↓ BOOTCAMPERS MODIFY BELOW THIS COMMENT ↓
 # =================================================================================================
 def stop(
-    args,  # Add any necessary arguments
-) -> None:
+    queue: queue_proxy_wrapper.QueueProxyWrapper, main_logger: logger.Logger
+) -> None:  # Add any necessary arguments
     """
-    Stop the workers.
+    Docstring for stop
+
+    :param queue: Description
+    :type queue: queue_proxy_wrapper.QueueProxyWrapper
+    :param main_logger: Description
+    :type main_logger: logger.Logger
     """
-    pass  # Add logic to stop your worker
+    controller.request_exit()
+    queue.fill_and_drain_queue()
+    main_logger.info("Stopping")
 
 
-def read_queue(
-    args,  # Add any necessary arguments
-    main_logger: logger.Logger,
-) -> None:
+def read_queue(main_logger: logger.Logger, queue: queue_proxy_wrapper.QueueProxyWrapper) -> None:
     """
     Read and print the output queue.
     """
-    pass  # Add logic to read from your worker's output queue and print it using the logger
+    while not controller.is_exit_requested():
+        information = queue.queue.get()
+        print(f"{information}")
+        main_logger.info(f"{information}")
 
 
 # =================================================================================================
@@ -115,22 +122,21 @@ def main() -> int:
     # Create a worker controller for your worker
 
     # Create a multiprocess manager for synchronized queues
-
+    manager = mp.Manager()
     # Create your queues
-
+    queue = queue_proxy_wrapper.QueueProxyWrapper(manager, 1)
     # Just set a timer to stop the worker after a while, since the worker infinite loops
     threading.Timer(
         HEARTBEAT_PERIOD * (NUM_TRIALS * 2 + DISCONNECT_THRESHOLD + NUM_DISCONNECTS + 2),
         stop,
-        (args,),
+        args=(queue, main_logger),
     ).start()
 
     # Read the main queue (worker outputs)
-    threading.Thread(target=read_queue, args=(args, main_logger)).start()
+    threading.Thread(target=read_queue, args=(main_logger, queue)).start()
 
-    heartbeat_receiver_worker.heartbeat_receiver_worker(
-        # Place your own arguments here
-    )
+    heartbeat_receiver_worker.heartbeat_receiver_worker(connection, queue, controller)
+
     # =============================================================================================
     #                          ↑ BOOTCAMPERS MODIFY ABOVE THIS COMMENT ↑
     # =============================================================================================

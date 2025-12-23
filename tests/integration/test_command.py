@@ -53,32 +53,46 @@ def start_drone() -> None:
 # =================================================================================================
 #                            ↓ BOOTCAMPERS MODIFY BELOW THIS COMMENT ↓
 # =================================================================================================
-def stop(
-    args,  # Add any necessary arguments
-) -> None:
+def stop(controller: worker_controller.WorkerController) -> None:
     """
-    Stop the workers.
+    Docstring for stop
+
+    :param controller: Description
+    :type controller: worker_controller.WorkerController
     """
-    pass  # Add logic to stop your worker
+    controller.request_exit()
 
 
 def read_queue(
-    args,  # Add any necessary arguments
     main_logger: logger.Logger,
+    output_queue: queue_proxy_wrapper.QueueProxyWrapper,
+    controller: worker_controller.WorkerController,
 ) -> None:
     """
-    Read and print the output queue.
+    Docstring for read_queue
+
+    :param main_logger: Description
+    :type main_logger: logger.Logger
+    :param output_queue: Description
+    :type output_queue: queue_proxy_wrapper.QueueProxyWrapper
+    :param controller: Description
+    :type controller: worker_controller.WorkerController
     """
-    pass  # Add logic to read from your worker's output queue and print it using the logger
+    while not controller.is_exit_requested():
+        data = output_queue.queue.get()
+        main_logger.info(data)
 
 
 def put_queue(
-    args,  # Add any necessary arguments
+    input_queue: queue_proxy_wrapper.QueueProxyWrapper,
+    path: list[telemetry.TelemetryData],  # Add any necessary arguments
 ) -> None:
     """
     Place mocked inputs into the input queue periodically with period TELEMETRY_PERIOD.
     """
-    pass  # Add logic to place the mocked inputs into your worker's input queue periodically
+    for i in path:
+        input_queue.queue.put(i)
+        time.sleep(TELEMETRY_PERIOD)
 
 
 # =================================================================================================
@@ -127,11 +141,12 @@ def main() -> int:
     # =============================================================================================
     # Mock starting a worker, since cannot actually start a new process
     # Create a worker controller for your worker
-
+    controller = worker_controller.WorkerController()
     # Create a multiprocess manager for synchronized queues
-
+    mp_manager = mp.Manager()
     # Create your queues
-
+    input_queue = queue_proxy_wrapper.QueueProxyWrapper(mp_manager, 1)
+    output_queue = queue_proxy_wrapper.QueueProxyWrapper(mp_manager, 1)
     # Test cases, DO NOT EDIT!
     path = [
         # Test singular points
@@ -217,16 +232,20 @@ def main() -> int:
     ]
 
     # Just set a timer to stop the worker after a while, since the worker infinite loops
-    threading.Timer(TELEMETRY_PERIOD * len(path), stop, (args,)).start()
+    threading.Timer(TELEMETRY_PERIOD * len(path), stop, (controller,)).start()
 
     # Put items into input queue
-    threading.Thread(target=put_queue, args=(args,)).start()
+    threading.Thread(target=put_queue, args=(output_queue, path)).start()
 
     # Read the main queue (worker outputs)
-    threading.Thread(target=read_queue, args=(args, main_logger)).start()
+    threading.Thread(target=read_queue, args=(main_logger, input_queue, controller)).start()
 
     command_worker.command_worker(
-        # Place your own arguments here
+        connection,
+        TARGET,
+        output_queue,
+        input_queue,
+        controller,
     )
     # =============================================================================================
     #                          ↑ BOOTCAMPERS MODIFY ABOVE THIS COMMENT ↑

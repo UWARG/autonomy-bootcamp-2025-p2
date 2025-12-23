@@ -2,8 +2,6 @@
 Telemetry gathering logic.
 """
 
-import time
-
 from pymavlink import mavutil
 
 from ..common.modules.logger import logger
@@ -76,37 +74,95 @@ class Telemetry:
     def create(
         cls,
         connection: mavutil.mavfile,
-        args,  # Put your own arguments here
         local_logger: logger.Logger,
-    ):
+    ) -> "tuple[bool,Telemetry]|tuple[bool,None]":
         """
         Falliable create (instantiation) method to create a Telemetry object.
         """
-        pass  # Create a Telemetry object
+        if connection is None:
+            return False, None
+        return True, cls(cls.__private_key, connection, local_logger)
 
     def __init__(
         self,
         key: object,
         connection: mavutil.mavfile,
-        args,  # Put your own arguments here
         local_logger: logger.Logger,
     ) -> None:
         assert key is Telemetry.__private_key, "Use create() method"
-
-        # Do any intializiation here
+        self.connection = connection
+        self.local_logger = local_logger
+        local_logger.info("Initialized")
+        self.time_since_last_message = {"ATTITUDE": 0, "LOCAL_POSITION_NED": 0}
+        self.attributes = {
+            "x": None,
+            "y": None,
+            "z": None,
+            "vx": None,
+            "vy": None,
+            "vz": None,
+            "pitch": None,
+            "yaw": None,
+            "roll": None,
+            "rollspeed": None,
+            "pitchspeed": None,
+            "yawspeed": None,
+        }
 
     def run(
         self,
-        args,  # Put your own arguments here
-    ):
+        # Put your own arguments here
+    ) -> TelemetryData | None:
         """
-        Receive LOCAL_POSITION_NED and ATTITUDE messages from the drone,
-        combining them together to form a single TelemetryData object.
+        Docstring for run
+
+        :param self: Description
+        :return: Description
+        :rtype: TelemetryData | None
         """
+        msg = self.connection.recv_match(
+            type=["ATTITUDE", "LOCAL_POSITION_NED"], blocking=True, timeout=1
+        )
+        telemetry_data = "Not Ready"
+        if msg is not None:
+            try:
+                self.attributes["roll"] = msg.roll
+                self.attributes["yaw"] = msg.yaw
+                self.attributes["pitch"] = msg.pitch
+                self.attributes["yawspeed"] = msg.yawspeed
+                self.attributes["pitchspeed"] = msg.pitchspeed
+                self.attributes["rollspeed"] = msg.rollspeed
+            except AttributeError:
+                self.attributes["x"] = msg.x
+                self.attributes["y"] = msg.y
+                self.attributes["z"] = msg.z
+                self.attributes["vx"] = msg.vx
+                self.attributes["vy"] = msg.vy
+                self.attributes["vz"] = msg.vz
+            if self.attributes["x"] is not None and self.attributes["roll"] is not None:
+                telemetry_data = TelemetryData(
+                    msg.time_boot_ms,
+                    self.attributes["x"],
+                    self.attributes["y"],
+                    self.attributes["z"],
+                    self.attributes["vx"],
+                    self.attributes["vy"],
+                    self.attributes["vz"],
+                    self.attributes["roll"],
+                    self.attributes["pitch"],
+                    self.attributes["yaw"],
+                    self.attributes["rollspeed"],
+                    self.attributes["pitchspeed"],
+                    self.attributes["yawspeed"],
+                )
+                for index in self.attributes:
+                    self.attributes[index] = None
+        else:
+            telemetry_data = None
+        return telemetry_data
         # Read MAVLink message LOCAL_POSITION_NED (32)
         # Read MAVLink message ATTITUDE (30)
         # Return the most recent of both, and use the most recent message's timestamp
-        pass
 
 
 # =================================================================================================

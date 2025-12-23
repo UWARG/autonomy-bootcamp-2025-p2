@@ -2,6 +2,7 @@
 Heartbeat sending logic.
 """
 
+import time
 from pymavlink import mavutil
 
 
@@ -19,31 +20,59 @@ class HeartbeatSender:
     def create(
         cls,
         connection: mavutil.mavfile,
-        args,  # Put your own arguments here
-    ) -> "tuple[True, HeartbeatSender] | tuple[False, None]":
+        mav_type: int,
+        autopilot: int,
+        base_mode: int,
+        custom_mode: int,
+        system_status: int,
+    ) -> "HeartbeatSender":
         """
-        Falliable create (instantiation) method to create a HeartbeatSender object.
+        Falliable create (instantiation) method to create a Command object.
         """
-        pass  # Create a HeartbeatSender object
+        return HeartbeatSender(
+            cls.__private_key,
+            connection,
+            mav_type,
+            autopilot,
+            base_mode,
+            custom_mode,
+            system_status,
+        )  # Create a HeartbeatSender object
 
     def __init__(
         self,
         key: object,
         connection: mavutil.mavfile,
-        args,  # Put your own arguments here
-    ):
+        mav_type: int,
+        autopilot: int,
+        base_mode: int,
+        custom_mode: int,
+        system_status: int,
+    ) -> None:
+
         assert key is HeartbeatSender.__private_key, "Use create() method"
 
-        # Do any intializiation here
+        self.connection = connection
+        self.mav_type = mav_type
+        self.autopilot = autopilot
+        self.base_mode = base_mode
+        self.custom_mode = custom_mode
+        self.system_status = system_status
 
     def run(
         self,
-        args,  # Put your own arguments here
-    ):
+    ) -> float:
         """
-        Attempt to send a heartbeat message.
+        Docstring for run
+
+        :param self: Description
+        :return: Description
+        :rtype: float
         """
-        pass  # Send a heartbeat message
+        self.connection.mav.heartbeat_send(
+            self.mav_type, self.autopilot, self.base_mode, self.custom_mode, self.system_status
+        )
+        return time.time()
 
 
 # =================================================================================================

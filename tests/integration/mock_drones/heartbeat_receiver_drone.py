@@ -75,8 +75,8 @@ def main() -> int:
 
     if send_heartbeats(1) != 0:
         return -1
-
     local_logger.info("Passesd!")
+    time.sleep(1)
     return 0
 
 

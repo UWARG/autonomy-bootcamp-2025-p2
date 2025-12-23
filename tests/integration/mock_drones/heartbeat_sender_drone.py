@@ -54,7 +54,7 @@ def main() -> int:
         )
         if not msg or msg.get_type() != "HEARTBEAT":
             local_logger.error(
-                f"Drone: Sent incorrect message type or didn't recieve a message in time: {msg}"
+                f"Drone: Sent incorrect message type or didn't recieve a message in time: {msg},time:{time.time()-start}"
             )
             return -2
         if abs((time.time() - start) - HEARTBEAT_PERIOD) > ERROR_TOLERANCE:
@@ -68,13 +68,13 @@ def main() -> int:
         ):
             local_logger.error("Drone: Sent incorrect contents within heartbeat message.")
             return -4
-        local_logger.info("Drone: Recieved heartbeat!")
+        local_logger.info(f"Drone: Recieved heartbeat! {time.time()-start}")
 
     msg = connection.recv_match(
         type="HEARTBEAT", blocking=True, timeout=HEARTBEAT_PERIOD + ERROR_TOLERANCE
     )
     if msg and msg.get_type() == "HEARTBEAT":
-        local_logger.error("Recieved extra heartbeat")
+        local_logger.error(f"Recieved extra heartbeat {time.time()-start}")
         return -5
 
     local_logger.info("Passed!")

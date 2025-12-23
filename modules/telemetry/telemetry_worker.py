@@ -4,6 +4,7 @@ Telemtry worker that gathers GPS data.
 
 import os
 import pathlib
+import time
 
 from pymavlink import mavutil
 
@@ -18,13 +19,19 @@ from ..common.modules.logger import logger
 # =================================================================================================
 def telemetry_worker(
     connection: mavutil.mavfile,
-    args,  # Place your own arguments here
+    controller: worker_controller.WorkerController,
+    queue: queue_proxy_wrapper.QueueProxyWrapper,  # Place your own arguments here
     # Add other necessary worker arguments here
 ) -> None:
     """
-    Worker process.
+    Docstring for telemetry_worker
 
-    args... describe what the arguments are
+    :param connection: connection object
+    :type connection: mavutil.mavfile
+    :param controller: controller object
+    :type controller: worker_controller.WorkerController
+    :param queue: output queue
+    :type queue: queue_proxy_wrapper.QueueProxyWrapper
     """
     # =============================================================================================
     #                          ↑ BOOTCAMPERS MODIFY ABOVE THIS COMMENT ↑
@@ -47,7 +54,15 @@ def telemetry_worker(
     #                          ↓ BOOTCAMPERS MODIFY BELOW THIS COMMENT ↓
     # =============================================================================================
     # Instantiate class object (telemetry.Telemetry)
-
+    _, telemetry_obj = telemetry.Telemetry.create(connection, local_logger)
+    while not controller.is_exit_requested():
+        data = telemetry_obj.run()
+        time.sleep(0.1)
+        if data is not None and data != "Not Ready":
+            queue.queue.put("Recieved Telemetry Data")
+            local_logger.info(data)
+        elif data is None:
+            local_logger.info("timeout")
     # Main loop: do work.
 
 
