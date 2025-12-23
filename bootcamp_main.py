@@ -5,7 +5,6 @@ Main process to setup and manage all the other working processes
 """
 
 import multiprocessing as mp
-import queue
 import time
 
 from pymavlink import mavutil
@@ -99,22 +98,25 @@ def main() -> int:
         [],
         [heartbeat_queue],
         controller,
+        main_logger
     )
-    telemetry_worker_properties = worker_manager.WorkerManager.create(
+    telemetry_worker_properties = worker_manager.WorkerProperties.create(
         WORKER_COUNT,
         telemetry_worker.telemetry_worker,
         (connection,),
         [],
         [telemetry_data_queue],
         controller,
+        main_logger
     )
-    command_worker_properties = worker_manager.WorkerManager.create(
+    command_worker_properties = worker_manager.WorkerProperties.create(
         WORKER_COUNT,
         command_worker.command_worker,
         (connection, command.Position(10, 20, 30)),
         [telemetry_data_queue],
         [command_queue],
         controller,
+        main_logger
     )
 
     # Heartbeat sender
@@ -154,10 +156,9 @@ def main() -> int:
             break
         main_logger.info(command_queue.queue.get())
 
-    # Stop the processes
 
     main_logger.info("Requested exit")
-    controller.request_exit
+    controller.request_exit()
     # Fill and drain queues from END TO START
     command_queue.fill_and_drain_queue()
     heartbeat_queue.fill_and_drain_queue()
