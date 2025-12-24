@@ -57,6 +57,9 @@ class Command:  # pylint: disable=too-many-instance-attributes
         target: Position,
         local_logger: logger.Logger,
     ) -> None:
+        """
+        Initializes the Command instance with drone connection and target.
+        """
         assert key is Command.__private_key, "Use create() method"
 
         self.connection = connection
@@ -131,7 +134,7 @@ class Command:  # pylint: disable=too-many-instance-attributes
                 return (True, f"CHANGE_YAW: {yaw_error}")
 
             return (False, None)
-        except Exception:
+        except Exception:  # pylint: disable=broad-exception-caught
             return (False, None)
 
 
