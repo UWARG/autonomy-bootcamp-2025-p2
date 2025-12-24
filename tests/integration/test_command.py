@@ -2,7 +2,6 @@
 Test the command worker with a mocked drone.
 """
 
-import math
 import multiprocessing as mp
 import subprocess
 import threading
