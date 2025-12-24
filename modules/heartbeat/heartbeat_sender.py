@@ -38,7 +38,7 @@ class HeartbeatSender:
         key: object,
         connection: mavutil.mavfile,
         local_logger: logger.Logger,  # Put your own arguments here
-    ):
+    ) -> None:
         assert key is HeartbeatSender.__private_key, "Use create() method"
 
         # Do any intializiation here
