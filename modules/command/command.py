@@ -58,7 +58,13 @@ class Command:  # pylint: disable=too-many-instance-attributes
         local_logger: logger.Logger,
     ) -> None:
         """
-        Initializes the Command instance with drone connection and target.
+        Initializes the Command instance.
+
+        Args:
+            key: Private key to prevent direct instantiation.
+            connection: MAVLink connection to the drone.
+            target: The target position to reach.
+            local_logger: Logger for debugging and status updates.
         """
         assert key is Command.__private_key, "Use create() method"
 
