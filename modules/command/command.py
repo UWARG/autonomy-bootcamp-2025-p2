@@ -50,7 +50,8 @@ class Command:  # pylint: disable=too-many-instance-attributes
         except (AssertionError, TypeError, AttributeError):
             return (False, None)
 
-    def __init__(  # pylint: disable=too-many-arguments,missing-function-docstring
+    # pylint: disable=missing-function-docstring
+    def __init__(
         self,
         key: object,
         connection: mavutil.mavfile,
