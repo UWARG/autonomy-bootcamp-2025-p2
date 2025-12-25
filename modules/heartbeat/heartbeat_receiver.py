@@ -68,9 +68,8 @@ class HeartbeatReceiver:
             self.__logger.warning(f"Missed Heartbeat ({self.__missed_heartbeats})", True)
 
             if self.__missed_heartbeats >= self.__disconnect_threshold:
-                if self.__is_connected:
-                    self.__is_connected = False
-                    self.__logger.error("Disconnected from Drone", True)
+                self.__is_connected = False
+                self.__logger.error("Disconnected from Drone", True)
 
         if self.__is_connected:
             status = "Connected"

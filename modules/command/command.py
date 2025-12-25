@@ -93,17 +93,27 @@ class Command:  # pylint: disable=too-many-instance-attributes
         Make a decision based on received telemetry data.
         """
         # Log average velocity for this trip so far
-
-        current_velocity = math.sqrt(
-            telemetry_data.x_velocity**2
-            + telemetry_data.y_velocity**2
-            + telemetry_data.z_velocity**2
+        self.__velocity_samples.append(
+            (telemetry_data.x_velocity, telemetry_data.y_velocity, telemetry_data.z_velocity)
         )
 
-        self.__velocity_samples.append(current_velocity)
-        average_velocity = sum(self.__velocity_samples) / len(self.__velocity_samples)
+        sum_x = 0
+        sum_y = 0
+        sum_z = 0
+        velocity_len = len(self.__velocity_samples)
 
-        self.__logger.info(f"Average velocity: {average_velocity} m/s", True)
+        for velocity in self.__velocity_samples:
+            sum_x += velocity[0]
+            sum_y += velocity[1]
+            sum_z += velocity[2]
+
+        avg_x = sum_x / velocity_len
+        avg_y = sum_y / velocity_len
+        avg_z = sum_z / velocity_len
+
+        average_velocity = math.sqrt(avg_x**2 + avg_y**2 + avg_z**2)
+
+        self.__logger.info(f"Average velocity: ({avg_x}, {avg_y}, {avg_z}) m/s", True)
 
         # Use COMMAND_LONG (76) message, assume the target_system=1 and target_componenet=0
         # The appropriate commands to use are instructed below
@@ -127,8 +137,6 @@ class Command:  # pylint: disable=too-many-instance-attributes
                 0,
                 self.__target.z,
             )
-
-            self.__logger.debug(f"Changing altitude by {altitude_delta}m", True)
             return True, f"CHANGE_ALTITUDE: {altitude_delta}"
 
         # Adjust direction (yaw) using MAV_CMD_CONDITION_YAW (115). Must use relative angle to current state
@@ -150,7 +158,7 @@ class Command:  # pylint: disable=too-many-instance-attributes
         angle_delta_deg = math.degrees(angle_delta)
 
         direction = 1
-        if angle_delta_deg < 0:
+        if angle_delta_deg >= 0:
             direction = -1
 
         if abs(angle_delta_deg) > self.__angle_tolerance:
@@ -167,10 +175,7 @@ class Command:  # pylint: disable=too-many-instance-attributes
                 0,
                 0,
             )
-            self.__logger.debug(f"Changing yaw by {angle_delta_deg} degrees", True)
             return True, f"CHANGING_YAW: {angle_delta_deg}"
-
-        self.__logger.debug("On target", True)
         return True, "ON_TARGET"
 
 

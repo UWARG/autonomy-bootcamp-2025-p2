@@ -74,7 +74,7 @@ def command_worker(
 
         telemetry_data = input_queue.queue.get()
         if telemetry_data is None:
-            break
+            continue
 
         result, status = cmd.run(telemetry_data)
 

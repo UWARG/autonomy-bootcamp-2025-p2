@@ -112,14 +112,10 @@ class Telemetry:
         start_time = time.time()
         timeout = 1.0
 
-        while attitude_msg is None or position_msg is None:
-            if time.time() - start_time > timeout:
-                self.__logger.error("Timeout waiting for telemtry messages", True)
-                return False, None
-
+        while (attitude_msg is None or position_msg is None) and (
+            time.time() - start_time < timeout
+        ):
             remaining_time = timeout - (time.time() - start_time)
-            if remaining_time <= 0:
-                break
 
             if attitude_msg is None:
                 attitude_msg = self.__connection.recv_match(
