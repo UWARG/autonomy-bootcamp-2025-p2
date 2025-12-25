@@ -111,8 +111,6 @@ class Command:  # pylint: disable=too-many-instance-attributes
         avg_y = sum_y / velocity_len
         avg_z = sum_z / velocity_len
 
-        average_velocity = math.sqrt(avg_x**2 + avg_y**2 + avg_z**2)
-
         self.__logger.info(f"Average velocity: ({avg_x}, {avg_y}, {avg_z}) m/s", True)
 
         # Use COMMAND_LONG (76) message, assume the target_system=1 and target_componenet=0
