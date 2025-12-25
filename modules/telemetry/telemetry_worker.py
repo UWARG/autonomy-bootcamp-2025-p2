@@ -67,7 +67,7 @@ def telemetry_worker(
             local_logger.warning("Telemetry data not received, timed out")
             break
         output.queue.put(data)
-        local_logger.info(data.__str__)
+        local_logger.info(f"Telemetry data {data}")
 
 
 # =================================================================================================
