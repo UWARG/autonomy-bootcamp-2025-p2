@@ -237,14 +237,14 @@ def main() -> int:
 
     # Just set a timer to stop the worker after a while, since the worker infinite loops
     threading.Timer(
-        TELEMETRY_PERIOD * len(path), stop, (controller, input_queue, output_queue)
+        TELEMETRY_PERIOD * len(path), stop, (input_queue, output_queue, controller)
     ).start()
 
     # Put items into input queue
     threading.Thread(target=put_queue, args=(input_queue, path)).start()
 
     # Read the main queue (worker outputs)
-    threading.Thread(target=read_queue, args=(output_queue, main_logger)).start()
+    threading.Thread(target=read_queue, args=(output_queue, main_logger, controller)).start()
 
     command_worker.command_worker(
         connection,
