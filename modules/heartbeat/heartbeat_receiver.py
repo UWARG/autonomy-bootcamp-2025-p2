@@ -22,7 +22,7 @@ class HeartbeatReceiver:
         cls,
         _connection: mavutil.mavfile,
         disconnect_threshold: int,
-        local_logger,
+        local_logger: logger.Logger,
         # Put your own arguments here
     ) -> "tuple[True, HeartbeatReceiver] | tuple[False, None]":
         """
@@ -59,7 +59,7 @@ class HeartbeatReceiver:
 
     def run(
         self,
-        timeout_s,  # Put your own arguments here
+        timeout_s: float,  # Put your own arguments here
     ) -> tuple[bool, bool]:
         """
         Attempt to recieve a heartbeat message.
