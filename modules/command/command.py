@@ -68,7 +68,7 @@ class Command:  # pylint: disable=too-many-instance-attributes
         self._vel_sum_z = 0.0
         self._vel_count = 0
 
-    def run(self, telemetry_data: telemetry.TelemetryData):
+    def run(self, telemetry_data: telemetry.TelemetryData) -> str | None:
         """
         Make a decision based on received telemetry data.
         """
