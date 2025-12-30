@@ -50,9 +50,7 @@ def start_drone() -> None:
 # =================================================================================================
 #                            ↓ BOOTCAMPERS MODIFY BELOW THIS COMMENT ↓
 # =================================================================================================
-def stop(
-    controller: worker_controller.WorkerController  # Add any necessary arguments
-) -> None:
+def stop(controller: worker_controller.WorkerController) -> None:  # Add any necessary arguments
     """
     Stop the workers.
     """
@@ -137,12 +135,12 @@ def main() -> int:
     threading.Thread(target=read_queue, args=(output_queue, controller, main_logger)).start()
 
     heartbeat_receiver_worker.heartbeat_receiver_worker(
-            connection=connection,
-            controller=controller,
-            output_queue=output_queue,
-            heartbeat_period=HEARTBEAT_PERIOD,
-            error_tolerance=ERROR_TOLERANCE,
-            disconnect_threshold=DISCONNECT_THRESHOLD,
+        connection=connection,
+        controller=controller,
+        output_queue=output_queue,
+        heartbeat_period=HEARTBEAT_PERIOD,
+        error_tolerance=ERROR_TOLERANCE,
+        disconnect_threshold=DISCONNECT_THRESHOLD,
     )
     # =============================================================================================
     #                          ↑ BOOTCAMPERS MODIFY ABOVE THIS COMMENT ↑

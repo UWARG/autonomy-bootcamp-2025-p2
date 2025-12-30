@@ -76,7 +76,7 @@ class Telemetry:
     def create(
         cls,
         connection: mavutil.mavfile,
-          # Put your own arguments here
+        # Put your own arguments here
         local_logger: logger.Logger,
     ):
         """
@@ -92,7 +92,7 @@ class Telemetry:
     def __init__(
         self,
         key: object,
-        connection: mavutil.mavfile,  
+        connection: mavutil.mavfile,
         local_logger: logger.Logger,
     ) -> None:
         assert key is Telemetry.__private_key, "Use create() method"
@@ -104,8 +104,8 @@ class Telemetry:
         self._last_position = None
 
     def run(
-        self
-  # Put your own arguments here
+        self,
+        # Put your own arguments here
     ):
         """
         Receive LOCAL_POSITION_NED and ATTITUDE messages from the drone,
@@ -130,11 +130,10 @@ class Telemetry:
             except Exception as e:  # pylint: disable=broad-exception-caught
                 self._logger.error(f"Telemetry recv error (likely EOF): {e}", True)
                 return None
-            
+
             if getattr(self._connection, "closed", False):
                 self._logger.warning("Telemetry connection closed (EOF).", True)
                 return None
-
 
             if msg is None:
                 if time.time() - start_time > timeout_s:
@@ -150,29 +149,28 @@ class Telemetry:
                 self._last_attitude = msg
             elif msg_type == "LOCAL_POSITION_NED":
                 self._last_position = msg
-            
+
             if self._last_attitude and self._last_position:
                 time_since_boot = max(
-                self._last_attitude.time_boot_ms,
-                self._last_position.time_boot_ms,
-            )
-                
-                return TelemetryData(
-                time_since_boot=time_since_boot,
-                x=self._last_position.x,
-                y=self._last_position.y,
-                z=self._last_position.z,
-                x_velocity=self._last_position.vx,
-                y_velocity=self._last_position.vy,
-                z_velocity=self._last_position.vz,
-                roll=self._last_attitude.roll,
-                pitch=self._last_attitude.pitch,
-                yaw=self._last_attitude.yaw,
-                roll_speed=self._last_attitude.rollspeed,
-                pitch_speed=self._last_attitude.pitchspeed,
-                yaw_speed=self._last_attitude.yawspeed,
-            )
+                    self._last_attitude.time_boot_ms,
+                    self._last_position.time_boot_ms,
+                )
 
+                return TelemetryData(
+                    time_since_boot=time_since_boot,
+                    x=self._last_position.x,
+                    y=self._last_position.y,
+                    z=self._last_position.z,
+                    x_velocity=self._last_position.vx,
+                    y_velocity=self._last_position.vy,
+                    z_velocity=self._last_position.vz,
+                    roll=self._last_attitude.roll,
+                    pitch=self._last_attitude.pitch,
+                    yaw=self._last_attitude.yaw,
+                    roll_speed=self._last_attitude.rollspeed,
+                    pitch_speed=self._last_attitude.pitchspeed,
+                    yaw_speed=self._last_attitude.yawspeed,
+                )
 
 
 # =================================================================================================

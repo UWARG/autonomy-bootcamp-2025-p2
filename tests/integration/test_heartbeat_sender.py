@@ -99,7 +99,7 @@ def main() -> int:
     heartbeat_sender_worker.heartbeat_sender_worker(
         connection=connection,
         send_period_s=HEARTBEAT_PERIOD,
-        controller = controller,
+        controller=controller,
     )
     # =============================================================================================
     #                          ↑ BOOTCAMPERS MODIFY ABOVE THIS COMMENT ↑

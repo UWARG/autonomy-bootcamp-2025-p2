@@ -78,7 +78,9 @@ def main() -> int:
     #                          ↓ BOOTCAMPERS MODIFY BELOW THIS COMMENT ↓
     # =============================================================================================
     # 1) Controller
-    controller = worker_controller.WorkerController()  # or WorkerController(main_logger) if required
+    controller = (
+        worker_controller.WorkerController()
+    )  # or WorkerController(main_logger) if required
 
     # 2) MP manager
     mp_manager = mp.Manager()
@@ -89,7 +91,7 @@ def main() -> int:
     report_queue = queue_proxy_wrapper.QueueProxyWrapper(mp_manager, REPORT_MAX)
 
     # 4) WorkerProperties.create(...) for each worker
-  
+
     ok, hb_sender_props = worker_manager.WorkerProperties.create(
         controller=controller,
         count=HEARTBEAT_SEND_WORKER,
@@ -106,7 +108,6 @@ def main() -> int:
         main_logger.error("Failed to create HeartbeatSender properties")
         return -1
 
- 
     ok, hb_recv_props = worker_manager.WorkerProperties.create(
         controller=controller,
         count=HEARTBEAT_REC_WORKER,
@@ -124,7 +125,6 @@ def main() -> int:
         main_logger.error("Failed to create HeartbeatReceiver properties")
         return -1
 
- 
     ok, telem_props = worker_manager.WorkerProperties.create(
         controller=controller,
         count=TELEMETRY_WORKER,
@@ -142,7 +142,6 @@ def main() -> int:
         main_logger.error("Failed to create Telemetry properties")
         return -1
 
- 
     ok, cmd_props = worker_manager.WorkerProperties.create(
         controller=controller,
         count=COMMAND_WORKER,
@@ -163,22 +162,30 @@ def main() -> int:
         return -1
 
     # 5) WorkerManager.create(...) for each
-    ok, hb_sender_mgr = worker_manager.WorkerManager.create(worker_properties=hb_sender_props, local_logger=main_logger)
+    ok, hb_sender_mgr = worker_manager.WorkerManager.create(
+        worker_properties=hb_sender_props, local_logger=main_logger
+    )
     if not ok:
         main_logger.error("Failed to create HeartbeatSender manager")
         return -1
 
-    ok, hb_recv_mgr = worker_manager.WorkerManager.create(worker_properties=hb_recv_props, local_logger=main_logger)
+    ok, hb_recv_mgr = worker_manager.WorkerManager.create(
+        worker_properties=hb_recv_props, local_logger=main_logger
+    )
     if not ok:
         main_logger.error("Failed to create HeartbeatReceiver manager")
         return -1
 
-    ok, telem_mgr = worker_manager.WorkerManager.create(worker_properties=telem_props, local_logger=main_logger)
+    ok, telem_mgr = worker_manager.WorkerManager.create(
+        worker_properties=telem_props, local_logger=main_logger
+    )
     if not ok:
         main_logger.error("Failed to create Telemetry manager")
         return -1
 
-    ok, cmd_mgr = worker_manager.WorkerManager.create(worker_properties=cmd_props, local_logger=main_logger)
+    ok, cmd_mgr = worker_manager.WorkerManager.create(
+        worker_properties=cmd_props, local_logger=main_logger
+    )
     if not ok:
         main_logger.error("Failed to create Command manager")
         return -1
@@ -194,12 +201,12 @@ def main() -> int:
     # 7) Main loop: read outputs
     start_time = time.time()
     while (time.time() - start_time) < runtime:
-      
+
         try:
-            hb_status = heartbeat_queue.queue.get_nowait()  
+            hb_status = heartbeat_queue.queue.get_nowait()
             main_logger.info(f"Heartbeat status: {hb_status}", True)
 
-            if hb_status == "Disconnected":  
+            if hb_status == "Disconnected":
                 main_logger.warning("Drone disconnected, exiting", True)
                 break
         except queue.Empty:
@@ -217,7 +224,7 @@ def main() -> int:
     controller.request_exit()
     main_logger.info("Requested exit")
 
-    # 9) Fill & drain queues 
+    # 9) Fill & drain queues
     report_queue.fill_and_drain_queue()
     telemetry_queue.fill_and_drain_queue()
     heartbeat_queue.fill_and_drain_queue()
@@ -232,7 +239,7 @@ def main() -> int:
     main_logger.info("Stopped")
 
     # 11) Reset controller
-    controller.clear_exit() 
+    controller.clear_exit()
 
     # =============================================================================================
     #                          ↑ BOOTCAMPERS MODIFY ABOVE THIS COMMENT ↑

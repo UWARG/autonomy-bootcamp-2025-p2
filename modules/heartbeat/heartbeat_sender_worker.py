@@ -63,7 +63,7 @@ def heartbeat_sender_worker(
         if not sent:
             local_logger.warning("Heartbeat send failed", True)
 
-        time.sleep(send_period_s) 
+        time.sleep(send_period_s)
 
 
 # =================================================================================================

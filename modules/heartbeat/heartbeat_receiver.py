@@ -22,15 +22,15 @@ class HeartbeatReceiver:
         cls,
         _connection: mavutil.mavfile,
         disconnect_threshold: int,
-        local_logger
-      # Put your own arguments here
+        local_logger,
+        # Put your own arguments here
     ) -> "tuple[True, HeartbeatReceiver] | tuple[False, None]":
         """
         Falliable create (instantiation) method to create a HeartbeatSender object.
         """
         if _connection is None:
             return False, None
-        
+
         if disconnect_threshold <= 0:
             if local_logger is not None:
                 local_logger.error("disconnect_threshold must be > 0", True)
@@ -44,13 +44,12 @@ class HeartbeatReceiver:
             # fail safely
             return False, None
 
-
     def __init__(
         self,
         key: object,
         _connection: mavutil.mavfile,
         disconnect_threshold: int,
-       # Put your own arguments here
+        # Put your own arguments here
     ) -> None:
         assert key is HeartbeatReceiver.__private_key, "Use create() method"
         self._connection = _connection
@@ -69,12 +68,12 @@ class HeartbeatReceiver:
         """
         try:
             # Send the heartbeat message over the connection
-            msg = self._connection.recv_match(            
-            type="HEARTBEAT",
-            blocking=True,
-            timeout=timeout_s,
-        )
-   
+            msg = self._connection.recv_match(
+                type="HEARTBEAT",
+                blocking=True,
+                timeout=timeout_s,
+            )
+
         except Exception:
             msg = None
 
@@ -82,13 +81,14 @@ class HeartbeatReceiver:
             self.missed_periods = 0
             self.is_connected = True
             return True, True
-        
+
         self.missed_periods += 1
-      
+
         if self.missed_periods >= self.disconnect_threshold:
             self.is_connected = False
 
         return False, self.is_connected
+
 
 # =================================================================================================
 #                            ↑ BOOTCAMPERS MODIFY ABOVE THIS COMMENT ↑

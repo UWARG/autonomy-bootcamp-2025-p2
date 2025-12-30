@@ -49,11 +49,6 @@ def main() -> int:
     # Recieve NUM_TRIALS heartbeats to consider a scucess
     for _ in range(NUM_TRIALS):
 
-
-
-
-
-
         start = time.time()
         msg = connection.recv_match(
             type="HEARTBEAT", blocking=True, timeout=HEARTBEAT_PERIOD + ERROR_TOLERANCE

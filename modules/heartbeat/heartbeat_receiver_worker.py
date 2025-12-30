@@ -4,7 +4,7 @@ Heartbeat worker that sends heartbeats periodically.
 
 import os
 import pathlib
-import time  
+import time
 
 from pymavlink import mavutil
 
@@ -14,18 +14,16 @@ from . import heartbeat_receiver
 from ..common.modules.logger import logger
 
 
-
 # =================================================================================================
 #                            ↓ BOOTCAMPERS MODIFY BELOW THIS COMMENT ↓
 # =================================================================================================
 def heartbeat_receiver_worker(
     connection: mavutil.mavfile,
     controller: worker_controller.WorkerController,
-    output_queue: queue_proxy_wrapper.QueueProxyWrapper ,
-    heartbeat_period:float,
+    output_queue: queue_proxy_wrapper.QueueProxyWrapper,
+    heartbeat_period: float,
     error_tolerance: float,
-    disconnect_threshold: int
-
+    disconnect_threshold: int,
 ) -> None:
     """
     Worker process.
@@ -59,7 +57,9 @@ def heartbeat_receiver_worker(
     # =============================================================================================
     #                          ↓ BOOTCAMPERS MODIFY BELOW THIS COMMENT ↓
     # =============================================================================================
-    ok, heartbeat_receiver_instance = heartbeat_receiver.HeartbeatReceiver.create(connection, disconnect_threshold, local_logger)
+    ok, heartbeat_receiver_instance = heartbeat_receiver.HeartbeatReceiver.create(
+        connection, disconnect_threshold, local_logger
+    )
     if not ok or heartbeat_receiver_instance is None:
         local_logger.error("Failed to create HeartbeatReceiver", True)
         return
@@ -70,19 +70,19 @@ def heartbeat_receiver_worker(
     while not controller.is_exit_requested():
         controller.check_pause()
 
-        
-        got_heartbeat, is_connected = heartbeat_receiver_instance.run(heartbeat_period + error_tolerance)
-        
+        got_heartbeat, is_connected = heartbeat_receiver_instance.run(
+            heartbeat_period + error_tolerance
+        )
+
         if not is_connected:
             local_logger.info("Drone disconnected, stopping heartbeat receiver", True)
             break
-                
-        
+
         if not got_heartbeat:
             local_logger.warning("Heartbeat missed", True)
         output_queue.queue.put({"got_heartbeat": got_heartbeat, "connected": is_connected})
 
-        time.sleep(heartbeat_period) 
+        time.sleep(heartbeat_period)
 
 
 # =================================================================================================

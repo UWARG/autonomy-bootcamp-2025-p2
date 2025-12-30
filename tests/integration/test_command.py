@@ -87,13 +87,15 @@ def put_queue(
     path: list[telemetry.TelemetryData],
 ) -> None:
     """
-    Place mocked inputs into the input queue periodically 
+    Place mocked inputs into the input queue periodically
     """
     for item in path:
         if controller.is_exit_requested():
             return
         input_queue.queue.put(item)
         time.sleep(TELEMETRY_PERIOD)
+
+
 # =================================================================================================
 #                            ↑ BOOTCAMPERS MODIFY ABOVE THIS COMMENT ↑
 # =================================================================================================
@@ -149,7 +151,6 @@ def main() -> int:
 
     # output: strings like "CHANGE ALTITUDE: ..." / "CHANGE YAW: ..."
     output_queue = queue_proxy_wrapper.QueueProxyWrapper(mp_manager, 10)
-
 
     # Test cases, DO NOT EDIT!
     path = [
@@ -236,7 +237,9 @@ def main() -> int:
     ]
 
     # Just set a timer to stop the worker after a while, since the worker infinite loops
-    threading.Timer(TELEMETRY_PERIOD * len(path), stop, (controller, input_queue, output_queue)).start()
+    threading.Timer(
+        TELEMETRY_PERIOD * len(path), stop, (controller, input_queue, output_queue)
+    ).start()
 
     # Put items into input queue
     threading.Thread(target=put_queue, args=(input_queue, controller, path)).start()
