@@ -85,7 +85,7 @@ class Telemetry:
         try:
             telemetry = cls(cls.__private_key, connection, local_logger)
             return True, telemetry
-        except Exception as e:
+        except Exception as e: # pylint: disable=broad-exception-caught
             local_logger.error(f"Failed to create Telemetry: {e}")
             return False, None
 

@@ -63,10 +63,11 @@ def command_worker(
             telemetry_data = input_queue.queue.get()
 
             decision = cmd.run(telemetry_data)
+
             if decision is not None:
                 output_queue.queue.put(decision)
 
-        except Exception as e:
+        except Exception as e:  # pylint: disable=broad-exception-caught
             local_logger.error(f"Command worker error: {e}", True)
 
 

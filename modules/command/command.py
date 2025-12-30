@@ -45,7 +45,7 @@ class Command:  # pylint: disable=too-many-instance-attributes
         try:
             obj = cls(cls.__private_key, connection, target, local_logger)
             return True, obj
-        except Exception as e:
+        except Exception as e:  # pylint: disable=broad-exception-caught
             local_logger.error(f"Failed to create Command: {e}", True)
             return False, None
 

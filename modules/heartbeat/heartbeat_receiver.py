@@ -40,7 +40,7 @@ class HeartbeatReceiver:
             # Create an instance using the private key
             instance = cls(cls.__private_key, _connection, disconnect_threshold)
             return True, instance
-        except Exception:
+        except Exception: # pylint: disable=broad-exception-caught
             # fail safely
             return False, None
 
@@ -74,7 +74,7 @@ class HeartbeatReceiver:
                 timeout=timeout_s,
             )
 
-        except Exception:
+        except Exception:  # pylint: disable=broad-exception-caught
             msg = None
 
         if msg is not None and msg.get_type() == "HEARTBEAT":

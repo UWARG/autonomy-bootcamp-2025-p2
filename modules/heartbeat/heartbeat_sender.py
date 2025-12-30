@@ -31,7 +31,7 @@ class HeartbeatSender:
             # Create an instance using the private key
             instance = cls(cls.__private_key, connection)
             return True, instance
-        except Exception:
+        except Exception: # pylint: disable=broad-exception-caught
             # fail safely
             return False, None
 
@@ -69,7 +69,7 @@ class HeartbeatSender:
                 self._system_status,
             )
             return True
-        except Exception:
+        except Exception:  # pylint: disable=broad-exception-caught
             return False
 
 
