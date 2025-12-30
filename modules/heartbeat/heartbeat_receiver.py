@@ -20,36 +20,75 @@ class HeartbeatReceiver:
     @classmethod
     def create(
         cls,
-        connection: mavutil.mavfile,
-        args,  # Put your own arguments here
-        local_logger: logger.Logger,
-    ):
+        _connection: mavutil.mavfile,
+        disconnect_threshold: int,
+        local_logger
+      # Put your own arguments here
+    ) -> "tuple[True, HeartbeatReceiver] | tuple[False, None]":
         """
-        Falliable create (instantiation) method to create a HeartbeatReceiver object.
+        Falliable create (instantiation) method to create a HeartbeatSender object.
         """
-        pass  # Create a HeartbeatReceiver object
+        if _connection is None:
+            return False, None
+        
+        if disconnect_threshold <= 0:
+            if local_logger is not None:
+                local_logger.error("disconnect_threshold must be > 0", True)
+            return False, None
+
+        try:
+            # Create an instance using the private key
+            instance = cls(cls.__private_key, _connection, disconnect_threshold)
+            return True, instance
+        except Exception:
+            # fail safely
+            return False, None
+
 
     def __init__(
         self,
         key: object,
-        connection: mavutil.mavfile,
-        args,  # Put your own arguments here
+        _connection: mavutil.mavfile,
+        disconnect_threshold: int,
+       # Put your own arguments here
     ) -> None:
         assert key is HeartbeatReceiver.__private_key, "Use create() method"
-
-        # Do any intializiation here
+        self._connection = _connection
+        self.disconnect_threshold = disconnect_threshold
+        self.missed_periods = 0
+        self.is_connected = True
 
     def run(
         self,
-        args,  # Put your own arguments here
+        timeout_s,  # Put your own arguments here
     ):
         """
         Attempt to recieve a heartbeat message.
         If disconnected for over a threshold number of periods,
         the connection is considered disconnected.
         """
-        pass
+        try:
+            # Send the heartbeat message over the connection
+            msg = self._connection.recv_match(            
+            type="HEARTBEAT",
+            blocking=True,
+            timeout=timeout_s,
+        )
+   
+        except Exception:
+            msg = None
 
+        if msg is not None and msg.get_type() == "HEARTBEAT":
+            self.missed_periods = 0
+            self.is_connected = True
+            return True, True
+        
+        self.missed_periods += 1
+      
+        if self.missed_periods >= self.disconnect_threshold:
+            self.is_connected = False
+
+        return False, self.is_connected
 
 # =================================================================================================
 #                            ↑ BOOTCAMPERS MODIFY ABOVE THIS COMMENT ↑

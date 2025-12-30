@@ -48,6 +48,12 @@ def main() -> int:
     # Task is to recive heartbeats at a rate of 1Hz
     # Recieve NUM_TRIALS heartbeats to consider a scucess
     for _ in range(NUM_TRIALS):
+
+
+
+
+
+
         start = time.time()
         msg = connection.recv_match(
             type="HEARTBEAT", blocking=True, timeout=HEARTBEAT_PERIOD + ERROR_TOLERANCE
