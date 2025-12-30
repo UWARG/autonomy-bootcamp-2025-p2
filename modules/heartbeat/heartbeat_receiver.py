@@ -60,7 +60,7 @@ class HeartbeatReceiver:
     def run(
         self,
         timeout_s,  # Put your own arguments here
-    )-> tuple[bool, bool]:
+    ) -> tuple[bool, bool]:
         """
         Attempt to recieve a heartbeat message.
         If disconnected for over a threshold number of periods,
