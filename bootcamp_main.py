@@ -37,7 +37,7 @@ HEARTBEAT_REC_WORKER = 1
 TELEMETRY_WORKER = 1
 COMMAND_WORKER = 1
 TARGET = command.Position(1.0, 1.0, 1.0)
-runtime = 100
+RUNTIME = 100
 
 # =================================================================================================
 #                            ↑ BOOTCAMPERS MODIFY ABOVE THIS COMMENT ↑
@@ -200,7 +200,7 @@ def main() -> int:
 
     # 7) Main loop: read outputs
     start_time = time.time()
-    while (time.time() - start_time) < runtime:
+    while (time.time() - start_time) < RUNTIME:
 
         try:
             hb_status = heartbeat_queue.queue.get_nowait()
