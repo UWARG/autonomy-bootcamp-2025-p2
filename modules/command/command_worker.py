@@ -56,6 +56,7 @@ def command_worker(
 
     # Main loop: do work.
     while not controller.is_exit_requested():
+        controller.check_pause()
         try:
             if input_queue.queue.empty():
                 continue

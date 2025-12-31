@@ -120,24 +120,19 @@ class Telemetry:
         self._last_attitude = None
         self._last_position = None
 
-        while True:
-            try:
-                msg = self._connection.recv_match(
-                    type=["ATTITUDE", "LOCAL_POSITION_NED"],
-                    blocking=True,
-                    timeout=0.2,
-                )
-            except Exception as e:  # pylint: disable=broad-exception-caught
-                self._logger.error(f"Telemetry recv error (likely EOF): {e}", True)
-                return None
+        while time.time() - start_time <= timeout_s:
+
+            msg = self._connection.recv_match(
+                type=["ATTITUDE", "LOCAL_POSITION_NED"],
+                blocking=True,
+                timeout=0.2,
+            )
 
             if msg is None:
                 if time.time() - start_time > timeout_s:
-                    self._logger.warning("Telemetry timeout, restarting")
-                    start_time = time.time()
-                    self._last_attitude = None
-                    self._last_position = None
-                continue
+                    continue
+
+            start_time = time.time()
 
             msg_type = msg.get_type()
 

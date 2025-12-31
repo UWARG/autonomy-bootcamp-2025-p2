@@ -125,7 +125,7 @@ class Command:  # pylint: disable=too-many-instance-attributes
         yaw_error = (desired_yaw_deg - current_yaw_deg + 180) % 360 - 180
 
         if abs(yaw_error) > 5:
-            direction = 1 if yaw_error >= 0 else -1
+            direction = -1 if yaw_error >= 0 else 1  # fixed logic flip
 
             self._connection.mav.command_long_send(
                 1,  # target_system

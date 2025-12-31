@@ -200,21 +200,23 @@ def main() -> int:
 
     # 7) Main loop: read outputs
     start_time = time.time()
+    last_status = None
     while (time.time() - start_time) < RUNTIME:
 
         try:
-            hb_status = heartbeat_queue.queue.get_nowait()
-            main_logger.info(f"Heartbeat status: {hb_status}", True)
+            hb = heartbeat_queue.queue.get_nowait()
+            status_str = "Connected" if hb["connected"] else "Disconnected"
 
-            if hb_status == "Disconnected":
+            if status_str != last_status:
+                last_status = status_str
+                main_logger.info(f"Heartbeat status: {status_str}", True)
+
+            if not hb["connected"]:
                 main_logger.warning("Drone disconnected, exiting", True)
                 break
-        except queue.Empty:
-            pass
-
-        try:
             report = report_queue.queue.get_nowait()
             main_logger.info(f"Command report: {report}", True)
+
         except queue.Empty:
             pass
 

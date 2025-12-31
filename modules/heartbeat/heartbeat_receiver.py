@@ -53,6 +53,7 @@ class HeartbeatReceiver:
     ) -> None:
         assert key is HeartbeatReceiver.__private_key, "Use create() method"
         self._connection = _connection
+        self.status = "Connected"
         self.disconnect_threshold = disconnect_threshold
         self.missed_periods = 0
         self.is_connected = True
@@ -79,13 +80,14 @@ class HeartbeatReceiver:
 
         if msg is not None and msg.get_type() == "HEARTBEAT":
             self.missed_periods = 0
+            self.status = "Connected"
             self.is_connected = True
             return True, True
 
         self.missed_periods += 1
 
         if self.missed_periods >= self.disconnect_threshold:
-            self.is_connected = False
+            self.status = "Disconnected"
 
         return False, self.is_connected
 

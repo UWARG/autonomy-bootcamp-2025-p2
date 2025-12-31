@@ -49,7 +49,7 @@ def heartbeat_sender_worker(
     #                          ↓ BOOTCAMPERS MODIFY BELOW THIS COMMENT ↓
     # =============================================================================================
     ok, heartbeat_sender_instance = heartbeat_sender.HeartbeatSender.create(connection)
-    if not ok or heartbeat_sender_instance is None:
+    if not ok:
         local_logger.error("Failed to create HeartbeatSender", True)
         return
 

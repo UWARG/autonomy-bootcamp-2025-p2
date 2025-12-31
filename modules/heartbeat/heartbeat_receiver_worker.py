@@ -19,8 +19,8 @@ from ..common.modules.logger import logger
 # =================================================================================================
 def heartbeat_receiver_worker(
     connection: mavutil.mavfile,
-    controller: worker_controller.WorkerController,
     output_queue: queue_proxy_wrapper.QueueProxyWrapper,
+    controller: worker_controller.WorkerController,
     heartbeat_period: float,
     error_tolerance: float,
     disconnect_threshold: int,
@@ -60,12 +60,15 @@ def heartbeat_receiver_worker(
     ok, heartbeat_receiver_instance = heartbeat_receiver.HeartbeatReceiver.create(
         connection, disconnect_threshold, local_logger
     )
-    if not ok or heartbeat_receiver_instance is None:
+    if not ok:
         local_logger.error("Failed to create HeartbeatReceiver", True)
         return
 
     # Main loop: receive heartbeat periodically until exit requested
     local_logger.info(f"heartbeat_period={heartbeat_period}", True)
+
+    local_logger.info(f"disconnect_threshold={disconnect_threshold}", True)
+    local_logger.info(f"error_tolerance={error_tolerance}", True)
 
     while not controller.is_exit_requested():
         controller.check_pause()
@@ -73,6 +76,10 @@ def heartbeat_receiver_worker(
         got_heartbeat, is_connected = heartbeat_receiver_instance.run(
             heartbeat_period + error_tolerance
         )
+        status_str = "Connected" if is_connected else "Disconnected"
+        local_logger.info(f"Status: {status_str}", True)
+
+        output_queue.queue.put({"got_heartbeat": got_heartbeat, "connected": is_connected})
 
         if not is_connected:
             local_logger.info("Drone disconnected, stopping heartbeat receiver", True)
@@ -80,7 +87,6 @@ def heartbeat_receiver_worker(
 
         if not got_heartbeat:
             local_logger.warning("Heartbeat missed", True)
-        output_queue.queue.put({"got_heartbeat": got_heartbeat, "connected": is_connected})
 
         time.sleep(heartbeat_period)
 
