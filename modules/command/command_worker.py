@@ -83,7 +83,6 @@ def command_worker(
             continue
 
         output_queue.queue.put(status)
-        local_logger.debug(f"Command status: {status}", True)
 
     local_logger.info("Command worker exiting", True)
 
