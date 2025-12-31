@@ -139,7 +139,7 @@ class Command:  # pylint: disable=too-many-instance-attributes
                     0,
                     abs(yaw_error),
                     5.0,
-                    (1 if yaw_error > 0 else -1),
+                    (-1 if yaw_error > 0 else 1),
                     1,
                     0,
                     0,
