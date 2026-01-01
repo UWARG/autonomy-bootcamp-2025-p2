@@ -129,10 +129,7 @@ class Telemetry:
             )
 
             if msg is None:
-                if time.time() - start_time > timeout_s:
-                    continue
-
-            start_time = time.time()
+                continue
 
             msg_type = msg.get_type()
 
@@ -162,6 +159,10 @@ class Telemetry:
                     pitch_speed=self._last_attitude.pitchspeed,
                     yaw_speed=self._last_attitude.yawspeed,
                 )
+        self._logger.warning("Telemetry timeout, restarting")
+        self._last_attitude = None
+        self._last_position = None
+        return None
 
 
 # =================================================================================================

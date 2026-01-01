@@ -56,14 +56,19 @@ def heartbeat_sender_worker(
     # Main loop: send heartbeat periodically until exit requested
     local_logger.info(f"send_period_s={send_period_s}", True)
 
+    # Send heartbeat every second
     while not controller.is_exit_requested():
+        start_time = time.time()  # Record start
         controller.check_pause()
 
         sent = heartbeat_sender_instance.run()
-        if not sent:
-            local_logger.warning("Heartbeat send failed", True)
+        if sent:
+            local_logger.info("Heartbeat sent", False)
 
-        time.sleep(send_period_s)
+        # Calculate how long to sleep to hit the target period
+        work_time = time.time() - start_time
+        sleep_time = max(0, send_period_s - work_time)
+        time.sleep(sleep_time)
 
 
 # =================================================================================================
