@@ -1,17 +1,17 @@
-23:20:05: [INFO] [C:\Users\1makk\OneDrive\Documents\JavaProjects\autonomy-bootcamp-2025-p2\modules\common\modules\logger\logger_main_setup.py | setup_main_logger | 62] main logger initialized
-23:20:06: [INFO] [C:\Users\1makk\OneDrive\Documents\JavaProjects\autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | main | 113] Connected!
-23:20:07: [INFO] [C:\Users\1makk\OneDrive\Documents\JavaProjects\autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 71] Receiver output: {'got_heartbeat': True, 'connected': True}
-23:20:08: [INFO] [C:\Users\1makk\OneDrive\Documents\JavaProjects\autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 71] Receiver output: {'got_heartbeat': True, 'connected': True}
-23:20:09: [INFO] [C:\Users\1makk\OneDrive\Documents\JavaProjects\autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 71] Receiver output: {'got_heartbeat': True, 'connected': True}
-23:20:10: [INFO] [C:\Users\1makk\OneDrive\Documents\JavaProjects\autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 71] Receiver output: {'got_heartbeat': True, 'connected': True}
-23:20:11: [INFO] [C:\Users\1makk\OneDrive\Documents\JavaProjects\autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 71] Receiver output: {'got_heartbeat': True, 'connected': True}
-23:20:13: [INFO] [C:\Users\1makk\OneDrive\Documents\JavaProjects\autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 71] Receiver output: {'got_heartbeat': False, 'connected': True}
-23:20:15: [INFO] [C:\Users\1makk\OneDrive\Documents\JavaProjects\autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 71] Receiver output: {'got_heartbeat': False, 'connected': True}
-23:20:17: [INFO] [C:\Users\1makk\OneDrive\Documents\JavaProjects\autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 71] Receiver output: {'got_heartbeat': False, 'connected': True}
-23:20:19: [INFO] [C:\Users\1makk\OneDrive\Documents\JavaProjects\autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 71] Receiver output: {'got_heartbeat': False, 'connected': True}
-23:20:20: [INFO] [C:\Users\1makk\OneDrive\Documents\JavaProjects\autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 71] Receiver output: {'got_heartbeat': True, 'connected': True}
-23:20:21: [INFO] [C:\Users\1makk\OneDrive\Documents\JavaProjects\autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 71] Receiver output: {'got_heartbeat': True, 'connected': True}
-23:20:22: [INFO] [C:\Users\1makk\OneDrive\Documents\JavaProjects\autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 71] Receiver output: {'got_heartbeat': True, 'connected': True}
-23:20:23: [INFO] [C:\Users\1makk\OneDrive\Documents\JavaProjects\autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 71] Receiver output: {'got_heartbeat': True, 'connected': True}
-23:20:24: [INFO] [C:\Users\1makk\OneDrive\Documents\JavaProjects\autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 71] Receiver output: {'got_heartbeat': True, 'connected': True}
-23:20:26: [INFO] [C:\Users\1makk\OneDrive\Documents\JavaProjects\autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 71] Receiver output: {'got_heartbeat': True, 'connected': True}
+02:30:25: [INFO] [C:\dev\autonomy-bootcamp-2025-p2\modules\common\modules\logger\logger_main_setup.py | setup_main_logger | 62] main logger initialized
+02:30:27: [INFO] [C:\dev\autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | main | 113] Connected!
+02:30:28: [INFO] [C:\dev\autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 71] Receiver output: Connected
+02:30:29: [INFO] [C:\dev\autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 71] Receiver output: Connected
+02:30:30: [INFO] [C:\dev\autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 71] Receiver output: Connected
+02:30:31: [INFO] [C:\dev\autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 71] Receiver output: Connected
+02:30:32: [INFO] [C:\dev\autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 71] Receiver output: Connected
+02:30:34: [INFO] [C:\dev\autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 71] Receiver output: Connected
+02:30:36: [INFO] [C:\dev\autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 71] Receiver output: Connected
+02:30:38: [INFO] [C:\dev\autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 71] Receiver output: Connected
+02:30:40: [INFO] [C:\dev\autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 71] Receiver output: Connected
+02:30:41: [INFO] [C:\dev\autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 71] Receiver output: Connected
+02:30:42: [INFO] [C:\dev\autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 71] Receiver output: Connected
+02:30:43: [INFO] [C:\dev\autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 71] Receiver output: Connected
+02:30:44: [INFO] [C:\dev\autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 71] Receiver output: Connected
+02:30:45: [INFO] [C:\dev\autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 71] Receiver output: Connected
+02:30:47: [INFO] [C:\dev\autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 71] Receiver output: Connected

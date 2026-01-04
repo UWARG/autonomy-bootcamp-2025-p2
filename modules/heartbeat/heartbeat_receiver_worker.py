@@ -79,11 +79,7 @@ def heartbeat_receiver_worker(
         status_str = "Connected" if is_connected else "Disconnected"
         local_logger.info(f"Status: {status_str}", True)
 
-        output_queue.queue.put({"got_heartbeat": got_heartbeat, "connected": is_connected})
-
-        if not is_connected:
-            local_logger.info("Drone disconnected, stopping heartbeat receiver", True)
-            break
+        output_queue.queue.put(status_str)
 
         if not got_heartbeat:
             local_logger.warning("Heartbeat missed", True)

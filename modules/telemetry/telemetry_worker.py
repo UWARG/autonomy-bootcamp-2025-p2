@@ -54,6 +54,7 @@ def telemetry_worker(
 
     # Main loop
     while not controller.is_exit_requested():
+        controller.check_pause()
         try:
 
             data = telem.run()  # returns TelemetryData
