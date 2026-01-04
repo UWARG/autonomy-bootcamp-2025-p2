@@ -1,0 +1,5 @@
+19:34:49: [INFO] [C:\Users\1makk\OneDrive\Documents\JavaProjects\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry_worker.py | telemetry_worker | 46] Logger initialized
+19:34:54: [WARNING] [C:\Users\1makk\OneDrive\Documents\JavaProjects\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 141] Telemetry timeout, restarting
+19:34:55: [WARNING] [C:\Users\1makk\OneDrive\Documents\JavaProjects\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 141] Telemetry timeout, restarting
+19:34:56: [WARNING] [C:\Users\1makk\OneDrive\Documents\JavaProjects\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 141] Telemetry timeout, restarting
+19:35:02: [WARNING] [C:\Users\1makk\OneDrive\Documents\JavaProjects\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 141] Telemetry timeout, restarting

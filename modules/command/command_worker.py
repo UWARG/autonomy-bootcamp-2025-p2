@@ -19,13 +19,15 @@ from ..common.modules.logger import logger
 def command_worker(
     connection: mavutil.mavfile,
     target: command.Position,
-    args,  # Place your own arguments here
-    # Add other necessary worker arguments here
+    input_queue: queue_proxy_wrapper.QueueProxyWrapper,  # TelemetryData in
+    output_queue: queue_proxy_wrapper.QueueProxyWrapper,
+    controller: worker_controller.WorkerController,
 ) -> None:
     """
     Worker process.
 
-    args... describe what the arguments are
+    Reads TelemetryData from input_queue, makes decisions, sends MAVLink commands,
+    and outputs decision strings to output_queue.
     """
     # =============================================================================================
     #                          ↑ BOOTCAMPERS MODIFY ABOVE THIS COMMENT ↑
@@ -47,9 +49,27 @@ def command_worker(
     # =============================================================================================
     #                          ↓ BOOTCAMPERS MODIFY BELOW THIS COMMENT ↓
     # =============================================================================================
-    # Instantiate class object (command.Command)
+    result, cmd = command.Command.create(connection, target, local_logger)
+    if not result or cmd is None:
+        local_logger.error("Failed to create Command object", True)
+        return
 
     # Main loop: do work.
+    while not controller.is_exit_requested():
+        controller.check_pause()
+        try:
+            if input_queue.queue.empty():
+                continue
+
+            telemetry_data = input_queue.queue.get()
+
+            decision = cmd.run(telemetry_data)
+
+            if decision is not None:
+                output_queue.queue.put(decision)
+
+        except Exception as e:  # pylint: disable=broad-exception-caught
+            local_logger.error(f"Command worker error: {e}", True)
 
 
 # =================================================================================================
