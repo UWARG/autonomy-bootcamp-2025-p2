@@ -75,7 +75,7 @@ def read_queue(
         try:
             report = command_queue.queue.get(timeout=0.1)
             main_logger.info(f"Main Process - Received Command Report: {report}")
-        except Exception: # pylint: disable=broad-exception-caught
+        except Exception:  # pylint: disable=broad-exception-caught
             continue
 
 

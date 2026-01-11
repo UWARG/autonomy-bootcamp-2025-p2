@@ -71,7 +71,7 @@ def read_queue(
         try:
             state = state_queue.queue.get(timeout=0.1)
             main_logger.info(f"Main Process - Received State: {state}")
-        except Exception: # pylint: disable=broad-exception-caught
+        except Exception:  # pylint: disable=broad-exception-caught
             continue
 
 
