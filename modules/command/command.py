@@ -93,7 +93,7 @@ class Command:  # pylint: disable=too-many-instance-attributes
         if abs(delta_z) > 0.5:
             self.connection.mav.command_long_send(
                 1,
-                1,
+                0,
                 mavutil.mavlink.MAV_CMD_CONDITION_CHANGE_ALT,
                 0,
                 1.0,
@@ -124,7 +124,7 @@ class Command:  # pylint: disable=too-many-instance-attributes
             direction = -1 if angle_diff_deg > 0 else 1
             self.connection.mav.command_long_send(
                 1,
-                1,
+                0,
                 mavutil.mavlink.MAV_CMD_CONDITION_YAW,
                 0,
                 abs(angle_diff_deg),

@@ -1,0 +1,28 @@
+21:17:03: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/modules/common/modules/logger/logger_main_setup.py | setup_main_logger | 62] main logger initialized
+21:17:03: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | main | 134] Connected!
+21:17:03: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 77] Main Process - Received Command Report: CHANGE ALTITUDE: 1
+21:17:03: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 77] Main Process - Received Command Report: CHANGE ALTITUDE: -1
+21:17:06: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 77] Main Process - Received Command Report: CHANGE YAW: 63.43494882292201
+21:17:07: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 77] Main Process - Received Command Report: CHANGE YAW: 90.0
+21:17:07: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 77] Main Process - Received Command Report: CHANGE YAW: 116.56505117707799
+21:17:08: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 77] Main Process - Received Command Report: CHANGE YAW: 45.0
+21:17:08: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 77] Main Process - Received Command Report: CHANGE YAW: 63.43494882292201
+21:17:09: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 77] Main Process - Received Command Report: CHANGE YAW: 90.0
+21:17:09: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 77] Main Process - Received Command Report: CHANGE YAW: 26.565051177077994
+21:17:10: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 77] Main Process - Received Command Report: CHANGE YAW: 45.0
+21:17:10: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 77] Main Process - Received Command Report: CHANGE YAW: 90.0
+21:17:11: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 77] Main Process - Received Command Report: CHANGE YAW: 45.0
+21:17:11: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 77] Main Process - Received Command Report: CHANGE YAW: 90.0
+21:17:12: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 77] Main Process - Received Command Report: CHANGE YAW: 135.0
+21:17:12: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 77] Main Process - Received Command Report: CHANGE YAW: -26.565051177077994
+21:17:13: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 77] Main Process - Received Command Report: CHANGE YAW: -45.0
+21:17:13: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 77] Main Process - Received Command Report: CHANGE YAW: -90.0
+21:17:14: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 77] Main Process - Received Command Report: CHANGE YAW: -45.0
+21:17:14: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 77] Main Process - Received Command Report: CHANGE YAW: -90.0
+21:17:15: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 77] Main Process - Received Command Report: CHANGE YAW: -135.0
+21:17:15: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 77] Main Process - Received Command Report: CHANGE YAW: -63.43494882292201
+21:17:16: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 77] Main Process - Received Command Report: CHANGE YAW: -90.0
+21:17:16: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 77] Main Process - Received Command Report: CHANGE YAW: -116.56505117707799
+21:17:17: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 77] Main Process - Received Command Report: CHANGE YAW: -45.0
+21:17:17: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 77] Main Process - Received Command Report: CHANGE YAW: -63.43494882292201
+21:17:18: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 77] Main Process - Received Command Report: CHANGE YAW: -90.0

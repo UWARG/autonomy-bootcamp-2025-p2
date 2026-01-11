@@ -1,0 +1,12 @@
+00:40:19: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/tests/integration/mock_drones/heartbeat_sender_drone.py | main | 40] Logger initialized
+00:40:52: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/tests/integration/mock_drones/heartbeat_sender_drone.py | main | 71] Drone: Recieved heartbeat!
+00:40:53: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/tests/integration/mock_drones/heartbeat_sender_drone.py | main | 71] Drone: Recieved heartbeat!
+00:40:54: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/tests/integration/mock_drones/heartbeat_sender_drone.py | main | 71] Drone: Recieved heartbeat!
+00:40:56: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/tests/integration/mock_drones/heartbeat_sender_drone.py | main | 71] Drone: Recieved heartbeat!
+00:40:57: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/tests/integration/mock_drones/heartbeat_sender_drone.py | main | 71] Drone: Recieved heartbeat!
+00:40:58: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/tests/integration/mock_drones/heartbeat_sender_drone.py | main | 71] Drone: Recieved heartbeat!
+00:40:59: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/tests/integration/mock_drones/heartbeat_sender_drone.py | main | 71] Drone: Recieved heartbeat!
+00:41:00: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/tests/integration/mock_drones/heartbeat_sender_drone.py | main | 71] Drone: Recieved heartbeat!
+00:41:01: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/tests/integration/mock_drones/heartbeat_sender_drone.py | main | 71] Drone: Recieved heartbeat!
+00:41:02: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/tests/integration/mock_drones/heartbeat_sender_drone.py | main | 71] Drone: Recieved heartbeat!
+00:41:03: [ERROR] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/tests/integration/mock_drones/heartbeat_sender_drone.py | main | 77] Recieved extra heartbeat

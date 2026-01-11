@@ -54,12 +54,17 @@ def start_drone() -> None:
 #                            ↓ BOOTCAMPERS MODIFY BELOW THIS COMMENT ↓
 # =================================================================================================
 def stop(
-    controller: worker_controller.WorkerController,  # Add any necessary arguments
+    # Add any necessary arguments
+    command_queue: queue_proxy_wrapper.QueueProxyWrapper,
+    telemetry_queue: queue_proxy_wrapper.QueueProxyWrapper,
+    controller: worker_controller.WorkerController,
 ) -> None:
     """
     Stop the workers.
     """
     controller.request_exit()  # Add logic to stop your worker
+    command_queue.fill_and_drain_queue()
+    telemetry_queue.fill_and_drain_queue()
 
 
 def read_queue(
@@ -236,7 +241,9 @@ def main() -> int:
     ]
 
     # Just set a timer to stop the worker after a while, since the worker infinite loops
-    threading.Timer(TELEMETRY_PERIOD * len(path) + 2, stop, (controller,)).start()
+    threading.Timer(
+        TELEMETRY_PERIOD * len(path) + 2, stop, (controller, command_queue, telemetry_queue)
+    ).start()
 
     # Put items into input queue
     threading.Thread(

@@ -19,9 +19,9 @@ from ..common.modules.logger import logger
 def command_worker(
     connection: mavutil.mavfile,
     target: command.Position,
-    controller: worker_controller.WorkerController,
     telemetry_queue: queue_proxy_wrapper.QueueProxyWrapper,
     command_queue: queue_proxy_wrapper.QueueProxyWrapper,
+    controller: worker_controller.WorkerController,
     # Place your own arguments here
     # Add other necessary worker arguments here
 ) -> None:
@@ -57,19 +57,19 @@ def command_worker(
     # =============================================================================================
     # Instantiate class object (command.Command)
     result, command_inst = command.Command.create(connection, target, local_logger)
-    if not result or command_inst is None:
+    if not result:
         local_logger.error("Failed to create Command instance")
         return
 
     # Main loop: do work.
     while not controller.is_exit_requested():
+        controller.check_pause()
         try:
             data = telemetry_queue.queue.get(timeout=0.1)
             report = command_inst.run(data)
 
             if report is not None:
                 command_queue.queue.put(report)
-                local_logger.info(f"Decision: {report}")
         except Exception:  # pylint: disable=broad-exception-caught
             continue
 

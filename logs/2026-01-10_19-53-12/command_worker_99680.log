@@ -1,0 +1,58 @@
+19:53:12: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 53] Logger initialized
+19:53:12: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 84] Average Velocity: x=0.00, y=0.00, z=4.00
+19:53:12: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 72] Decision: CHANGE ALTITUDE: 1
+19:53:13: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 84] Average Velocity: x=0.00, y=0.00, z=1.00
+19:53:13: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 72] Decision: CHANGE ALTITUDE: -1
+19:53:13: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 84] Average Velocity: x=0.00, y=0.00, z=0.67
+19:53:14: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 84] Average Velocity: x=0.00, y=0.00, z=0.50
+19:53:14: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 84] Average Velocity: x=0.00, y=0.00, z=0.40
+19:53:15: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 84] Average Velocity: x=0.00, y=0.00, z=0.33
+19:53:15: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 84] Average Velocity: x=0.00, y=0.00, z=0.29
+19:53:16: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 84] Average Velocity: x=0.00, y=2.50, z=0.25
+19:53:16: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 72] Decision: CHANGE YAW: 63.43494882292201
+19:53:16: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 84] Average Velocity: x=0.00, y=4.44, z=0.22
+19:53:16: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 72] Decision: CHANGE YAW: 90.0
+19:53:17: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 84] Average Velocity: x=0.00, y=6.00, z=0.20
+19:53:17: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 72] Decision: CHANGE YAW: 116.56505117707799
+19:53:17: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 84] Average Velocity: x=1.82, y=5.45, z=0.18
+19:53:17: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 72] Decision: CHANGE YAW: 45.0
+19:53:18: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 84] Average Velocity: x=3.33, y=5.00, z=0.17
+19:53:18: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 72] Decision: CHANGE YAW: 63.43494882292201
+19:53:18: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 84] Average Velocity: x=4.62, y=4.62, z=0.15
+19:53:18: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 72] Decision: CHANGE YAW: 90.0
+19:53:19: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 84] Average Velocity: x=4.29, y=2.86, z=0.14
+19:53:19: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 72] Decision: CHANGE YAW: 26.565051177077994
+19:53:19: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 84] Average Velocity: x=4.00, y=1.33, z=0.13
+19:53:19: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 72] Decision: CHANGE YAW: 45.0
+19:53:20: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 84] Average Velocity: x=3.75, y=0.00, z=0.12
+19:53:20: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 72] Decision: CHANGE YAW: 90.0
+19:53:20: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 84] Average Velocity: x=2.35, y=0.00, z=0.12
+19:53:20: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 72] Decision: CHANGE YAW: 45.0
+19:53:21: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 84] Average Velocity: x=1.11, y=0.00, z=0.11
+19:53:21: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 72] Decision: CHANGE YAW: 90.0
+19:53:21: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 84] Average Velocity: x=0.00, y=0.00, z=0.11
+19:53:21: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 72] Decision: CHANGE YAW: 135.0
+19:53:22: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 84] Average Velocity: x=0.00, y=1.00, z=0.10
+19:53:22: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 72] Decision: CHANGE YAW: -26.565051177077994
+19:53:23: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 84] Average Velocity: x=0.00, y=1.90, z=0.10
+19:53:23: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 72] Decision: CHANGE YAW: -45.0
+19:53:23: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 84] Average Velocity: x=0.00, y=2.73, z=0.09
+19:53:23: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 72] Decision: CHANGE YAW: -90.0
+19:53:24: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 84] Average Velocity: x=0.87, y=2.61, z=0.09
+19:53:24: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 72] Decision: CHANGE YAW: -45.0
+19:53:24: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 84] Average Velocity: x=1.67, y=2.50, z=0.08
+19:53:24: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 72] Decision: CHANGE YAW: -90.0
+19:53:25: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 84] Average Velocity: x=2.40, y=2.40, z=0.08
+19:53:25: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 72] Decision: CHANGE YAW: -135.0
+19:53:25: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 84] Average Velocity: x=2.31, y=1.54, z=0.08
+19:53:25: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 72] Decision: CHANGE YAW: -63.43494882292201
+19:53:26: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 84] Average Velocity: x=2.22, y=0.74, z=0.07
+19:53:26: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 72] Decision: CHANGE YAW: -90.0
+19:53:26: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 84] Average Velocity: x=2.14, y=0.00, z=0.07
+19:53:26: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 72] Decision: CHANGE YAW: -116.56505117707799
+19:53:27: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 84] Average Velocity: x=1.38, y=0.00, z=0.07
+19:53:27: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 72] Decision: CHANGE YAW: -45.0
+19:53:27: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 84] Average Velocity: x=0.67, y=0.00, z=0.07
+19:53:27: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 72] Decision: CHANGE YAW: -63.43494882292201
+19:53:28: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 84] Average Velocity: x=0.00, y=0.00, z=0.06
+19:53:28: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 72] Decision: CHANGE YAW: -90.0

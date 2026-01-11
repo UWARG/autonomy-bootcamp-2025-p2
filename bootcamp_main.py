@@ -32,6 +32,7 @@ CONNECTION_STRING = "tcp:localhost:12345"
 # Set queue max sizes (<= 0 for infinity)
 TELEMETRY_QUEUE_MAX_SIZE = 100
 COMMAND_QUEUE_MAX_SIZE = 100
+HEARTBEAT_RECEIVER_QUEUE_MAX_SIZE = 100
 
 # Set worker counts
 HEARTBEAT_SENDER_WORKER_COUNT = 1
@@ -94,6 +95,9 @@ def main() -> int:
     command_to_main_queue = queue_proxy_wrapper.QueueProxyWrapper(
         mp_manager, COMMAND_QUEUE_MAX_SIZE
     )
+    heartbeat_receiver_to_main_queue = queue_proxy_wrapper.QueueProxyWrapper(
+        mp_manager, HEARTBEAT_RECEIVER_QUEUE_MAX_SIZE
+    )
 
     worker_managers: list[worker_manager.WorkerManager] = []
 
@@ -115,7 +119,7 @@ def main() -> int:
         target=heartbeat_receiver_worker.heartbeat_receiver_worker,
         work_arguments=(connection,),
         input_queues=[],
-        output_queues=[],
+        output_queues=[heartbeat_receiver_to_main_queue],
         controller=controller,
         local_logger=main_logger,
     )
@@ -144,10 +148,9 @@ def main() -> int:
 
     # Create the workers (processes) and obtain their managers
     for props in [heartbeat_sender_props, heartbeat_receiver_props, telemetry_props, command_props]:
-        if props is not None:
-            result, manager = worker_manager.WorkerManager.create(props, main_logger)
-            if result and manager is not None:
-                worker_managers.append(manager)
+        result, manager = worker_manager.WorkerManager.create(props, main_logger)
+        if result:
+            worker_managers.append(manager)
 
     # Start worker processes
     for manager in worker_managers:
@@ -159,10 +162,13 @@ def main() -> int:
     # Continue running for 100 seconds or until the drone disconnects
     end_time = time.time() + 100
     while time.time() < end_time:
+        if not connection.motors_armed():
+            main_logger.info("Drone disconnected or disarmed.")
+            break
         try:
             # Check the final output queue for any decision reports
             report = command_to_main_queue.queue.get(timeout=1)
-            main_logger.info(f"Main Process - Received Command Report: {report}", True)
+            main_logger.info(f"Decision: {report}", True)
         except queue.Empty:
             continue
 

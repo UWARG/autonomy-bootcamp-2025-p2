@@ -18,8 +18,9 @@ from ..common.modules.logger import logger
 # =================================================================================================
 def telemetry_worker(
     connection: mavutil.mavfile,
-    controller: worker_controller.WorkerController,  # Place your own arguments here
+    # Place your own arguments here
     telemetry_queue: queue_proxy_wrapper.QueueProxyWrapper,
+    controller: worker_controller.WorkerController,
     # Add other necessary worker arguments here
 ) -> None:
     """
@@ -52,7 +53,7 @@ def telemetry_worker(
     # =============================================================================================
     # Instantiate class object (telemetry.Telemetry)
     result, telemetry_inst = telemetry.Telemetry.create(connection, local_logger)
-    if not result or telemetry_inst is None:
+    if not result:
         local_logger.error("Failed to create Telemetry instance")
         return
 
