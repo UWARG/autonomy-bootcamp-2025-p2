@@ -76,29 +76,31 @@ class Telemetry:
     def create(
         cls,
         connection: mavutil.mavfile,
-        args,  # Put your own arguments here
+        # Put your own arguments here
         local_logger: logger.Logger,
-    ):
+    ) -> tuple[bool, "Command | None"]:
         """
         Falliable create (instantiation) method to create a Telemetry object.
         """
-        pass  # Create a Telemetry object
+        return True, cls(cls.__private_key, connection, local_logger)  # Create a Telemetry object
 
     def __init__(
         self,
         key: object,
         connection: mavutil.mavfile,
-        args,  # Put your own arguments here
+        # Put your own arguments here
         local_logger: logger.Logger,
     ) -> None:
         assert key is Telemetry.__private_key, "Use create() method"
 
         # Do any intializiation here
+        self.connection = connection
+        self.logger = local_logger
 
     def run(
         self,
-        args,  # Put your own arguments here
-    ):
+        # Put your own arguments here
+    ) -> TelemetryData | None:
         """
         Receive LOCAL_POSITION_NED and ATTITUDE messages from the drone,
         combining them together to form a single TelemetryData object.
@@ -106,7 +108,45 @@ class Telemetry:
         # Read MAVLink message LOCAL_POSITION_NED (32)
         # Read MAVLink message ATTITUDE (30)
         # Return the most recent of both, and use the most recent message's timestamp
-        pass
+
+        pos_msg = None
+        att_msg = None
+        start_time = time.time()
+
+        while time.time() - start_time < 1.0:
+            msg = self.connection.recv_match(
+                type=["LOCAL_POSITION_NED", "ATTITUDE"], blocking=True, timeout=0.1
+            )
+
+            if not msg:
+                continue
+
+            if msg.get_type() == "LOCAL_POSITION_NED":
+                pos_msg = msg
+            elif msg.get_type() == "ATTITUDE":
+                att_msg = msg
+
+            if pos_msg and att_msg:
+                latest_timestamp = max(pos_msg.time_boot_ms, att_msg.time_boot_ms)
+
+                return TelemetryData(
+                    time_since_boot=latest_timestamp,
+                    x=pos_msg.x,
+                    y=pos_msg.y,
+                    z=pos_msg.z,
+                    x_velocity=pos_msg.vx,
+                    y_velocity=pos_msg.vy,
+                    z_velocity=pos_msg.vz,
+                    roll=att_msg.roll,
+                    pitch=att_msg.pitch,
+                    yaw=att_msg.yaw,
+                    roll_speed=att_msg.rollspeed,
+                    pitch_speed=att_msg.pitchspeed,
+                    yaw_speed=att_msg.yawspeed,
+                )
+
+        self.logger.error("Telemetry timed out: Failed to receive both messages within 1 second.")
+        return None
 
 
 # =================================================================================================
