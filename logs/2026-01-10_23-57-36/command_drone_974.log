@@ -1,4 +1,0 @@
-23:57:36: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/tests/integration/mock_drones/command_drone.py | main | 45] Logger initialized
-23:57:36: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/tests/integration/mock_drones/command_drone.py | main | 76] Received a valid command
-23:57:36: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/tests/integration/mock_drones/command_drone.py | main | 76] Received a valid command
-23:57:40: [ERROR] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/tests/integration/mock_drones/command_drone.py | main | 74] Turning speed is not the desired value: 20.0

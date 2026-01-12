@@ -1,7 +1,0 @@
-00:16:38: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/modules/common/modules/logger/logger_main_setup.py | setup_main_logger | 62] main logger initialized
-00:16:38: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/documentation/main_multiprocess_example.py | main | 182] Started
-00:16:40: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/documentation/main_multiprocess_example.py | main | 188] Paused
-00:16:44: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/documentation/main_multiprocess_example.py | main | 192] Resumed
-00:16:46: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/documentation/main_multiprocess_example.py | main | 199] Requested exit
-00:16:47: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/documentation/main_multiprocess_example.py | main | 205] Queues cleared
-00:16:47: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/documentation/main_multiprocess_example.py | main | 211] Stopped
