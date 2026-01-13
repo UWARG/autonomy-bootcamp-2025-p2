@@ -78,7 +78,7 @@ class Telemetry:
         connection: mavutil.mavfile,
         telemetry_timeout_s: float,
         local_logger: logger.Logger,
-    ):
+    ) -> "tuple[bool, Telemetry | None]":
         """
         Falliable create (instantiation) method to create a Telemetry object.
         """

@@ -42,7 +42,7 @@ class Command:  # pylint: disable=too-many-instance-attributes
         z_speed: float,
         turning_speed: float,
         local_logger: logger.Logger,
-    ):
+    ) -> "tuple[bool, Command | None]":
         """
         Falliable create (instantiation) method to create a Command object.
         """

@@ -24,7 +24,7 @@ class HeartbeatReceiver:
         heartbeat_period_s: float,
         disconnect_threshold: int,
         local_logger: logger.Logger,
-    ):
+    ) -> "tuple[bool, HeartbeatReceiver | None]":
         """
         Falliable create (instantiation) method to create a HeartbeatReceiver object.
         """

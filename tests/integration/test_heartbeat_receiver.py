@@ -6,6 +6,7 @@ import multiprocessing as mp
 import queue
 import subprocess
 import threading
+from typing import Any
 
 from pymavlink import mavutil
 
@@ -52,7 +53,7 @@ def start_drone() -> None:
 #                            ↓ BOOTCAMPERS MODIFY BELOW THIS COMMENT ↓
 # =================================================================================================
 def stop(
-    args,  # Add any necessary arguments
+    args: dict[str, Any],
 ) -> None:
     """
     Stop the workers.
@@ -62,7 +63,7 @@ def stop(
 
 
 def read_queue(
-    args,  # Add any necessary arguments
+    args: dict[str, Any],
     main_logger: logger.Logger,
 ) -> None:
     """
