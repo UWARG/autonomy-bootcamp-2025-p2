@@ -103,7 +103,11 @@ class Command:  # pylint: disable=too-many-instance-attributes
         # Adjust direction (yaw) using MAV_CMD_CONDITION_YAW (115). Must use relative angle to current state
         # String to return to main: "CHANGING_YAW: {degree you changed it by in range [-180, 180]}"
         # Positive angle is counter-clockwise as in a right handed system
-        if telemetry_data.x_velocity is None or telemetry_data.y_velocity is None or telemetry_data.z_velocity is None:
+        if (
+            telemetry_data.x_velocity is None
+            or telemetry_data.y_velocity is None
+            or telemetry_data.z_velocity is None
+        ):
             self.__logger.error("Telemetry missing velocity data", True)
             return False, None
 
@@ -149,7 +153,9 @@ class Command:  # pylint: disable=too-many-instance-attributes
             self.__logger.error("Telemetry missing position or yaw data", True)
             return False, None
 
-        desired_yaw = math.atan2(self.__target.y - telemetry_data.y, self.__target.x - telemetry_data.x)
+        desired_yaw = math.atan2(
+            self.__target.y - telemetry_data.y, self.__target.x - telemetry_data.x
+        )
         yaw_error = math.atan2(
             math.sin(desired_yaw - telemetry_data.yaw),
             math.cos(desired_yaw - telemetry_data.yaw),
