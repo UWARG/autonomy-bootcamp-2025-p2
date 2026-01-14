@@ -1,0 +1,23 @@
+02:49:40: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/modules/common/modules/logger/logger_main_setup.py | setup_main_logger | 62] main logger initialized
+02:49:40: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | main | 115] Connected!
+02:49:40: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 71] Main Process - Received State: Connected
+02:49:41: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 71] Main Process - Received State: Connected
+02:49:42: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 71] Main Process - Received State: Connected
+02:49:43: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 71] Main Process - Received State: Connected
+02:49:44: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 71] Main Process - Received State: Connected
+02:49:45: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 71] Main Process - Received State: Connected
+02:49:46: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 71] Main Process - Received State: Connected
+02:49:47: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 71] Main Process - Received State: Connected
+02:49:48: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 71] Main Process - Received State: Connected
+02:49:49: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 71] Main Process - Received State: Disconnected
+02:49:50: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 71] Main Process - Received State: Disconnected
+02:49:51: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 71] Main Process - Received State: Disconnected
+02:49:53: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 71] Main Process - Received State: Disconnected
+02:49:53: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 71] Main Process - Received State: Connected
+02:49:54: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 71] Main Process - Received State: Connected
+02:49:55: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 71] Main Process - Received State: Connected
+02:49:56: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 71] Main Process - Received State: Connected
+02:49:57: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 71] Main Process - Received State: Connected
+02:49:58: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 71] Main Process - Received State: Connected
+02:49:59: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 71] Main Process - Received State: Connected
+02:50:00: [INFO] [/Users/shaafshoaib/Desktop/WARG-Work/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 71] Main Process - Received State: Connected
