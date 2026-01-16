@@ -1,0 +1,28 @@
+19:26:59: [INFO] [C:\Users\aclie\bootcamp_WARG_Evan_Liem\autonomy-bootcamp-2025-p2\modules\common\modules\logger\logger_main_setup.py | setup_main_logger | 62] main logger initialized
+19:27:00: [INFO] [C:\Users\aclie\bootcamp_WARG_Evan_Liem\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | main | 140] Connected!
+19:27:01: [INFO] [C:\Users\aclie\bootcamp_WARG_Evan_Liem\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 85] Command output: CHANGE ALTITUDE: 1
+19:27:01: [INFO] [C:\Users\aclie\bootcamp_WARG_Evan_Liem\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 85] Command output: CHANGE ALTITUDE: -1
+19:27:04: [INFO] [C:\Users\aclie\bootcamp_WARG_Evan_Liem\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 85] Command output: CHANGE YAW: 63.43494882292201
+19:27:05: [INFO] [C:\Users\aclie\bootcamp_WARG_Evan_Liem\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 85] Command output: CHANGE YAW: 90.0
+19:27:05: [INFO] [C:\Users\aclie\bootcamp_WARG_Evan_Liem\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 85] Command output: CHANGE YAW: 116.56505117707799
+19:27:06: [INFO] [C:\Users\aclie\bootcamp_WARG_Evan_Liem\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 85] Command output: CHANGE YAW: 45.0
+19:27:06: [INFO] [C:\Users\aclie\bootcamp_WARG_Evan_Liem\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 85] Command output: CHANGE YAW: 63.43494882292201
+19:27:07: [INFO] [C:\Users\aclie\bootcamp_WARG_Evan_Liem\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 85] Command output: CHANGE YAW: 90.0
+19:27:07: [INFO] [C:\Users\aclie\bootcamp_WARG_Evan_Liem\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 85] Command output: CHANGE YAW: 26.565051177078008
+19:27:08: [INFO] [C:\Users\aclie\bootcamp_WARG_Evan_Liem\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 85] Command output: CHANGE YAW: 45.0
+19:27:08: [INFO] [C:\Users\aclie\bootcamp_WARG_Evan_Liem\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 85] Command output: CHANGE YAW: 90.00000000000001
+19:27:09: [INFO] [C:\Users\aclie\bootcamp_WARG_Evan_Liem\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 85] Command output: CHANGE YAW: 45.0
+19:27:09: [INFO] [C:\Users\aclie\bootcamp_WARG_Evan_Liem\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 85] Command output: CHANGE YAW: 90.0
+19:27:10: [INFO] [C:\Users\aclie\bootcamp_WARG_Evan_Liem\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 85] Command output: CHANGE YAW: 135.0
+19:27:10: [INFO] [C:\Users\aclie\bootcamp_WARG_Evan_Liem\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 85] Command output: CHANGE YAW: -26.565051177077994
+19:27:11: [INFO] [C:\Users\aclie\bootcamp_WARG_Evan_Liem\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 85] Command output: CHANGE YAW: -45.0
+19:27:11: [INFO] [C:\Users\aclie\bootcamp_WARG_Evan_Liem\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 85] Command output: CHANGE YAW: -90.0
+19:27:12: [INFO] [C:\Users\aclie\bootcamp_WARG_Evan_Liem\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 85] Command output: CHANGE YAW: -45.0
+19:27:12: [INFO] [C:\Users\aclie\bootcamp_WARG_Evan_Liem\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 85] Command output: CHANGE YAW: -90.0
+19:27:13: [INFO] [C:\Users\aclie\bootcamp_WARG_Evan_Liem\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 85] Command output: CHANGE YAW: -135.0
+19:27:13: [INFO] [C:\Users\aclie\bootcamp_WARG_Evan_Liem\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 85] Command output: CHANGE YAW: -63.43494882292201
+19:27:14: [INFO] [C:\Users\aclie\bootcamp_WARG_Evan_Liem\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 85] Command output: CHANGE YAW: -90.00000000000001
+19:27:14: [INFO] [C:\Users\aclie\bootcamp_WARG_Evan_Liem\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 85] Command output: CHANGE YAW: -116.56505117707802
+19:27:15: [INFO] [C:\Users\aclie\bootcamp_WARG_Evan_Liem\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 85] Command output: CHANGE YAW: -45.000000000000014
+19:27:15: [INFO] [C:\Users\aclie\bootcamp_WARG_Evan_Liem\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 85] Command output: CHANGE YAW: -63.43494882292201
+19:27:16: [INFO] [C:\Users\aclie\bootcamp_WARG_Evan_Liem\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 85] Command output: CHANGE YAW: -90.00000000000001

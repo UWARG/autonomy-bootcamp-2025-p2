@@ -1,0 +1,5 @@
+19:26:45: [INFO] [C:\Users\aclie\bootcamp_WARG_Evan_Liem\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry_worker.py | telemetry_worker | 45] Logger initialized
+19:26:51: [WARNING] [C:\Users\aclie\bootcamp_WARG_Evan_Liem\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 152] Telemetry timeout waiting for attitude/position
+19:26:52: [WARNING] [C:\Users\aclie\bootcamp_WARG_Evan_Liem\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 152] Telemetry timeout waiting for attitude/position
+19:26:53: [WARNING] [C:\Users\aclie\bootcamp_WARG_Evan_Liem\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 152] Telemetry timeout waiting for attitude/position
+19:26:59: [WARNING] [C:\Users\aclie\bootcamp_WARG_Evan_Liem\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 152] Telemetry timeout waiting for attitude/position

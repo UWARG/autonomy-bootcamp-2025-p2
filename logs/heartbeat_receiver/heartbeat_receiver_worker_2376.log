@@ -1,0 +1,13 @@
+19:26:23: [INFO] [C:\Users\aclie\bootcamp_WARG_Evan_Liem\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver_worker.py | heartbeat_receiver_worker | 47] Logger initialized
+19:26:23: [INFO] [C:\Users\aclie\bootcamp_WARG_Evan_Liem\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 81] Heartbeat connection established
+19:26:29: [WARNING] [C:\Users\aclie\bootcamp_WARG_Evan_Liem\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 86] Missed heartbeat 1/5
+19:26:30: [WARNING] [C:\Users\aclie\bootcamp_WARG_Evan_Liem\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 86] Missed heartbeat 2/5
+19:26:31: [WARNING] [C:\Users\aclie\bootcamp_WARG_Evan_Liem\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 86] Missed heartbeat 3/5
+19:26:32: [WARNING] [C:\Users\aclie\bootcamp_WARG_Evan_Liem\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 86] Missed heartbeat 4/5
+19:26:33: [WARNING] [C:\Users\aclie\bootcamp_WARG_Evan_Liem\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 86] Missed heartbeat 5/5
+19:26:33: [WARNING] [C:\Users\aclie\bootcamp_WARG_Evan_Liem\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 92] Heartbeat connection lost
+19:26:35: [WARNING] [C:\Users\aclie\bootcamp_WARG_Evan_Liem\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 86] Missed heartbeat 6/5
+19:26:36: [WARNING] [C:\Users\aclie\bootcamp_WARG_Evan_Liem\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 86] Missed heartbeat 7/5
+19:26:36: [INFO] [C:\Users\aclie\bootcamp_WARG_Evan_Liem\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 81] Heartbeat connection established
+19:26:42: [WARNING] [C:\Users\aclie\bootcamp_WARG_Evan_Liem\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 86] Missed heartbeat 1/5
+19:26:44: [WARNING] [C:\Users\aclie\bootcamp_WARG_Evan_Liem\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 86] Missed heartbeat 1/5

@@ -1,0 +1,2 @@
+19:26:09: [INFO] [C:\Users\aclie\bootcamp_WARG_Evan_Liem\autonomy-bootcamp-2025-p2\modules\common\modules\logger\logger_main_setup.py | setup_main_logger | 62] main logger initialized
+19:26:10: [INFO] [C:\Users\aclie\bootcamp_WARG_Evan_Liem\autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_sender.py | main | 90] Connected!
