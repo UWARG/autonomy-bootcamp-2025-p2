@@ -1,0 +1,2 @@
+22:14:31: [INFO] [/home/pencilknot/Documents/Programming/WARG Autonomy Bootcamp/autonomy-bootcamp-2025-p2/modules/common/modules/logger/logger_main_setup.py | setup_main_logger | 62] main logger initialized
+22:14:32: [INFO] [/home/pencilknot/Documents/Programming/WARG Autonomy Bootcamp/autonomy-bootcamp-2025-p2/tests/integration/test_telemetry.py | main | 108] Connected!
