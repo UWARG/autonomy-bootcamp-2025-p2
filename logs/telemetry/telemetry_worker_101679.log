@@ -1,0 +1,13 @@
+16:00:27: [INFO] [/home/pencilknot/Documents/Programming/WARG Autonomy Bootcamp/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry_worker.py | telemetry_worker | 46] Logger initialized
+16:00:28: [ERROR] [/home/pencilknot/Documents/Programming/WARG Autonomy Bootcamp/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry.py | run | 147] One or more messages were not received within time limit.
+16:00:29: [ERROR] [/home/pencilknot/Documents/Programming/WARG Autonomy Bootcamp/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry.py | run | 147] One or more messages were not received within time limit.
+16:00:30: [ERROR] [/home/pencilknot/Documents/Programming/WARG Autonomy Bootcamp/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry.py | run | 147] One or more messages were not received within time limit.
+16:00:31: [ERROR] [/home/pencilknot/Documents/Programming/WARG Autonomy Bootcamp/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry.py | run | 147] One or more messages were not received within time limit.
+16:00:32: [ERROR] [/home/pencilknot/Documents/Programming/WARG Autonomy Bootcamp/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry.py | run | 147] One or more messages were not received within time limit.
+16:00:33: [ERROR] [/home/pencilknot/Documents/Programming/WARG Autonomy Bootcamp/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry.py | run | 147] One or more messages were not received within time limit.
+16:00:34: [ERROR] [/home/pencilknot/Documents/Programming/WARG Autonomy Bootcamp/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry.py | run | 147] One or more messages were not received within time limit.
+16:00:36: [ERROR] [/home/pencilknot/Documents/Programming/WARG Autonomy Bootcamp/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry.py | run | 147] One or more messages were not received within time limit.
+16:00:37: [ERROR] [/home/pencilknot/Documents/Programming/WARG Autonomy Bootcamp/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry.py | run | 147] One or more messages were not received within time limit.
+16:00:38: [ERROR] [/home/pencilknot/Documents/Programming/WARG Autonomy Bootcamp/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry.py | run | 147] One or more messages were not received within time limit.
+16:00:40: [ERROR] [/home/pencilknot/Documents/Programming/WARG Autonomy Bootcamp/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry.py | run | 147] One or more messages were not received within time limit.
+16:00:41: [ERROR] [/home/pencilknot/Documents/Programming/WARG Autonomy Bootcamp/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry.py | run | 147] One or more messages were not received within time limit.

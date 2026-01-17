@@ -1,0 +1,30 @@
+16:00:45: [INFO] [/home/pencilknot/Documents/Programming/WARG Autonomy Bootcamp/autonomy-bootcamp-2025-p2/modules/common/modules/logger/logger_main_setup.py | setup_main_logger | 62] main logger initialized
+16:00:46: [INFO] [/home/pencilknot/Documents/Programming/WARG Autonomy Bootcamp/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | main | 131] Connected!
+16:00:46: [INFO] [/home/pencilknot/Documents/Programming/WARG Autonomy Bootcamp/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 76] CHANGE ALTITUDE: 1
+CHANGE YAW: 63.435
+16:00:47: [INFO] [/home/pencilknot/Documents/Programming/WARG Autonomy Bootcamp/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 76] CHANGE ALTITUDE: -1
+CHANGE YAW: 63.435
+16:00:50: [INFO] [/home/pencilknot/Documents/Programming/WARG Autonomy Bootcamp/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 76] CHANGE YAW: 63.435
+16:00:50: [INFO] [/home/pencilknot/Documents/Programming/WARG Autonomy Bootcamp/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 76] CHANGE YAW: 90.0
+16:00:51: [INFO] [/home/pencilknot/Documents/Programming/WARG Autonomy Bootcamp/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 76] CHANGE YAW: 116.565
+16:00:51: [INFO] [/home/pencilknot/Documents/Programming/WARG Autonomy Bootcamp/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 76] CHANGE YAW: 45.0
+16:00:52: [INFO] [/home/pencilknot/Documents/Programming/WARG Autonomy Bootcamp/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 76] CHANGE YAW: 63.435
+16:00:52: [INFO] [/home/pencilknot/Documents/Programming/WARG Autonomy Bootcamp/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 76] CHANGE YAW: 90.0
+16:00:53: [INFO] [/home/pencilknot/Documents/Programming/WARG Autonomy Bootcamp/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 76] CHANGE YAW: 26.565
+16:00:53: [INFO] [/home/pencilknot/Documents/Programming/WARG Autonomy Bootcamp/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 76] CHANGE YAW: 45.0
+16:00:54: [INFO] [/home/pencilknot/Documents/Programming/WARG Autonomy Bootcamp/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 76] CHANGE YAW: 90.0
+16:00:54: [INFO] [/home/pencilknot/Documents/Programming/WARG Autonomy Bootcamp/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 76] CHANGE YAW: 45.0
+16:00:55: [INFO] [/home/pencilknot/Documents/Programming/WARG Autonomy Bootcamp/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 76] CHANGE YAW: 90.0
+16:00:55: [INFO] [/home/pencilknot/Documents/Programming/WARG Autonomy Bootcamp/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 76] CHANGE YAW: 135.0
+16:00:56: [INFO] [/home/pencilknot/Documents/Programming/WARG Autonomy Bootcamp/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 76] CHANGE YAW: -26.565
+16:00:56: [INFO] [/home/pencilknot/Documents/Programming/WARG Autonomy Bootcamp/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 76] CHANGE YAW: -45.0
+16:00:57: [INFO] [/home/pencilknot/Documents/Programming/WARG Autonomy Bootcamp/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 76] CHANGE YAW: -90.0
+16:00:57: [INFO] [/home/pencilknot/Documents/Programming/WARG Autonomy Bootcamp/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 76] CHANGE YAW: -45.0
+16:00:58: [INFO] [/home/pencilknot/Documents/Programming/WARG Autonomy Bootcamp/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 76] CHANGE YAW: -90.0
+16:00:58: [INFO] [/home/pencilknot/Documents/Programming/WARG Autonomy Bootcamp/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 76] CHANGE YAW: -135.0
+16:00:59: [INFO] [/home/pencilknot/Documents/Programming/WARG Autonomy Bootcamp/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 76] CHANGE YAW: -63.435
+16:00:59: [INFO] [/home/pencilknot/Documents/Programming/WARG Autonomy Bootcamp/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 76] CHANGE YAW: -90.0
+16:01:00: [INFO] [/home/pencilknot/Documents/Programming/WARG Autonomy Bootcamp/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 76] CHANGE YAW: -116.565
+16:01:00: [INFO] [/home/pencilknot/Documents/Programming/WARG Autonomy Bootcamp/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 76] CHANGE YAW: -45.0
+16:01:01: [INFO] [/home/pencilknot/Documents/Programming/WARG Autonomy Bootcamp/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 76] CHANGE YAW: -63.435
+16:01:01: [INFO] [/home/pencilknot/Documents/Programming/WARG Autonomy Bootcamp/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 76] CHANGE YAW: -90.0
