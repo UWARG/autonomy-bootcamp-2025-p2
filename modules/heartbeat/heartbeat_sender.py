@@ -20,7 +20,7 @@ class HeartbeatSender:
         cls,
         connection: mavutil.mavfile,
         local_logger: object,  # Put your own arguments here
-    ) -> "tuple[True, HeartbeatSender] | tuple[False, None]":
+    ) -> tuple[bool, "HeartbeatSender | None"]:
         """
         Falliable create (instantiation) method to create a HeartbeatSender object.
         """
@@ -41,7 +41,7 @@ class HeartbeatSender:
         self.connection = connection
         self.logger = local_logger
 
-    def run(self) -> None:  # Put your own arguments here
+    def run(self) -> bool:  # Put your own arguments here
         """
         Attempt to send a heartbeat message.
         """

@@ -50,11 +50,13 @@ def start_drone() -> None:
 # =================================================================================================
 def stop(
     controller: worker_controller.WorkerController,  # Add any necessary arguments
+    state_queue: queue_proxy_wrapper.QueueProxyWrapper,
 ) -> None:
     """
     Stop the workers.
     """
     controller.request_exit()  # Add logic to stop your worker
+    state_queue.fill_and_drain_queue()
 
 
 def read_queue(
@@ -133,7 +135,7 @@ def main() -> int:
     threading.Timer(
         HEARTBEAT_PERIOD * (NUM_TRIALS * 2 + DISCONNECT_THRESHOLD + NUM_DISCONNECTS + 2),
         stop,
-        args=(controller,),
+        args=(controller, state_queue),
     ).start()
 
     # Read the main queue (worker outputs)

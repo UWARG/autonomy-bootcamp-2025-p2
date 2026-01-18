@@ -57,6 +57,8 @@ def heartbeat_receiver_worker(
 
     # Main loop: do work.
     while not controller.is_exit_requested():
+        controller.check_pause()
+
         current_state = receiver.run()
         state_queue.queue.put(current_state)
         local_logger.info(f"Reported State: {current_state}")

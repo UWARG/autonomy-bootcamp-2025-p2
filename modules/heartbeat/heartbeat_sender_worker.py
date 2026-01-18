@@ -54,6 +54,7 @@ def heartbeat_sender_worker(
 
     # Main loop: do work.
     while not controller.is_exit_requested():
+        controller.check_pause()
         sender.run()
         time.sleep(1)
 

@@ -242,7 +242,7 @@ def main() -> int:
 
     # Just set a timer to stop the worker after a while, since the worker infinite loops
     threading.Timer(
-        TELEMETRY_PERIOD * len(path) + 2, stop, (controller, command_queue, telemetry_queue)
+        TELEMETRY_PERIOD * len(path) + 2, stop, (command_queue, telemetry_queue, controller)
     ).start()
 
     # Put items into input queue

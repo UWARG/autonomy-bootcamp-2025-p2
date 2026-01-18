@@ -151,6 +151,9 @@ def main() -> int:
         result, manager = worker_manager.WorkerManager.create(props, main_logger)
         if result:
             worker_managers.append(manager)
+        else:
+            main_logger.error(f"Failed to create WorkerManager for {props.target.__name__}")
+            return -1
 
     # Start worker processes
     for manager in worker_managers:
@@ -162,9 +165,14 @@ def main() -> int:
     # Continue running for 100 seconds or until the drone disconnects
     end_time = time.time() + 100
     while time.time() < end_time:
-        if not connection.motors_armed():
-            main_logger.info("Drone disconnected or disarmed.")
-            break
+        try:
+            heartbeat_status = heartbeat_receiver_to_main_queue.queue.get_nowait()
+            if heartbeat_status == "Disconnected":
+                main_logger.info("Drone disconnected based on heartbeat timeout.")
+                break
+        except queue.Empty:
+            pass
+
         try:
             # Check the final output queue for any decision reports
             report = command_to_main_queue.queue.get(timeout=1)
@@ -177,6 +185,7 @@ def main() -> int:
     main_logger.info("Requested exit", True)
 
     # Fill and drain queues from END TO START
+    heartbeat_receiver_to_main_queue.fill_and_drain_queue()
     command_to_main_queue.fill_and_drain_queue()
     telemetry_to_command_queue.fill_and_drain_queue()
 

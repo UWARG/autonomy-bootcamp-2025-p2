@@ -78,7 +78,7 @@ class Telemetry:
         connection: mavutil.mavfile,
         # Put your own arguments here
         local_logger: logger.Logger,
-    ) -> tuple[bool, "Command | None"]:
+    ) -> tuple[bool, "Telemetry | None"]:
         """
         Falliable create (instantiation) method to create a Telemetry object.
         """
