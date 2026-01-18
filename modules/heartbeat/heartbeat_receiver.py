@@ -29,7 +29,7 @@ class HeartbeatReceiver:
         try:
             return (True, HeartbeatReceiver(cls.__private_key, connection, local_logger))
 
-        except (Exception):
+        except Exception:
             return (False, None)
 
     def __init__(
@@ -56,7 +56,7 @@ class HeartbeatReceiver:
         """
 
         # Add blocking to check once per second
-        msg = self.connection.recv_match(type='HEARTBEAT', blocking=True, timeout=1.5)
+        msg = self.connection.recv_match(type="HEARTBEAT", blocking=True, timeout=1.5)
 
         if msg is not None:
             self.missed_count = 0

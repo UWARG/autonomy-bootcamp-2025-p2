@@ -63,11 +63,7 @@ class Command:  # pylint: disable=too-many-instance-attributes
         self._velocity_sum = [0.0, 0.0, 0.0]
         self._velocity_count = 0
 
-    def run(
-        self,
-        data: telemetry.TelemetryData,
-        target: command.Position
-    ):
+    def run(self, data: telemetry.TelemetryData, target: command.Position):
         """
         Make a decision based on received telemetry data.
         """
@@ -77,12 +73,12 @@ class Command:  # pylint: disable=too-many-instance-attributes
         vx = data.x_velocity
         vy = data.y_velocity
         vz = data.z_velocity
-        
+
         self._velocity_sum[0] += vx
         self._velocity_sum[1] += vy
         self._velocity_sum[2] += vz
         self._velocity_count += 1
-        
+
         avg_velocity = (
             round(self._velocity_sum[0] / self._velocity_count, 2),
             round(self._velocity_sum[1] / self._velocity_count, 2),
@@ -100,12 +96,12 @@ class Command:  # pylint: disable=too-many-instance-attributes
             # param1 should be the target altitude (absolute), not the delta
             self.connection.mav.command_long_send(1, 0, 113, 0, target.z, 0, 0, 0, 0, 0, 0)
             msg.append(f"CHANGE ALTITUDE: {round(altitude_delta, 3)}")
-        
+
         # Adjust direction (yaw) using MAV_CMD_CONDITION_YAW (115). Must use relative angle to current state
         # String to return to main: "CHANGING_YAW: {degree you changed it by in range [-180, 180]}"
         # Positive angle is counter-clockwise as in a right handed system
         yaw = math.atan2(target.y - data.y, target.x - data.x) - data.yaw
-        
+
         while yaw > math.pi:
             yaw -= 2 * math.pi
         while yaw < -math.pi:
@@ -117,9 +113,8 @@ class Command:  # pylint: disable=too-many-instance-attributes
             direction = -1 if deg > 0 else 1
             self.connection.mav.command_long_send(1, 0, 115, 0, abs(deg), 0, direction, 1, 0, 0, 0)
             msg.append(f"CHANGE YAW: {round(deg, 3)}")
-        
+
         return "\n".join(msg) if msg else None
-        
 
 
 # =================================================================================================

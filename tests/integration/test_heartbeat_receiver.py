@@ -61,11 +61,7 @@ def stop(
     main_logger.info("Stopped workers", True)
 
 
-def read_queue(
-    args,  # Add any necessary arguments
-    main_logger: logger.Logger,
-    queue
-) -> None:
+def read_queue(args, main_logger: logger.Logger, queue) -> None:  # Add any necessary arguments
     """
     Read and print the output queue.
     """
@@ -135,12 +131,12 @@ def main() -> int:
     ).start()
 
     # Read the main queue (worker outputs)
-    read_thread = threading.Thread(target=read_queue, args=(None, main_logger, output_queue.queue), daemon=True)
+    read_thread = threading.Thread(
+        target=read_queue, args=(None, main_logger, output_queue.queue), daemon=True
+    )
     read_thread.start()
 
-    heartbeat_receiver_worker.heartbeat_receiver_worker(
-        connection, output_queue, controller
-    )
+    heartbeat_receiver_worker.heartbeat_receiver_worker(connection, output_queue, controller)
     # =============================================================================================
     #                          ↑ BOOTCAMPERS MODIFY ABOVE THIS COMMENT ↑
     # =============================================================================================

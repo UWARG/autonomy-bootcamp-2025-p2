@@ -62,7 +62,6 @@ def telemetry_worker(
 
         if data is not None:
             output_queue.queue.put(data)
-        
 
 
 # =================================================================================================

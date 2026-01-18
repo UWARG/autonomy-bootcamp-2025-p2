@@ -27,7 +27,7 @@ class HeartbeatSender:
         try:
             return (True, HeartbeatSender(cls.__private_key, connection))
 
-        except (Exception):
+        except Exception:
             return (False, None)
 
     def __init__(
@@ -50,7 +50,7 @@ class HeartbeatSender:
                 mavutil.mavlink.MAV_TYPE_GCS, mavutil.mavlink.MAV_AUTOPILOT_INVALID, 0, 0, 0
             )
 
-        except (Exception):
+        except Exception:
             return False
 
         return True

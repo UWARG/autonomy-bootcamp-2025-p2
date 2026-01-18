@@ -1,6 +1,7 @@
 """
 Telemetry gathering logic.
 """
+
 import time
 
 from pymavlink import mavutil
@@ -71,7 +72,6 @@ class Telemetry:
 
     __private_key = object()
 
-
     @classmethod
     def create(
         cls,
@@ -116,18 +116,18 @@ class Telemetry:
 
         # both are received or 1 second has passed
         while time.time() - start < 1:
-            pos_msg = self.connection.recv_match(type='LOCAL_POSITION_NED', blocking=False)
+            pos_msg = self.connection.recv_match(type="LOCAL_POSITION_NED", blocking=False)
             if pos_msg is not None:
                 position = pos_msg
 
-            att_msg = self.connection.recv_match(type='ATTITUDE', blocking=False)
+            att_msg = self.connection.recv_match(type="ATTITUDE", blocking=False)
             if att_msg is not None:
                 attitude = att_msg
 
             # if both are received
             if position is not None and attitude is not None:
                 latest = max(attitude.time_boot_ms, position.time_boot_ms)
-                
+
                 return TelemetryData(
                     time_since_boot=latest,
                     x=position.x,
@@ -141,9 +141,9 @@ class Telemetry:
                     yaw=attitude.yaw,
                     roll_speed=attitude.rollspeed,
                     pitch_speed=attitude.pitchspeed,
-                    yaw_speed=attitude.yawspeed
+                    yaw_speed=attitude.yawspeed,
                 )
-            
+
         self.local_logger.error("One or more messages were not received within time limit.", True)
 
         return None

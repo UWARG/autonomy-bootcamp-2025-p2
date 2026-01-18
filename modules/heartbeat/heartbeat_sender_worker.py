@@ -17,8 +17,7 @@ from ..common.modules.logger import logger
 #                            ↓ BOOTCAMPERS MODIFY BELOW THIS COMMENT ↓
 # =================================================================================================
 def heartbeat_sender_worker(
-    connection: mavutil.mavfile,
-    controller: worker_controller.WorkerController
+    connection: mavutil.mavfile, controller: worker_controller.WorkerController
 ) -> None:
     """
     Worker process.
