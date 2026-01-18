@@ -170,10 +170,7 @@ def main() -> int:
             if heartbeat_status == "Disconnected":
                 main_logger.info("Drone disconnected based on heartbeat timeout.")
                 break
-        except queue.Empty:
-            pass
 
-        try:
             # Check the final output queue for any decision reports
             report = command_to_main_queue.queue.get(timeout=1)
             main_logger.info(f"Decision: {report}", True)

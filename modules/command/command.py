@@ -84,7 +84,7 @@ class Command:  # pylint: disable=too-many-instance-attributes
         avg_y = self.sum_y_vel / self.count
         avg_z = self.sum_z_vel / self.count
 
-        velocity_report = f"Average Velocity: x={avg_x:.2f}, y={avg_y:.2f}, z={avg_z:.2f}"
+        self.logger.info(f"Average Velocity: x={avg_x:.2f}, y={avg_y:.2f}, z={avg_z:.2f}")
 
         # Use COMMAND_LONG (76) message, assume the target_system=1 and target_componenet=0
         # The appropriate commands to use are instructed below
@@ -106,7 +106,7 @@ class Command:  # pylint: disable=too-many-instance-attributes
                 float(self.target.z),
             )
             # String to return to main: "CHANGE_ALTITUDE: {amount you changed it by, delta height in meters}"
-            return f"{velocity_report} | CHANGE ALTITUDE: {delta_z}"
+            return f"CHANGE ALTITUDE: {delta_z}"
 
         # Adjust direction (yaw) using MAV_CMD_CONDITION_YAW (115). Must use relative angle to current state
         target_angle_rad = math.atan2(
@@ -137,9 +137,9 @@ class Command:  # pylint: disable=too-many-instance-attributes
                 0,
             )
             # String to return to main: "CHANGING_YAW: {degree you changed it by in range [-180, 180]}"
-            return f"{velocity_report} | CHANGE YAW: {angle_diff_deg}"
+            return f"CHANGE YAW: {angle_diff_deg}"
 
-        return velocity_report
+        return None
         # Positive angle is counter-clockwise as in a right handed system
 
 
