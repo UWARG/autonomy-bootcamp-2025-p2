@@ -1,0 +1,8 @@
+15:59:55: [INFO] [/home/pencilknot/Documents/Programming/WARG Autonomy Bootcamp/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver_worker.py | heartbeat_receiver_worker | 46] Logger initialized
+16:00:00: [WARNING] [/home/pencilknot/Documents/Programming/WARG Autonomy Bootcamp/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 66] Missed 1 heartbeat(s)
+16:00:02: [WARNING] [/home/pencilknot/Documents/Programming/WARG Autonomy Bootcamp/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 66] Missed 2 heartbeat(s)
+16:00:03: [WARNING] [/home/pencilknot/Documents/Programming/WARG Autonomy Bootcamp/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 66] Missed 3 heartbeat(s)
+16:00:05: [WARNING] [/home/pencilknot/Documents/Programming/WARG Autonomy Bootcamp/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 66] Missed 4 heartbeat(s)
+16:00:06: [WARNING] [/home/pencilknot/Documents/Programming/WARG Autonomy Bootcamp/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 66] Missed 5 heartbeat(s)
+16:00:13: [WARNING] [/home/pencilknot/Documents/Programming/WARG Autonomy Bootcamp/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 66] Missed 1 heartbeat(s)
+16:00:15: [WARNING] [/home/pencilknot/Documents/Programming/WARG Autonomy Bootcamp/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 66] Missed 1 heartbeat(s)

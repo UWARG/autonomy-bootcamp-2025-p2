@@ -1,0 +1,2 @@
+16:00:46: [INFO] [/home/pencilknot/Documents/Programming/WARG Autonomy Bootcamp/autonomy-bootcamp-2025-p2/tests/integration/mock_drones/command_drone.py | main | 45] Logger initialized
+16:00:46: [ERROR] [/home/pencilknot/Documents/Programming/WARG Autonomy Bootcamp/autonomy-bootcamp-2025-p2/tests/integration/mock_drones/command_drone.py | main | 64] Altitude target is not the desired value: 0.0

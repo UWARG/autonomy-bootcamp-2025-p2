@@ -82,7 +82,8 @@ class Telemetry:
         """
         Falliable create (instantiation) method to create a Telemetry object.
         """
-        pass  # Create a Telemetry object
+        # Create a Telemetry object
+        return True, Telemetry(cls.__private_key, connection, args, local_logger)
 
     def __init__(
         self,
@@ -94,6 +95,8 @@ class Telemetry:
         assert key is Telemetry.__private_key, "Use create() method"
 
         # Do any intializiation here
+        self.connection = connection
+        self.local_logger = local_logger
 
     def run(
         self,
@@ -106,7 +109,44 @@ class Telemetry:
         # Read MAVLink message LOCAL_POSITION_NED (32)
         # Read MAVLink message ATTITUDE (30)
         # Return the most recent of both, and use the most recent message's timestamp
-        pass
+        start = time.time()
+
+        position = None
+        attitude = None
+
+        # both are received or 1 second has passed
+        while time.time() - start < 1:
+            pos_msg = self.connection.recv_match(type="LOCAL_POSITION_NED", blocking=False)
+            if pos_msg is not None:
+                position = pos_msg
+
+            att_msg = self.connection.recv_match(type="ATTITUDE", blocking=False)
+            if att_msg is not None:
+                attitude = att_msg
+
+            # if both are received
+            if position is not None and attitude is not None:
+                latest = max(attitude.time_boot_ms, position.time_boot_ms)
+
+                return TelemetryData(
+                    time_since_boot=latest,
+                    x=position.x,
+                    y=position.y,
+                    z=position.z,
+                    x_velocity=position.vx,
+                    y_velocity=position.vy,
+                    z_velocity=position.vz,
+                    roll=attitude.roll,
+                    pitch=attitude.pitch,
+                    yaw=attitude.yaw,
+                    roll_speed=attitude.rollspeed,
+                    pitch_speed=attitude.pitchspeed,
+                    yaw_speed=attitude.yawspeed,
+                )
+
+        self.local_logger.error("One or more messages were not received within time limit.", True)
+
+        return None
 
 
 # =================================================================================================
