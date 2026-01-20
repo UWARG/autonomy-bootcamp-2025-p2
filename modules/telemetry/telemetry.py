@@ -150,7 +150,9 @@ class Telemetry:
                 elif msg_type == "LOCAL_POSITION_NED":
                     position_data = msg
                     position_time = msg.time_boot_ms
-                    self.__logger.debug(f"Received LOCAL_POSITION_NED: x={msg.x}, y={msg.y}, z={msg.z}")
+                    self.__logger.debug(
+                        f"Received LOCAL_POSITION_NED: x={msg.x}, y={msg.y}, z={msg.z}"
+                    )
 
             # Check if we have both messages
             if attitude_data is not None and position_data is not None:
@@ -184,7 +186,9 @@ class Telemetry:
             remaining_timeout = TELEMETRY_TIMEOUT - elapsed
 
         # Timeout: did not receive both messages in time
-        self.__logger.error("Telemetry timeout: did not receive both ATTITUDE and LOCAL_POSITION_NED")
+        self.__logger.error(
+            "Telemetry timeout: did not receive both ATTITUDE and LOCAL_POSITION_NED"
+        )
         return False, None
 
 
