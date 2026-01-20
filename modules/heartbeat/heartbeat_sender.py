@@ -57,8 +57,8 @@ class HeartbeatSender:
         """
         try:
             self.__connection.mav.heartbeat_send(
-                mavutil.mavlink.MAV_TYPE_GCS,  # type: Ground Control Station
-                mavutil.mavlink.MAV_AUTOPILOT_INVALID,  # autopilot: not an autopilot
+                mavutil.mavlink.MAV_TYPE_GCS,  # Ground Control Station
+                mavutil.mavlink.MAV_AUTOPILOT_INVALID,  # Not an autopilot
                 0,  # base_mode
                 0,  # custom_mode
                 0,  # system_status
