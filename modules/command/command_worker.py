@@ -4,6 +4,7 @@ Command worker to make decisions based on Telemetry Data.
 
 import os
 import pathlib
+import queue
 
 from pymavlink import mavutil
 
@@ -19,8 +20,13 @@ from ..common.modules.logger import logger
 def command_worker(
     connection: mavutil.mavfile,
     target: command.Position,
-    args,  # Place your own arguments here
-    # Add other necessary worker arguments here
+    height_tolerance: float,
+    yaw_tolerance_deg: float,
+    z_speed: float,
+    turning_speed: float,
+    input_queue: queue_proxy_wrapper.QueueProxyWrapper,
+    output_queue: queue_proxy_wrapper.QueueProxyWrapper,
+    controller: worker_controller.WorkerController,
 ) -> None:
     """
     Worker process.
@@ -48,8 +54,40 @@ def command_worker(
     #                          ↓ BOOTCAMPERS MODIFY BELOW THIS COMMENT ↓
     # =============================================================================================
     # Instantiate class object (command.Command)
+    result, command_instance = command.Command.create(
+        connection,
+        target,
+        height_tolerance,
+        yaw_tolerance_deg,
+        z_speed,
+        turning_speed,
+        local_logger,
+    )
+    if not result:
+        local_logger.error("Failed to create Command", True)
+        return
+
+    assert command_instance is not None
 
     # Main loop: do work.
+    while not controller.is_exit_requested():
+        controller.check_pause()
+
+        try:
+            telemetry_data = input_queue.queue.get(timeout=0.2)
+        except queue.Empty:
+            continue
+
+        # Skip None values from queue draining
+        if telemetry_data is None:
+            continue
+
+        result, output = command_instance.run(telemetry_data)
+        if not result:
+            continue
+
+        if output is not None:
+            output_queue.queue.put(output)
 
 
 # =================================================================================================

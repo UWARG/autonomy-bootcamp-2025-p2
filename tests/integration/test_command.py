@@ -4,9 +4,11 @@ Test the command worker with a mocked drone.
 
 import math
 import multiprocessing as mp
+import queue
 import subprocess
 import threading
 import time
+from typing import Any
 
 from pymavlink import mavutil
 
@@ -35,6 +37,9 @@ TURNING_SPEED = 5  # deg/s
 #                            ↓ BOOTCAMPERS MODIFY BELOW THIS COMMENT ↓
 # =================================================================================================
 # Add your own constants here
+TELEMETRY_PERIOD_S = TELEMETRY_PERIOD
+INPUT_QUEUE_MAX_SIZE = 10
+OUTPUT_QUEUE_MAX_SIZE = 10
 
 # =================================================================================================
 #                            ↑ BOOTCAMPERS MODIFY ABOVE THIS COMMENT ↑
@@ -54,31 +59,51 @@ def start_drone() -> None:
 #                            ↓ BOOTCAMPERS MODIFY BELOW THIS COMMENT ↓
 # =================================================================================================
 def stop(
-    args,  # Add any necessary arguments
+    args: dict[str, Any],
 ) -> None:
     """
     Stop the workers.
     """
-    pass  # Add logic to stop your worker
+    controller = args["controller"]
+    controller.request_exit()
+
+    # Fill and drain queues
+    input_queue = args["input_queue"]
+    output_queue = args["output_queue"]
+    input_queue.fill_and_drain_queue()
+    output_queue.fill_and_drain_queue()
 
 
 def read_queue(
-    args,  # Add any necessary arguments
+    args: dict[str, Any],
     main_logger: logger.Logger,
 ) -> None:
     """
     Read and print the output queue.
     """
-    pass  # Add logic to read from your worker's output queue and print it using the logger
+    output_queue = args["output_queue"]
+    controller = args["controller"]
+
+    while not controller.is_exit_requested() or not output_queue.queue.empty():
+        try:
+            item = output_queue.queue.get(timeout=0.2)
+        except queue.Empty:
+            continue
+        main_logger.info(f"Command output: {item}", True)
 
 
 def put_queue(
-    args,  # Add any necessary arguments
+    args: dict[str, Any],
 ) -> None:
     """
     Place mocked inputs into the input queue periodically with period TELEMETRY_PERIOD.
     """
-    pass  # Add logic to place the mocked inputs into your worker's input queue periodically
+    input_queue = args["input_queue"]
+    path = args["path"]
+
+    for telemetry_data in path:
+        input_queue.queue.put(telemetry_data)
+        time.sleep(TELEMETRY_PERIOD_S)
 
 
 # =================================================================================================
@@ -127,10 +152,14 @@ def main() -> int:
     # =============================================================================================
     # Mock starting a worker, since cannot actually start a new process
     # Create a worker controller for your worker
+    controller = worker_controller.WorkerController()
 
     # Create a multiprocess manager for synchronized queues
+    mp_manager = mp.Manager()
 
     # Create your queues
+    input_queue = queue_proxy_wrapper.QueueProxyWrapper(mp_manager, INPUT_QUEUE_MAX_SIZE)
+    output_queue = queue_proxy_wrapper.QueueProxyWrapper(mp_manager, OUTPUT_QUEUE_MAX_SIZE)
 
     # Test cases, DO NOT EDIT!
     path = [
@@ -216,8 +245,15 @@ def main() -> int:
         ),
     ]
 
+    args = {
+        "controller": controller,
+        "input_queue": input_queue,
+        "output_queue": output_queue,
+        "path": path,
+    }
+
     # Just set a timer to stop the worker after a while, since the worker infinite loops
-    threading.Timer(TELEMETRY_PERIOD * len(path), stop, (args,)).start()
+    threading.Timer(TELEMETRY_PERIOD_S * len(path), stop, (args,)).start()
 
     # Put items into input queue
     threading.Thread(target=put_queue, args=(args,)).start()
@@ -226,7 +262,15 @@ def main() -> int:
     threading.Thread(target=read_queue, args=(args, main_logger)).start()
 
     command_worker.command_worker(
-        # Place your own arguments here
+        connection,
+        TARGET,
+        HEIGHT_TOLERANCE,
+        ANGLE_TOLERANCE,
+        Z_SPEED,
+        TURNING_SPEED,
+        input_queue,
+        output_queue,
+        controller,
     )
     # =============================================================================================
     #                          ↑ BOOTCAMPERS MODIFY ABOVE THIS COMMENT ↑
