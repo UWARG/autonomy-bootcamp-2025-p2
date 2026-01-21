@@ -60,7 +60,7 @@ def stop(
     """
     controller = args["controller"]
     controller.request_exit()
-    
+
     # Fill and drain queues
     output_queue = args["output_queue"]
     output_queue.fill_and_drain_queue()
