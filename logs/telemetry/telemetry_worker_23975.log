@@ -1,0 +1,57 @@
+17:05:13: [INFO] [/home/ryan/Downloads/WARG/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry_worker.py | telemetry_worker | 47] Logger initialized
+17:05:13: [INFO] [/home/ryan/Downloads/WARG/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry.py | run | 111] Received: ATTITUDE
+17:05:13: [INFO] [/home/ryan/Downloads/WARG/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry.py | run | 111] Received: LOCAL_POSITION_NED
+17:05:13: [INFO] [/home/ryan/Downloads/WARG/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry.py | run | 111] Received: ATTITUDE
+17:05:13: [INFO] [/home/ryan/Downloads/WARG/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry.py | run | 111] Received: LOCAL_POSITION_NED
+17:05:13: [INFO] [/home/ryan/Downloads/WARG/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry.py | run | 111] Received: ATTITUDE
+17:05:13: [INFO] [/home/ryan/Downloads/WARG/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry.py | run | 111] Received: ATTITUDE
+17:05:13: [INFO] [/home/ryan/Downloads/WARG/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry.py | run | 111] Received: LOCAL_POSITION_NED
+17:05:14: [INFO] [/home/ryan/Downloads/WARG/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry.py | run | 111] Received: ATTITUDE
+17:05:14: [INFO] [/home/ryan/Downloads/WARG/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry.py | run | 111] Received: LOCAL_POSITION_NED
+17:05:14: [INFO] [/home/ryan/Downloads/WARG/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry.py | run | 111] Received: ATTITUDE
+17:05:14: [INFO] [/home/ryan/Downloads/WARG/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry.py | run | 111] Received: ATTITUDE
+17:05:14: [INFO] [/home/ryan/Downloads/WARG/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry.py | run | 111] Received: LOCAL_POSITION_NED
+17:05:15: [INFO] [/home/ryan/Downloads/WARG/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry.py | run | 111] Received: ATTITUDE
+17:05:15: [INFO] [/home/ryan/Downloads/WARG/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry.py | run | 111] Received: LOCAL_POSITION_NED
+17:05:15: [INFO] [/home/ryan/Downloads/WARG/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry.py | run | 111] Received: ATTITUDE
+17:05:15: [INFO] [/home/ryan/Downloads/WARG/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry.py | run | 111] Received: ATTITUDE
+17:05:15: [INFO] [/home/ryan/Downloads/WARG/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry.py | run | 111] Received: LOCAL_POSITION_NED
+17:05:16: [INFO] [/home/ryan/Downloads/WARG/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry.py | run | 111] Received: ATTITUDE
+17:05:16: [INFO] [/home/ryan/Downloads/WARG/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry.py | run | 111] Received: LOCAL_POSITION_NED
+17:05:16: [INFO] [/home/ryan/Downloads/WARG/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry.py | run | 111] Received: ATTITUDE
+17:05:16: [INFO] [/home/ryan/Downloads/WARG/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry.py | run | 111] Received: ATTITUDE
+17:05:16: [INFO] [/home/ryan/Downloads/WARG/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry.py | run | 111] Received: LOCAL_POSITION_NED
+17:05:17: [INFO] [/home/ryan/Downloads/WARG/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry.py | run | 111] Received: ATTITUDE
+17:05:17: [INFO] [/home/ryan/Downloads/WARG/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry.py | run | 111] Received: LOCAL_POSITION_NED
+17:05:17: [INFO] [/home/ryan/Downloads/WARG/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry.py | run | 111] Received: ATTITUDE
+17:05:18: [WARNING] [/home/ryan/Downloads/WARG/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry.py | run | 135] Did not receive messages, restarting...
+17:05:18: [INFO] [/home/ryan/Downloads/WARG/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry.py | run | 111] Received: ATTITUDE
+17:05:19: [WARNING] [/home/ryan/Downloads/WARG/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry.py | run | 135] Did not receive messages, restarting...
+17:05:19: [INFO] [/home/ryan/Downloads/WARG/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry.py | run | 111] Received: LOCAL_POSITION_NED
+17:05:20: [WARNING] [/home/ryan/Downloads/WARG/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry.py | run | 135] Did not receive messages, restarting...
+17:05:20: [INFO] [/home/ryan/Downloads/WARG/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry.py | run | 111] Received: ATTITUDE
+17:05:20: [INFO] [/home/ryan/Downloads/WARG/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry.py | run | 111] Received: LOCAL_POSITION_NED
+17:05:21: [INFO] [/home/ryan/Downloads/WARG/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry.py | run | 111] Received: LOCAL_POSITION_NED
+17:05:21: [INFO] [/home/ryan/Downloads/WARG/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry.py | run | 111] Received: ATTITUDE
+17:05:21: [INFO] [/home/ryan/Downloads/WARG/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry.py | run | 111] Received: LOCAL_POSITION_NED
+17:05:21: [INFO] [/home/ryan/Downloads/WARG/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry.py | run | 111] Received: ATTITUDE
+17:05:21: [INFO] [/home/ryan/Downloads/WARG/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry.py | run | 111] Received: LOCAL_POSITION_NED
+17:05:22: [INFO] [/home/ryan/Downloads/WARG/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry.py | run | 111] Received: LOCAL_POSITION_NED
+17:05:22: [INFO] [/home/ryan/Downloads/WARG/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry.py | run | 111] Received: ATTITUDE
+17:05:22: [INFO] [/home/ryan/Downloads/WARG/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry.py | run | 111] Received: LOCAL_POSITION_NED
+17:05:22: [INFO] [/home/ryan/Downloads/WARG/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry.py | run | 111] Received: ATTITUDE
+17:05:22: [INFO] [/home/ryan/Downloads/WARG/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry.py | run | 111] Received: LOCAL_POSITION_NED
+17:05:23: [INFO] [/home/ryan/Downloads/WARG/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry.py | run | 111] Received: LOCAL_POSITION_NED
+17:05:23: [INFO] [/home/ryan/Downloads/WARG/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry.py | run | 111] Received: ATTITUDE
+17:05:23: [INFO] [/home/ryan/Downloads/WARG/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry.py | run | 111] Received: LOCAL_POSITION_NED
+17:05:23: [INFO] [/home/ryan/Downloads/WARG/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry.py | run | 111] Received: ATTITUDE
+17:05:23: [INFO] [/home/ryan/Downloads/WARG/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry.py | run | 111] Received: LOCAL_POSITION_NED
+17:05:24: [INFO] [/home/ryan/Downloads/WARG/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry.py | run | 111] Received: LOCAL_POSITION_NED
+17:05:24: [INFO] [/home/ryan/Downloads/WARG/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry.py | run | 111] Received: ATTITUDE
+17:05:24: [INFO] [/home/ryan/Downloads/WARG/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry.py | run | 111] Received: LOCAL_POSITION_NED
+17:05:24: [INFO] [/home/ryan/Downloads/WARG/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry.py | run | 111] Received: ATTITUDE
+17:05:24: [INFO] [/home/ryan/Downloads/WARG/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry.py | run | 111] Received: LOCAL_POSITION_NED
+17:05:25: [INFO] [/home/ryan/Downloads/WARG/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry.py | run | 111] Received: LOCAL_POSITION_NED
+17:05:25: [INFO] [/home/ryan/Downloads/WARG/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry.py | run | 111] Received: ATTITUDE
+17:05:25: [INFO] [/home/ryan/Downloads/WARG/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry.py | run | 111] Received: LOCAL_POSITION_NED
+17:05:26: [WARNING] [/home/ryan/Downloads/WARG/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry.py | run | 135] Did not receive messages, restarting...
