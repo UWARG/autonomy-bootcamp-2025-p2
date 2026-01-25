@@ -19,6 +19,7 @@ from ..common.modules.logger import logger
 def heartbeat_sender_worker(
     connection: mavutil.mavfile,
     heartbeat_period: float,
+    disconnect_period: int,
     controller: worker_controller.WorkerController
 ) -> None:
     """
@@ -60,7 +61,10 @@ def heartbeat_sender_worker(
     assert local_logger is not None
 
     result, heartbeat_sender_instance = heartbeat_sender.HeartbeatSender.create(
-        connection=connection
+        connection=connection,
+        local_logger=local_logger,
+        heartbeat_period=heartbeat_period,
+        disconnect_period=disconnect_period,
     )
 
     if not result:
