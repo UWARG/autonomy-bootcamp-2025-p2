@@ -244,7 +244,7 @@ def main() -> int:
     threading.Thread(target=put_queue, args=(input_queue, path)).start()
 
     # Read the main queue (worker outputs)
-    threading.Thread(target=read_queue, args=(output_queue, main_logger)).start()
+    threading.Thread(target=read_queue, args=(output_queue, controller, main_logger)).start()
 
     command_worker.command_worker(
         connection,

@@ -4,6 +4,7 @@ Command worker to make decisions based on Telemetry Data.
 
 import os
 import pathlib
+import time
 
 from pymavlink import mavutil
 
@@ -51,8 +52,8 @@ def command_worker(
     # Instantiate class object (command.Command)
     result, command_instance = command.Command.create(
         connection,
-        local_logger,
         target,
+        local_logger,
     )
 
     if not result:
@@ -83,6 +84,9 @@ def command_worker(
         except Exception as e:
             local_logger.error(f"Command processing error: {e}", True)
             continue
+
+        time.sleep(0.2)
+        
 
 
 # =================================================================================================
