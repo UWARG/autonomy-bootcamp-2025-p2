@@ -39,7 +39,7 @@ class HeartbeatSender:
         self,
         key: object,
         connection: mavutil.mavfile,
-    ):
+    ) -> None:
         assert key is HeartbeatSender.__private_key, "Use create() method"
 
         self.__connection = connection
