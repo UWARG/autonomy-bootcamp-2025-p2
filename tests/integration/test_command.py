@@ -55,7 +55,8 @@ def start_drone() -> None:
 #                            ↓ BOOTCAMPERS MODIFY BELOW THIS COMMENT ↓
 # =================================================================================================
 def stop(
-    controller: worker_controller.WorkerController, local_queue: mp.Queue  # Add any necessary arguments
+    controller: worker_controller.WorkerController,
+    local_queue: mp.Queue,  # Add any necessary arguments
 ) -> None:
     """
     Stop the workers.
