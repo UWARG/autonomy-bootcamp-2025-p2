@@ -112,44 +112,40 @@ class Telemetry:
         start_time = time.time()
         return_telemetry = TelemetryData()
 
-        # Bool tuple to check if both attitude and local position data is received
-        data_received = [False, False]
-
+        local_position = None
+        attitude = None
         ### Run until time is greater than one
         while time.time() - start_time <= 1:
 
-            # Attempt to take in attitude data
-            attitude = self.connection.recv_match(type="ATTITUDE", timeout=0.0)
+            msg = self.connection.recv_match(type=["ATTITUDE", "LOCAL_POSITION_NED"], timeout=0.1)
 
-            # Set telemetry data to corresponding incoming data
-            if attitude is not None:
-                data_received[0] = True
+            if not msg:
+                continue
+            if msg.get_type() == "LOCAL_POSITION_NED":
+                local_position = msg
+            if msg.get_type() == "ATTITUDE":
+                attitude = msg
+            if attitude and local_position:
+                break
 
-                return_telemetry.time_since_boot = attitude.time_boot_ms
-                return_telemetry.roll = attitude.roll
-                return_telemetry.pitch = attitude.pitch
-                return_telemetry.yaw = attitude.yaw
-                return_telemetry.roll_speed = attitude.rollspeed
-                return_telemetry.pitch_speed = attitude.pitchspeed
-                return_telemetry.yaw_speed = attitude.yawspeed
-
-            # Take in position data
-            local_position = self.connection.recv_match(type="LOCAL_POSITION_NED", timeout=0.0)
-            # Same thing as attitude data intake
-            if local_position is not None:
-                data_received[1] = True
-
-                return_telemetry.time_since_boot = local_position.time_boot_ms
-                return_telemetry.x = local_position.x
-                return_telemetry.y = local_position.y
-                return_telemetry.z = local_position.z
-                return_telemetry.x_velocity = local_position.vx
-                return_telemetry.y_velocity = local_position.vy
-                return_telemetry.z_velocity = local_position.vz
-
-            # If both data types have been received, return the data to worker
-            if all(data_received):
-                return return_telemetry
+        # Set telemetry data to corresponding incoming data
+        if attitude and local_position:
+            return_telemetry.time_since_boot = max(
+                local_position.time_boot_ms, attitude.time_boot_ms
+            )
+            return_telemetry.roll = attitude.roll
+            return_telemetry.pitch = attitude.pitch
+            return_telemetry.yaw = attitude.yaw
+            return_telemetry.roll_speed = attitude.rollspeed
+            return_telemetry.pitch_speed = attitude.pitchspeed
+            return_telemetry.yaw_speed = attitude.yawspeed
+            return_telemetry.x = local_position.x
+            return_telemetry.y = local_position.y
+            return_telemetry.z = local_position.z
+            return_telemetry.x_velocity = local_position.vx
+            return_telemetry.y_velocity = local_position.vy
+            return_telemetry.z_velocity = local_position.vz
+            return return_telemetry
         return None
 
 

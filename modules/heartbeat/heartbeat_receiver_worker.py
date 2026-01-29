@@ -51,7 +51,13 @@ def heartbeat_receiver_worker(
     #                          ↓ BOOTCAMPERS MODIFY BELOW THIS COMMENT ↓
     # =============================================================================================
     # Instantiate class object (heartbeat_receiver.HeartbeatReceiver)
-    _, hb_receiver = heartbeat_receiver.HeartbeatReceiver.create(connection)
+    is_created, hb_receiver = heartbeat_receiver.HeartbeatReceiver.create(connection)
+
+    if not is_created:
+        local_logger.info("Heartbeat receiving connection was not created succesfully")
+        controller.request_exit()
+        return
+
     # Main loop: do work.
     num_missed = 0
     while not controller.is_exit_requested():

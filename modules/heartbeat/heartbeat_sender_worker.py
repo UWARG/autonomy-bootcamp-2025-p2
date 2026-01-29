@@ -51,6 +51,7 @@ def heartbeat_sender_worker(
     if connection_created is False:
         local_logger.error("ERROR: No connection found")
         controller.request_exit()
+        return
 
     local_logger.info("Heartbeat sender connection established")
 

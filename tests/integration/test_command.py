@@ -56,17 +56,17 @@ def start_drone() -> None:
 # =================================================================================================
 def stop(
     controller: worker_controller.WorkerController,
-    local_queue: mp.Queue,  # Add any necessary arguments
+    local_logger: logger.Logger,
 ) -> None:
     """
     Stop the workers.
     """
     controller.request_exit()
-    local_queue.put("DONE")
+    local_logger.info("Controller worker exiting")
 
 
 def read_queue(
-    input_queue: mp.Queue,  # Add any necessary arguments
+    input_queue: mp.Queue,
     main_logger: logger.Logger,
     controller: worker_controller.WorkerController,
 ) -> None:
@@ -238,10 +238,7 @@ def main() -> int:
     threading.Timer(
         TELEMETRY_PERIOD * len(path),
         stop,
-        (
-            controller,
-            output_queue,
-        ),
+        (controller, main_logger),
     ).start()
 
     # Put items into input queue

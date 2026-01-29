@@ -1,0 +1,6 @@
+19:13:03: [INFO] [C:\Users\Andre\Desktop\WARG\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver_worker.py | heartbeat_receiver_worker | 48] Logger initialized
+19:13:09: [ERROR] [C:\Users\Andre\Desktop\WARG\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver_worker.py | heartbeat_receiver_worker | 71] 1 Heartbeats from Drone Missed!!!
+19:13:11: [ERROR] [C:\Users\Andre\Desktop\WARG\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver_worker.py | heartbeat_receiver_worker | 71] 2 Heartbeats from Drone Missed!!!
+19:13:13: [ERROR] [C:\Users\Andre\Desktop\WARG\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver_worker.py | heartbeat_receiver_worker | 71] 3 Heartbeats from Drone Missed!!!
+19:13:15: [ERROR] [C:\Users\Andre\Desktop\WARG\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver_worker.py | heartbeat_receiver_worker | 71] 4 Heartbeats from Drone Missed!!!
+19:13:24: [ERROR] [C:\Users\Andre\Desktop\WARG\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver_worker.py | heartbeat_receiver_worker | 71] 5 Heartbeats from Drone Missed!!!
