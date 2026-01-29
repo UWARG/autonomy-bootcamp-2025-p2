@@ -7,6 +7,7 @@ import multiprocessing as mp
 import subprocess
 import threading
 import time
+import queue  ### IMPORTED BY ME
 
 from pymavlink import mavutil
 
@@ -16,7 +17,7 @@ from modules.common.modules.logger import logger
 from modules.common.modules.logger import logger_main_setup
 from modules.common.modules.read_yaml import read_yaml
 from modules.telemetry import telemetry
-from utilities.workers import queue_proxy_wrapper
+from utilities.workers import queue_proxy_wrapper  # pylint: disable=unused-import
 from utilities.workers import worker_controller
 
 
@@ -54,31 +55,47 @@ def start_drone() -> None:
 #                            ↓ BOOTCAMPERS MODIFY BELOW THIS COMMENT ↓
 # =================================================================================================
 def stop(
-    args,  # Add any necessary arguments
+    controller: worker_controller.WorkerController,
+    local_logger: logger.Logger,
 ) -> None:
     """
     Stop the workers.
     """
-    pass  # Add logic to stop your worker
+    controller.request_exit()
+    local_logger.info("Controller worker exiting")
 
 
 def read_queue(
-    args,  # Add any necessary arguments
+    input_queue: mp.Queue,
     main_logger: logger.Logger,
+    controller: worker_controller.WorkerController,
 ) -> None:
     """
     Read and print the output queue.
     """
-    pass  # Add logic to read from your worker's output queue and print it using the logger
+    while not controller.is_exit_requested():
+        try:
+            msg = input_queue.get(timeout=1)
+
+            if msg is not None:
+                main_logger.info(msg)
+
+        except queue.Empty:
+            continue
 
 
 def put_queue(
-    args,  # Add any necessary arguments
+    flight_info: list[telemetry.Telemetry],
+    local_queue: mp.Queue,
+    # Add any necessary arguments
 ) -> None:
     """
     Place mocked inputs into the input queue periodically with period TELEMETRY_PERIOD.
     """
-    pass  # Add logic to place the mocked inputs into your worker's input queue periodically
+
+    for info in flight_info:
+        local_queue.put(info)
+        time.sleep(TELEMETRY_PERIOD)
 
 
 # =================================================================================================
@@ -127,11 +144,12 @@ def main() -> int:
     # =============================================================================================
     # Mock starting a worker, since cannot actually start a new process
     # Create a worker controller for your worker
-
+    controller = worker_controller.WorkerController()
     # Create a multiprocess manager for synchronized queues
-
+    manager = mp.Manager()
     # Create your queues
-
+    input_queue = manager.Queue()
+    output_queue = manager.Queue()
     # Test cases, DO NOT EDIT!
     path = [
         # Test singular points
@@ -217,16 +235,25 @@ def main() -> int:
     ]
 
     # Just set a timer to stop the worker after a while, since the worker infinite loops
-    threading.Timer(TELEMETRY_PERIOD * len(path), stop, (args,)).start()
+    threading.Timer(
+        TELEMETRY_PERIOD * len(path),
+        stop,
+        (controller, main_logger),
+    ).start()
 
     # Put items into input queue
-    threading.Thread(target=put_queue, args=(args,)).start()
+    threading.Thread(target=put_queue, args=(path, input_queue)).start()
 
     # Read the main queue (worker outputs)
-    threading.Thread(target=read_queue, args=(args, main_logger)).start()
+    threading.Thread(target=read_queue, args=(output_queue, main_logger, controller)).start()
 
     command_worker.command_worker(
         # Place your own arguments here
+        connection=connection,
+        target=TARGET,
+        controller=controller,
+        input_queue=input_queue,
+        output_queue=output_queue,
     )
     # =============================================================================================
     #                          ↑ BOOTCAMPERS MODIFY ABOVE THIS COMMENT ↑

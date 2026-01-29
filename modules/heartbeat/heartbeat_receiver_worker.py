@@ -4,6 +4,7 @@ Heartbeat worker that sends heartbeats periodically.
 
 import os
 import pathlib
+import time  ### ADDED THIS MYSELF
 
 from pymavlink import mavutil
 
@@ -16,9 +17,12 @@ from ..common.modules.logger import logger
 # =================================================================================================
 #                            ↓ BOOTCAMPERS MODIFY BELOW THIS COMMENT ↓
 # =================================================================================================
+
+
 def heartbeat_receiver_worker(
     connection: mavutil.mavfile,
-    args,  # Place your own arguments here
+    controller: worker_controller.WorkerController,
+    output_queue: queue_proxy_wrapper.queue,  # Place your own arguments here
     # Add other necessary worker arguments here
 ) -> None:
     """
@@ -47,8 +51,25 @@ def heartbeat_receiver_worker(
     #                          ↓ BOOTCAMPERS MODIFY BELOW THIS COMMENT ↓
     # =============================================================================================
     # Instantiate class object (heartbeat_receiver.HeartbeatReceiver)
+    is_created, hb_receiver = heartbeat_receiver.HeartbeatReceiver.create(connection)
+
+    if not is_created:
+        local_logger.info("Heartbeat receiving connection was not created succesfully")
+        controller.request_exit()
+        return
 
     # Main loop: do work.
+    num_missed = 0
+    while not controller.is_exit_requested():
+        message = hb_receiver.run()
+        if message is not None:
+            output_queue.put("Connected")
+        elif message is None:
+            output_queue.put("Disconnected")
+
+            num_missed += 1
+            local_logger.error(f"{num_missed} Heartbeats from Drone Missed!!!")
+        time.sleep(1)
 
 
 # =================================================================================================
