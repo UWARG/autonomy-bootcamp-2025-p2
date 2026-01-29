@@ -4,6 +4,7 @@ Command worker to make decisions based on Telemetry Data.
 
 import os
 import pathlib
+import time
 
 from pymavlink import mavutil
 
@@ -17,15 +18,24 @@ from ..common.modules.logger import logger
 #                            ↓ BOOTCAMPERS MODIFY BELOW THIS COMMENT ↓
 # =================================================================================================
 def command_worker(
-    connection: mavutil.mavfile,
     target: command.Position,
-    args,  # Place your own arguments here
-    # Add other necessary worker arguments here
+    height_tolerance: float,
+    angle_tolerance: float,
+    connection: mavutil.mavfile,
+    telemetry_queue: queue_proxy_wrapper.QueueProxyWrapper,
+    report_queue: queue_proxy_wrapper.QueueProxyWrapper,
+    controller: worker_controller.WorkerController,
 ) -> None:
     """
-    Worker process.
+    Worker process. Makes decisions based on telemetry data.
 
-    args... describe what the arguments are
+    target: Target position to maintain
+    height_tolerance: Tolerance for altitude adjustments (meters)
+    angle_tolerance: Tolerance for yaw adjustments (degrees)
+    connection: MAVLink connection to the drone
+    telemetry_queue: Input queue receiving TelemetryData
+    report_queue: Output queue for action strings
+    controller: Worker controller for managing worker state
     """
     # =============================================================================================
     #                          ↑ BOOTCAMPERS MODIFY ABOVE THIS COMMENT ↑
@@ -48,8 +58,35 @@ def command_worker(
     #                          ↓ BOOTCAMPERS MODIFY BELOW THIS COMMENT ↓
     # =============================================================================================
     # Instantiate class object (command.Command)
+    result, cmd = command.Command.create(
+        connection, target, height_tolerance, angle_tolerance, local_logger
+    )
+    if not result:
+        local_logger.error("Failed to create Command", True)
+        return
+
+    assert cmd is not None
+
+    local_logger.info("Command created", True)
 
     # Main loop: do work.
+    while not controller.is_exit_requested():
+        controller.check_pause()
+        if not telemetry_queue.queue.empty():
+            telemetry_data = telemetry_queue.queue.get()
+            # local_logger.info(f"Received telemetry: {telemetry_data}", True)
+
+            if telemetry_data is None:
+                continue
+
+            result, action = cmd.run(telemetry_data)
+
+            if result:
+                # Send action string to report queue
+                report_queue.queue.put(action)
+                local_logger.info(f"Action taken: {action}", True)
+        else:
+            time.sleep(0.01)  # Small sleep when queue is empty
 
 
 # =================================================================================================
