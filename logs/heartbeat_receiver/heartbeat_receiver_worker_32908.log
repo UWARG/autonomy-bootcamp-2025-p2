@@ -1,0 +1,62 @@
+23:44:23: [INFO] [/Users/sahij/Desktop/autonomy/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver_worker.py | heartbeat_receiver_worker | 45] Logger initialized
+23:44:23: [INFO] [/Users/sahij/Desktop/autonomy/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver_worker.py | heartbeat_receiver_worker | 57] HeartbeatReceiver created successfully
+23:44:23: [INFO] [/Users/sahij/Desktop/autonomy/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 61] Received heartbeat
+23:44:23: [INFO] [/Users/sahij/Desktop/autonomy/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver_worker.py | heartbeat_receiver_worker | 63] Status: Connected
+23:44:24: [INFO] [/Users/sahij/Desktop/autonomy/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 61] Received heartbeat
+23:44:24: [INFO] [/Users/sahij/Desktop/autonomy/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver_worker.py | heartbeat_receiver_worker | 63] Status: Connected
+23:44:25: [WARNING] [/Users/sahij/Desktop/autonomy/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 65] Missed heartbeat (count: 1)
+23:44:25: [INFO] [/Users/sahij/Desktop/autonomy/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver_worker.py | heartbeat_receiver_worker | 63] Status: Connected
+23:44:25: [INFO] [/Users/sahij/Desktop/autonomy/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 61] Received heartbeat
+23:44:25: [INFO] [/Users/sahij/Desktop/autonomy/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver_worker.py | heartbeat_receiver_worker | 63] Status: Connected
+23:44:26: [INFO] [/Users/sahij/Desktop/autonomy/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 61] Received heartbeat
+23:44:26: [INFO] [/Users/sahij/Desktop/autonomy/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver_worker.py | heartbeat_receiver_worker | 63] Status: Connected
+23:44:27: [WARNING] [/Users/sahij/Desktop/autonomy/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 65] Missed heartbeat (count: 1)
+23:44:27: [INFO] [/Users/sahij/Desktop/autonomy/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver_worker.py | heartbeat_receiver_worker | 63] Status: Connected
+23:44:27: [INFO] [/Users/sahij/Desktop/autonomy/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 61] Received heartbeat
+23:44:27: [INFO] [/Users/sahij/Desktop/autonomy/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver_worker.py | heartbeat_receiver_worker | 63] Status: Connected
+23:44:28: [WARNING] [/Users/sahij/Desktop/autonomy/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 65] Missed heartbeat (count: 1)
+23:44:28: [INFO] [/Users/sahij/Desktop/autonomy/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver_worker.py | heartbeat_receiver_worker | 63] Status: Connected
+23:44:29: [WARNING] [/Users/sahij/Desktop/autonomy/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 65] Missed heartbeat (count: 2)
+23:44:29: [INFO] [/Users/sahij/Desktop/autonomy/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver_worker.py | heartbeat_receiver_worker | 63] Status: Connected
+23:44:30: [WARNING] [/Users/sahij/Desktop/autonomy/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 65] Missed heartbeat (count: 3)
+23:44:30: [INFO] [/Users/sahij/Desktop/autonomy/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver_worker.py | heartbeat_receiver_worker | 63] Status: Connected
+23:44:31: [WARNING] [/Users/sahij/Desktop/autonomy/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 65] Missed heartbeat (count: 4)
+23:44:31: [INFO] [/Users/sahij/Desktop/autonomy/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver_worker.py | heartbeat_receiver_worker | 63] Status: Connected
+23:44:32: [WARNING] [/Users/sahij/Desktop/autonomy/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 65] Missed heartbeat (count: 5)
+23:44:32: [ERROR] [/Users/sahij/Desktop/autonomy/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 69] Disconnected after 5 missed heartbeats
+23:44:32: [INFO] [/Users/sahij/Desktop/autonomy/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver_worker.py | heartbeat_receiver_worker | 63] Status: Disconnected
+23:44:33: [WARNING] [/Users/sahij/Desktop/autonomy/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 65] Missed heartbeat (count: 6)
+23:44:33: [ERROR] [/Users/sahij/Desktop/autonomy/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 69] Disconnected after 6 missed heartbeats
+23:44:33: [INFO] [/Users/sahij/Desktop/autonomy/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver_worker.py | heartbeat_receiver_worker | 63] Status: Disconnected
+23:44:34: [WARNING] [/Users/sahij/Desktop/autonomy/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 65] Missed heartbeat (count: 7)
+23:44:34: [ERROR] [/Users/sahij/Desktop/autonomy/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 69] Disconnected after 7 missed heartbeats
+23:44:34: [INFO] [/Users/sahij/Desktop/autonomy/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver_worker.py | heartbeat_receiver_worker | 63] Status: Disconnected
+23:44:35: [WARNING] [/Users/sahij/Desktop/autonomy/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 65] Missed heartbeat (count: 8)
+23:44:35: [ERROR] [/Users/sahij/Desktop/autonomy/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 69] Disconnected after 8 missed heartbeats
+23:44:35: [INFO] [/Users/sahij/Desktop/autonomy/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver_worker.py | heartbeat_receiver_worker | 63] Status: Disconnected
+23:44:36: [INFO] [/Users/sahij/Desktop/autonomy/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 61] Received heartbeat
+23:44:36: [INFO] [/Users/sahij/Desktop/autonomy/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver_worker.py | heartbeat_receiver_worker | 63] Status: Connected
+23:44:37: [WARNING] [/Users/sahij/Desktop/autonomy/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 65] Missed heartbeat (count: 1)
+23:44:37: [INFO] [/Users/sahij/Desktop/autonomy/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver_worker.py | heartbeat_receiver_worker | 63] Status: Connected
+23:44:37: [INFO] [/Users/sahij/Desktop/autonomy/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 61] Received heartbeat
+23:44:37: [INFO] [/Users/sahij/Desktop/autonomy/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver_worker.py | heartbeat_receiver_worker | 63] Status: Connected
+23:44:38: [WARNING] [/Users/sahij/Desktop/autonomy/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 65] Missed heartbeat (count: 1)
+23:44:38: [INFO] [/Users/sahij/Desktop/autonomy/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver_worker.py | heartbeat_receiver_worker | 63] Status: Connected
+23:44:38: [INFO] [/Users/sahij/Desktop/autonomy/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 61] Received heartbeat
+23:44:38: [INFO] [/Users/sahij/Desktop/autonomy/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver_worker.py | heartbeat_receiver_worker | 63] Status: Connected
+23:44:39: [WARNING] [/Users/sahij/Desktop/autonomy/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 65] Missed heartbeat (count: 1)
+23:44:39: [INFO] [/Users/sahij/Desktop/autonomy/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver_worker.py | heartbeat_receiver_worker | 63] Status: Connected
+23:44:39: [INFO] [/Users/sahij/Desktop/autonomy/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 61] Received heartbeat
+23:44:39: [INFO] [/Users/sahij/Desktop/autonomy/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver_worker.py | heartbeat_receiver_worker | 63] Status: Connected
+23:44:40: [INFO] [/Users/sahij/Desktop/autonomy/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 61] Received heartbeat
+23:44:40: [INFO] [/Users/sahij/Desktop/autonomy/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver_worker.py | heartbeat_receiver_worker | 63] Status: Connected
+23:44:41: [WARNING] [/Users/sahij/Desktop/autonomy/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 65] Missed heartbeat (count: 1)
+23:44:41: [INFO] [/Users/sahij/Desktop/autonomy/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver_worker.py | heartbeat_receiver_worker | 63] Status: Connected
+23:44:42: [WARNING] [/Users/sahij/Desktop/autonomy/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 65] Missed heartbeat (count: 2)
+23:44:42: [INFO] [/Users/sahij/Desktop/autonomy/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver_worker.py | heartbeat_receiver_worker | 63] Status: Connected
+23:44:42: [INFO] [/Users/sahij/Desktop/autonomy/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 61] Received heartbeat
+23:44:42: [INFO] [/Users/sahij/Desktop/autonomy/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver_worker.py | heartbeat_receiver_worker | 63] Status: Connected
+23:44:43: [WARNING] [/Users/sahij/Desktop/autonomy/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 65] Missed heartbeat (count: 1)
+23:44:43: [INFO] [/Users/sahij/Desktop/autonomy/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver_worker.py | heartbeat_receiver_worker | 63] Status: Connected
+23:44:44: [WARNING] [/Users/sahij/Desktop/autonomy/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 65] Missed heartbeat (count: 2)
+23:44:44: [INFO] [/Users/sahij/Desktop/autonomy/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver_worker.py | heartbeat_receiver_worker | 63] Status: Connected

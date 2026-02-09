@@ -1,0 +1,27 @@
+23:37:48: [INFO] [/Users/sahij/Desktop/autonomy/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 46] Logger initialized
+23:37:48: [INFO] [/Users/sahij/Desktop/autonomy/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 64] Command: CHANGE ALTITUDE: 1
+23:37:48: [INFO] [/Users/sahij/Desktop/autonomy/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 64] Command: CHANGE ALTITUDE: -1
+23:37:51: [INFO] [/Users/sahij/Desktop/autonomy/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 64] Command: CHANGE YAW: 63.43494882292201
+23:37:52: [INFO] [/Users/sahij/Desktop/autonomy/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 64] Command: CHANGE YAW: 90.0
+23:37:52: [INFO] [/Users/sahij/Desktop/autonomy/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 64] Command: CHANGE YAW: 116.56505117707799
+23:37:53: [INFO] [/Users/sahij/Desktop/autonomy/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 64] Command: CHANGE YAW: 45.0
+23:37:53: [INFO] [/Users/sahij/Desktop/autonomy/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 64] Command: CHANGE YAW: 63.43494882292201
+23:37:54: [INFO] [/Users/sahij/Desktop/autonomy/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 64] Command: CHANGE YAW: 90.0
+23:37:54: [INFO] [/Users/sahij/Desktop/autonomy/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 64] Command: CHANGE YAW: 26.565051177077976
+23:37:55: [INFO] [/Users/sahij/Desktop/autonomy/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 64] Command: CHANGE YAW: 45.0
+23:37:55: [INFO] [/Users/sahij/Desktop/autonomy/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 64] Command: CHANGE YAW: 90.0
+23:37:56: [INFO] [/Users/sahij/Desktop/autonomy/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 64] Command: CHANGE YAW: 45.0
+23:37:56: [INFO] [/Users/sahij/Desktop/autonomy/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 64] Command: CHANGE YAW: 90.0
+23:37:57: [INFO] [/Users/sahij/Desktop/autonomy/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 64] Command: CHANGE YAW: 135.0
+23:37:57: [INFO] [/Users/sahij/Desktop/autonomy/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 64] Command: CHANGE YAW: -26.565051177077994
+23:37:58: [INFO] [/Users/sahij/Desktop/autonomy/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 64] Command: CHANGE YAW: -45.0
+23:37:58: [INFO] [/Users/sahij/Desktop/autonomy/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 64] Command: CHANGE YAW: -90.0
+23:37:59: [INFO] [/Users/sahij/Desktop/autonomy/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 64] Command: CHANGE YAW: -45.0
+23:37:59: [INFO] [/Users/sahij/Desktop/autonomy/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 64] Command: CHANGE YAW: -90.0
+23:38:00: [INFO] [/Users/sahij/Desktop/autonomy/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 64] Command: CHANGE YAW: -135.0
+23:38:00: [INFO] [/Users/sahij/Desktop/autonomy/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 64] Command: CHANGE YAW: -63.43494882292201
+23:38:01: [INFO] [/Users/sahij/Desktop/autonomy/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 64] Command: CHANGE YAW: -90.0
+23:38:01: [INFO] [/Users/sahij/Desktop/autonomy/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 64] Command: CHANGE YAW: -116.565051177078
+23:38:02: [INFO] [/Users/sahij/Desktop/autonomy/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 64] Command: CHANGE YAW: -45.0
+23:38:02: [INFO] [/Users/sahij/Desktop/autonomy/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 64] Command: CHANGE YAW: -63.43494882292201
+23:38:03: [INFO] [/Users/sahij/Desktop/autonomy/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 64] Command: CHANGE YAW: -90.0
