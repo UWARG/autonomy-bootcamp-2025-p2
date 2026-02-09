@@ -1,0 +1,28 @@
+23:37:48: [INFO] [/Users/sahij/Desktop/autonomy/autonomy-bootcamp-2025-p2/modules/common/modules/logger/logger_main_setup.py | setup_main_logger | 62] main logger initialized
+23:37:48: [INFO] [/Users/sahij/Desktop/autonomy/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | main | 124] Connected!
+23:37:48: [INFO] [/Users/sahij/Desktop/autonomy/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 72] Main: CHANGE ALTITUDE: 1
+23:37:48: [INFO] [/Users/sahij/Desktop/autonomy/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 72] Main: CHANGE ALTITUDE: -1
+23:37:51: [INFO] [/Users/sahij/Desktop/autonomy/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 72] Main: CHANGE YAW: 63.43494882292201
+23:37:52: [INFO] [/Users/sahij/Desktop/autonomy/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 72] Main: CHANGE YAW: 90.0
+23:37:52: [INFO] [/Users/sahij/Desktop/autonomy/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 72] Main: CHANGE YAW: 116.56505117707799
+23:37:53: [INFO] [/Users/sahij/Desktop/autonomy/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 72] Main: CHANGE YAW: 45.0
+23:37:53: [INFO] [/Users/sahij/Desktop/autonomy/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 72] Main: CHANGE YAW: 63.43494882292201
+23:37:54: [INFO] [/Users/sahij/Desktop/autonomy/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 72] Main: CHANGE YAW: 90.0
+23:37:54: [INFO] [/Users/sahij/Desktop/autonomy/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 72] Main: CHANGE YAW: 26.565051177077976
+23:37:55: [INFO] [/Users/sahij/Desktop/autonomy/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 72] Main: CHANGE YAW: 45.0
+23:37:55: [INFO] [/Users/sahij/Desktop/autonomy/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 72] Main: CHANGE YAW: 90.0
+23:37:56: [INFO] [/Users/sahij/Desktop/autonomy/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 72] Main: CHANGE YAW: 45.0
+23:37:56: [INFO] [/Users/sahij/Desktop/autonomy/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 72] Main: CHANGE YAW: 90.0
+23:37:57: [INFO] [/Users/sahij/Desktop/autonomy/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 72] Main: CHANGE YAW: 135.0
+23:37:57: [INFO] [/Users/sahij/Desktop/autonomy/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 72] Main: CHANGE YAW: -26.565051177077994
+23:37:58: [INFO] [/Users/sahij/Desktop/autonomy/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 72] Main: CHANGE YAW: -45.0
+23:37:58: [INFO] [/Users/sahij/Desktop/autonomy/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 72] Main: CHANGE YAW: -90.0
+23:37:59: [INFO] [/Users/sahij/Desktop/autonomy/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 72] Main: CHANGE YAW: -45.0
+23:37:59: [INFO] [/Users/sahij/Desktop/autonomy/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 72] Main: CHANGE YAW: -90.0
+23:38:00: [INFO] [/Users/sahij/Desktop/autonomy/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 72] Main: CHANGE YAW: -135.0
+23:38:00: [INFO] [/Users/sahij/Desktop/autonomy/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 72] Main: CHANGE YAW: -63.43494882292201
+23:38:01: [INFO] [/Users/sahij/Desktop/autonomy/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 72] Main: CHANGE YAW: -90.0
+23:38:01: [INFO] [/Users/sahij/Desktop/autonomy/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 72] Main: CHANGE YAW: -116.565051177078
+23:38:02: [INFO] [/Users/sahij/Desktop/autonomy/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 72] Main: CHANGE YAW: -45.0
+23:38:02: [INFO] [/Users/sahij/Desktop/autonomy/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 72] Main: CHANGE YAW: -63.43494882292201
+23:38:03: [INFO] [/Users/sahij/Desktop/autonomy/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 72] Main: CHANGE YAW: -90.0
