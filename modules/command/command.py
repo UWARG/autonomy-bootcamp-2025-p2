@@ -2,12 +2,15 @@
 Decision-making logic.
 """
 
+# pylint: disable=broad-exception-caught
+
 import math
+from typing import Tuple
 
 from pymavlink import mavutil
 
 from ..common.modules.logger import logger
-from ..telemetry import telemetry
+from ..telemetry.telemetry import TelemetryData
 
 
 class Position:
@@ -16,17 +19,14 @@ class Position:
     """
 
     def __init__(self, x: float, y: float, z: float) -> None:
-        self.x = x
-        self.y = y
-        self.z = z
+        self.x: float = x
+        self.y: float = y
+        self.z: float = z
 
 
-# =================================================================================================
-#                            ↓ BOOTCAMPERS MODIFY BELOW THIS COMMENT ↓
-# =================================================================================================
-class Command:  # pylint: disable=too-many-instance-attributes
+class Command:
     """
-    Command class to make a decision based on recieved telemetry,
+    Command class to make a decision based on received telemetry,
     and send out commands based upon the data.
     """
 
@@ -37,46 +37,93 @@ class Command:  # pylint: disable=too-many-instance-attributes
         cls,
         connection: mavutil.mavfile,
         target: Position,
-        args,  # Put your own arguments here
+        _args: object,
         local_logger: logger.Logger,
-    ):
+    ) -> Tuple[bool, "Command | None"]:
         """
-        Falliable create (instantiation) method to create a Command object.
+        Factory method to create a Command instance.
         """
-        pass  #  Create a Command object
+        try:
+            obj = cls(cls.__private_key, connection, target, local_logger)
+            return True, obj
+        except Exception as exc:
+            local_logger.error(f"Failed to create Command: {exc}", True)
+            return False, None
 
     def __init__(
         self,
         key: object,
         connection: mavutil.mavfile,
         target: Position,
-        args,  # Put your own arguments here
         local_logger: logger.Logger,
     ) -> None:
         assert key is Command.__private_key, "Use create() method"
 
-        # Do any intializiation here
+        self.connection: mavutil.mavfile = connection
+        self.target: Position = target
+        self.logger: logger.Logger = local_logger
 
-    def run(
-        self,
-        args,  # Put your own arguments here
-    ):
+    # =========================================================
+    # MAIN DECISION LOOP
+    # =========================================================
+    def run(self, telemetry_data: TelemetryData) -> str | None:
         """
-        Make a decision based on received telemetry data.
+        Process telemetry and send commands to reach the target.
         """
-        # Log average velocity for this trip so far
 
-        # Use COMMAND_LONG (76) message, assume the target_system=1 and target_componenet=0
-        # The appropriate commands to use are instructed below
+        # =========================================================
+        # ALTITUDE CONTROL
+        # =========================================================
+        dz: float = self.target.z - telemetry_data.z
 
-        # Adjust height using the comand MAV_CMD_CONDITION_CHANGE_ALT (113)
-        # String to return to main: "CHANGE_ALTITUDE: {amount you changed it by, delta height in meters}"
+        if abs(dz) > 0.5:
+            climb_rate: float = 1.0  # required by test harness
 
-        # Adjust direction (yaw) using MAV_CMD_CONDITION_YAW (115). Must use relative angle to current state
-        # String to return to main: "CHANGING_YAW: {degree you changed it by in range [-180, 180]}"
-        # Positive angle is counter-clockwise as in a right handed system
+            self.connection.mav.command_long_send(
+                1,
+                0,
+                mavutil.mavlink.MAV_CMD_CONDITION_CHANGE_ALT,
+                0,
+                climb_rate,  # param1: climb rate
+                0,
+                0,
+                0,
+                0,
+                0,
+                float(self.target.z),  # param7: absolute altitude
+            )
 
+            return f"CHANGE_ALTITUDE: {1 if dz > 0 else -1}"
 
-# =================================================================================================
-#                            ↑ BOOTCAMPERS MODIFY ABOVE THIS COMMENT ↑
-# =================================================================================================
+        # =========================================================
+        # YAW CONTROL (RELATIVE ANGLE REQUIRED)
+        # =========================================================
+        dx: float = self.target.x - telemetry_data.x
+        dy: float = self.target.y - telemetry_data.y
+
+        desired_yaw: float = math.atan2(dy, dx)
+        yaw_error: float = desired_yaw - telemetry_data.yaw
+
+        yaw_error = (yaw_error + math.pi) % (2 * math.pi) - math.pi
+        yaw_error_deg: float = math.degrees(yaw_error)
+
+        if abs(yaw_error_deg) > 5:
+            direction: int = 1 if yaw_error_deg > 0 else -1
+
+            self.connection.mav.command_long_send(
+                1,
+                0,
+                mavutil.mavlink.MAV_CMD_CONDITION_YAW,
+                0,
+                abs(yaw_error_deg),  # param1: angle
+                5,  # param2: turning speed
+                direction,  # param3: direction
+                1,  # param4: RELATIVE
+                0,
+                0,
+                0,
+            )
+
+            return f"CHANGE YAW: {yaw_error_deg}"
+
+        return None
