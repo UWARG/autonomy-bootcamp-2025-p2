@@ -19,36 +19,44 @@ class HeartbeatReceiver:
 
     @classmethod
     def create(
-        cls,
-        connection: mavutil.mavfile,
-        args,  # Put your own arguments here
-        local_logger: logger.Logger,
-    ):
+        cls, connection: mavutil.mavfile, local_logger: logger.Logger
+    ) -> "tuple [True, HeartbeatReceiver] | tuple [False, None]":
         """
         Falliable create (instantiation) method to create a HeartbeatReceiver object.
         """
-        pass  # Create a HeartbeatReceiver object
+        return True, cls(cls.__private_key, connection, local_logger)
 
     def __init__(
-        self,
-        key: object,
-        connection: mavutil.mavfile,
-        args,  # Put your own arguments here
+        self, key: object, connection: mavutil.mavfile, local_logger: logger.Logger
     ) -> None:
+        
         assert key is HeartbeatReceiver.__private_key, "Use create() method"
 
         # Do any intializiation here
+        self.local_logger = local_logger
+        self.status = "Connected"
+        self.number_missed = 0
+        self.connection = connection
 
-    def run(
-        self,
-        args,  # Put your own arguments here
-    ):
+    def run(self) -> "tuple[bool, str]":
         """
         Attempt to recieve a heartbeat message.
         If disconnected for over a threshold number of periods,
         the connection is considered disconnected.
         """
-        pass
+        message = self.connection.recv_match(type="HEARTBEAT", blocking=True, timeout=1)
+        if message is not None and message.get_type() == "HEARTBEAT":
+            self.status = "Connected"
+            self.number_missed = 0
+            self.local_logger.info("Heartbeat message received")
+        else:
+            self.number_missed += 1
+            self.local_logger.warning(f"{self.number_missed} heartbeat(s) missed")
+            if self.number_missed >= 5:
+                self.status = "Disconnected"
+                self.local_logger.warning("Drone Disconnected")
+            return False, self.status
+        return True, self.status
 
 
 # =================================================================================================

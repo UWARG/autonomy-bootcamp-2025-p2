@@ -1,0 +1,23 @@
+18:52:46: [INFO] [C:\Users\aarav\autonomy-bootcamp-2025-p2\modules\common\modules\logger\logger_main_setup.py | setup_main_logger | 62] main logger initialized
+18:52:47: [INFO] [C:\Users\aarav\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | main | 136] Connected!
+18:52:48: [INFO] [C:\Users\aarav\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 80] CHANGE_ALTITUDE 1.00
+18:52:48: [INFO] [C:\Users\aarav\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 80] CHANGE_ALTITUDE -1.00
+18:52:51: [INFO] [C:\Users\aarav\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 80] CHANGING YAW 63.43
+18:52:52: [INFO] [C:\Users\aarav\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 80] CHANGING YAW 90.00
+18:52:52: [INFO] [C:\Users\aarav\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 80] CHANGING YAW 116.57
+18:52:53: [INFO] [C:\Users\aarav\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 80] CHANGING YAW 45.00
+18:52:53: [INFO] [C:\Users\aarav\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 80] CHANGING YAW 63.43
+18:52:54: [INFO] [C:\Users\aarav\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 80] CHANGING YAW 90.00
+18:52:54: [INFO] [C:\Users\aarav\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 80] CHANGING YAW 26.57
+18:52:55: [INFO] [C:\Users\aarav\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 80] CHANGING YAW 45.00
+18:52:55: [INFO] [C:\Users\aarav\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 80] CHANGING YAW 90.00
+18:53:03: [INFO] [C:\Users\aarav\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 80] None
+18:53:03: [INFO] [C:\Users\aarav\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 80] None
+18:53:03: [INFO] [C:\Users\aarav\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 80] None
+18:53:03: [INFO] [C:\Users\aarav\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 80] None
+18:53:03: [INFO] [C:\Users\aarav\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 80] None
+18:53:03: [INFO] [C:\Users\aarav\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 80] None
+18:53:03: [INFO] [C:\Users\aarav\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 80] None
+18:53:03: [INFO] [C:\Users\aarav\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 80] None
+18:53:03: [INFO] [C:\Users\aarav\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 80] None
+18:53:03: [INFO] [C:\Users\aarav\autonomy-bootcamp-2025-p2\tests\integration\test_command.py | read_queue | 80] None

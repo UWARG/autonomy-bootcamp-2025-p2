@@ -1,0 +1,9 @@
+18:13:09: [INFO] [C:\Users\aarav\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver_worker.py | heartbeat_receiver_worker | 48] Logger initialized
+18:13:09: [INFO] [C:\Users\aarav\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 50] Heartbeat message received
+18:13:10: [INFO] [C:\Users\aarav\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 50] Heartbeat message received
+18:13:11: [WARNING] [C:\Users\aarav\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 53] 1 heartbeat(s) missed
+18:13:11: [WARNING] [C:\Users\aarav\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver_worker.py | heartbeat_receiver_worker | 67] Failed to receive Heartbeat
+18:13:11: [INFO] [C:\Users\aarav\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 50] Heartbeat message received
+18:13:12: [WARNING] [C:\Users\aarav\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 53] 1 heartbeat(s) missed
+18:13:12: [WARNING] [C:\Users\aarav\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver_worker.py | heartbeat_receiver_worker | 67] Failed to receive Heartbeat
+18:13:12: [INFO] [C:\Users\aarav\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 50] Heartbeat message received
