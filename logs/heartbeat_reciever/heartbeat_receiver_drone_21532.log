@@ -1,0 +1,5 @@
+18:13:09: [INFO] [C:\Users\aarav\autonomy-bootcamp-2025-p2\tests\integration\mock_drones\heartbeat_receiver_drone.py | main | 42] Logger initialized
+18:13:09: [INFO] [C:\Users\aarav\autonomy-bootcamp-2025-p2\tests\integration\mock_drones\heartbeat_receiver_drone.py | send_heartbeats | 59] Drone: Sent a heartbeat
+18:13:10: [INFO] [C:\Users\aarav\autonomy-bootcamp-2025-p2\tests\integration\mock_drones\heartbeat_receiver_drone.py | send_heartbeats | 59] Drone: Sent a heartbeat
+18:13:11: [INFO] [C:\Users\aarav\autonomy-bootcamp-2025-p2\tests\integration\mock_drones\heartbeat_receiver_drone.py | send_heartbeats | 59] Drone: Sent a heartbeat
+18:13:12: [INFO] [C:\Users\aarav\autonomy-bootcamp-2025-p2\tests\integration\mock_drones\heartbeat_receiver_drone.py | send_heartbeats | 59] Drone: Sent a heartbeat

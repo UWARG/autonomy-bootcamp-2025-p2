@@ -1,0 +1,26 @@
+18:48:08: [INFO] [C:\Users\aarav\autonomy-bootcamp-2025-p2\tests\integration\mock_drones\telemetry_drone.py | main | 45] Logger initialized
+18:48:08: [INFO] [C:\Users\aarav\autonomy-bootcamp-2025-p2\tests\integration\mock_drones\telemetry_drone.py | send_telemetry | 75] Drone: Sent attitude 0
+18:48:08: [INFO] [C:\Users\aarav\autonomy-bootcamp-2025-p2\tests\integration\mock_drones\telemetry_drone.py | send_telemetry | 95] Drone: Sent position 0
+18:48:09: [INFO] [C:\Users\aarav\autonomy-bootcamp-2025-p2\tests\integration\mock_drones\telemetry_drone.py | send_telemetry | 75] Drone: Sent attitude 1
+18:48:09: [INFO] [C:\Users\aarav\autonomy-bootcamp-2025-p2\tests\integration\mock_drones\telemetry_drone.py | send_telemetry | 95] Drone: Sent position 1
+18:48:09: [INFO] [C:\Users\aarav\autonomy-bootcamp-2025-p2\tests\integration\mock_drones\telemetry_drone.py | send_telemetry | 75] Drone: Sent attitude 2
+18:48:09: [INFO] [C:\Users\aarav\autonomy-bootcamp-2025-p2\tests\integration\mock_drones\telemetry_drone.py | send_telemetry | 75] Drone: Sent attitude 3
+18:48:09: [INFO] [C:\Users\aarav\autonomy-bootcamp-2025-p2\tests\integration\mock_drones\telemetry_drone.py | send_telemetry | 95] Drone: Sent position 2
+18:48:10: [INFO] [C:\Users\aarav\autonomy-bootcamp-2025-p2\tests\integration\mock_drones\telemetry_drone.py | send_telemetry | 75] Drone: Sent attitude 4
+18:48:10: [INFO] [C:\Users\aarav\autonomy-bootcamp-2025-p2\tests\integration\mock_drones\telemetry_drone.py | send_telemetry | 95] Drone: Sent position 3
+18:48:10: [INFO] [C:\Users\aarav\autonomy-bootcamp-2025-p2\tests\integration\mock_drones\telemetry_drone.py | send_telemetry | 75] Drone: Sent attitude 5
+18:48:10: [INFO] [C:\Users\aarav\autonomy-bootcamp-2025-p2\tests\integration\mock_drones\telemetry_drone.py | send_telemetry | 75] Drone: Sent attitude 6
+18:48:10: [INFO] [C:\Users\aarav\autonomy-bootcamp-2025-p2\tests\integration\mock_drones\telemetry_drone.py | send_telemetry | 95] Drone: Sent position 4
+18:48:11: [INFO] [C:\Users\aarav\autonomy-bootcamp-2025-p2\tests\integration\mock_drones\telemetry_drone.py | send_telemetry | 75] Drone: Sent attitude 7
+18:48:11: [INFO] [C:\Users\aarav\autonomy-bootcamp-2025-p2\tests\integration\mock_drones\telemetry_drone.py | send_telemetry | 95] Drone: Sent position 5
+18:48:11: [INFO] [C:\Users\aarav\autonomy-bootcamp-2025-p2\tests\integration\mock_drones\telemetry_drone.py | send_telemetry | 75] Drone: Sent attitude 8
+18:48:11: [INFO] [C:\Users\aarav\autonomy-bootcamp-2025-p2\tests\integration\mock_drones\telemetry_drone.py | send_telemetry | 75] Drone: Sent attitude 9
+18:48:11: [INFO] [C:\Users\aarav\autonomy-bootcamp-2025-p2\tests\integration\mock_drones\telemetry_drone.py | send_telemetry | 95] Drone: Sent position 6
+18:48:12: [INFO] [C:\Users\aarav\autonomy-bootcamp-2025-p2\tests\integration\mock_drones\telemetry_drone.py | send_telemetry | 75] Drone: Sent attitude 10
+18:48:12: [INFO] [C:\Users\aarav\autonomy-bootcamp-2025-p2\tests\integration\mock_drones\telemetry_drone.py | send_telemetry | 95] Drone: Sent position 7
+18:48:12: [INFO] [C:\Users\aarav\autonomy-bootcamp-2025-p2\tests\integration\mock_drones\telemetry_drone.py | send_telemetry | 75] Drone: Sent attitude 11
+18:48:12: [INFO] [C:\Users\aarav\autonomy-bootcamp-2025-p2\tests\integration\mock_drones\telemetry_drone.py | send_telemetry | 75] Drone: Sent attitude 12
+18:48:12: [INFO] [C:\Users\aarav\autonomy-bootcamp-2025-p2\tests\integration\mock_drones\telemetry_drone.py | send_telemetry | 95] Drone: Sent position 8
+18:48:13: [INFO] [C:\Users\aarav\autonomy-bootcamp-2025-p2\tests\integration\mock_drones\telemetry_drone.py | send_telemetry | 75] Drone: Sent attitude 13
+18:48:13: [INFO] [C:\Users\aarav\autonomy-bootcamp-2025-p2\tests\integration\mock_drones\telemetry_drone.py | send_telemetry | 95] Drone: Sent position 9
+18:48:13: [INFO] [C:\Users\aarav\autonomy-bootcamp-2025-p2\tests\integration\mock_drones\telemetry_drone.py | send_telemetry | 75] Drone: Sent attitude 14

@@ -1,0 +1,2 @@
+18:12:16: [INFO] [C:\Users\aarav\autonomy-bootcamp-2025-p2\modules\common\modules\logger\logger_main_setup.py | setup_main_logger | 62] main logger initialized
+18:12:17: [INFO] [C:\Users\aarav\autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_sender.py | main | 86] Connected!

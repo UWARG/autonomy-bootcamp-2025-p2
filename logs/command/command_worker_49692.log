@@ -1,0 +1,38 @@
+18:52:48: [INFO] [C:\Users\aarav\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 52] Logger initialized
+18:52:48: [INFO] [C:\Users\aarav\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 69] Received telemetry data
+18:52:48: [INFO] [C:\Users\aarav\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 85] Average velocity: (0.0, 0.0, 4.0) m/s
+18:52:48: [INFO] [C:\Users\aarav\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 69] Received telemetry data
+18:52:48: [INFO] [C:\Users\aarav\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 85] Average velocity: (0.0, 0.0, 1.0) m/s
+18:52:49: [INFO] [C:\Users\aarav\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 69] Received telemetry data
+18:52:49: [INFO] [C:\Users\aarav\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 85] Average velocity: (0.0, 0.0, 0.6666666666666666) m/s
+18:52:49: [ERROR] [C:\Users\aarav\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 138] Could not run command
+18:52:49: [INFO] [C:\Users\aarav\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 69] Received telemetry data
+18:52:49: [INFO] [C:\Users\aarav\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 85] Average velocity: (0.0, 0.0, 0.5) m/s
+18:52:49: [ERROR] [C:\Users\aarav\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 138] Could not run command
+18:52:50: [INFO] [C:\Users\aarav\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 69] Received telemetry data
+18:52:50: [INFO] [C:\Users\aarav\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 85] Average velocity: (0.0, 0.0, 0.4) m/s
+18:52:50: [ERROR] [C:\Users\aarav\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 138] Could not run command
+18:52:50: [INFO] [C:\Users\aarav\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 69] Received telemetry data
+18:52:50: [INFO] [C:\Users\aarav\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 85] Average velocity: (0.0, 0.0, 0.3333333333333333) m/s
+18:52:50: [ERROR] [C:\Users\aarav\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 138] Could not run command
+18:52:51: [INFO] [C:\Users\aarav\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 69] Received telemetry data
+18:52:51: [INFO] [C:\Users\aarav\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 85] Average velocity: (0.0, 0.0, 0.2857142857142857) m/s
+18:52:51: [ERROR] [C:\Users\aarav\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 138] Could not run command
+18:52:51: [INFO] [C:\Users\aarav\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 69] Received telemetry data
+18:52:51: [INFO] [C:\Users\aarav\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 85] Average velocity: (0.0, 2.5, 0.25) m/s
+18:52:52: [INFO] [C:\Users\aarav\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 69] Received telemetry data
+18:52:52: [INFO] [C:\Users\aarav\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 85] Average velocity: (0.0, 4.444444444444445, 0.2222222222222222) m/s
+18:52:52: [INFO] [C:\Users\aarav\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 69] Received telemetry data
+18:52:52: [INFO] [C:\Users\aarav\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 85] Average velocity: (0.0, 6.0, 0.2) m/s
+18:52:53: [INFO] [C:\Users\aarav\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 69] Received telemetry data
+18:52:53: [INFO] [C:\Users\aarav\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 85] Average velocity: (1.8181818181818181, 5.454545454545454, 0.18181818181818182) m/s
+18:52:53: [INFO] [C:\Users\aarav\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 69] Received telemetry data
+18:52:53: [INFO] [C:\Users\aarav\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 85] Average velocity: (3.3333333333333335, 5.0, 0.16666666666666666) m/s
+18:52:54: [INFO] [C:\Users\aarav\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 69] Received telemetry data
+18:52:54: [INFO] [C:\Users\aarav\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 85] Average velocity: (4.615384615384615, 4.615384615384615, 0.15384615384615385) m/s
+18:52:54: [INFO] [C:\Users\aarav\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 69] Received telemetry data
+18:52:54: [INFO] [C:\Users\aarav\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 85] Average velocity: (4.285714285714286, 2.857142857142857, 0.14285714285714285) m/s
+18:52:55: [INFO] [C:\Users\aarav\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 69] Received telemetry data
+18:52:55: [INFO] [C:\Users\aarav\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 85] Average velocity: (4.0, 1.3333333333333333, 0.13333333333333333) m/s
+18:52:55: [INFO] [C:\Users\aarav\autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 69] Received telemetry data
+18:52:55: [INFO] [C:\Users\aarav\autonomy-bootcamp-2025-p2\modules\command\command.py | run | 85] Average velocity: (3.75, 0.0, 0.125) m/s

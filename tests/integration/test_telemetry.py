@@ -47,22 +47,29 @@ def start_drone() -> None:
 #                            ↓ BOOTCAMPERS MODIFY BELOW THIS COMMENT ↓
 # =================================================================================================
 def stop(
-    args,  # Add any necessary arguments
+    controller: worker_controller.WorkerController,
+    queue: queue_proxy_wrapper.QueueProxyWrapper,  # Add any necessary arguments
 ) -> None:
     """
     Stop the workers.
     """
-    pass  # Add logic to stop your worker
+    queue.fill_and_drain_queue()
+    controller.request_exit()
 
 
 def read_queue(
-    args,  # Add any necessary arguments
+    queue: queue_proxy_wrapper.QueueProxyWrapper,
+    controller: worker_controller.WorkerController,
     main_logger: logger.Logger,
 ) -> None:
     """
     Read and print the output queue.
     """
-    pass  # Add logic to read from your worker's output queue and print it using the logger
+    # Add logic to read from your worker's output queue and print it using the logger
+    while not controller.is_exit_requested():
+        if not queue.queue.empty():
+            data = queue.queue.get(timeout=1)
+            main_logger.info(f"Telemetry data {data}")
 
 
 # =================================================================================================
@@ -111,19 +118,28 @@ def main() -> int:
     # =============================================================================================
     # Mock starting a worker, since cannot actually start a new process
     # Create a worker controller for your worker
+    controller = worker_controller.WorkerController()
 
     # Create a multiprocess manager for synchronized queues
+    manager = mp.Manager()
 
     # Create your queues
+    queue = queue_proxy_wrapper.QueueProxyWrapper(manager)
 
     # Just set a timer to stop the worker after a while, since the worker infinite loops
-    threading.Timer(TELEMETRY_PERIOD * NUM_TRIALS * 2 + NUM_FAILS, stop, (args,)).start()
+    threading.Timer(
+        TELEMETRY_PERIOD * NUM_TRIALS * 2 + NUM_FAILS, stop, args=(controller, queue)
+    ).start()
 
     # Read the main queue (worker outputs)
-    threading.Thread(target=read_queue, args=(args, main_logger)).start()
+    threading.Thread(target=read_queue, args=(queue, controller, main_logger)).start()
 
     telemetry_worker.telemetry_worker(
         # Put your own arguments here
+        connection,
+        controller,
+        main_logger,
+        queue,
     )
     # =============================================================================================
     #                          ↑ BOOTCAMPERS MODIFY ABOVE THIS COMMENT ↑
