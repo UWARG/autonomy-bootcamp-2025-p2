@@ -4,10 +4,6 @@ Heartbeat receiving logic.
 
 from pymavlink import mavutil
 
-from ..common.modules.logger.logger import (
-    Logger,
-)  # pylint: disable=unused-import, no-name-in-module
-
 
 # =================================================================================================
 #                            ↓ BOOTCAMPERS MODIFY BELOW THIS COMMENT ↓
@@ -28,7 +24,6 @@ class HeartbeatReceiver:
         """
         Factory method to create a HeartbeatReceiver instance.
         """
-
         return True, cls(cls.__private_key, threshold, connection)
 
     def __init__(
