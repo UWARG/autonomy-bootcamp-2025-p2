@@ -1,0 +1,32 @@
+14:23:55: [INFO] [C:\Users\16478\Documents\UWARG\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver_worker.py | heartbeat_receiver_worker | 44] Logger initialized
+14:23:55: [INFO] [C:\Users\16478\Documents\UWARG\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver_worker.py | heartbeat_receiver_worker | 59] HeartbeatReceiver object created successfully
+14:23:55: [INFO] [C:\Users\16478\Documents\UWARG\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver_worker.py | heartbeat_receiver_worker | 66] connected
+14:23:55: [INFO] [C:\Users\16478\Documents\UWARG\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver_worker.py | heartbeat_receiver_worker | 66] connected
+14:23:56: [INFO] [C:\Users\16478\Documents\UWARG\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver_worker.py | heartbeat_receiver_worker | 66] connected
+14:23:57: [INFO] [C:\Users\16478\Documents\UWARG\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver_worker.py | heartbeat_receiver_worker | 66] connected
+14:23:57: [INFO] [C:\Users\16478\Documents\UWARG\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver_worker.py | heartbeat_receiver_worker | 66] connected
+14:23:58: [INFO] [C:\Users\16478\Documents\UWARG\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver_worker.py | heartbeat_receiver_worker | 66] connected
+14:23:59: [INFO] [C:\Users\16478\Documents\UWARG\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver_worker.py | heartbeat_receiver_worker | 66] connected
+14:24:00: [INFO] [C:\Users\16478\Documents\UWARG\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver_worker.py | heartbeat_receiver_worker | 66] connected
+14:24:01: [INFO] [C:\Users\16478\Documents\UWARG\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver_worker.py | heartbeat_receiver_worker | 66] connected
+14:24:02: [INFO] [C:\Users\16478\Documents\UWARG\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver_worker.py | heartbeat_receiver_worker | 66] connected
+14:24:03: [INFO] [C:\Users\16478\Documents\UWARG\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver_worker.py | heartbeat_receiver_worker | 66] disconnected
+14:24:03: [INFO] [C:\Users\16478\Documents\UWARG\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver_worker.py | heartbeat_receiver_worker | 69] Heartbeat Missed
+14:24:04: [INFO] [C:\Users\16478\Documents\UWARG\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver_worker.py | heartbeat_receiver_worker | 66] disconnected
+14:24:04: [INFO] [C:\Users\16478\Documents\UWARG\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver_worker.py | heartbeat_receiver_worker | 69] Heartbeat Missed
+14:24:05: [INFO] [C:\Users\16478\Documents\UWARG\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver_worker.py | heartbeat_receiver_worker | 66] disconnected
+14:24:05: [INFO] [C:\Users\16478\Documents\UWARG\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver_worker.py | heartbeat_receiver_worker | 69] Heartbeat Missed
+14:24:07: [INFO] [C:\Users\16478\Documents\UWARG\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver_worker.py | heartbeat_receiver_worker | 66] disconnected
+14:24:07: [INFO] [C:\Users\16478\Documents\UWARG\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver_worker.py | heartbeat_receiver_worker | 69] Heartbeat Missed
+14:24:07: [INFO] [C:\Users\16478\Documents\UWARG\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver_worker.py | heartbeat_receiver_worker | 66] connected
+14:24:08: [INFO] [C:\Users\16478\Documents\UWARG\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver_worker.py | heartbeat_receiver_worker | 66] connected
+14:24:08: [INFO] [C:\Users\16478\Documents\UWARG\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver_worker.py | heartbeat_receiver_worker | 66] connected
+14:24:09: [INFO] [C:\Users\16478\Documents\UWARG\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver_worker.py | heartbeat_receiver_worker | 66] connected
+14:24:09: [INFO] [C:\Users\16478\Documents\UWARG\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver_worker.py | heartbeat_receiver_worker | 66] connected
+14:24:10: [INFO] [C:\Users\16478\Documents\UWARG\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver_worker.py | heartbeat_receiver_worker | 66] connected
+14:24:11: [INFO] [C:\Users\16478\Documents\UWARG\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver_worker.py | heartbeat_receiver_worker | 66] connected
+14:24:12: [INFO] [C:\Users\16478\Documents\UWARG\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver_worker.py | heartbeat_receiver_worker | 66] connected
+14:24:13: [INFO] [C:\Users\16478\Documents\UWARG\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver_worker.py | heartbeat_receiver_worker | 66] connected
+14:24:14: [INFO] [C:\Users\16478\Documents\UWARG\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver_worker.py | heartbeat_receiver_worker | 66] connected
+14:24:15: [INFO] [C:\Users\16478\Documents\UWARG\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver_worker.py | heartbeat_receiver_worker | 66] connected
+14:24:15: [INFO] [C:\Users\16478\Documents\UWARG\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver_worker.py | heartbeat_receiver_worker | 71] Exit requested, shutting down worker

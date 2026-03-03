@@ -134,9 +134,15 @@ class Telemetry:
                     roll=attitude_msg.roll,
                     pitch=attitude_msg.pitch,
                     yaw=attitude_msg.yaw,
+                    roll_speed=attitude_msg.rollspeed,
+                    pitch_speed=attitude_msg.pitchspeed,
+                    yaw_speed=attitude_msg.yawspeed,
                     x=position_msg.y,  # East is X
                     y=position_msg.x,  # North is Y
                     z=-position_msg.z,  # -Down is Up
+                    x_velocity=position_msg.vy,  # East velocity
+                    y_velocity=position_msg.vx,  # North velocity
+                    z_velocity=-position_msg.vz,  # -Down velocity
                     time_since_boot=timestamp,
                 )
                 return True, data

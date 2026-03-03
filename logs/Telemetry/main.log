@@ -1,302 +1,302 @@
-17:50:40: [INFO] [C:\Users\16478\Documents\UWARG\autonomy-bootcamp-2025-p2\modules\common\modules\logger\logger_main_setup.py | setup_main_logger | 62] main logger initialized
-17:50:42: [INFO] [C:\Users\16478\Documents\UWARG\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | main | 113] Connected!
-17:50:43: [INFO] [C:\Users\16478\Documents\UWARG\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 70] Received data from queue: {
+14:23:27: [INFO] [C:\Users\16478\Documents\UWARG\autonomy-bootcamp-2025-p2\modules\common\modules\logger\logger_main_setup.py | setup_main_logger | 62] main logger initialized
+14:23:28: [INFO] [C:\Users\16478\Documents\UWARG\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | main | 113] Connected!
+14:23:28: [INFO] [C:\Users\16478\Documents\UWARG\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 70] Received data from queue: {
             time_since_boot: 0,
             x: 0.0,
             y: 0.0,
             z: -0.0,
-            x_velocity: None,
-            y_velocity: None,
-            z_velocity: None,
+            x_velocity: 0.0,
+            y_velocity: 1.0,
+            z_velocity: -0.0,
             roll: 0.0,
             pitch: 0.0,
             yaw: 0.0,
-            roll_speed: None,
-            pitch_speed: None,
-            yaw_speed: None
+            roll_speed: 0.0,
+            pitch_speed: 0.0,
+            yaw_speed: 3.1415927410125732
         }
-17:50:43: [INFO] [C:\Users\16478\Documents\UWARG\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 70] Received data from queue: {
-            time_since_boot: 501,
+14:23:28: [INFO] [C:\Users\16478\Documents\UWARG\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 70] Received data from queue: {
+            time_since_boot: 500,
             x: 0.0,
             y: 0.5,
             z: -0.0,
-            x_velocity: None,
-            y_velocity: None,
-            z_velocity: None,
+            x_velocity: 0.0,
+            y_velocity: 1.0,
+            z_velocity: -0.0,
             roll: 0.0,
             pitch: 0.0,
             yaw: 1.0471975803375244,
-            roll_speed: None,
-            pitch_speed: None,
-            yaw_speed: None
+            roll_speed: 0.0,
+            pitch_speed: 0.0,
+            yaw_speed: 3.1415927410125732
         }
-17:50:43: [INFO] [C:\Users\16478\Documents\UWARG\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 70] Received data from queue: {
+14:23:29: [INFO] [C:\Users\16478\Documents\UWARG\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 70] Received data from queue: {
             time_since_boot: 1000,
             x: 0.0,
             y: 1.0,
             z: -0.0,
-            x_velocity: None,
-            y_velocity: None,
-            z_velocity: None,
+            x_velocity: 0.0,
+            y_velocity: 1.0,
+            z_velocity: -0.0,
             roll: 0.0,
             pitch: 0.0,
             yaw: 3.1415927410125732,
-            roll_speed: None,
-            pitch_speed: None,
-            yaw_speed: None
+            roll_speed: 0.0,
+            pitch_speed: 0.0,
+            yaw_speed: 3.1415927410125732
         }
-17:50:44: [INFO] [C:\Users\16478\Documents\UWARG\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 70] Received data from queue: {
-            time_since_boot: 1501,
+14:23:29: [INFO] [C:\Users\16478\Documents\UWARG\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 70] Received data from queue: {
+            time_since_boot: 1504,
             x: 0.0,
             y: 1.5,
             z: -0.0,
-            x_velocity: None,
-            y_velocity: None,
-            z_velocity: None,
+            x_velocity: 0.0,
+            y_velocity: 1.0,
+            z_velocity: -0.0,
             roll: 0.0,
             pitch: 0.0,
             yaw: -2.094395160675049,
-            roll_speed: None,
-            pitch_speed: None,
-            yaw_speed: None
+            roll_speed: 0.0,
+            pitch_speed: 0.0,
+            yaw_speed: 3.1415927410125732
         }
-17:50:44: [INFO] [C:\Users\16478\Documents\UWARG\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 70] Received data from queue: {
+14:23:30: [INFO] [C:\Users\16478\Documents\UWARG\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 70] Received data from queue: {
             time_since_boot: 2000,
             x: 0.0,
             y: 2.0,
             z: -0.0,
-            x_velocity: None,
-            y_velocity: None,
-            z_velocity: None,
+            x_velocity: 0.0,
+            y_velocity: 1.0,
+            z_velocity: -0.0,
             roll: 0.0,
             pitch: 0.0,
             yaw: 0.0,
-            roll_speed: None,
-            pitch_speed: None,
-            yaw_speed: None
+            roll_speed: 0.0,
+            pitch_speed: 0.0,
+            yaw_speed: 3.1415927410125732
         }
-17:50:45: [INFO] [C:\Users\16478\Documents\UWARG\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 70] Received data from queue: {
-            time_since_boot: 2501,
+14:23:30: [INFO] [C:\Users\16478\Documents\UWARG\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 70] Received data from queue: {
+            time_since_boot: 2500,
             x: 0.0,
             y: 2.5,
             z: -0.0,
-            x_velocity: None,
-            y_velocity: None,
-            z_velocity: None,
+            x_velocity: 0.0,
+            y_velocity: 1.0,
+            z_velocity: -0.0,
             roll: 0.0,
             pitch: 0.0,
             yaw: 1.0471975803375244,
-            roll_speed: None,
-            pitch_speed: None,
-            yaw_speed: None
+            roll_speed: 0.0,
+            pitch_speed: 0.0,
+            yaw_speed: 3.1415927410125732
         }
-17:50:45: [INFO] [C:\Users\16478\Documents\UWARG\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 70] Received data from queue: {
+14:23:31: [INFO] [C:\Users\16478\Documents\UWARG\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 70] Received data from queue: {
             time_since_boot: 3000,
             x: 0.0,
             y: 3.0,
             z: -0.0,
-            x_velocity: None,
-            y_velocity: None,
-            z_velocity: None,
+            x_velocity: 0.0,
+            y_velocity: 1.0,
+            z_velocity: -0.0,
             roll: 0.0,
             pitch: 0.0,
             yaw: 3.1415927410125732,
-            roll_speed: None,
-            pitch_speed: None,
-            yaw_speed: None
+            roll_speed: 0.0,
+            pitch_speed: 0.0,
+            yaw_speed: 3.1415927410125732
         }
-17:50:46: [INFO] [C:\Users\16478\Documents\UWARG\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 70] Received data from queue: {
-            time_since_boot: 3511,
+14:23:31: [INFO] [C:\Users\16478\Documents\UWARG\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 70] Received data from queue: {
+            time_since_boot: 3513,
             x: 0.0,
             y: 3.5,
             z: -0.0,
-            x_velocity: None,
-            y_velocity: None,
-            z_velocity: None,
+            x_velocity: 0.0,
+            y_velocity: 1.0,
+            z_velocity: -0.0,
             roll: 0.0,
             pitch: 0.0,
             yaw: -2.094395160675049,
-            roll_speed: None,
-            pitch_speed: None,
-            yaw_speed: None
+            roll_speed: 0.0,
+            pitch_speed: 0.0,
+            yaw_speed: 3.1415927410125732
         }
-17:50:46: [INFO] [C:\Users\16478\Documents\UWARG\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 70] Received data from queue: {
+14:23:32: [INFO] [C:\Users\16478\Documents\UWARG\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 70] Received data from queue: {
             time_since_boot: 4000,
             x: 0.0,
             y: 4.0,
             z: -0.0,
-            x_velocity: None,
-            y_velocity: None,
-            z_velocity: None,
+            x_velocity: 0.0,
+            y_velocity: 1.0,
+            z_velocity: -0.0,
             roll: 0.0,
             pitch: 0.0,
             yaw: 0.0,
-            roll_speed: None,
-            pitch_speed: None,
-            yaw_speed: None
+            roll_speed: 0.0,
+            pitch_speed: 0.0,
+            yaw_speed: 3.1415927410125732
         }
-17:50:47: [INFO] [C:\Users\16478\Documents\UWARG\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 70] Received data from queue: {
-            time_since_boot: 4500,
+14:23:32: [INFO] [C:\Users\16478\Documents\UWARG\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 70] Received data from queue: {
+            time_since_boot: 4504,
             x: 0.0,
             y: 4.5,
             z: -0.0,
-            x_velocity: None,
-            y_velocity: None,
-            z_velocity: None,
+            x_velocity: 0.0,
+            y_velocity: 1.0,
+            z_velocity: -0.0,
             roll: 0.0,
             pitch: 0.0,
             yaw: 1.0471975803375244,
-            roll_speed: None,
-            pitch_speed: None,
-            yaw_speed: None
+            roll_speed: 0.0,
+            pitch_speed: 0.0,
+            yaw_speed: 3.1415927410125732
         }
-17:50:50: [INFO] [C:\Users\16478\Documents\UWARG\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 70] Received data from queue: {
+14:23:36: [INFO] [C:\Users\16478\Documents\UWARG\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 70] Received data from queue: {
             time_since_boot: 0,
             x: 0.0,
             y: 0.0,
             z: -0.0,
-            x_velocity: None,
-            y_velocity: None,
-            z_velocity: None,
+            x_velocity: 0.0,
+            y_velocity: 1.0,
+            z_velocity: -0.0,
             roll: 0.0,
             pitch: 0.0,
             yaw: 0.0,
-            roll_speed: None,
-            pitch_speed: None,
-            yaw_speed: None
+            roll_speed: 0.0,
+            pitch_speed: 0.0,
+            yaw_speed: 3.1415927410125732
         }
-17:50:51: [INFO] [C:\Users\16478\Documents\UWARG\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 70] Received data from queue: {
-            time_since_boot: 501,
+14:23:36: [INFO] [C:\Users\16478\Documents\UWARG\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 70] Received data from queue: {
+            time_since_boot: 500,
             x: 0.0,
             y: 0.3333333432674408,
             z: -0.0,
-            x_velocity: None,
-            y_velocity: None,
-            z_velocity: None,
+            x_velocity: 0.0,
+            y_velocity: 1.0,
+            z_velocity: -0.0,
             roll: 0.0,
             pitch: 0.0,
             yaw: 1.5707963705062866,
-            roll_speed: None,
-            pitch_speed: None,
-            yaw_speed: None
+            roll_speed: 0.0,
+            pitch_speed: 0.0,
+            yaw_speed: 3.1415927410125732
         }
-17:50:51: [INFO] [C:\Users\16478\Documents\UWARG\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 70] Received data from queue: {
+14:23:37: [INFO] [C:\Users\16478\Documents\UWARG\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 70] Received data from queue: {
             time_since_boot: 1000,
             x: 0.0,
             y: 0.6666666865348816,
             z: -0.0,
-            x_velocity: None,
-            y_velocity: None,
-            z_velocity: None,
+            x_velocity: 0.0,
+            y_velocity: 1.0,
+            z_velocity: -0.0,
             roll: 0.0,
             pitch: 0.0,
             yaw: 3.1415927410125732,
-            roll_speed: None,
-            pitch_speed: None,
-            yaw_speed: None
+            roll_speed: 0.0,
+            pitch_speed: 0.0,
+            yaw_speed: 3.1415927410125732
         }
-17:50:52: [INFO] [C:\Users\16478\Documents\UWARG\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 70] Received data from queue: {
+14:23:37: [INFO] [C:\Users\16478\Documents\UWARG\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 70] Received data from queue: {
             time_since_boot: 1500,
             x: 0.0,
             y: 1.3333333730697632,
             z: -0.0,
-            x_velocity: None,
-            y_velocity: None,
-            z_velocity: None,
+            x_velocity: 0.0,
+            y_velocity: 1.0,
+            z_velocity: -0.0,
             roll: 0.0,
             pitch: 0.0,
             yaw: -1.5707963705062866,
-            roll_speed: None,
-            pitch_speed: None,
-            yaw_speed: None
+            roll_speed: 0.0,
+            pitch_speed: 0.0,
+            yaw_speed: 3.1415927410125732
         }
-17:50:52: [INFO] [C:\Users\16478\Documents\UWARG\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 70] Received data from queue: {
+14:23:38: [INFO] [C:\Users\16478\Documents\UWARG\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 70] Received data from queue: {
             time_since_boot: 2000,
             x: 0.0,
             y: 1.6666666269302368,
             z: -0.0,
-            x_velocity: None,
-            y_velocity: None,
-            z_velocity: None,
+            x_velocity: 0.0,
+            y_velocity: 1.0,
+            z_velocity: -0.0,
             roll: 0.0,
             pitch: 0.0,
             yaw: 0.0,
-            roll_speed: None,
-            pitch_speed: None,
-            yaw_speed: None
+            roll_speed: 0.0,
+            pitch_speed: 0.0,
+            yaw_speed: 3.1415927410125732
         }
-17:50:53: [INFO] [C:\Users\16478\Documents\UWARG\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 70] Received data from queue: {
-            time_since_boot: 2507,
+14:23:38: [INFO] [C:\Users\16478\Documents\UWARG\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 70] Received data from queue: {
+            time_since_boot: 2500,
             x: 0.0,
             y: 2.3333332538604736,
             z: -0.0,
-            x_velocity: None,
-            y_velocity: None,
-            z_velocity: None,
+            x_velocity: 0.0,
+            y_velocity: 1.0,
+            z_velocity: -0.0,
             roll: 0.0,
             pitch: 0.0,
             yaw: 1.5707963705062866,
-            roll_speed: None,
-            pitch_speed: None,
-            yaw_speed: None
+            roll_speed: 0.0,
+            pitch_speed: 0.0,
+            yaw_speed: 3.1415927410125732
         }
-17:50:53: [INFO] [C:\Users\16478\Documents\UWARG\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 70] Received data from queue: {
+14:23:39: [INFO] [C:\Users\16478\Documents\UWARG\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 70] Received data from queue: {
             time_since_boot: 3000,
             x: 0.0,
             y: 2.6666667461395264,
             z: -0.0,
-            x_velocity: None,
-            y_velocity: None,
-            z_velocity: None,
+            x_velocity: 0.0,
+            y_velocity: 1.0,
+            z_velocity: -0.0,
             roll: 0.0,
             pitch: 0.0,
             yaw: 3.1415927410125732,
-            roll_speed: None,
-            pitch_speed: None,
-            yaw_speed: None
+            roll_speed: 0.0,
+            pitch_speed: 0.0,
+            yaw_speed: 3.1415927410125732
         }
-17:50:54: [INFO] [C:\Users\16478\Documents\UWARG\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 70] Received data from queue: {
+14:23:39: [INFO] [C:\Users\16478\Documents\UWARG\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 70] Received data from queue: {
             time_since_boot: 3500,
             x: 0.0,
             y: 3.3333332538604736,
             z: -0.0,
-            x_velocity: None,
-            y_velocity: None,
-            z_velocity: None,
+            x_velocity: 0.0,
+            y_velocity: 1.0,
+            z_velocity: -0.0,
             roll: 0.0,
             pitch: 0.0,
             yaw: -1.5707963705062866,
-            roll_speed: None,
-            pitch_speed: None,
-            yaw_speed: None
+            roll_speed: 0.0,
+            pitch_speed: 0.0,
+            yaw_speed: 3.1415927410125732
         }
-17:50:54: [INFO] [C:\Users\16478\Documents\UWARG\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 70] Received data from queue: {
+14:23:40: [INFO] [C:\Users\16478\Documents\UWARG\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 70] Received data from queue: {
             time_since_boot: 4000,
             x: 0.0,
             y: 3.6666667461395264,
             z: -0.0,
-            x_velocity: None,
-            y_velocity: None,
-            z_velocity: None,
+            x_velocity: 0.0,
+            y_velocity: 1.0,
+            z_velocity: -0.0,
             roll: 0.0,
             pitch: 0.0,
             yaw: 0.0,
-            roll_speed: None,
-            pitch_speed: None,
-            yaw_speed: None
+            roll_speed: 0.0,
+            pitch_speed: 0.0,
+            yaw_speed: 3.1415927410125732
         }
-17:50:55: [INFO] [C:\Users\16478\Documents\UWARG\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 70] Received data from queue: {
-            time_since_boot: 4503,
+14:23:40: [INFO] [C:\Users\16478\Documents\UWARG\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 70] Received data from queue: {
+            time_since_boot: 4500,
             x: 0.0,
             y: 4.333333492279053,
             z: -0.0,
-            x_velocity: None,
-            y_velocity: None,
-            z_velocity: None,
+            x_velocity: 0.0,
+            y_velocity: 1.0,
+            z_velocity: -0.0,
             roll: 0.0,
             pitch: 0.0,
             yaw: 1.5707963705062866,
-            roll_speed: None,
-            pitch_speed: None,
-            yaw_speed: None
+            roll_speed: 0.0,
+            pitch_speed: 0.0,
+            yaw_speed: 3.1415927410125732
         }

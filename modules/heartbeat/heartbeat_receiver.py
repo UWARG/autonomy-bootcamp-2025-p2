@@ -37,7 +37,7 @@ class HeartbeatReceiver:
         self.__connection = connection
         self.missed_heartbeats = 0
 
-    def run(self) -> bool:
+    def run(self) -> str:
         """
         Run the heartbeat receiver logic.
         """
@@ -45,11 +45,11 @@ class HeartbeatReceiver:
         if msg is None:
             self.missed_heartbeats += 1
             if self.missed_heartbeats >= self.__threshold:
-                return "Disconnected"
-            return "Connected"
+                return "disconnected"
+            return "connected"
 
         self.missed_heartbeats = 0
-        return "Connected"
+        return "connected"
 
 
 # =================================================================================================
