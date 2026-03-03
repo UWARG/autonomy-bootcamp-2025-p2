@@ -53,12 +53,10 @@ def heartbeat_sender_worker(
 
     local_logger.info("HeartbeatSender connection established")
 
-    # Main loop: do work.
     if result is True:
         while not controller.is_exit_requested():
             sender.run()
-            local_logger.info("Heartbeat Sent")
-            time.sleep(1)
+            time.sleep(1)  # Sleep for 1 second before sending the next heartbeat
 
 
 # =================================================================================================

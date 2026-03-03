@@ -113,7 +113,7 @@ class Command:  # pylint: disable=too-many-instance-attributes
             delta_yaw += 360
 
         if abs(delta_yaw) > 5:
-            direction = 1 if delta_yaw > 0 else -1
+            direction = -1 if delta_yaw > 0 else 1
             self.connection.mav.command_long_send(
                 1,
                 0,

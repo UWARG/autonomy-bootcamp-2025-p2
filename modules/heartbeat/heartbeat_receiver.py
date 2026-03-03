@@ -45,11 +45,11 @@ class HeartbeatReceiver:
         if msg is None:
             self.missed_heartbeats += 1
             if self.missed_heartbeats >= self.__threshold:
-                return False
-            return True
+                return "Disconnected"
+            return "Connected"
 
         self.missed_heartbeats = 0
-        return True
+        return "Connected"
 
 
 # =================================================================================================

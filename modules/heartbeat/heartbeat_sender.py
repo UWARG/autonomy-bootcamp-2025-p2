@@ -48,6 +48,7 @@ class HeartbeatSender:
             0,
             0,
             mavutil.mavlink.MAV_STATE_ACTIVE,
+            0,
         )
 
 

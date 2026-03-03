@@ -38,7 +38,6 @@ def main() -> int:
     assert local_logger is not None
 
     local_logger.info("Logger initialized")
-
     # Since this one is timing sensitive and opening files take a while,
     # create logger before beginning. This causes a race condition, but it seems to work out.
     # The creation of this process is typically slower than main creating the log folder

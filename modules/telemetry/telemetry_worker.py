@@ -57,7 +57,7 @@ def telemetry_worker(
         # run() handles the 1s timeout logic internally
         success, data = telemetry_obj.run()
 
-        if success and data:
+        if success:
             output_queue.queue.put(data)
             local_logger.info(f"Telemetry updated: X={data.x:.2f}, Y={data.y:.2f}, Z={data.z:.2f}")
         else:

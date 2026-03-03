@@ -18,8 +18,8 @@ from ..common.modules.logger import logger
 # =================================================================================================
 def heartbeat_receiver_worker(
     connection: mavutil.mavfile,
-    controller: worker_controller.WorkerController,
     queue_wrapper: queue_proxy_wrapper.QueueProxyWrapper,
+    controller: worker_controller.WorkerController,
     threshold: int,
 ) -> None:
     """

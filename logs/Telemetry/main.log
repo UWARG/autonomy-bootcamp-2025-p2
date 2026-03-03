@@ -1,6 +1,6 @@
-17:02:05: [INFO] [C:\Users\16478\Documents\UWARG\autonomy-bootcamp-2025-p2\modules\common\modules\logger\logger_main_setup.py | setup_main_logger | 62] main logger initialized
-17:02:05: [INFO] [C:\Users\16478\Documents\UWARG\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | main | 113] Connected!
-17:02:06: [INFO] [C:\Users\16478\Documents\UWARG\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 70] Received data from queue: {
+17:50:40: [INFO] [C:\Users\16478\Documents\UWARG\autonomy-bootcamp-2025-p2\modules\common\modules\logger\logger_main_setup.py | setup_main_logger | 62] main logger initialized
+17:50:42: [INFO] [C:\Users\16478\Documents\UWARG\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | main | 113] Connected!
+17:50:43: [INFO] [C:\Users\16478\Documents\UWARG\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 70] Received data from queue: {
             time_since_boot: 0,
             x: 0.0,
             y: 0.0,
@@ -15,8 +15,8 @@
             pitch_speed: None,
             yaw_speed: None
         }
-17:02:06: [INFO] [C:\Users\16478\Documents\UWARG\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 70] Received data from queue: {
-            time_since_boot: 500,
+17:50:43: [INFO] [C:\Users\16478\Documents\UWARG\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 70] Received data from queue: {
+            time_since_boot: 501,
             x: 0.0,
             y: 0.5,
             z: -0.0,
@@ -30,7 +30,7 @@
             pitch_speed: None,
             yaw_speed: None
         }
-17:02:07: [INFO] [C:\Users\16478\Documents\UWARG\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 70] Received data from queue: {
+17:50:43: [INFO] [C:\Users\16478\Documents\UWARG\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 70] Received data from queue: {
             time_since_boot: 1000,
             x: 0.0,
             y: 1.0,
@@ -45,8 +45,8 @@
             pitch_speed: None,
             yaw_speed: None
         }
-17:02:07: [INFO] [C:\Users\16478\Documents\UWARG\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 70] Received data from queue: {
-            time_since_boot: 1500,
+17:50:44: [INFO] [C:\Users\16478\Documents\UWARG\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 70] Received data from queue: {
+            time_since_boot: 1501,
             x: 0.0,
             y: 1.5,
             z: -0.0,
@@ -60,7 +60,7 @@
             pitch_speed: None,
             yaw_speed: None
         }
-17:02:08: [INFO] [C:\Users\16478\Documents\UWARG\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 70] Received data from queue: {
+17:50:44: [INFO] [C:\Users\16478\Documents\UWARG\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 70] Received data from queue: {
             time_since_boot: 2000,
             x: 0.0,
             y: 2.0,
@@ -75,8 +75,8 @@
             pitch_speed: None,
             yaw_speed: None
         }
-17:02:08: [INFO] [C:\Users\16478\Documents\UWARG\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 70] Received data from queue: {
-            time_since_boot: 2500,
+17:50:45: [INFO] [C:\Users\16478\Documents\UWARG\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 70] Received data from queue: {
+            time_since_boot: 2501,
             x: 0.0,
             y: 2.5,
             z: -0.0,
@@ -90,7 +90,7 @@
             pitch_speed: None,
             yaw_speed: None
         }
-17:02:09: [INFO] [C:\Users\16478\Documents\UWARG\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 70] Received data from queue: {
+17:50:45: [INFO] [C:\Users\16478\Documents\UWARG\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 70] Received data from queue: {
             time_since_boot: 3000,
             x: 0.0,
             y: 3.0,
@@ -105,8 +105,8 @@
             pitch_speed: None,
             yaw_speed: None
         }
-17:02:09: [INFO] [C:\Users\16478\Documents\UWARG\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 70] Received data from queue: {
-            time_since_boot: 3500,
+17:50:46: [INFO] [C:\Users\16478\Documents\UWARG\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 70] Received data from queue: {
+            time_since_boot: 3511,
             x: 0.0,
             y: 3.5,
             z: -0.0,
@@ -120,7 +120,7 @@
             pitch_speed: None,
             yaw_speed: None
         }
-17:02:10: [INFO] [C:\Users\16478\Documents\UWARG\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 70] Received data from queue: {
+17:50:46: [INFO] [C:\Users\16478\Documents\UWARG\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 70] Received data from queue: {
             time_since_boot: 4000,
             x: 0.0,
             y: 4.0,
@@ -135,7 +135,7 @@
             pitch_speed: None,
             yaw_speed: None
         }
-17:02:10: [INFO] [C:\Users\16478\Documents\UWARG\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 70] Received data from queue: {
+17:50:47: [INFO] [C:\Users\16478\Documents\UWARG\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 70] Received data from queue: {
             time_since_boot: 4500,
             x: 0.0,
             y: 4.5,
@@ -150,7 +150,7 @@
             pitch_speed: None,
             yaw_speed: None
         }
-17:02:14: [INFO] [C:\Users\16478\Documents\UWARG\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 70] Received data from queue: {
+17:50:50: [INFO] [C:\Users\16478\Documents\UWARG\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 70] Received data from queue: {
             time_since_boot: 0,
             x: 0.0,
             y: 0.0,
@@ -165,7 +165,7 @@
             pitch_speed: None,
             yaw_speed: None
         }
-17:02:14: [INFO] [C:\Users\16478\Documents\UWARG\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 70] Received data from queue: {
+17:50:51: [INFO] [C:\Users\16478\Documents\UWARG\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 70] Received data from queue: {
             time_since_boot: 501,
             x: 0.0,
             y: 0.3333333432674408,
@@ -180,7 +180,7 @@
             pitch_speed: None,
             yaw_speed: None
         }
-17:02:15: [INFO] [C:\Users\16478\Documents\UWARG\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 70] Received data from queue: {
+17:50:51: [INFO] [C:\Users\16478\Documents\UWARG\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 70] Received data from queue: {
             time_since_boot: 1000,
             x: 0.0,
             y: 0.6666666865348816,
@@ -195,7 +195,7 @@
             pitch_speed: None,
             yaw_speed: None
         }
-17:02:15: [INFO] [C:\Users\16478\Documents\UWARG\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 70] Received data from queue: {
+17:50:52: [INFO] [C:\Users\16478\Documents\UWARG\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 70] Received data from queue: {
             time_since_boot: 1500,
             x: 0.0,
             y: 1.3333333730697632,
@@ -210,7 +210,7 @@
             pitch_speed: None,
             yaw_speed: None
         }
-17:02:16: [INFO] [C:\Users\16478\Documents\UWARG\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 70] Received data from queue: {
+17:50:52: [INFO] [C:\Users\16478\Documents\UWARG\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 70] Received data from queue: {
             time_since_boot: 2000,
             x: 0.0,
             y: 1.6666666269302368,
@@ -225,8 +225,8 @@
             pitch_speed: None,
             yaw_speed: None
         }
-17:02:16: [INFO] [C:\Users\16478\Documents\UWARG\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 70] Received data from queue: {
-            time_since_boot: 2500,
+17:50:53: [INFO] [C:\Users\16478\Documents\UWARG\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 70] Received data from queue: {
+            time_since_boot: 2507,
             x: 0.0,
             y: 2.3333332538604736,
             z: -0.0,
@@ -240,7 +240,7 @@
             pitch_speed: None,
             yaw_speed: None
         }
-17:02:17: [INFO] [C:\Users\16478\Documents\UWARG\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 70] Received data from queue: {
+17:50:53: [INFO] [C:\Users\16478\Documents\UWARG\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 70] Received data from queue: {
             time_since_boot: 3000,
             x: 0.0,
             y: 2.6666667461395264,
@@ -255,7 +255,7 @@
             pitch_speed: None,
             yaw_speed: None
         }
-17:02:17: [INFO] [C:\Users\16478\Documents\UWARG\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 70] Received data from queue: {
+17:50:54: [INFO] [C:\Users\16478\Documents\UWARG\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 70] Received data from queue: {
             time_since_boot: 3500,
             x: 0.0,
             y: 3.3333332538604736,
@@ -270,7 +270,7 @@
             pitch_speed: None,
             yaw_speed: None
         }
-17:02:18: [INFO] [C:\Users\16478\Documents\UWARG\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 70] Received data from queue: {
+17:50:54: [INFO] [C:\Users\16478\Documents\UWARG\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 70] Received data from queue: {
             time_since_boot: 4000,
             x: 0.0,
             y: 3.6666667461395264,
@@ -285,8 +285,8 @@
             pitch_speed: None,
             yaw_speed: None
         }
-17:02:18: [INFO] [C:\Users\16478\Documents\UWARG\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 70] Received data from queue: {
-            time_since_boot: 4505,
+17:50:55: [INFO] [C:\Users\16478\Documents\UWARG\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 70] Received data from queue: {
+            time_since_boot: 4503,
             x: 0.0,
             y: 4.333333492279053,
             z: -0.0,
