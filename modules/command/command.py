@@ -100,6 +100,9 @@ class Command:  # pylint: disable=too-many-instance-attributes
     # Helper function to normalize degree angle between -180 to 180
     @staticmethod
     def normalize_angle_deg(angle_deg: float) -> float:
+        """
+        Normalize an angle in degrees to the range [-180, 180].
+        """
         normalized = (angle_deg + 180.0) % 360.0 - 180
         if normalized == -180.0 and angle_deg > 0:
             return 180.0
