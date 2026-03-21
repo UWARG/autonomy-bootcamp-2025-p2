@@ -52,6 +52,9 @@ def start_drone() -> None:
 def stop(
     controller: worker_controller.WorkerController, queue: queue_proxy_wrapper.QueueProxyWrapper
 ) -> None:
+    """
+    stops the controller and drains queue.
+    """
 
     controller.request_exit()
     queue.drain_queue()
