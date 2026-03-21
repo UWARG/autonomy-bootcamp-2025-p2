@@ -19,13 +19,26 @@ from ..common.modules.logger import logger
 def command_worker(
     connection: mavutil.mavfile,
     target: command.Position,
-    args,  # Place your own arguments here
-    # Add other necessary worker arguments here
+    z_speed: float,
+    height_tolerance: float,
+    angle_tolerance: float,
+    turning_speed: float,
+    input_queue: queue_proxy_wrapper.QueueProxyWrapper,
+    output_queue: queue_proxy_wrapper.QueueProxyWrapper,
+    controller: worker_controller.WorkerController,
 ) -> None:
     """
     Worker process.
 
-    args... describe what the arguments are
+    connection: MAVLink connection used to talk to the drone
+    target: target point the drone should face and match altitude with
+    z_speed: altitude change speed
+    height_tolerance: maximum allowed altitude error
+    angle_tolerance: maximum allowed yaw error in degrees
+    turning_speed: yaw turning speed
+    input_queue: receives TelemetryData objects
+    output_queue: sends status strings to main
+    controller: controls pause/exit of worker
     """
     # =============================================================================================
     #                          ↑ BOOTCAMPERS MODIFY ABOVE THIS COMMENT ↑
@@ -48,8 +61,37 @@ def command_worker(
     #                          ↓ BOOTCAMPERS MODIFY BELOW THIS COMMENT ↓
     # =============================================================================================
     # Instantiate class object (command.Command)
+    result, command_instance = command.Command.create(
+        connection,
+        target,
+        z_speed,
+        height_tolerance,
+        angle_tolerance,
+        turning_speed,
+        local_logger,
+    )
+
+    if not result:
+        local_logger.error("command_instance failed to create", True)
+        return
+
+    assert command_instance is not None
 
     # Main loop: do work.
+    while not controller.is_exit_requested():
+        controller.check_pause()
+
+        telemetry_data = input_queue.queue.get()
+        if telemetry_data is None:
+            break
+
+        result, value = command_instance.run(telemetry_data)
+
+        if not result:
+            continue
+
+        if value is not None:
+            output_queue.queue.put(value)
 
 
 # =================================================================================================

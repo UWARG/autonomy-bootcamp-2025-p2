@@ -4,7 +4,6 @@ Heartbeat worker that sends heartbeats periodically.
 
 import os
 import pathlib
-import time
 
 from pymavlink import mavutil
 
@@ -18,13 +17,13 @@ from ..common.modules.logger import logger
 # =================================================================================================
 def heartbeat_sender_worker(
     connection: mavutil.mavfile,
-    args,  # Place your own arguments here
-    # Add other necessary worker arguments here
+    controller: worker_controller.WorkerController,
 ) -> None:
     """
     Worker process.
 
-    args... describe what the arguments are
+    The connection provides a connection to the drone via MAVLink
+    The controller is used to stop and start the operation
     """
     # =============================================================================================
     #                          ↑ BOOTCAMPERS MODIFY ABOVE THIS COMMENT ↑
@@ -46,9 +45,23 @@ def heartbeat_sender_worker(
     # =============================================================================================
     #                          ↓ BOOTCAMPERS MODIFY BELOW THIS COMMENT ↓
     # =============================================================================================
-    # Instantiate class object (heartbeat_sender.HeartbeatSender)
+    # Instantiate class object heartbeat_sender.HeartbeatSender)
+    result, item = heartbeat_sender.HeartbeatSender.create(connection)
+    if not result:
+        local_logger.error("Failed to create HeartbeatSender", True)
+        return
+
+    assert item is not None
 
     # Main loop: do work.
+    while not controller.is_exit_requested():
+        controller.check_pause()
+
+        try:
+            item.run()
+            local_logger.info("The heartbeat has been sent.", True)
+        except Exception as ex:  # pylint: disable=broad-exception-caught
+            local_logger.error(f"Failed to send heartbeat: {ex}", True)
 
 
 # =================================================================================================
