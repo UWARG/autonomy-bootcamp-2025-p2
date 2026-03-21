@@ -68,8 +68,8 @@ def telemetry_worker(
             if run_result and telemetry_data is not None:
                 output_queue.queue.put(telemetry_data)
                 local_logger.info("Sucessfully ran telemetry program", True)
-        except Exception as ex:
-            local_logger.error(f"Unsucessful in returning telemetry data: {ex}", True)
+        except RuntimeError as exc:
+            local_logger.error(f"Unsucessful in returning telemetry data: {exc}", True)
 
 
 # =================================================================================================

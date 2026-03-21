@@ -4,7 +4,6 @@ Heartbeat worker that sends heartbeats periodically.
 
 import os
 import pathlib
-import time
 
 from pymavlink import mavutil
 
@@ -47,21 +46,21 @@ def heartbeat_sender_worker(
     #                          ↓ BOOTCAMPERS MODIFY BELOW THIS COMMENT ↓
     # =============================================================================================
     # Instantiate class object heartbeat_sender.HeartbeatSender)
-    result, object = heartbeat_sender.HeartbeatSender.create(connection)
-    if result != True:
+    result, item = heartbeat_sender.HeartbeatSender.create(connection)
+    if not result:
         local_logger.error("Failed to create HeartbeatSender", True)
         return
 
-    assert object is not None
+    assert item is not None
 
     # Main loop: do work.
     while not controller.is_exit_requested():
         controller.check_pause()
 
         try:
-            object.run()
+            item.run()
             local_logger.info("The heartbeat has been sent.", True)
-        except Exception as ex:
+        except Exception as ex:  # pylint: disable=broad-exception-caught
             local_logger.error(f"Failed to send heartbeat: {ex}", True)
 
 

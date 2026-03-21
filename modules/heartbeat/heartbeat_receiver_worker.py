@@ -74,7 +74,7 @@ def heartbeat_receiver_worker(
             output_queue.queue.put(run_result)
             local_logger.info(f"Reported state: {run_result}.", True)
 
-        except Exception as ex:
+        except Exception as ex:  # pylint: disable=broad-exception-caught
             local_logger.error(f"Failed: {ex}.", True)
 
 

@@ -57,6 +57,10 @@ class HeartbeatReceiver:
     def run(
         self,
     ) -> str:
+        """
+        Attempt to receive a heartbeat and return the current connection state.
+        """
+
         heartbeat_msg = self.__connection.recv_match(
             type="HEARTBEAT",
             blocking=True,
@@ -76,13 +80,12 @@ class HeartbeatReceiver:
             True,
         )
 
-        if self.__missed_heartbeats >= 5:
+        if self.__missed_heartbeats >= self.__disconnect_threshold:
             self.__connected = False
 
         if self.__connected:
             return "Connected"
-        else:
-            return "Disconnected"
+        return "Disconnected"
 
 
 # =================================================================================================

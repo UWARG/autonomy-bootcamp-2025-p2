@@ -2,8 +2,6 @@
 Telemetry gathering logic.
 """
 
-import time
-
 from pymavlink import mavutil
 
 from ..common.modules.logger import logger
@@ -96,8 +94,10 @@ class Telemetry:
 
     def run(
         self,
-    ) -> "tuple[bool, None | bool, telemetry_data]":
-
+    ) -> "tuple[bool, TelemetryData | None]":
+        """
+        Receive telemetry messages and return the latest combined telemetry data.
+        """
         attitude_msg = None
         position_msg = None
 
