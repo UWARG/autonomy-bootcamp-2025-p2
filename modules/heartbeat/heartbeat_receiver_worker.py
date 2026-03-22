@@ -1,5 +1,5 @@
 """
-Heartbeat worker that sends heartbeats periodically.
+Heartbeat worker that receives heartbeats and reports connection state.
 """
 
 import os
@@ -18,13 +18,15 @@ from ..common.modules.logger import logger
 # =================================================================================================
 def heartbeat_receiver_worker(
     connection: mavutil.mavfile,
-    args,  # Place your own arguments here
-    # Add other necessary worker arguments here
+    output_queue: queue_proxy_wrapper.QueueProxyWrapper,
+    controller: worker_controller.WorkerController,
 ) -> None:
     """
     Worker process.
 
-    args... describe what the arguments are
+    connection: MAVLink connection to receive heartbeats from.
+    output_queue: Queue to send connection state string to main.
+    controller: Used to check for pause/exit requests from main.
     """
     # =============================================================================================
     #                          ↑ BOOTCAMPERS MODIFY ABOVE THIS COMMENT ↑
@@ -47,8 +49,16 @@ def heartbeat_receiver_worker(
     #                          ↓ BOOTCAMPERS MODIFY BELOW THIS COMMENT ↓
     # =============================================================================================
     # Instantiate class object (heartbeat_receiver.HeartbeatReceiver)
+    result, receiver = heartbeat_receiver.HeartbeatReceiver.create(connection, (5,), local_logger)
+    if not result or receiver is None:
+        local_logger.error("Failed to create HeartbeatReceiver", True)
+        return
 
-    # Main loop: do work.
+    # Main loop: do work. Receive heartbeats and report state every second.
+    while not controller.is_exit_requested():
+        controller.check_pause()
+        state_str = receiver.run(())
+        output_queue.queue.put(state_str)
 
 
 # =================================================================================================
