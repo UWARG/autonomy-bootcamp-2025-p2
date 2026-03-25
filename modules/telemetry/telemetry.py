@@ -100,9 +100,7 @@ class Telemetry:
         combining them together to form a single TelemetryData object.
         """
         # Read MAVLink message LOCAL_POSITION_NED (32)
-        pos_msg = self.connection.recv_match(
-            type="LOCAL_POSITION_NED", blocking=True, timeout=1.0
-        )
+        pos_msg = self.connection.recv_match(type="LOCAL_POSITION_NED", blocking=True, timeout=1.0)
         if not pos_msg or pos_msg.get_type() != "LOCAL_POSITION_NED":
             self.local_logger.error("Timeout waiting for LOCAL_POSITION_NED")
             return False, None
@@ -132,7 +130,7 @@ class Telemetry:
             yaw_speed=att_msg.yawspeed,
         )
 
-        self.local_logger.info(f"Telemetry data: {data}")
+        self.local_logger.info(f"Telemetry data at {time.time()}: {data}")
         return True, data
 
 
