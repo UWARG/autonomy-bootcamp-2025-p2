@@ -76,37 +76,62 @@ class Telemetry:
     def create(
         cls,
         connection: mavutil.mavfile,
-        args,  # Put your own arguments here
         local_logger: logger.Logger,
-    ):
+    ) -> "tuple[True, Telemetry] | tuple[False, None]":
         """
         Falliable create (instantiation) method to create a Telemetry object.
         """
-        pass  # Create a Telemetry object
+        return True, Telemetry(cls.__private_key, connection, local_logger)
 
     def __init__(
         self,
         key: object,
         connection: mavutil.mavfile,
-        args,  # Put your own arguments here
         local_logger: logger.Logger,
     ) -> None:
         assert key is Telemetry.__private_key, "Use create() method"
 
-        # Do any intializiation here
+        self.connection = connection
+        self.local_logger = local_logger
 
-    def run(
-        self,
-        args,  # Put your own arguments here
-    ):
+    def run(self) -> "tuple[bool, TelemetryData | None]":
         """
         Receive LOCAL_POSITION_NED and ATTITUDE messages from the drone,
         combining them together to form a single TelemetryData object.
         """
         # Read MAVLink message LOCAL_POSITION_NED (32)
+        pos_msg = self.connection.recv_match(type="LOCAL_POSITION_NED", blocking=True, timeout=1.0)
+        if not pos_msg or pos_msg.get_type() != "LOCAL_POSITION_NED":
+            self.local_logger.error("Timeout waiting for LOCAL_POSITION_NED")
+            return False, None
+
         # Read MAVLink message ATTITUDE (30)
+        att_msg = self.connection.recv_match(type="ATTITUDE", blocking=True, timeout=1.0)
+        if not att_msg or att_msg.get_type() != "ATTITUDE":
+            self.local_logger.error("Timeout waiting for ATTITUDE")
+            return False, None
+
         # Return the most recent of both, and use the most recent message's timestamp
-        pass
+        time_since_boot = max(pos_msg.time_boot_ms, att_msg.time_boot_ms)
+
+        data = TelemetryData(
+            time_since_boot=time_since_boot,
+            x=pos_msg.x,
+            y=pos_msg.y,
+            z=pos_msg.z,
+            x_velocity=pos_msg.vx,
+            y_velocity=pos_msg.vy,
+            z_velocity=pos_msg.vz,
+            roll=att_msg.roll,
+            pitch=att_msg.pitch,
+            yaw=att_msg.yaw,
+            roll_speed=att_msg.rollspeed,
+            pitch_speed=att_msg.pitchspeed,
+            yaw_speed=att_msg.yawspeed,
+        )
+
+        self.local_logger.info(f"Telemetry data at {time.time()}: {data}")
+        return True, data
 
 
 # =================================================================================================
