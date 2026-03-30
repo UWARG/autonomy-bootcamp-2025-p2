@@ -1,0 +1,23 @@
+22:11:47: [INFO] [C:\Users\Waterloo\School\WARG\Onboard\autonomy-bootcamp-2025-p2\modules\common\modules\logger\logger_main_setup.py | setup_main_logger | 62] main logger initialized
+22:11:47: [INFO] [C:\Users\Waterloo\School\WARG\Onboard\autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | main | 117] Connected!
+22:11:48: [INFO] [C:\Users\Waterloo\School\WARG\Onboard\autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 68] Receiver state: Connected
+22:11:49: [INFO] [C:\Users\Waterloo\School\WARG\Onboard\autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 68] Receiver state: Connected
+22:11:50: [INFO] [C:\Users\Waterloo\School\WARG\Onboard\autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 68] Receiver state: Connected
+22:11:51: [INFO] [C:\Users\Waterloo\School\WARG\Onboard\autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 68] Receiver state: Connected
+22:11:52: [INFO] [C:\Users\Waterloo\School\WARG\Onboard\autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 68] Receiver state: Connected
+22:11:53: [INFO] [C:\Users\Waterloo\School\WARG\Onboard\autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 68] Receiver state: Connected
+22:11:54: [INFO] [C:\Users\Waterloo\School\WARG\Onboard\autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 68] Receiver state: Connected
+22:11:55: [INFO] [C:\Users\Waterloo\School\WARG\Onboard\autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 68] Receiver state: Connected
+22:11:56: [INFO] [C:\Users\Waterloo\School\WARG\Onboard\autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 68] Receiver state: Connected
+22:11:57: [INFO] [C:\Users\Waterloo\School\WARG\Onboard\autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 68] Receiver state: Disconnected
+22:11:58: [INFO] [C:\Users\Waterloo\School\WARG\Onboard\autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 68] Receiver state: Disconnected
+22:11:59: [INFO] [C:\Users\Waterloo\School\WARG\Onboard\autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 68] Receiver state: Disconnected
+22:12:00: [INFO] [C:\Users\Waterloo\School\WARG\Onboard\autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 68] Receiver state: Disconnected
+22:12:01: [INFO] [C:\Users\Waterloo\School\WARG\Onboard\autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 68] Receiver state: Connected
+22:12:02: [INFO] [C:\Users\Waterloo\School\WARG\Onboard\autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 68] Receiver state: Connected
+22:12:03: [INFO] [C:\Users\Waterloo\School\WARG\Onboard\autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 68] Receiver state: Connected
+22:12:04: [INFO] [C:\Users\Waterloo\School\WARG\Onboard\autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 68] Receiver state: Connected
+22:12:05: [INFO] [C:\Users\Waterloo\School\WARG\Onboard\autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 68] Receiver state: Connected
+22:12:06: [INFO] [C:\Users\Waterloo\School\WARG\Onboard\autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 68] Receiver state: Connected
+22:12:07: [INFO] [C:\Users\Waterloo\School\WARG\Onboard\autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 68] Receiver state: Connected
+22:12:08: [INFO] [C:\Users\Waterloo\School\WARG\Onboard\autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 68] Receiver state: Connected

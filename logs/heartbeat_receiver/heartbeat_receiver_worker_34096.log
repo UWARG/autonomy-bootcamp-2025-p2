@@ -1,0 +1,30 @@
+22:11:48: [INFO] [C:\Users\Waterloo\School\WARG\Onboard\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver_worker.py | heartbeat_receiver_worker | 49] Logger initialized
+22:11:48: [DEBUG] [C:\Users\Waterloo\School\WARG\Onboard\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | create | 42] HeartbeatReceiver instance created
+22:11:48: [INFO] [C:\Users\Waterloo\School\WARG\Onboard\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver_worker.py | heartbeat_receiver_worker | 63] Heartbeat receiver started
+22:11:48: [DEBUG] [C:\Users\Waterloo\School\WARG\Onboard\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 81] Connected
+22:11:48: [DEBUG] [C:\Users\Waterloo\School\WARG\Onboard\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 81] Connected
+22:11:49: [DEBUG] [C:\Users\Waterloo\School\WARG\Onboard\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 81] Connected
+22:11:50: [DEBUG] [C:\Users\Waterloo\School\WARG\Onboard\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 81] Connected
+22:11:51: [DEBUG] [C:\Users\Waterloo\School\WARG\Onboard\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 81] Connected
+22:11:52: [WARNING] [C:\Users\Waterloo\School\WARG\Onboard\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 84] Missed Heartbeats: 1
+22:11:53: [WARNING] [C:\Users\Waterloo\School\WARG\Onboard\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 84] Missed Heartbeats: 2
+22:11:54: [WARNING] [C:\Users\Waterloo\School\WARG\Onboard\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 84] Missed Heartbeats: 3
+22:11:56: [WARNING] [C:\Users\Waterloo\School\WARG\Onboard\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 84] Missed Heartbeats: 4
+22:11:57: [WARNING] [C:\Users\Waterloo\School\WARG\Onboard\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 84] Missed Heartbeats: 5
+22:11:57: [WARNING] [C:\Users\Waterloo\School\WARG\Onboard\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 88] Disconnected
+22:11:58: [WARNING] [C:\Users\Waterloo\School\WARG\Onboard\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 84] Missed Heartbeats: 6
+22:11:58: [WARNING] [C:\Users\Waterloo\School\WARG\Onboard\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 88] Disconnected
+22:11:59: [WARNING] [C:\Users\Waterloo\School\WARG\Onboard\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 84] Missed Heartbeats: 7
+22:11:59: [WARNING] [C:\Users\Waterloo\School\WARG\Onboard\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 88] Disconnected
+22:12:00: [WARNING] [C:\Users\Waterloo\School\WARG\Onboard\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 84] Missed Heartbeats: 8
+22:12:00: [WARNING] [C:\Users\Waterloo\School\WARG\Onboard\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 88] Disconnected
+22:12:00: [DEBUG] [C:\Users\Waterloo\School\WARG\Onboard\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 81] Connected
+22:12:01: [DEBUG] [C:\Users\Waterloo\School\WARG\Onboard\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 81] Connected
+22:12:02: [DEBUG] [C:\Users\Waterloo\School\WARG\Onboard\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 81] Connected
+22:12:03: [DEBUG] [C:\Users\Waterloo\School\WARG\Onboard\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 81] Connected
+22:12:04: [DEBUG] [C:\Users\Waterloo\School\WARG\Onboard\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 81] Connected
+22:12:05: [WARNING] [C:\Users\Waterloo\School\WARG\Onboard\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 84] Missed Heartbeats: 1
+22:12:06: [DEBUG] [C:\Users\Waterloo\School\WARG\Onboard\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 81] Connected
+22:12:07: [WARNING] [C:\Users\Waterloo\School\WARG\Onboard\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 84] Missed Heartbeats: 1
+22:12:08: [WARNING] [C:\Users\Waterloo\School\WARG\Onboard\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 84] Missed Heartbeats: 2
+22:12:08: [INFO] [C:\Users\Waterloo\School\WARG\Onboard\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver_worker.py | heartbeat_receiver_worker | 75] Heartbeat receiver stopped

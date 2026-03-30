@@ -18,13 +18,19 @@ from ..common.modules.logger import logger
 # =================================================================================================
 def heartbeat_sender_worker(
     connection: mavutil.mavfile,
-    args,  # Place your own arguments here
+    controller: worker_controller.WorkerController,
+    period: float = 1,
+    # Place your own arguments here
     # Add other necessary worker arguments here
 ) -> None:
     """
     Worker process.
 
     args... describe what the arguments are
+
+    connection: a mavutil.mavfile connection
+    controller: WorkerController to stop the worker
+    period: how often to send heartbeats (seconds)
     """
     # =============================================================================================
     #                          ↑ BOOTCAMPERS MODIFY ABOVE THIS COMMENT ↑
@@ -49,6 +55,38 @@ def heartbeat_sender_worker(
     # Instantiate class object (heartbeat_sender.HeartbeatSender)
 
     # Main loop: do work.
+    success, sender = heartbeat_sender.HeartbeatSender.create(connection, local_logger)
+
+    if not success:
+        local_logger.error("Failed to create Heartbeat sender")
+        return
+
+    local_logger.info("Heartbeat sender started", True)
+
+    try:
+        sender.run()
+        local_logger.debug("Initial heartbeat sent")
+    except Exception as e:  # pylint: disable=broad-exception-caught
+        local_logger.error("Failed to send initial heartbeat: " + str(e))
+
+    start_time = time.time()
+
+    while not controller.is_exit_requested():
+        controller.check_pause()
+        end_time = time.time()
+
+        try:
+            if (
+                end_time - start_time >= period + 1e-10
+            ):  # adds 1e-10 because otherwise it runs too fast
+                sender.run()
+                local_logger.debug("heartbeat sent", True)
+                start_time = time.time()
+
+        except Exception as e:  # pylint: disable=broad-exception-caught
+            local_logger.error("Heartbeat Failed: " + str(e))
+
+    local_logger.info("Heartbeat sender stopped")
 
 
 # =================================================================================================
