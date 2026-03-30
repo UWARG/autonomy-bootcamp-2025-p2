@@ -96,6 +96,7 @@ def put_queue(
             break
         if t is not None:
             input_queue_wrapper.queue.put(t)
+            main_logger.debug("Command sent")
             time.sleep(TELEMETRY_PERIOD)
 
     # Add logic to place the mocked inputs into your worker's input queue periodically
