@@ -76,37 +76,68 @@ class Telemetry:
     def create(
         cls,
         connection: mavutil.mavfile,
-        args,  # Put your own arguments here
         local_logger: logger.Logger,
-    ):
+    ) -> "tuple[bool, Telemetry]":
         """
         Falliable create (instantiation) method to create a Telemetry object.
         """
-        pass  # Create a Telemetry object
+        try:
+            return (True, cls(cls.__private_key, connection, local_logger))
+        except (OSError, TypeError, AttributeError) as e:
+            local_logger.error(f"Error when creating telemetry object: {e}", True)
+            return (False, None)
+        # Create a Telemetry object
 
     def __init__(
         self,
         key: object,
         connection: mavutil.mavfile,
-        args,  # Put your own arguments here
         local_logger: logger.Logger,
     ) -> None:
         assert key is Telemetry.__private_key, "Use create() method"
 
+        self._connection = connection
+        self._logger = local_logger
         # Do any intializiation here
 
     def run(
         self,
-        args,  # Put your own arguments here
-    ):
+    ) -> tuple[bool, TelemetryData]:
         """
         Receive LOCAL_POSITION_NED and ATTITUDE messages from the drone,
         combining them together to form a single TelemetryData object.
         """
+        local_position_ned_msg = self._connection.recv_match(
+            type="LOCAL_POSITION_NED", blocking=False, timeout=1
+        )
+        attitude_msg = self._connection.recv_match(type="ATTITUDE", blocking=False, timeout=1)
+        time.sleep(1)
+        if local_position_ned_msg and attitude_msg:
+            time_since_boot = max(
+                attitude_msg.time_boot_ms,
+                local_position_ned_msg.time_boot_ms,
+            )
+            telemetry_data = TelemetryData(
+                time_since_boot=time_since_boot,
+                x=local_position_ned_msg.x,
+                y=local_position_ned_msg.y,
+                z=local_position_ned_msg.z,
+                x_velocity=local_position_ned_msg.vx,
+                y_velocity=local_position_ned_msg.vy,
+                z_velocity=local_position_ned_msg.vz,
+                roll=attitude_msg.roll,
+                pitch=attitude_msg.pitch,
+                yaw=attitude_msg.yaw,
+                roll_speed=attitude_msg.rollspeed,
+                pitch_speed=attitude_msg.pitchspeed,
+                yaw_speed=attitude_msg.yawspeed,
+            )
+            return True, telemetry_data
+        self._logger.error("Error receiving either local_position_ned_msg or attitude_msg", True)
+        return False, None
         # Read MAVLink message LOCAL_POSITION_NED (32)
         # Read MAVLink message ATTITUDE (30)
         # Return the most recent of both, and use the most recent message's timestamp
-        pass
 
 
 # =================================================================================================
