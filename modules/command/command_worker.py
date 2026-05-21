@@ -6,7 +6,7 @@ import os
 import pathlib
 
 from pymavlink import mavutil
-
+import time
 from utilities.workers import queue_proxy_wrapper
 from utilities.workers import worker_controller
 from . import command
@@ -19,8 +19,14 @@ from ..common.modules.logger import logger
 def command_worker(
     connection: mavutil.mavfile,
     target: command.Position,
-    args,  # Place your own arguments here
-    # Add other necessary worker arguments here
+    controller: worker_controller.WorkerController,
+    input_queue: queue_proxy_wrapper.QueueProxyWrapper,
+    output_queue: queue_proxy_wrapper.QueueProxyWrapper,
+    height_threshold: int,
+    yaw_threshold: int,
+    z_speed: int,
+    turning_speed: float,
+    telemetry_period: float
 ) -> None:
     """
     Worker process.
@@ -48,8 +54,19 @@ def command_worker(
     #                          ↓ BOOTCAMPERS MODIFY BELOW THIS COMMENT ↓
     # =============================================================================================
     # Instantiate class object (command.Command)
-
+    _, command_instance = command.Command.create(
+        connection, local_logger, target, height_threshold, yaw_threshold, z_speed, turning_speed
+    )
     # Main loop: do work.
+    while not controller.is_exit_requested():
+        controller.check_pause()
+        if input_queue is not None and input_queue.queue.qsize() > 0:
+            data = input_queue.queue.get()
+            local_logger.info(f"Received telemetry data: {data}", True)
+            alt_str, yaw_str = command_instance.run(data)
+            local_logger.info(f"Command run produced: alt_str: {alt_str}, yaw_str: {yaw_str}", True)
+            output_queue.queue.put((alt_str, yaw_str))
+            time.sleep(telemetry_period)
 
 
 # =================================================================================================

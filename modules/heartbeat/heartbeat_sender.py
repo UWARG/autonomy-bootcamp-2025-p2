@@ -3,6 +3,7 @@ Heartbeat sending logic.
 """
 
 from pymavlink import mavutil
+from modules.common.modules.logger import logger
 
 
 # =================================================================================================
@@ -17,33 +18,42 @@ class HeartbeatSender:
 
     @classmethod
     def create(
-        cls,
-        connection: mavutil.mavfile,
-        args,  # Put your own arguments here
+        cls, connection: mavutil.mavfile, local_logger: logger.Logger | None = None
     ) -> "tuple[True, HeartbeatSender] | tuple[False, None]":
         """
         Falliable create (instantiation) method to create a HeartbeatSender object.
         """
-        pass  # Create a HeartbeatSender object
+        if connection is None:
+            return (False, None)
+        instance = cls(cls.__private_key, connection, local_logger)
+        if local_logger is not None:
+            local_logger.info("HeartbeatSender instance created", True)
+        return (True, instance)
 
     def __init__(
-        self,
-        key: object,
-        connection: mavutil.mavfile,
-        args,  # Put your own arguments here
-    ):
+        self, key: object, connection: mavutil.mavfile, local_logger: logger.Logger | None = None
+    ) -> None:
         assert key is HeartbeatSender.__private_key, "Use create() method"
 
         # Do any intializiation here
+        self._master = connection
+        self._local_logger = local_logger
+        if self._local_logger is not None:
+            self._local_logger.info("HeartbeatSender initialized", True)
 
-    def run(
-        self,
-        args,  # Put your own arguments here
-    ):
+    def run(self) -> None:
         """
         Attempt to send a heartbeat message.
         """
-        pass  # Send a heartbeat message
+        self._master.mav.heartbeat_send(
+            mavutil.mavlink.MAV_TYPE_GCS,
+            mavutil.mavlink.MAV_AUTOPILOT_INVALID,
+            0,
+            0,
+            mavutil.mavlink.MAV_STATE_ACTIVE,
+        )
+        if self._local_logger is not None:
+            self._local_logger.info("Heartbeat sent", True)
 
 
 # =================================================================================================
