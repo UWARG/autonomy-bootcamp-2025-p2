@@ -76,37 +76,90 @@ class Telemetry:
     def create(
         cls,
         connection: mavutil.mavfile,
-        args,  # Put your own arguments here
         local_logger: logger.Logger,
-    ):
+    ) -> "tuple[True, Telemetry] | tuple[False, None]":
         """
-        Falliable create (instantiation) method to create a Telemetry object.
+        Fallible create (instantiation) method to create a Telemetry object.
         """
-        pass  # Create a Telemetry object
+        if connection is None:
+            local_logger.error("Failed to create Telemetry: connection is None", True)
+            return False, None
+
+        instance = cls(cls.__private_key, connection, local_logger)
+        return True, instance
 
     def __init__(
         self,
         key: object,
         connection: mavutil.mavfile,
-        args,  # Put your own arguments here
         local_logger: logger.Logger,
     ) -> None:
         assert key is Telemetry.__private_key, "Use create() method"
+        self.__connection = connection
+        self.__logger = local_logger
 
-        # Do any intializiation here
-
-    def run(
-        self,
-        args,  # Put your own arguments here
-    ):
+    def run(self) -> "tuple[bool, TelemetryData | None]":
         """
         Receive LOCAL_POSITION_NED and ATTITUDE messages from the drone,
         combining them together to form a single TelemetryData object.
         """
-        # Read MAVLink message LOCAL_POSITION_NED (32)
-        # Read MAVLink message ATTITUDE (30)
-        # Return the most recent of both, and use the most recent message's timestamp
-        pass
+        window_start = time.time()
+        received_attitude = False
+        received_position = False
+        attitude_msg = None
+        position_msg = None
+
+        while True:
+            elapsed = time.time() - window_start
+            if elapsed >= 1.0:
+                self.__logger.error("Telemetry timed out: did not receive both ATTITUDE and LOCAL_POSITION_NED within 1 second.", True)
+                return False, None
+
+            remaining_time = 1.0 - elapsed
+
+            try:
+                # Read either ATTITUDE or LOCAL_POSITION_NED
+                msg = self.__connection.recv_match(
+                    type=["ATTITUDE", "LOCAL_POSITION_NED"],
+                    blocking=True,
+                    timeout=remaining_time
+                )
+            except Exception as e:
+                self.__logger.error(f"Error receiving telemetry message: {e}", True)
+                return False, None
+
+            if msg is not None:
+                msg_type = msg.get_type()
+                if msg_type == "ATTITUDE":
+                    attitude_msg = msg
+                    received_attitude = True
+                elif msg_type == "LOCAL_POSITION_NED":
+                    position_msg = msg
+                    received_position = True
+
+                # If both are received, construct and return TelemetryData
+                if received_attitude and received_position:
+                    assert attitude_msg is not None
+                    assert position_msg is not None
+
+                    time_since_boot = max(attitude_msg.time_boot_ms, position_msg.time_boot_ms)
+
+                    telemetry_data = TelemetryData(
+                        time_since_boot=time_since_boot,
+                        x=position_msg.x,
+                        y=position_msg.y,
+                        z=position_msg.z,
+                        x_velocity=position_msg.vx,
+                        y_velocity=position_msg.vy,
+                        z_velocity=position_msg.vz,
+                        roll=attitude_msg.roll,
+                        pitch=attitude_msg.pitch,
+                        yaw=attitude_msg.yaw,
+                        roll_speed=attitude_msg.rollspeed,
+                        pitch_speed=attitude_msg.pitchspeed,
+                        yaw_speed=attitude_msg.yawspeed,
+                    )
+                    return True, telemetry_data
 
 
 # =================================================================================================

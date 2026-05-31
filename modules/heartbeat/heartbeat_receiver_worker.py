@@ -18,13 +18,15 @@ from ..common.modules.logger import logger
 # =================================================================================================
 def heartbeat_receiver_worker(
     connection: mavutil.mavfile,
-    args,  # Place your own arguments here
-    # Add other necessary worker arguments here
+    output_queue: queue_proxy_wrapper.QueueProxyWrapper,
+    controller: worker_controller.WorkerController,
 ) -> None:
     """
-    Worker process.
+    Worker process to receive heartbeats from the drone and report status.
 
-    args... describe what the arguments are
+    connection: MAVLink connection file object.
+    output_queue: Synchronized queue proxy to report status back.
+    controller: Worker controller managing process state (exit/pause).
     """
     # =============================================================================================
     #                          ↑ BOOTCAMPERS MODIFY ABOVE THIS COMMENT ↑
@@ -47,8 +49,27 @@ def heartbeat_receiver_worker(
     #                          ↓ BOOTCAMPERS MODIFY BELOW THIS COMMENT ↓
     # =============================================================================================
     # Instantiate class object (heartbeat_receiver.HeartbeatReceiver)
+    result, receiver_instance = heartbeat_receiver.HeartbeatReceiver.create(
+        connection,
+        local_logger
+    )
+    if not result:
+        local_logger.error("Failed to initialize HeartbeatReceiver", True)
+        return
+
+    assert receiver_instance is not None
 
     # Main loop: do work.
+    while not controller.is_exit_requested():
+        # Check if the process needs to pause
+        controller.check_pause()
+
+        # Run receiving logic (blocks for up to 1 second)
+        success, state = receiver_instance.run()
+        if success:
+            output_queue.queue.put(state)
+        else:
+            local_logger.warning("Heartbeat reception cycle encountered an issue", True)
 
 
 # =================================================================================================

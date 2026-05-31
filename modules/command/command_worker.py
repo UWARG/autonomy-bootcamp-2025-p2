@@ -19,13 +19,18 @@ from ..common.modules.logger import logger
 def command_worker(
     connection: mavutil.mavfile,
     target: command.Position,
-    args,  # Place your own arguments here
-    # Add other necessary worker arguments here
+    input_queue: queue_proxy_wrapper.QueueProxyWrapper,
+    output_queue: queue_proxy_wrapper.QueueProxyWrapper,
+    controller: worker_controller.WorkerController,
 ) -> None:
     """
-    Worker process.
+    Worker process to make decisions based on TelemetryData and command the drone.
 
-    args... describe what the arguments are
+    connection: MAVLink connection file object.
+    target: 3D vector target Position object.
+    input_queue: Synchronized queue proxy to receive TelemetryData.
+    output_queue: Synchronized queue proxy to report command decisions.
+    controller: Worker controller managing process state (exit/pause).
     """
     # =============================================================================================
     #                          ↑ BOOTCAMPERS MODIFY ABOVE THIS COMMENT ↑
@@ -48,8 +53,35 @@ def command_worker(
     #                          ↓ BOOTCAMPERS MODIFY BELOW THIS COMMENT ↓
     # =============================================================================================
     # Instantiate class object (command.Command)
+    result, command_instance = command.Command.create(
+        connection,
+        target,
+        local_logger
+    )
+    if not result:
+        local_logger.error("Failed to initialize Command", True)
+        return
+
+    assert command_instance is not None
 
     # Main loop: do work.
+    while not controller.is_exit_requested():
+        # Check if the process needs to pause
+        controller.check_pause()
+
+        # Get an item from the queue
+        # If the queue is empty, the worker process will block
+        # until the queue is non-empty
+        telemetry_data = input_queue.queue.get()
+
+        # Exit on sentinel
+        if telemetry_data is None:
+            break
+
+        # Run decision logic
+        success, report = command_instance.run(telemetry_data)
+        if success and report is not None:
+            output_queue.queue.put(report)
 
 
 # =================================================================================================

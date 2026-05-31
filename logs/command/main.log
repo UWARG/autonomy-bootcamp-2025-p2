@@ -1,0 +1,28 @@
+04:17:26: [INFO] [/home/poytaytoy/autonomy-bootcamp-2025-p2/modules/common/modules/logger/logger_main_setup.py | setup_main_logger | 62] main logger initialized
+04:17:27: [INFO] [/home/poytaytoy/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | main | 139] Connected!
+04:17:27: [INFO] [/home/poytaytoy/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 80] Command Worker reported: CHANGE ALTITUDE: 1
+04:17:28: [INFO] [/home/poytaytoy/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 80] Command Worker reported: CHANGE ALTITUDE: -1
+04:17:31: [INFO] [/home/poytaytoy/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 80] Command Worker reported: CHANGE YAW: 63.43494882292201
+04:17:31: [INFO] [/home/poytaytoy/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 80] Command Worker reported: CHANGE YAW: 90.0
+04:17:32: [INFO] [/home/poytaytoy/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 80] Command Worker reported: CHANGE YAW: 116.56505117707799
+04:17:32: [INFO] [/home/poytaytoy/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 80] Command Worker reported: CHANGE YAW: 45.0
+04:17:33: [INFO] [/home/poytaytoy/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 80] Command Worker reported: CHANGE YAW: 63.43494882292201
+04:17:33: [INFO] [/home/poytaytoy/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 80] Command Worker reported: CHANGE YAW: 90.0
+04:17:34: [INFO] [/home/poytaytoy/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 80] Command Worker reported: CHANGE YAW: 26.565051177077994
+04:17:34: [INFO] [/home/poytaytoy/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 80] Command Worker reported: CHANGE YAW: 45.0
+04:17:35: [INFO] [/home/poytaytoy/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 80] Command Worker reported: CHANGE YAW: 90.0
+04:17:35: [INFO] [/home/poytaytoy/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 80] Command Worker reported: CHANGE YAW: 45.0
+04:17:36: [INFO] [/home/poytaytoy/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 80] Command Worker reported: CHANGE YAW: 90.0
+04:17:36: [INFO] [/home/poytaytoy/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 80] Command Worker reported: CHANGE YAW: 135.0
+04:17:37: [INFO] [/home/poytaytoy/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 80] Command Worker reported: CHANGE YAW: -26.565051177077994
+04:17:37: [INFO] [/home/poytaytoy/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 80] Command Worker reported: CHANGE YAW: -45.0
+04:17:38: [INFO] [/home/poytaytoy/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 80] Command Worker reported: CHANGE YAW: -90.0
+04:17:38: [INFO] [/home/poytaytoy/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 80] Command Worker reported: CHANGE YAW: -45.0
+04:17:39: [INFO] [/home/poytaytoy/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 80] Command Worker reported: CHANGE YAW: -90.0
+04:17:39: [INFO] [/home/poytaytoy/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 80] Command Worker reported: CHANGE YAW: -135.0
+04:17:40: [INFO] [/home/poytaytoy/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 80] Command Worker reported: CHANGE YAW: -63.43494882292201
+04:17:40: [INFO] [/home/poytaytoy/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 80] Command Worker reported: CHANGE YAW: -90.0
+04:17:41: [INFO] [/home/poytaytoy/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 80] Command Worker reported: CHANGE YAW: -116.56505117707799
+04:17:41: [INFO] [/home/poytaytoy/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 80] Command Worker reported: CHANGE YAW: -45.00000000000005
+04:17:42: [INFO] [/home/poytaytoy/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 80] Command Worker reported: CHANGE YAW: -63.43494882292201
+04:17:42: [INFO] [/home/poytaytoy/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 80] Command Worker reported: CHANGE YAW: -90.0

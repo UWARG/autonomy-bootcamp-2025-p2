@@ -1,0 +1,5 @@
+04:15:34: [INFO] [/home/poytaytoy/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry_worker.py | telemetry_worker | 46] Logger initialized
+04:15:39: [ERROR] [/home/poytaytoy/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry.py | run | 115] Telemetry timed out: did not receive both ATTITUDE and LOCAL_POSITION_NED within 1 second.
+04:15:40: [ERROR] [/home/poytaytoy/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry.py | run | 115] Telemetry timed out: did not receive both ATTITUDE and LOCAL_POSITION_NED within 1 second.
+04:15:41: [ERROR] [/home/poytaytoy/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry.py | run | 115] Telemetry timed out: did not receive both ATTITUDE and LOCAL_POSITION_NED within 1 second.
+04:15:47: [ERROR] [/home/poytaytoy/autonomy-bootcamp-2025-p2/modules/telemetry/telemetry.py | run | 115] Telemetry timed out: did not receive both ATTITUDE and LOCAL_POSITION_NED within 1 second.
