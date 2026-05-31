@@ -4,6 +4,7 @@ Test the heartbeat sender worker with a mocked drone.
 
 import multiprocessing as mp
 import subprocess
+import sys
 import threading
 
 from pymavlink import mavutil
@@ -38,7 +39,7 @@ def start_drone() -> None:
     """
     Start the mocked drone.
     """
-    subprocess.run(["python", "-m", MOCK_DRONE_MODULE], shell=True, check=False)
+    subprocess.run([sys.executable, "-m", MOCK_DRONE_MODULE], check=False)
 
 
 # =================================================================================================
