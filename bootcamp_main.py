@@ -7,7 +7,6 @@ Main process to setup and manage all the other working processes
 import multiprocessing as mp
 import queue
 import time
-import threading
 
 from pymavlink import mavutil
 
@@ -114,7 +113,7 @@ def main() -> int:
         return -1
 
     # Telemetry
-    TARGET = command.Position(10, 20, 30)
+    target = command.Position(10, 20, 30)
     result, telemetry_properties = worker_manager.WorkerProperties.create(
         count=1,
         target=telemetry_worker.telemetry_worker,
@@ -132,7 +131,7 @@ def main() -> int:
     result, command_properties = worker_manager.WorkerProperties.create(
         count=1,
         target=command_worker.command_worker,
-        work_arguments=(connection, TARGET),
+        work_arguments=(connection, target),
         input_queues=[input_queue],
         output_queues=[output_queue],
         controller=controller,
@@ -179,7 +178,7 @@ def main() -> int:
                 if item == "Disconnected":
                     main_logger.info("Drone disconnected. Exiting loop.")
                     break
-                elif item == "Connected":
+                if item == "Connected":
                     # Optionally log drone connection
                     pass
                 else:

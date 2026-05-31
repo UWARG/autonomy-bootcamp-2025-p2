@@ -34,7 +34,7 @@ class HeartbeatSender:
         key: object,
         connection: mavutil.mavfile,
         local_logger: logger.Logger,
-    ):
+    ) -> None:
         assert key is HeartbeatSender.__private_key, "Use create() method"
         self.__connection = connection
         self.__logger = local_logger
@@ -52,6 +52,7 @@ class HeartbeatSender:
                 0,
             )
             return True
+        # pylint: disable-next=broad-exception-caught
         except Exception as e:
             # Log the error using the logger class
             self.__logger.error(f"Failed to send MAVLink heartbeat: {e}", True)

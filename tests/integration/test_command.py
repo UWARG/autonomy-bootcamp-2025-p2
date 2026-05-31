@@ -78,6 +78,7 @@ def read_queue(
             if item is None:
                 break
             main_logger.info(f"Command Worker reported: {item}")
+        # pylint: disable-next=broad-exception-caught
         except Exception:
             break
 

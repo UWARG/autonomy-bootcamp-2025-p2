@@ -113,6 +113,7 @@ class Command:  # pylint: disable=too-many-instance-attributes
                         self.__target.z,  # param7: target altitude
                     )
                     return True, f"CHANGE ALTITUDE: {delta_z}"
+                # pylint: disable-next=broad-exception-caught
                 except Exception as e:
                     self.__logger.error(f"Failed to send CHANGE_ALT command: {e}", True)
                     return False, None
@@ -153,6 +154,7 @@ class Command:  # pylint: disable=too-many-instance-attributes
                         0.0,  # param7
                     )
                     return True, f"CHANGE YAW: {delta_yaw_deg}"
+                # pylint: disable-next=broad-exception-caught
                 except Exception as e:
                     self.__logger.error(f"Failed to send YAW command: {e}", True)
                     return False, None

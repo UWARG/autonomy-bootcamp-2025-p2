@@ -73,6 +73,7 @@ class HeartbeatReceiver:
             state = "Connected" if self.__is_connected else "Disconnected"
             return True, state
 
+        # pylint: disable-next=broad-exception-caught
         except Exception as e:
             self.__logger.error(f"Error receiving heartbeat: {e}", True)
             return False, "Disconnected"

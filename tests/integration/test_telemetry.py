@@ -71,6 +71,7 @@ def read_queue(
             if item is None:
                 break
             main_logger.info(f"Telemetry Worker reported: {item}")
+        # pylint: disable-next=broad-exception-caught
         except Exception:
             break
 

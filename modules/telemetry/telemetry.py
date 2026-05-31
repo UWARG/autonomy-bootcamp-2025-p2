@@ -125,6 +125,7 @@ class Telemetry:
                 msg = self.__connection.recv_match(
                     type=["ATTITUDE", "LOCAL_POSITION_NED"], blocking=True, timeout=remaining_time
                 )
+            # pylint: disable-next=broad-exception-caught
             except Exception as e:
                 self.__logger.error(f"Error receiving telemetry message: {e}", True)
                 return False, None
