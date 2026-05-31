@@ -5,6 +5,7 @@ Heartbeat sending logic.
 from pymavlink import mavutil
 from ..common.modules.logger import logger
 
+
 class HeartbeatSender:
     """
     HeartbeatSender class to send a heartbeat
@@ -24,7 +25,7 @@ class HeartbeatSender:
         if connection is None:
             local_logger.error("Failed to create HeartbeatSender: connection is None", True)
             return False, None
-        
+
         instance = cls(cls.__private_key, connection, local_logger)
         return True, instance
 

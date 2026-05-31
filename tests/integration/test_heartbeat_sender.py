@@ -39,7 +39,7 @@ def start_drone() -> None:
     """
     Start the mocked drone.
     """
-    subprocess.run([sys.executable, "-m", MOCK_DRONE_MODULE], shell = True, check=False)
+    subprocess.run([sys.executable, "-m", MOCK_DRONE_MODULE], shell=True, check=False)
 
 
 # =================================================================================================

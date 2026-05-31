@@ -112,7 +112,10 @@ class Telemetry:
         while True:
             elapsed = time.time() - window_start
             if elapsed >= 1.0:
-                self.__logger.error("Telemetry timed out: did not receive both ATTITUDE and LOCAL_POSITION_NED within 1 second.", True)
+                self.__logger.error(
+                    "Telemetry timed out: did not receive both ATTITUDE and LOCAL_POSITION_NED within 1 second.",
+                    True,
+                )
                 return False, None
 
             remaining_time = 1.0 - elapsed
@@ -120,9 +123,7 @@ class Telemetry:
             try:
                 # Read either ATTITUDE or LOCAL_POSITION_NED
                 msg = self.__connection.recv_match(
-                    type=["ATTITUDE", "LOCAL_POSITION_NED"],
-                    blocking=True,
-                    timeout=remaining_time
+                    type=["ATTITUDE", "LOCAL_POSITION_NED"], blocking=True, timeout=remaining_time
                 )
             except Exception as e:
                 self.__logger.error(f"Error receiving telemetry message: {e}", True)

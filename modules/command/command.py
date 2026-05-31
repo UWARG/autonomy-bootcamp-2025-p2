@@ -91,8 +91,7 @@ class Command:  # pylint: disable=too-many-instance-attributes
             avg_vz = self.__sum_vz / self.__total_reports
 
             self.__logger.info(
-                f"Average velocity so far: x={avg_vx:.4f}, y={avg_vy:.4f}, z={avg_vz:.4f}",
-                True
+                f"Average velocity so far: x={avg_vx:.4f}, y={avg_vy:.4f}, z={avg_vz:.4f}", True
             )
 
         # 2. Adjust height using the command MAV_CMD_CONDITION_CHANGE_ALT (113)

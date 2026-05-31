@@ -53,11 +53,7 @@ def command_worker(
     #                          ↓ BOOTCAMPERS MODIFY BELOW THIS COMMENT ↓
     # =============================================================================================
     # Instantiate class object (command.Command)
-    result, command_instance = command.Command.create(
-        connection,
-        target,
-        local_logger
-    )
+    result, command_instance = command.Command.create(connection, target, local_logger)
     if not result:
         local_logger.error("Failed to initialize Command", True)
         return

@@ -53,11 +53,7 @@ class HeartbeatReceiver:
         """
         try:
             # Block for up to 1.0 second waiting for a HEARTBEAT
-            msg = self.__connection.recv_match(
-                type="HEARTBEAT",
-                blocking=True,
-                timeout=1.0
-            )
+            msg = self.__connection.recv_match(type="HEARTBEAT", blocking=True, timeout=1.0)
 
             if msg is not None and msg.get_type() == "HEARTBEAT":
                 self.__is_connected = True
@@ -65,12 +61,13 @@ class HeartbeatReceiver:
             else:
                 self.__missed_count += 1
                 self.__logger.warning(
-                    f"Missed heartbeat! Consecutive missed: {self.__missed_count}",
-                    True
+                    f"Missed heartbeat! Consecutive missed: {self.__missed_count}", True
                 )
                 if self.__missed_count >= 5:
                     if self.__is_connected:
-                        self.__logger.warning("Disconnected from drone after 5 missed heartbeats", True)
+                        self.__logger.warning(
+                            "Disconnected from drone after 5 missed heartbeats", True
+                        )
                     self.__is_connected = False
 
             state = "Connected" if self.__is_connected else "Disconnected"
