@@ -13,6 +13,7 @@ from . import heartbeat_sender
 from ..common.modules.logger import logger
 from time import sleep
 
+
 def heartbeat_sender_worker(
     connection: mavutil.mavfile,
     controller: worker_controller.WorkerController,
