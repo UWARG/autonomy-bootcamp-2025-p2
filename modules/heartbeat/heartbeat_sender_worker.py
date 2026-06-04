@@ -4,14 +4,12 @@ Heartbeat worker that sends heartbeats periodically.
 
 import os
 import pathlib
-import time
-
+from time import sleep
 from pymavlink import mavutil
 
 from utilities.workers import worker_controller
 from . import heartbeat_sender
 from ..common.modules.logger import logger
-from time import sleep
 
 
 def heartbeat_sender_worker(
@@ -45,8 +43,6 @@ def heartbeat_sender_worker(
 
     assert sender_instance is not None
 
-    last_sent_time = 0.0
-
     # Main loop: do work once per second.
     while not controller.is_exit_requested():
         # Check if the process needs to pause
@@ -55,4 +51,3 @@ def heartbeat_sender_worker(
         success = sender_instance.run()
         if not success:
             local_logger.warning("Heartbeat transmission unsuccessful this period", True)
-        last_sent_time = current_time
