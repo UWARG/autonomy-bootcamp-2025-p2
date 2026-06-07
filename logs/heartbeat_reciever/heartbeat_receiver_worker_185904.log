@@ -1,0 +1,17 @@
+01:38:03: [INFO] [/home/poytaytoy/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver_worker.py | heartbeat_receiver_worker | 46] Logger initialized
+01:38:05: [WARNING] [/home/poytaytoy/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 63] Missed heartbeat! Consecutive missed: 1
+01:38:07: [WARNING] [/home/poytaytoy/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 63] Missed heartbeat! Consecutive missed: 1
+01:38:08: [WARNING] [/home/poytaytoy/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 63] Missed heartbeat! Consecutive missed: 1
+01:38:09: [WARNING] [/home/poytaytoy/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 63] Missed heartbeat! Consecutive missed: 2
+01:38:10: [WARNING] [/home/poytaytoy/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 63] Missed heartbeat! Consecutive missed: 3
+01:38:11: [WARNING] [/home/poytaytoy/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 63] Missed heartbeat! Consecutive missed: 4
+01:38:12: [WARNING] [/home/poytaytoy/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 63] Missed heartbeat! Consecutive missed: 5
+01:38:12: [WARNING] [/home/poytaytoy/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 68] Disconnected from drone after 5 missed heartbeats
+01:38:13: [WARNING] [/home/poytaytoy/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 63] Missed heartbeat! Consecutive missed: 6
+01:38:14: [WARNING] [/home/poytaytoy/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 63] Missed heartbeat! Consecutive missed: 7
+01:38:15: [WARNING] [/home/poytaytoy/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 63] Missed heartbeat! Consecutive missed: 8
+01:38:17: [WARNING] [/home/poytaytoy/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 63] Missed heartbeat! Consecutive missed: 1
+01:38:19: [WARNING] [/home/poytaytoy/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 63] Missed heartbeat! Consecutive missed: 1
+01:38:21: [WARNING] [/home/poytaytoy/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 63] Missed heartbeat! Consecutive missed: 1
+01:38:23: [WARNING] [/home/poytaytoy/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 63] Missed heartbeat! Consecutive missed: 1
+01:38:24: [WARNING] [/home/poytaytoy/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 63] Missed heartbeat! Consecutive missed: 2
