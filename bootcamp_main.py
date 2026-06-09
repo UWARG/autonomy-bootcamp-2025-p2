@@ -226,15 +226,17 @@ def main() -> int:
     # Continue running for RUN_DURATION seconds or until the drone disconnects
     start_time = time.time()
     while time.time() - start_time < RUN_DURATION:
-        # Check heartbeat status queue and command output queue
         try:
             status = heartbeat_status_queue.queue.get(timeout=0.1)
             main_logger.info(f"Heartbeat status: {status}")
             if status == "Disconnected":
                 main_logger.warning("Drone disconnected! Stopping.")
                 break
+        except queue.Empty:
+            pass
 
-            command_str = command_output_queue.queue.get(timeout=0.1)
+        try:
+            command_str = command_output_queue.queue.get_nowait()
             main_logger.info(f"Command output: {command_str}")
         except queue.Empty:
             pass
