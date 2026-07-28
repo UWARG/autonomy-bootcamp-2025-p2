@@ -1,0 +1,23 @@
+01:37:58: [INFO] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\modules\common\modules\logger\logger_main_setup.py | setup_main_logger | 62] main logger initialized
+01:37:59: [INFO] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | main | 113] Connected!
+01:37:59: [INFO] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 70] Connected: True
+01:38:00: [INFO] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 70] Connected: True
+01:38:01: [INFO] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 70] Connected: True
+01:38:02: [INFO] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 70] Connected: True
+01:38:03: [INFO] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 70] Connected: True
+01:38:04: [INFO] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 70] Connected: False
+01:38:05: [INFO] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 70] Connected: False
+01:38:06: [INFO] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 70] Connected: False
+01:38:07: [INFO] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 70] Connected: False
+01:38:08: [INFO] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 70] Connected: False
+01:38:09: [INFO] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 70] Connected: False
+01:38:10: [INFO] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 70] Connected: False
+01:38:11: [INFO] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 70] Connected: False
+01:38:12: [INFO] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 70] Connected: True
+01:38:13: [INFO] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 70] Connected: True
+01:38:14: [INFO] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 70] Connected: True
+01:38:15: [INFO] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 70] Connected: True
+01:38:16: [INFO] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 70] Connected: True
+01:38:17: [INFO] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 70] Connected: False
+01:38:18: [INFO] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 70] Connected: True
+01:38:19: [INFO] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 70] Connected: False

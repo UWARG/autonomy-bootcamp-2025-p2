@@ -1,4 +1,0 @@
-17:48:24: [INFO] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\modules\common\modules\logger\logger_main_setup.py | setup_main_logger | 62] main logger initialized
-17:48:25: [INFO] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | main | 113] Connected!
-17:48:25: [INFO] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 70] Connected: True
-17:48:26: [INFO] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\tests\integration\test_heartbeat_receiver.py | read_queue | 70] Connected: True
