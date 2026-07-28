@@ -14,10 +14,10 @@ from modules.common.modules.logger import logger
 from modules.common.modules.logger import logger_main_setup
 from modules.common.modules.read_yaml import read_yaml
 from modules.command import command
-from modules.command import command_worker  # pylint: disable=unused-import
-from modules.heartbeat import heartbeat_receiver_worker  # pylint: disable=unused-import
+from modules.command import command_worker
+from modules.heartbeat import heartbeat_receiver_worker
 from modules.heartbeat import heartbeat_sender_worker
-from modules.telemetry import telemetry_worker  # pylint: disable=unused-import
+from modules.telemetry import telemetry_worker
 from utilities.workers import queue_proxy_wrapper
 from utilities.workers import worker_controller
 from utilities.workers import worker_manager
