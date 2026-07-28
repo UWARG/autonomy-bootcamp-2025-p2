@@ -73,7 +73,7 @@ def read_queue(
         try:
             message = output_queue.queue.get(timeout=30)
             main_logger.info(f"Command: {message}", True)
-        except Exception: # pylint: disable=broad-except
+        except Exception:  # pylint: disable=broad-except
             break
 
 
