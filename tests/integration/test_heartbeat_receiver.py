@@ -68,7 +68,7 @@ def read_queue(
         try:
             connected = output_queue.queue.get(timeout=30)
             main_logger.info(f"Connected: {connected}", True)
-        except Exception:
+        except Exception: # pylint: disable=broad-except
             break
 
 
