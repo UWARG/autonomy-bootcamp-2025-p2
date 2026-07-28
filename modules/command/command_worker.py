@@ -19,13 +19,21 @@ from ..common.modules.logger import logger
 def command_worker(
     connection: mavutil.mavfile,
     target: command.Position,
-    args,  # Place your own arguments here
-    # Add other necessary worker arguments here
+    input_queue: queue_proxy_wrapper.QueueProxyWrapper,
+    output_queue: queue_proxy_wrapper.QueueProxyWrapper,
+    height_tolerance: float,
+    z_speed: float,
+    angle_tolerance: float,
+    turn_speed: float,
+    controller: worker_controller.WorkerController,
 ) -> None:
     """
     Worker process.
 
-    args... describe what the arguments are
+    connection: MAVLink connection b/w drone & worker
+    target: position of target
+    output_queue: queue of commands made to drone
+    controller: worker controller to pause/exit process
     """
     # =============================================================================================
     #                          ↑ BOOTCAMPERS MODIFY ABOVE THIS COMMENT ↑
@@ -48,8 +56,30 @@ def command_worker(
     #                          ↓ BOOTCAMPERS MODIFY BELOW THIS COMMENT ↓
     # =============================================================================================
     # Instantiate class object (command.Command)
+    result, command_instance = command.Command.create(
+        connection, target, height_tolerance, z_speed, angle_tolerance, turn_speed, local_logger
+    )
+    if not result:
+        local_logger.error("ERROR: Could not initialize Command object")
+
+    assert command_instance is not None
 
     # Main loop: do work.
+    while not controller.is_exit_requested():
+        # Method blocks worker if pause has been requested
+        controller.check_pause()
+
+        try:
+            tel_data = input_queue.queue.get(timeout=1)
+        except Exception:  # pylint: disable=broad-except
+            continue
+        result, message = command_instance.run(tel_data)
+        if not result:
+            local_logger.error("Failed to run Command", True)
+            continue
+
+        if message is not None:
+            output_queue.queue.put(message)
 
 
 # =================================================================================================

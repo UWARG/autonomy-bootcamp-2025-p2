@@ -1,0 +1,212 @@
+13:59:03: [INFO] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\modules\common\modules\logger\logger_main_setup.py | setup_main_logger | 62] main logger initialized
+13:59:05: [INFO] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | main | 112] Connected!
+13:59:05: [INFO] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 69] Telemetry Data: {
+            time_since_boot: None,
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            x_velocity: None,
+            y_velocity: None,
+            z_velocity: None,
+            roll: 0.0,
+            pitch: 0.0,
+            yaw: 1.0471975803375244,
+            roll_speed: 0.0,
+            pitch_speed: 0.0,
+            yaw_speed: 3.1415927410125732
+        }
+13:59:06: [INFO] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 69] Telemetry Data: {
+            time_since_boot: None,
+            x: 0.5,
+            y: 0.0,
+            z: 0.0,
+            x_velocity: None,
+            y_velocity: None,
+            z_velocity: None,
+            roll: 0.0,
+            pitch: 0.0,
+            yaw: 2.094395160675049,
+            roll_speed: 0.0,
+            pitch_speed: 0.0,
+            yaw_speed: 3.1415927410125732
+        }
+13:59:07: [INFO] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 69] Telemetry Data: {
+            time_since_boot: None,
+            x: 1.0,
+            y: 0.0,
+            z: 0.0,
+            x_velocity: None,
+            y_velocity: None,
+            z_velocity: None,
+            roll: 0.0,
+            pitch: 0.0,
+            yaw: -2.094395160675049,
+            roll_speed: 0.0,
+            pitch_speed: 0.0,
+            yaw_speed: 3.1415927410125732
+        }
+13:59:08: [INFO] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 69] Telemetry Data: {
+            time_since_boot: None,
+            x: 1.5,
+            y: 0.0,
+            z: 0.0,
+            x_velocity: None,
+            y_velocity: None,
+            z_velocity: None,
+            roll: 0.0,
+            pitch: 0.0,
+            yaw: -1.0471975803375244,
+            roll_speed: 0.0,
+            pitch_speed: 0.0,
+            yaw_speed: 3.1415927410125732
+        }
+13:59:09: [INFO] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 69] Telemetry Data: {
+            time_since_boot: None,
+            x: 2.0,
+            y: 0.0,
+            z: 0.0,
+            x_velocity: None,
+            y_velocity: None,
+            z_velocity: None,
+            roll: 0.0,
+            pitch: 0.0,
+            yaw: 1.0471975803375244,
+            roll_speed: 0.0,
+            pitch_speed: 0.0,
+            yaw_speed: 3.1415927410125732
+        }
+13:59:10: [INFO] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 69] Telemetry Data: {
+            time_since_boot: None,
+            x: 2.5,
+            y: 0.0,
+            z: 0.0,
+            x_velocity: None,
+            y_velocity: None,
+            z_velocity: None,
+            roll: 0.0,
+            pitch: 0.0,
+            yaw: 2.094395160675049,
+            roll_speed: 0.0,
+            pitch_speed: 0.0,
+            yaw_speed: 3.1415927410125732
+        }
+13:59:11: [INFO] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 69] Telemetry Data: {
+            time_since_boot: None,
+            x: 3.0,
+            y: 0.0,
+            z: 0.0,
+            x_velocity: None,
+            y_velocity: None,
+            z_velocity: None,
+            roll: 0.0,
+            pitch: 0.0,
+            yaw: -2.094395160675049,
+            roll_speed: 0.0,
+            pitch_speed: 0.0,
+            yaw_speed: 3.1415927410125732
+        }
+13:59:12: [INFO] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 69] Telemetry Data: {
+            time_since_boot: None,
+            x: 3.5,
+            y: 0.0,
+            z: 0.0,
+            x_velocity: None,
+            y_velocity: None,
+            z_velocity: None,
+            roll: 0.0,
+            pitch: 0.0,
+            yaw: -1.0471975803375244,
+            roll_speed: 0.0,
+            pitch_speed: 0.0,
+            yaw_speed: 3.1415927410125732
+        }
+13:59:13: [INFO] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 69] Telemetry Data: {
+            time_since_boot: None,
+            x: 4.0,
+            y: 0.0,
+            z: 0.0,
+            x_velocity: None,
+            y_velocity: None,
+            z_velocity: None,
+            roll: 0.0,
+            pitch: 0.0,
+            yaw: 1.0471975803375244,
+            roll_speed: 0.0,
+            pitch_speed: 0.0,
+            yaw_speed: 3.1415927410125732
+        }
+13:59:14: [INFO] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 69] Telemetry Data: {
+            time_since_boot: None,
+            x: 4.5,
+            y: 0.0,
+            z: 0.0,
+            x_velocity: None,
+            y_velocity: None,
+            z_velocity: None,
+            roll: 0.0,
+            pitch: 0.0,
+            yaw: 2.094395160675049,
+            roll_speed: 0.0,
+            pitch_speed: 0.0,
+            yaw_speed: 3.1415927410125732
+        }
+13:59:15: [INFO] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 69] Telemetry Data: {
+            time_since_boot: None,
+            x: 3.0,
+            y: 2.0,
+            z: 1.0,
+            x_velocity: None,
+            y_velocity: None,
+            z_velocity: None,
+            roll: 0.0,
+            pitch: 0.0,
+            yaw: 0.0,
+            roll_speed: 0.0,
+            pitch_speed: 0.0,
+            yaw_speed: 3.1415927410125732
+        }
+13:59:16: [INFO] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 69] Telemetry Data: {
+            time_since_boot: None,
+            x: 0.0,
+            y: 0.0,
+            z: 0.0,
+            x_velocity: None,
+            y_velocity: None,
+            z_velocity: None,
+            roll: 0.0,
+            pitch: 0.0,
+            yaw: 1.5707963705062866,
+            roll_speed: 0.0,
+            pitch_speed: 0.0,
+            yaw_speed: 3.1415927410125732
+        }
+13:59:17: [INFO] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 69] Telemetry Data: {
+            time_since_boot: None,
+            x: 0.6666666865348816,
+            y: 0.0,
+            z: 0.0,
+            x_velocity: None,
+            y_velocity: None,
+            z_velocity: None,
+            roll: 0.0,
+            pitch: 0.0,
+            yaw: 3.1415927410125732,
+            roll_speed: 0.0,
+            pitch_speed: 0.0,
+            yaw_speed: 3.1415927410125732
+        }
+13:59:18: [INFO] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 69] Telemetry Data: {
+            time_since_boot: None,
+            x: 1.0,
+            y: 0.0,
+            z: 0.0,
+            x_velocity: None,
+            y_velocity: None,
+            z_velocity: None,
+            roll: 0.0,
+            pitch: 0.0,
+            yaw: -1.5707963705062866,
+            roll_speed: 0.0,
+            pitch_speed: 0.0,
+            yaw_speed: 3.1415927410125732
+        }

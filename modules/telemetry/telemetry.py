@@ -76,37 +76,75 @@ class Telemetry:
     def create(
         cls,
         connection: mavutil.mavfile,
-        args,  # Put your own arguments here
         local_logger: logger.Logger,
-    ):
+    ) -> "tuple[True, Telemetry] | tuple[False, None]":
         """
         Falliable create (instantiation) method to create a Telemetry object.
         """
-        pass  # Create a Telemetry object
+        return True, Telemetry(cls.__private_key, connection, local_logger)
 
     def __init__(
         self,
         key: object,
         connection: mavutil.mavfile,
-        args,  # Put your own arguments here
         local_logger: logger.Logger,
     ) -> None:
         assert key is Telemetry.__private_key, "Use create() method"
 
         # Do any intializiation here
+        self.__connection = connection
+        self.__logger = local_logger
+        self.__latest_data = TelemetryData()
 
     def run(
         self,
-        args,  # Put your own arguments here
-    ):
+    ) -> "tuple[bool, TelemetryData]":
         """
         Receive LOCAL_POSITION_NED and ATTITUDE messages from the drone,
         combining them together to form a single TelemetryData object.
         """
+        start = time.time()
+
         # Read MAVLink message LOCAL_POSITION_NED (32)
+        position = self.__connection.recv_match(type="LOCAL_POSITION_NED", blocking=True, timeout=1)
+
+        duration = time.time() - start
+
         # Read MAVLink message ATTITUDE (30)
+        attitude = self.__connection.recv_match(
+            type="ATTITUDE", blocking=True, timeout=max(0, 1 - duration)
+        )  # both messages should be received in 1s
+
+        if position is None or attitude is None:
+            self.__logger.error("ERROR: TelemetryData timeout", True)
+            return True, None
+
+        # Update position & velocity
+        if position is not None:
+            self.__latest_data.x = position.x
+            self.__latest_data.y = position.y
+            self.__latest_data.z = position.z
+
+            self.__latest_data.x_velocity = position.vx
+            self.__latest_data.y_velocity = position.vy
+            self.__latest_data.z_velocity = position.vz
+
+        # Update attitude
+        if attitude is not None:
+            self.__latest_data.roll = attitude.roll
+            self.__latest_data.pitch = attitude.pitch
+            self.__latest_data.yaw = attitude.yaw
+
+            self.__latest_data.roll_speed = attitude.rollspeed
+            self.__latest_data.pitch_speed = attitude.pitchspeed
+            self.__latest_data.yaw_speed = attitude.yawspeed
+
         # Return the most recent of both, and use the most recent message's timestamp
-        pass
+        if position is not None and attitude is not None:
+            self.__latest_data.time_since_boot = max(position.time_boot_ms, attitude.time_boot_ms)
+            return True, self.__latest_data
+
+        return True, None
 
 
 # =================================================================================================

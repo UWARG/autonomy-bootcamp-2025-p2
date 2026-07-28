@@ -2,6 +2,7 @@
 Telemtry worker that gathers GPS data.
 """
 
+import time
 import os
 import pathlib
 
@@ -18,13 +19,17 @@ from ..common.modules.logger import logger
 # =================================================================================================
 def telemetry_worker(
     connection: mavutil.mavfile,
-    args,  # Place your own arguments here
-    # Add other necessary worker arguments here
+    output_queue: queue_proxy_wrapper.QueueProxyWrapper,
+    telemetry_period: float,
+    controller: worker_controller.WorkerController,
 ) -> None:
     """
     Worker process.
 
-    args... describe what the arguments are
+    connection: MAVLink connection between the drone and worker
+    output_queue: queue with telemetry data
+    telemetry_period: period b/w telemetry readings
+    controller: worker controller to pause/exit process
     """
     # =============================================================================================
     #                          ↑ BOOTCAMPERS MODIFY ABOVE THIS COMMENT ↑
@@ -47,8 +52,29 @@ def telemetry_worker(
     #                          ↓ BOOTCAMPERS MODIFY BELOW THIS COMMENT ↓
     # =============================================================================================
     # Instantiate class object (telemetry.Telemetry)
+    result, telemetry_instance = telemetry.Telemetry.create(connection, local_logger)
+    if not result:
+        local_logger.error("ERROR: Worker failed to create a Telemetry instance", True)
+
+    assert telemetry_instance is not None
 
     # Main loop: do work.
+    while not controller.is_exit_requested():
+        # Method blocks worker if pause has been requested
+        controller.check_pause()
+
+        start = time.time()
+
+        result, tel_data = telemetry_instance.run()
+        if not result:
+            local_logger.error("ERROR: Could not run Telemetry", True)
+            continue
+
+        if tel_data is not None:
+            output_queue.queue.put(tel_data)
+
+        elapsed = time.time() - start
+        time.sleep(max(0.0, telemetry_period - elapsed))
 
 
 # =================================================================================================

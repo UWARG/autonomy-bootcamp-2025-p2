@@ -1,0 +1,58 @@
+21:45:35: [INFO] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\modules\command\command_worker.py | command_worker | 53] Logger initialized
+21:45:35: [INFO] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\modules\command\command.py | run | 103] Average velocity: 0.000, 0.000, 4.000
+21:45:35: [INFO] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\modules\command\command.py | run | 129] CHANGE_ALTITUDE: 1.000 meters
+21:45:35: [INFO] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\modules\command\command.py | run | 103] Average velocity: 0.000, 0.000, 1.000
+21:45:35: [INFO] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\modules\command\command.py | run | 129] CHANGE_ALTITUDE: -1.000 meters
+21:45:36: [INFO] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\modules\command\command.py | run | 103] Average velocity: 0.000, 0.000, 0.667
+21:45:36: [INFO] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\modules\command\command.py | run | 103] Average velocity: 0.000, 0.000, 0.500
+21:45:37: [INFO] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\modules\command\command.py | run | 103] Average velocity: 0.000, 0.000, 0.400
+21:45:37: [INFO] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\modules\command\command.py | run | 103] Average velocity: 0.000, 0.000, 0.333
+21:45:38: [INFO] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\modules\command\command.py | run | 103] Average velocity: 0.000, 0.000, 0.286
+21:45:38: [INFO] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\modules\command\command.py | run | 103] Average velocity: 0.000, 2.500, 0.250
+21:45:38: [INFO] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\modules\command\command.py | run | 156] CHANGING_YAW: 63.435 degrees
+21:45:39: [INFO] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\modules\command\command.py | run | 103] Average velocity: 0.000, 4.444, 0.222
+21:45:39: [INFO] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\modules\command\command.py | run | 156] CHANGING_YAW: 90.000 degrees
+21:45:39: [INFO] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\modules\command\command.py | run | 103] Average velocity: 0.000, 6.000, 0.200
+21:45:39: [INFO] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\modules\command\command.py | run | 156] CHANGING_YAW: 116.565 degrees
+21:45:40: [INFO] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\modules\command\command.py | run | 103] Average velocity: 1.818, 5.455, 0.182
+21:45:40: [INFO] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\modules\command\command.py | run | 156] CHANGING_YAW: 45.000 degrees
+21:45:40: [INFO] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\modules\command\command.py | run | 103] Average velocity: 3.333, 5.000, 0.167
+21:45:40: [INFO] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\modules\command\command.py | run | 156] CHANGING_YAW: 63.435 degrees
+21:45:41: [INFO] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\modules\command\command.py | run | 103] Average velocity: 4.615, 4.615, 0.154
+21:45:41: [INFO] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\modules\command\command.py | run | 156] CHANGING_YAW: 90.000 degrees
+21:45:41: [INFO] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\modules\command\command.py | run | 103] Average velocity: 4.286, 2.857, 0.143
+21:45:41: [INFO] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\modules\command\command.py | run | 156] CHANGING_YAW: 26.565 degrees
+21:45:42: [INFO] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\modules\command\command.py | run | 103] Average velocity: 4.000, 1.333, 0.133
+21:45:42: [INFO] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\modules\command\command.py | run | 156] CHANGING_YAW: 45.000 degrees
+21:45:42: [INFO] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\modules\command\command.py | run | 103] Average velocity: 3.750, 0.000, 0.125
+21:45:42: [INFO] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\modules\command\command.py | run | 156] CHANGING_YAW: 90.000 degrees
+21:45:43: [INFO] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\modules\command\command.py | run | 103] Average velocity: 2.353, 0.000, 0.118
+21:45:43: [INFO] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\modules\command\command.py | run | 156] CHANGING_YAW: 45.000 degrees
+21:45:43: [INFO] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\modules\command\command.py | run | 103] Average velocity: 1.111, 0.000, 0.111
+21:45:43: [INFO] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\modules\command\command.py | run | 156] CHANGING_YAW: 90.000 degrees
+21:45:44: [INFO] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\modules\command\command.py | run | 103] Average velocity: 0.000, 0.000, 0.105
+21:45:44: [INFO] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\modules\command\command.py | run | 156] CHANGING_YAW: 135.000 degrees
+21:45:44: [INFO] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\modules\command\command.py | run | 103] Average velocity: 0.000, 1.000, 0.100
+21:45:44: [INFO] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\modules\command\command.py | run | 156] CHANGING_YAW: -26.565 degrees
+21:45:45: [INFO] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\modules\command\command.py | run | 103] Average velocity: 0.000, 1.905, 0.095
+21:45:45: [INFO] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\modules\command\command.py | run | 156] CHANGING_YAW: -45.000 degrees
+21:45:45: [INFO] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\modules\command\command.py | run | 103] Average velocity: 0.000, 2.727, 0.091
+21:45:45: [INFO] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\modules\command\command.py | run | 156] CHANGING_YAW: -90.000 degrees
+21:45:46: [INFO] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\modules\command\command.py | run | 103] Average velocity: 0.870, 2.609, 0.087
+21:45:46: [INFO] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\modules\command\command.py | run | 156] CHANGING_YAW: -45.000 degrees
+21:45:46: [INFO] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\modules\command\command.py | run | 103] Average velocity: 1.667, 2.500, 0.083
+21:45:46: [INFO] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\modules\command\command.py | run | 156] CHANGING_YAW: -90.000 degrees
+21:45:47: [INFO] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\modules\command\command.py | run | 103] Average velocity: 2.400, 2.400, 0.080
+21:45:47: [INFO] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\modules\command\command.py | run | 156] CHANGING_YAW: -135.000 degrees
+21:45:47: [INFO] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\modules\command\command.py | run | 103] Average velocity: 2.308, 1.538, 0.077
+21:45:47: [INFO] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\modules\command\command.py | run | 156] CHANGING_YAW: -63.435 degrees
+21:45:48: [INFO] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\modules\command\command.py | run | 103] Average velocity: 2.222, 0.741, 0.074
+21:45:48: [INFO] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\modules\command\command.py | run | 156] CHANGING_YAW: -90.000 degrees
+21:45:48: [INFO] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\modules\command\command.py | run | 103] Average velocity: 2.143, 0.000, 0.071
+21:45:48: [INFO] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\modules\command\command.py | run | 156] CHANGING_YAW: -116.565 degrees
+21:45:49: [INFO] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\modules\command\command.py | run | 103] Average velocity: 1.379, 0.000, 0.069
+21:45:49: [INFO] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\modules\command\command.py | run | 156] CHANGING_YAW: -45.000 degrees
+21:45:49: [INFO] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\modules\command\command.py | run | 103] Average velocity: 0.667, 0.000, 0.067
+21:45:49: [INFO] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\modules\command\command.py | run | 156] CHANGING_YAW: -63.435 degrees
+21:45:50: [INFO] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\modules\command\command.py | run | 103] Average velocity: 0.000, 0.000, 0.065
+21:45:50: [INFO] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\modules\command\command.py | run | 156] CHANGING_YAW: -90.000 degrees

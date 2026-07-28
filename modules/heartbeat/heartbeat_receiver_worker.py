@@ -4,6 +4,7 @@ Heartbeat worker that sends heartbeats periodically.
 
 import os
 import pathlib
+import time
 
 from pymavlink import mavutil
 
@@ -18,18 +19,23 @@ from ..common.modules.logger import logger
 # =================================================================================================
 def heartbeat_receiver_worker(
     connection: mavutil.mavfile,
-    args,  # Place your own arguments here
-    # Add other necessary worker arguments here
+    disconnect: int,
+    heartbeat_dur: float,
+    output_queue: queue_proxy_wrapper.QueueProxyWrapper,
+    controller: worker_controller.WorkerController,  # Place your own arguments here
 ) -> None:
     """
     Worker process.
 
-    args... describe what the arguments are
+    connection: MAVLink Connection b/w drone and worker
+    disconnect: Threshold of failed receive attempts before status is disconnected
+    output_queue: Queue for output connection status
+    controller: worker controller to pause/exit
+
     """
     # =============================================================================================
     #                          ↑ BOOTCAMPERS MODIFY ABOVE THIS COMMENT ↑
     # =============================================================================================
-
     # Instantiate logger
     worker_name = pathlib.Path(__file__).stem
     process_id = os.getpid()
@@ -47,8 +53,31 @@ def heartbeat_receiver_worker(
     #                          ↓ BOOTCAMPERS MODIFY BELOW THIS COMMENT ↓
     # =============================================================================================
     # Instantiate class object (heartbeat_receiver.HeartbeatReceiver)
+    result, receiver = heartbeat_receiver.HeartbeatReceiver.create(
+        connection, disconnect * heartbeat_dur, local_logger
+    )
+    if not result:
+        local_logger.error("ERROR: Worker failed to create HeartbeatReceiver", True)
+
+    assert receiver is not None
 
     # Main loop: do work.
+    while not controller.is_exit_requested():
+        # check if process is paused
+        controller.check_pause()
+
+        start = time.time()
+
+        result, connected = receiver.run()
+
+        if not result:
+            local_logger.error("ERROR: Worker could not run HeartbeatReceiver Successfully", True)
+            continue
+
+        output_queue.queue.put(connected)
+
+        elapsed = time.time() - start
+        time.sleep(max(0.0, 1.0 - elapsed))
 
 
 # =================================================================================================

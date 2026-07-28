@@ -1,0 +1,14 @@
+17:48:25: [INFO] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver_worker.py | heartbeat_receiver_worker | 50] Logger initialized
+17:48:25: [INFO] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 62] Heartbeat received
+17:48:26: [INFO] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 62] Heartbeat received
+17:48:27: [INFO] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 62] Heartbeat received
+17:48:28: [INFO] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 62] Heartbeat received
+17:48:29: [INFO] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 62] Heartbeat received
+17:48:30: [WARNING] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 60] Drone is disconnected
+17:48:31: [WARNING] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 60] Drone is disconnected
+17:48:32: [WARNING] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 60] Drone is disconnected
+17:48:33: [WARNING] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 60] Drone is disconnected
+17:48:34: [WARNING] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 60] Drone is disconnected
+17:48:35: [WARNING] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 60] Drone is disconnected
+17:48:36: [WARNING] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 60] Drone is disconnected
+17:48:37: [WARNING] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 60] Drone is disconnected
