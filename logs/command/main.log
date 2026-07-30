@@ -1,0 +1,28 @@
+11:08:33: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/modules/common/modules/logger/logger_main_setup.py | setup_main_logger | 62] main logger initialized
+11:08:33: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | main | 133] Connected!
+11:08:33: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 76] Command output: CHANGE ALTITUDE: 1
+11:08:33: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 76] Command output: CHANGE ALTITUDE: -1
+11:08:36: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 76] Command output: CHANGE YAW: 63.43494882292201
+11:08:37: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 76] Command output: CHANGE YAW: 90.0
+11:08:37: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 76] Command output: CHANGE YAW: 116.56505117707799
+11:08:38: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 76] Command output: CHANGE YAW: 45.0
+11:08:38: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 76] Command output: CHANGE YAW: 63.43494882292201
+11:08:39: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 76] Command output: CHANGE YAW: 90.0
+11:08:39: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 76] Command output: CHANGE YAW: 26.565051177077994
+11:08:40: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 76] Command output: CHANGE YAW: 45.0
+11:08:40: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 76] Command output: CHANGE YAW: 90.0
+11:08:41: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 76] Command output: CHANGE YAW: 45.0
+11:08:41: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 76] Command output: CHANGE YAW: 90.0
+11:08:42: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 76] Command output: CHANGE YAW: 135.0
+11:08:42: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 76] Command output: CHANGE YAW: -26.565051177077994
+11:08:43: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 76] Command output: CHANGE YAW: -45.0
+11:08:43: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 76] Command output: CHANGE YAW: -90.0
+11:08:44: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 76] Command output: CHANGE YAW: -45.0
+11:08:44: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 76] Command output: CHANGE YAW: -90.0
+11:08:45: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 76] Command output: CHANGE YAW: -135.0
+11:08:45: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 76] Command output: CHANGE YAW: -63.43494882292201
+11:08:46: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 76] Command output: CHANGE YAW: -90.0
+11:08:46: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 76] Command output: CHANGE YAW: -116.56505117707799
+11:08:47: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 76] Command output: CHANGE YAW: -45.00000000000005
+11:08:47: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 76] Command output: CHANGE YAW: -63.43494882292201
+11:08:48: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 76] Command output: CHANGE YAW: -90.0

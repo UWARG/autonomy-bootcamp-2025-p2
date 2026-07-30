@@ -1,0 +1,58 @@
+11:08:33: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 46] Logger initialized
+11:08:33: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 84] Average velocity: (0.0, 0.0, 4.0)
+11:08:33: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 71] CHANGE ALTITUDE: 1
+11:08:33: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 84] Average velocity: (0.0, 0.0, 1.0)
+11:08:33: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 71] CHANGE ALTITUDE: -1
+11:08:34: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 84] Average velocity: (0.0, 0.0, 0.6666666666666666)
+11:08:34: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 84] Average velocity: (0.0, 0.0, 0.5)
+11:08:35: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 84] Average velocity: (0.0, 0.0, 0.4)
+11:08:35: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 84] Average velocity: (0.0, 0.0, 0.3333333333333333)
+11:08:36: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 84] Average velocity: (0.0, 0.0, 0.2857142857142857)
+11:08:36: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 84] Average velocity: (0.0, 2.5, 0.25)
+11:08:36: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 71] CHANGE YAW: 63.43494882292201
+11:08:37: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 84] Average velocity: (0.0, 4.444444444444445, 0.2222222222222222)
+11:08:37: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 71] CHANGE YAW: 90.0
+11:08:37: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 84] Average velocity: (0.0, 6.0, 0.2)
+11:08:37: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 71] CHANGE YAW: 116.56505117707799
+11:08:38: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 84] Average velocity: (1.8181818181818181, 5.454545454545454, 0.18181818181818182)
+11:08:38: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 71] CHANGE YAW: 45.0
+11:08:38: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 84] Average velocity: (3.3333333333333335, 5.0, 0.16666666666666666)
+11:08:38: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 71] CHANGE YAW: 63.43494882292201
+11:08:39: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 84] Average velocity: (4.615384615384615, 4.615384615384615, 0.15384615384615385)
+11:08:39: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 71] CHANGE YAW: 90.0
+11:08:39: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 84] Average velocity: (4.285714285714286, 2.857142857142857, 0.14285714285714285)
+11:08:39: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 71] CHANGE YAW: 26.565051177077994
+11:08:40: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 84] Average velocity: (4.0, 1.3333333333333333, 0.13333333333333333)
+11:08:40: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 71] CHANGE YAW: 45.0
+11:08:40: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 84] Average velocity: (3.75, 0.0, 0.125)
+11:08:40: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 71] CHANGE YAW: 90.0
+11:08:41: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 84] Average velocity: (2.3529411764705883, 0.0, 0.11764705882352941)
+11:08:41: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 71] CHANGE YAW: 45.0
+11:08:41: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 84] Average velocity: (1.1111111111111112, 0.0, 0.1111111111111111)
+11:08:41: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 71] CHANGE YAW: 90.0
+11:08:42: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 84] Average velocity: (0.0, 0.0, 0.10526315789473684)
+11:08:42: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 71] CHANGE YAW: 135.0
+11:08:42: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 84] Average velocity: (0.0, 1.0, 0.1)
+11:08:42: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 71] CHANGE YAW: -26.565051177077994
+11:08:43: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 84] Average velocity: (0.0, 1.9047619047619047, 0.09523809523809523)
+11:08:43: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 71] CHANGE YAW: -45.0
+11:08:43: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 84] Average velocity: (0.0, 2.727272727272727, 0.09090909090909091)
+11:08:43: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 71] CHANGE YAW: -90.0
+11:08:44: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 84] Average velocity: (0.8695652173913043, 2.608695652173913, 0.08695652173913043)
+11:08:44: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 71] CHANGE YAW: -45.0
+11:08:44: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 84] Average velocity: (1.6666666666666667, 2.5, 0.08333333333333333)
+11:08:44: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 71] CHANGE YAW: -90.0
+11:08:45: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 84] Average velocity: (2.4, 2.4, 0.08)
+11:08:45: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 71] CHANGE YAW: -135.0
+11:08:45: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 84] Average velocity: (2.3076923076923075, 1.5384615384615385, 0.07692307692307693)
+11:08:45: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 71] CHANGE YAW: -63.43494882292201
+11:08:46: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 84] Average velocity: (2.2222222222222223, 0.7407407407407407, 0.07407407407407407)
+11:08:46: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 71] CHANGE YAW: -90.0
+11:08:46: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 84] Average velocity: (2.142857142857143, 0.0, 0.07142857142857142)
+11:08:46: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 71] CHANGE YAW: -116.56505117707799
+11:08:47: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 84] Average velocity: (1.3793103448275863, 0.0, 0.06896551724137931)
+11:08:47: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 71] CHANGE YAW: -45.00000000000005
+11:08:47: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 84] Average velocity: (0.6666666666666666, 0.0, 0.06666666666666667)
+11:08:47: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 71] CHANGE YAW: -63.43494882292201
+11:08:48: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 84] Average velocity: (0.0, 0.0, 0.06451612903225806)
+11:08:48: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 71] CHANGE YAW: -90.0

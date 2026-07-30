@@ -1,0 +1,13 @@
+12:58:37: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/tests/integration/mock_drones/heartbeat_receiver_drone.py | main | 42] Logger initialized
+12:58:37: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/tests/integration/mock_drones/heartbeat_receiver_drone.py | send_heartbeats | 59] Drone: Sent a heartbeat
+12:58:38: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/tests/integration/mock_drones/heartbeat_receiver_drone.py | send_heartbeats | 59] Drone: Sent a heartbeat
+12:58:39: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/tests/integration/mock_drones/heartbeat_receiver_drone.py | send_heartbeats | 59] Drone: Sent a heartbeat
+12:58:40: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/tests/integration/mock_drones/heartbeat_receiver_drone.py | send_heartbeats | 59] Drone: Sent a heartbeat
+12:58:41: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/tests/integration/mock_drones/heartbeat_receiver_drone.py | send_heartbeats | 59] Drone: Sent a heartbeat
+12:58:50: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/tests/integration/mock_drones/heartbeat_receiver_drone.py | send_heartbeats | 59] Drone: Sent a heartbeat
+12:58:51: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/tests/integration/mock_drones/heartbeat_receiver_drone.py | send_heartbeats | 59] Drone: Sent a heartbeat
+12:58:52: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/tests/integration/mock_drones/heartbeat_receiver_drone.py | send_heartbeats | 59] Drone: Sent a heartbeat
+12:58:53: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/tests/integration/mock_drones/heartbeat_receiver_drone.py | send_heartbeats | 59] Drone: Sent a heartbeat
+12:58:54: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/tests/integration/mock_drones/heartbeat_receiver_drone.py | send_heartbeats | 59] Drone: Sent a heartbeat
+12:58:56: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/tests/integration/mock_drones/heartbeat_receiver_drone.py | send_heartbeats | 59] Drone: Sent a heartbeat
+12:58:57: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/tests/integration/mock_drones/heartbeat_receiver_drone.py | main | 79] Passesd!

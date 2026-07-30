@@ -1,0 +1,61 @@
+12:58:37: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver_worker.py | heartbeat_receiver_worker | 43] Logger initialized
+12:58:37: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 63] Heartbeat received
+12:58:37: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver_worker.py | heartbeat_receiver_worker | 62] Heartbeat state: Connected
+12:58:38: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 63] Heartbeat received
+12:58:38: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver_worker.py | heartbeat_receiver_worker | 62] Heartbeat state: Connected
+12:58:39: [WARNING] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 66] Missed heartbeat (1)
+12:58:39: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver_worker.py | heartbeat_receiver_worker | 62] Heartbeat state: Connected
+12:58:39: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 63] Heartbeat received
+12:58:39: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver_worker.py | heartbeat_receiver_worker | 62] Heartbeat state: Connected
+12:58:40: [WARNING] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 66] Missed heartbeat (1)
+12:58:40: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver_worker.py | heartbeat_receiver_worker | 62] Heartbeat state: Connected
+12:58:40: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 63] Heartbeat received
+12:58:40: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver_worker.py | heartbeat_receiver_worker | 62] Heartbeat state: Connected
+12:58:41: [WARNING] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 66] Missed heartbeat (1)
+12:58:41: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver_worker.py | heartbeat_receiver_worker | 62] Heartbeat state: Connected
+12:58:41: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 63] Heartbeat received
+12:58:41: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver_worker.py | heartbeat_receiver_worker | 62] Heartbeat state: Connected
+12:58:42: [WARNING] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 66] Missed heartbeat (1)
+12:58:42: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver_worker.py | heartbeat_receiver_worker | 62] Heartbeat state: Connected
+12:58:43: [WARNING] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 66] Missed heartbeat (2)
+12:58:43: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver_worker.py | heartbeat_receiver_worker | 62] Heartbeat state: Connected
+12:58:44: [WARNING] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 66] Missed heartbeat (3)
+12:58:44: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver_worker.py | heartbeat_receiver_worker | 62] Heartbeat state: Connected
+12:58:45: [WARNING] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 66] Missed heartbeat (4)
+12:58:45: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver_worker.py | heartbeat_receiver_worker | 62] Heartbeat state: Connected
+12:58:46: [WARNING] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 66] Missed heartbeat (5)
+12:58:46: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver_worker.py | heartbeat_receiver_worker | 62] Heartbeat state: Disconnected
+12:58:47: [WARNING] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 66] Missed heartbeat (6)
+12:58:47: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver_worker.py | heartbeat_receiver_worker | 62] Heartbeat state: Disconnected
+12:58:48: [WARNING] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 66] Missed heartbeat (7)
+12:58:48: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver_worker.py | heartbeat_receiver_worker | 62] Heartbeat state: Disconnected
+12:58:49: [WARNING] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 66] Missed heartbeat (8)
+12:58:49: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver_worker.py | heartbeat_receiver_worker | 62] Heartbeat state: Disconnected
+12:58:50: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 63] Heartbeat received
+12:58:50: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver_worker.py | heartbeat_receiver_worker | 62] Heartbeat state: Connected
+12:58:51: [WARNING] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 66] Missed heartbeat (1)
+12:58:51: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver_worker.py | heartbeat_receiver_worker | 62] Heartbeat state: Connected
+12:58:51: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 63] Heartbeat received
+12:58:51: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver_worker.py | heartbeat_receiver_worker | 62] Heartbeat state: Connected
+12:58:52: [WARNING] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 66] Missed heartbeat (1)
+12:58:52: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver_worker.py | heartbeat_receiver_worker | 62] Heartbeat state: Connected
+12:58:52: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 63] Heartbeat received
+12:58:52: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver_worker.py | heartbeat_receiver_worker | 62] Heartbeat state: Connected
+12:58:53: [WARNING] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 66] Missed heartbeat (1)
+12:58:53: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver_worker.py | heartbeat_receiver_worker | 62] Heartbeat state: Connected
+12:58:53: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 63] Heartbeat received
+12:58:53: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver_worker.py | heartbeat_receiver_worker | 62] Heartbeat state: Connected
+12:58:54: [WARNING] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 66] Missed heartbeat (1)
+12:58:54: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver_worker.py | heartbeat_receiver_worker | 62] Heartbeat state: Connected
+12:58:54: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 63] Heartbeat received
+12:58:54: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver_worker.py | heartbeat_receiver_worker | 62] Heartbeat state: Connected
+12:58:55: [WARNING] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 66] Missed heartbeat (1)
+12:58:55: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver_worker.py | heartbeat_receiver_worker | 62] Heartbeat state: Connected
+12:58:56: [WARNING] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 66] Missed heartbeat (2)
+12:58:56: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver_worker.py | heartbeat_receiver_worker | 62] Heartbeat state: Connected
+12:58:56: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 63] Heartbeat received
+12:58:56: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver_worker.py | heartbeat_receiver_worker | 62] Heartbeat state: Connected
+12:58:57: [WARNING] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 66] Missed heartbeat (1)
+12:58:57: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver_worker.py | heartbeat_receiver_worker | 62] Heartbeat state: Connected
+12:58:58: [WARNING] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 66] Missed heartbeat (2)
+12:58:58: [INFO] [/Users/maziko/conductor/workspaces/WARG-Bootcamp/cairo/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver_worker.py | heartbeat_receiver_worker | 62] Heartbeat state: Connected
