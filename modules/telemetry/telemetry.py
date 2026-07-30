@@ -76,29 +76,29 @@ class Telemetry:
     def create(
         cls,
         connection: mavutil.mavfile,
-        args,  # Put your own arguments here
         local_logger: logger.Logger,
-    ):
+    ) -> "tuple[bool, Telemetry] | tuple[bool, None]":
         """
         Falliable create (instantiation) method to create a Telemetry object.
         """
-        pass  # Create a Telemetry object
+        if connection is None:
+            return False, None
+        return True, Telemetry(cls.__private_key, connection, local_logger)
 
     def __init__(
         self,
         key: object,
         connection: mavutil.mavfile,
-        args,  # Put your own arguments here
         local_logger: logger.Logger,
     ) -> None:
         assert key is Telemetry.__private_key, "Use create() method"
 
-        # Do any intializiation here
+        self.__connection = connection
+        self.__local_logger = local_logger
 
     def run(
         self,
-        args,  # Put your own arguments here
-    ):
+    ) -> "tuple[bool, TelemetryData | None]":
         """
         Receive LOCAL_POSITION_NED and ATTITUDE messages from the drone,
         combining them together to form a single TelemetryData object.
@@ -106,7 +106,42 @@ class Telemetry:
         # Read MAVLink message LOCAL_POSITION_NED (32)
         # Read MAVLink message ATTITUDE (30)
         # Return the most recent of both, and use the most recent message's timestamp
-        pass
+        start_time = time.time()
+        timeout = 1.0
+        remaining = timeout - (time.time() - start_time)
+        pos_msg = self.__connection.recv_match(
+            type="LOCAL_POSITION_NED", blocking=True, timeout=remaining
+        )
+        if pos_msg is None:
+            self.__local_logger.error("Timeout waiting for LOCAL_POSITION_NED", True)
+            return False, None
+
+        remaining = timeout - (time.time() - start_time)
+        att_msg = self.__connection.recv_match(type="ATTITUDE", blocking=True, timeout=remaining)
+        if att_msg is None:
+            self.__local_logger.error("Timeout waiting for ATTITUDE", True)
+            return False, None
+
+        time_since_boot = max(pos_msg.time_boot_ms, att_msg.time_boot_ms)
+
+        telemetry_data = TelemetryData(
+            time_since_boot=time_since_boot,
+            x=pos_msg.x,
+            y=pos_msg.y,
+            z=pos_msg.z,
+            x_velocity=pos_msg.vx,
+            y_velocity=pos_msg.vy,
+            z_velocity=pos_msg.vz,
+            roll=att_msg.roll,
+            pitch=att_msg.pitch,
+            yaw=att_msg.yaw,
+            roll_speed=att_msg.rollspeed,
+            pitch_speed=att_msg.pitchspeed,
+            yaw_speed=att_msg.yawspeed,
+        )
+
+        self.__local_logger.info(f"Telemetry: {telemetry_data}", True)
+        return True, telemetry_data
 
 
 # =================================================================================================
