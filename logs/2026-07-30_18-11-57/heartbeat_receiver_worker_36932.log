@@ -1,0 +1,16 @@
+18:11:58: [INFO] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver_worker.py | heartbeat_receiver_worker | 49] Logger initialized
+18:11:58: [INFO] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 65] Heartbeat received
+18:11:59: [INFO] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 65] Heartbeat received
+18:12:00: [INFO] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 65] Heartbeat received
+18:12:01: [INFO] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 65] Heartbeat received
+18:12:02: [INFO] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 65] Heartbeat received
+18:12:07: [WARNING] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 72] Drone is disconnected
+18:12:08: [WARNING] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 72] Drone is disconnected
+18:12:09: [WARNING] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 72] Drone is disconnected
+18:12:10: [WARNING] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 72] Drone is disconnected
+18:12:11: [INFO] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 65] Heartbeat received
+18:12:12: [INFO] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 65] Heartbeat received
+18:12:13: [INFO] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 65] Heartbeat received
+18:12:14: [INFO] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 65] Heartbeat received
+18:12:15: [INFO] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 65] Heartbeat received
+18:12:17: [INFO] [C:\Users\aryan\Documents\WARG\Autonomy\Bootcamp\aryan-kapoor-autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 65] Heartbeat received

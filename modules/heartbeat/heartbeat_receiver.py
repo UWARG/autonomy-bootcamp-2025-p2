@@ -21,26 +21,31 @@ class HeartbeatReceiver:
     def create(
         cls,
         connection: mavutil.mavfile,
-        disconnect: int,
+        heartbeat_period: float,
+        disconnect_threshold: int,
         local_logger: logger.Logger,
     ) -> "tuple[True, HeartbeatReceiver] | tuple[False, None]":
         """
         Falliable create (instantiation) method to create a HeartbeatReceiver object.
         """
-        return True, HeartbeatReceiver(cls.__private_key, connection, disconnect, local_logger)
+        return True, HeartbeatReceiver(
+            cls.__private_key, connection, heartbeat_period, disconnect_threshold, local_logger
+        )
 
     def __init__(
         self,
         key: object,
         connection: mavutil.mavfile,
-        disconnect: int,
-        local_logger: logger.Logger,  # Put your own arguments here
+        heartbeat_period: float,
+        disconnect_threshold: int,
+        local_logger: logger.Logger,
     ) -> None:
         assert key is HeartbeatReceiver.__private_key, "Use create() method"
 
-        # Do any intializiation here
         self.__connection = connection
-        self.__disconnect = disconnect
+        self.__heartbeat_period = heartbeat_period
+        self.__disconnect_threshold = disconnect_threshold
+        self.__missed = 0
         self.__logger = local_logger
 
     def run(
@@ -52,17 +57,21 @@ class HeartbeatReceiver:
         the connection is considered disconnected.
         """
         message = self.__connection.recv_match(
-            type="HEARTBEAT", blocking=False, timeout=self.__disconnect
+            type="HEARTBEAT", blocking=True, timeout=self.__heartbeat_period
         )
 
-        connected = message is not None
-
-        if not connected:
-            self.__logger.warning("Drone is disconnected", True)
-        else:
+        if message is not None:
+            self.__missed = 0
             self.__logger.info("Heartbeat received", True)
+            return True, True
 
-        return True, connected
+        self.__missed += 1
+        is_connected = self.__missed < self.__disconnect_threshold
+
+        if not is_connected:
+            self.__logger.warning("Drone is disconnected", True)
+
+        return True, is_connected
 
 
 # =================================================================================================
