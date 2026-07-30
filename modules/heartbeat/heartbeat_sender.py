@@ -37,15 +37,15 @@ class HeartbeatSender:
     ) -> None:
         assert key is HeartbeatSender.__private_key, "Use create() method"
         # Do any intializiation here
-        self.__connection = connection
-        self.__local_logger = local_logger
+        self._connection = connection
+        self._local_logger = local_logger
 
     def run(self) -> None:
         """
         Attempt to send a heartbeat message.
         """
-        self.__local_logger.info("Sending heartbeat message", True)
-        self.__connection.mav.heartbeat_send(
+        self._local_logger.info("Sending heartbeat message", True)
+        self._connection.mav.heartbeat_send(
             mavutil.mavlink.MAV_TYPE_GCS,
             mavutil.mavlink.MAV_AUTOPILOT_INVALID,
             0,

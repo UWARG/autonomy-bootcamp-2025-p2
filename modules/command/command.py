@@ -56,12 +56,12 @@ class Command:  # pylint: disable=too-many-instance-attributes
         assert key is Command.__private_key, "Use create() method"
 
         self._connection = connection
-        self.__target = target
-        self.__local_logger = local_logger
-        self.__total_vx = 0.0
-        self.__total_vy = 0.0
-        self.__total_vz = 0.0
-        self.__num_reports = 0
+        self._target = target
+        self._local_logger = local_logger
+        self._total_vx = 0.0
+        self._total_vy = 0.0
+        self._total_vz = 0.0
+        self._num_reports = 0
 
     def run(
         self,
@@ -74,14 +74,14 @@ class Command:  # pylint: disable=too-many-instance-attributes
             return False, None
 
         # Log average velocity for this trip so far
-        self.__num_reports += 1
-        self.__total_vx += telemetry_data.x_velocity
-        self.__total_vy += telemetry_data.y_velocity
-        self.__total_vz += telemetry_data.z_velocity
-        avg_vx = self.__total_vx / self.__num_reports
-        avg_vy = self.__total_vy / self.__num_reports
-        avg_vz = self.__total_vz / self.__num_reports
-        self.__local_logger.info(f"Average velocity: ({avg_vx}, {avg_vy}, {avg_vz})", True)
+        self._num_reports += 1
+        self._total_vx += telemetry_data.x_velocity
+        self._total_vy += telemetry_data.y_velocity
+        self._total_vz += telemetry_data.z_velocity
+        avg_vx = self._total_vx / self._num_reports
+        avg_vy = self._total_vy / self._num_reports
+        avg_vz = self._total_vz / self._num_reports
+        self._local_logger.info(f"Average velocity: ({avg_vx}, {avg_vy}, {avg_vz})", True)
 
         # Use COMMAND_LONG (76) message, assume the target_system=1 and target_componenet=0
         # The appropriate commands to use are instructed below
@@ -93,9 +93,9 @@ class Command:  # pylint: disable=too-many-instance-attributes
         # String to return to main: "CHANGING_YAW: {degree you changed it by in range [-180, 180]}"
         # Positive angle is counter-clockwise as in a right handed system
         outputs = []
-        delta_z = self.__target.z - telemetry_data.z
+        delta_z = self._target.z - telemetry_data.z
         if abs(delta_z) > 0.5:
-            self.__connection.mav.command_long_send(
+            self._connection.mav.command_long_send(
                 1,
                 0,
                 mavutil.mavlink.MAV_CMD_CONDITION_CHANGE_ALT,
@@ -106,13 +106,13 @@ class Command:  # pylint: disable=too-many-instance-attributes
                 0,
                 0,
                 0,
-                self.__target.z,
+                self._target.z,
             )
             outputs.append(f"CHANGE ALTITUDE: {delta_z}")
         else:
             target_yaw = math.atan2(
-                self.__target.y - telemetry_data.y,
-                self.__target.x - telemetry_data.x,
+                self._target.y - telemetry_data.y,
+                self._target.x - telemetry_data.x,
             )
             yaw_delta_rad = target_yaw - telemetry_data.yaw
             yaw_delta_rad = (yaw_delta_rad + math.pi) % (2 * math.pi) - math.pi
@@ -120,7 +120,7 @@ class Command:  # pylint: disable=too-many-instance-attributes
 
             if abs(yaw_delta_degrees) > 5:
                 direction = -1 if yaw_delta_degrees > 0 else 1
-                self.__connection.mav.command_long_send(
+                self._connection.mav.command_long_send(
                     1,
                     0,
                     mavutil.mavlink.MAV_CMD_CONDITION_YAW,

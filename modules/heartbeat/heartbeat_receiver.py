@@ -39,10 +39,10 @@ class HeartbeatReceiver:
         assert key is HeartbeatReceiver.__private_key, "Use create() method"
 
         # Do any intializiation here
-        self.__connection = connection
-        self.__local_logger = local_logger
-        self.__missed_count = 0
-        self.__is_connected = False
+        self._connection = connection
+        self._local_logger = local_logger
+        self._missed_count = 0
+        self._is_connected = False
 
     def run(
         self,
@@ -52,19 +52,19 @@ class HeartbeatReceiver:
         If disconnected for over a threshold number of periods,
         the connection is considered disconnected.
         """
-        msg = self.__connection.recv_match(type="HEARTBEAT", blocking=True, timeout=1)
+        msg = self._connection.recv_match(type="HEARTBEAT", blocking=True, timeout=1)
 
         if msg is not None:
-            self.__missed_count = 0
-            self.__is_connected = True
-            self.__local_logger.info("Heartbeat received", True)
+            self._missed_count = 0
+            self._is_connected = True
+            self._local_logger.info("Heartbeat received", True)
         else:
-            self.__missed_count += 1
-            self.__local_logger.warning(f"Missed heartbeat ({self.__missed_count})", True)
-            if self.__missed_count >= 5:
-                self.__is_connected = False
+            self._missed_count += 1
+            self._local_logger.warning(f"Missed heartbeat ({self._missed_count})", True)
+            if self._missed_count >= 5:
+                self._is_connected = False
 
-        state = "Connected" if self.__is_connected else "Disconnected"
+        state = "Connected" if self._is_connected else "Disconnected"
         return True, state
 
 

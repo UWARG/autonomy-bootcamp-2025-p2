@@ -93,8 +93,8 @@ class Telemetry:
     ) -> None:
         assert key is Telemetry.__private_key, "Use create() method"
 
-        self.__connection = connection
-        self.__local_logger = local_logger
+        self._connection = connection
+        self._local_logger = local_logger
 
     def run(
         self,
@@ -109,17 +109,17 @@ class Telemetry:
         start_time = time.time()
         timeout = 1.0
         remaining = timeout - (time.time() - start_time)
-        pos_msg = self.__connection.recv_match(
+        pos_msg = self._connection.recv_match(
             type="LOCAL_POSITION_NED", blocking=True, timeout=remaining
         )
         if pos_msg is None:
-            self.__local_logger.error("Timeout waiting for LOCAL_POSITION_NED", True)
+            self._local_logger.error("Timeout waiting for LOCAL_POSITION_NED", True)
             return False, None
 
         remaining = timeout - (time.time() - start_time)
-        att_msg = self.__connection.recv_match(type="ATTITUDE", blocking=True, timeout=remaining)
+        att_msg = self._connection.recv_match(type="ATTITUDE", blocking=True, timeout=remaining)
         if att_msg is None:
-            self.__local_logger.error("Timeout waiting for ATTITUDE", True)
+            self._local_logger.error("Timeout waiting for ATTITUDE", True)
             return False, None
 
         time_since_boot = max(pos_msg.time_boot_ms, att_msg.time_boot_ms)
@@ -140,7 +140,7 @@ class Telemetry:
             yaw_speed=att_msg.yawspeed,
         )
 
-        self.__local_logger.info(f"Telemetry: {telemetry_data}", True)
+        self._local_logger.info(f"Telemetry: {telemetry_data}", True)
         return True, telemetry_data
 
 
