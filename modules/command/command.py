@@ -55,7 +55,7 @@ class Command:  # pylint: disable=too-many-instance-attributes
     ) -> None:
         assert key is Command.__private_key, "Use create() method"
 
-        self.__connection = connection
+        self._connection = connection
         self.__target = target
         self.__local_logger = local_logger
         self.__total_vx = 0.0
