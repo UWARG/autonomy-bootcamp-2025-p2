@@ -1,0 +1,30 @@
+16:16:24: [INFO] [/Users/alexli/autonomy-bootcamp-2025-p2/modules/common/modules/logger/logger_main_setup.py | setup_main_logger | 62] main logger initialized
+16:16:25: [INFO] [/Users/alexli/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | main | 123] Connected!
+16:16:25: [INFO] [/Users/alexli/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 82] Heartbeat receiver reported: Connected
+16:16:26: [INFO] [/Users/alexli/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 82] Heartbeat receiver reported: Connected
+16:16:27: [INFO] [/Users/alexli/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 82] Heartbeat receiver reported: Connected
+16:16:27: [INFO] [/Users/alexli/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 82] Heartbeat receiver reported: Connected
+16:16:28: [INFO] [/Users/alexli/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 82] Heartbeat receiver reported: Connected
+16:16:28: [INFO] [/Users/alexli/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 82] Heartbeat receiver reported: Connected
+16:16:29: [INFO] [/Users/alexli/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 82] Heartbeat receiver reported: Connected
+16:16:29: [INFO] [/Users/alexli/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 82] Heartbeat receiver reported: Connected
+16:16:30: [INFO] [/Users/alexli/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 82] Heartbeat receiver reported: Connected
+16:16:31: [INFO] [/Users/alexli/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 82] Heartbeat receiver reported: Connected
+16:16:32: [INFO] [/Users/alexli/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 82] Heartbeat receiver reported: Connected
+16:16:33: [INFO] [/Users/alexli/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 82] Heartbeat receiver reported: Connected
+16:16:34: [INFO] [/Users/alexli/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 82] Heartbeat receiver reported: Disconnected
+16:16:35: [INFO] [/Users/alexli/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 82] Heartbeat receiver reported: Disconnected
+16:16:36: [INFO] [/Users/alexli/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 82] Heartbeat receiver reported: Disconnected
+16:16:37: [INFO] [/Users/alexli/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 82] Heartbeat receiver reported: Disconnected
+16:16:38: [INFO] [/Users/alexli/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 82] Heartbeat receiver reported: Connected
+16:16:39: [INFO] [/Users/alexli/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 82] Heartbeat receiver reported: Connected
+16:16:39: [INFO] [/Users/alexli/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 82] Heartbeat receiver reported: Connected
+16:16:40: [INFO] [/Users/alexli/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 82] Heartbeat receiver reported: Connected
+16:16:40: [INFO] [/Users/alexli/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 82] Heartbeat receiver reported: Connected
+16:16:41: [INFO] [/Users/alexli/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 82] Heartbeat receiver reported: Connected
+16:16:41: [INFO] [/Users/alexli/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 82] Heartbeat receiver reported: Connected
+16:16:42: [INFO] [/Users/alexli/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 82] Heartbeat receiver reported: Connected
+16:16:42: [INFO] [/Users/alexli/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 82] Heartbeat receiver reported: Connected
+16:16:43: [INFO] [/Users/alexli/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 82] Heartbeat receiver reported: Connected
+16:16:44: [INFO] [/Users/alexli/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 82] Heartbeat receiver reported: Connected
+16:16:45: [INFO] [/Users/alexli/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 82] Heartbeat receiver reported: Connected

@@ -18,13 +18,19 @@ from ..common.modules.logger import logger
 # =================================================================================================
 def heartbeat_receiver_worker(
     connection: mavutil.mavfile,
-    args,  # Place your own arguments here
-    # Add other necessary worker arguments here
+    period: float,
+    disconnect_threshold: int,
+    output_queue: queue_proxy_wrapper.QueueProxyWrapper,
+    controller: worker_controller.WorkerController,
 ) -> None:
     """
     Worker process.
 
-    args... describe what the arguments are
+    connection is the MAVLink connection to the drone.
+    period is how long to wait for a heartbeat before counting it as missed, in seconds.
+    disconnect_threshold is how many heartbeats can be missed in a row before disconnecting.
+    output_queue is the data queue, which reports the connection state to the main process.
+    controller is how the main process communicates to this worker process.
     """
     # =============================================================================================
     #                          ↑ BOOTCAMPERS MODIFY ABOVE THIS COMMENT ↑
@@ -47,8 +53,37 @@ def heartbeat_receiver_worker(
     #                          ↓ BOOTCAMPERS MODIFY BELOW THIS COMMENT ↓
     # =============================================================================================
     # Instantiate class object (heartbeat_receiver.HeartbeatReceiver)
+    result, receiver = heartbeat_receiver.HeartbeatReceiver.create(
+        connection,
+        period,
+        disconnect_threshold,
+        local_logger,
+    )
+    if not result:
+        local_logger.error("Failed to create HeartbeatReceiver", True)
+        return
+
+    # Get Pylance to stop complaining
+    assert receiver is not None
 
     # Main loop: do work.
+    # Loop forever until exit has been requested (producer)
+    # run() waits up to a period for a heartbeat, so the state is reported once per period
+    while not controller.is_exit_requested():
+        # Method blocks worker if pause has been requested
+        controller.check_pause()
+
+        # All of the work should be done within the class
+        result, state = receiver.run()
+
+        # Check result
+        if not result:
+            continue
+
+        local_logger.info(f"Connection state: {state}", True)
+
+        # Report the current state to the main process
+        output_queue.queue.put(state)
 
 
 # =================================================================================================

@@ -1,0 +1,28 @@
+16:17:01: [INFO] [/Users/alexli/autonomy-bootcamp-2025-p2/modules/common/modules/logger/logger_main_setup.py | setup_main_logger | 62] main logger initialized
+16:17:02: [INFO] [/Users/alexli/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | main | 144] Connected!
+16:17:03: [INFO] [/Users/alexli/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 90] Command worker reported: CHANGE_ALTITUDE: 1
+16:17:03: [INFO] [/Users/alexli/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 90] Command worker reported: CHANGE_ALTITUDE: -1
+16:17:06: [INFO] [/Users/alexli/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 90] Command worker reported: CHANGING_YAW: 63.434948822922024
+16:17:07: [INFO] [/Users/alexli/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 90] Command worker reported: CHANGING_YAW: 90.0
+16:17:07: [INFO] [/Users/alexli/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 90] Command worker reported: CHANGING_YAW: 116.56505117707798
+16:17:08: [INFO] [/Users/alexli/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 90] Command worker reported: CHANGING_YAW: 45.0
+16:17:08: [INFO] [/Users/alexli/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 90] Command worker reported: CHANGING_YAW: 63.434948822922024
+16:17:09: [INFO] [/Users/alexli/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 90] Command worker reported: CHANGING_YAW: 90.0
+16:17:09: [INFO] [/Users/alexli/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 90] Command worker reported: CHANGING_YAW: 26.565051177077976
+16:17:10: [INFO] [/Users/alexli/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 90] Command worker reported: CHANGING_YAW: 45.0
+16:17:10: [INFO] [/Users/alexli/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 90] Command worker reported: CHANGING_YAW: 90.0
+16:17:11: [INFO] [/Users/alexli/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 90] Command worker reported: CHANGING_YAW: 45.0
+16:17:11: [INFO] [/Users/alexli/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 90] Command worker reported: CHANGING_YAW: 90.0
+16:17:12: [INFO] [/Users/alexli/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 90] Command worker reported: CHANGING_YAW: 135.0
+16:17:12: [INFO] [/Users/alexli/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 90] Command worker reported: CHANGING_YAW: -26.565051177078004
+16:17:13: [INFO] [/Users/alexli/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 90] Command worker reported: CHANGING_YAW: -45.0
+16:17:13: [INFO] [/Users/alexli/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 90] Command worker reported: CHANGING_YAW: -90.0
+16:17:14: [INFO] [/Users/alexli/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 90] Command worker reported: CHANGING_YAW: -45.0
+16:17:14: [INFO] [/Users/alexli/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 90] Command worker reported: CHANGING_YAW: -90.0
+16:17:15: [INFO] [/Users/alexli/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 90] Command worker reported: CHANGING_YAW: -135.0
+16:17:15: [INFO] [/Users/alexli/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 90] Command worker reported: CHANGING_YAW: -63.43494882292201
+16:17:16: [INFO] [/Users/alexli/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 90] Command worker reported: CHANGING_YAW: -90.0
+16:17:16: [INFO] [/Users/alexli/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 90] Command worker reported: CHANGING_YAW: -116.56505117707798
+16:17:17: [INFO] [/Users/alexli/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 90] Command worker reported: CHANGING_YAW: -45.0
+16:17:17: [INFO] [/Users/alexli/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 90] Command worker reported: CHANGING_YAW: -63.43494882292201
+16:17:18: [INFO] [/Users/alexli/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 90] Command worker reported: CHANGING_YAW: -90.0
