@@ -76,29 +76,34 @@ class Telemetry:
     def create(
         cls,
         connection: mavutil.mavfile,
-        args,  # Put your own arguments here
         local_logger: logger.Logger,
-    ):
+    ) -> "tuple[True, Telemetry] | tuple[False, None]":
         """
         Falliable create (instantiation) method to create a Telemetry object.
         """
-        pass  # Create a Telemetry object
+        # Create a Telemetry object
+        try:
+            return True, Telemetry(cls.__private_key, connection, local_logger)
+
+        except (OSError, TypeError, AttributeError) as e:
+            local_logger.error(f"Failed to create Telemetry object: {e}", True)
+            return False, None
 
     def __init__(
         self,
         key: object,
         connection: mavutil.mavfile,
-        args,  # Put your own arguments here
         local_logger: logger.Logger,
     ) -> None:
         assert key is Telemetry.__private_key, "Use create() method"
 
         # Do any intializiation here
+        self.connection = connection
+        self.logger = local_logger
 
     def run(
         self,
-        args,  # Put your own arguments here
-    ):
+    ) -> "tuple[bool, TelemetryData | None]":
         """
         Receive LOCAL_POSITION_NED and ATTITUDE messages from the drone,
         combining them together to form a single TelemetryData object.
@@ -106,7 +111,46 @@ class Telemetry:
         # Read MAVLink message LOCAL_POSITION_NED (32)
         # Read MAVLink message ATTITUDE (30)
         # Return the most recent of both, and use the most recent message's timestamp
-        pass
+        start_time = time.time()
+
+        # Both must be received fresh within this cycle; stale values are not reused.
+        attitude = None
+        local_position = None
+
+        while time.time() - start_time <= 1:
+            msg = self.connection.recv_match(type=["ATTITUDE", "LOCAL_POSITION_NED"], timeout=0.1)
+
+            if not msg:
+                continue
+            if msg.get_type() == "LOCAL_POSITION_NED":
+                local_position = msg
+            elif msg.get_type() == "ATTITUDE":
+                attitude = msg
+
+            # Stop only once this cycle has a fresh reading of both message types.
+            if attitude is not None and local_position is not None:
+                break
+
+        # A cycle that did not receive fresh data for both types could not get a
+        # complete reading; report failure so the worker can log it.
+        if attitude is None or local_position is None:
+            return False, None
+
+        return_telemetry = TelemetryData()
+        return_telemetry.time_since_boot = max(local_position.time_boot_ms, attitude.time_boot_ms)
+        return_telemetry.roll = attitude.roll
+        return_telemetry.pitch = attitude.pitch
+        return_telemetry.yaw = attitude.yaw
+        return_telemetry.roll_speed = attitude.rollspeed
+        return_telemetry.pitch_speed = attitude.pitchspeed
+        return_telemetry.yaw_speed = attitude.yawspeed
+        return_telemetry.x = local_position.x
+        return_telemetry.y = local_position.y
+        return_telemetry.z = local_position.z
+        return_telemetry.x_velocity = local_position.vx
+        return_telemetry.y_velocity = local_position.vy
+        return_telemetry.z_velocity = local_position.vz
+        return True, return_telemetry
 
 
 # =================================================================================================

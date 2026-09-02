@@ -4,6 +4,7 @@ Command worker to make decisions based on Telemetry Data.
 
 import os
 import pathlib
+import queue as py_queue
 
 from pymavlink import mavutil
 
@@ -19,13 +20,18 @@ from ..common.modules.logger import logger
 def command_worker(
     connection: mavutil.mavfile,
     target: command.Position,
-    args,  # Place your own arguments here
-    # Add other necessary worker arguments here
+    input_queue: queue_proxy_wrapper.QueueProxyWrapper,
+    output_queue: queue_proxy_wrapper.QueueProxyWrapper,
+    controller: worker_controller.WorkerController,
 ) -> None:
     """
     Worker process.
 
-    args... describe what the arguments are
+    connection: mavlink connection to drone
+    target: 3D target position
+    input_queue: input queue receiving telemetry data from telemetry worker
+    output_queue: output queue sending result strings to main process
+    controller: shared controller
     """
     # =============================================================================================
     #                          ↑ BOOTCAMPERS MODIFY ABOVE THIS COMMENT ↑
@@ -48,8 +54,35 @@ def command_worker(
     #                          ↓ BOOTCAMPERS MODIFY BELOW THIS COMMENT ↓
     # =============================================================================================
     # Instantiate class object (command.Command)
+    result, command_instance = command.Command.create(connection, target, local_logger)
+    if not result:
+        local_logger.error("Failed to create Command instance", True)
+        return
+
+    assert command_instance is not None
 
     # Main loop: do work.
+    while not controller.is_exit_requested():
+        controller.check_pause()
+
+        try:
+            telemetry_data = input_queue.queue.get(timeout=0.1)
+        except py_queue.Empty:
+            continue
+
+        if telemetry_data is None:
+            continue
+
+        result, output = command_instance.run(telemetry_data)
+        if not result:
+            local_logger.warning("Command run() failed, skipping this telemetry sample")
+            continue
+
+        if output is not None:
+            try:
+                output_queue.queue.put(output, timeout=0.1)
+            except py_queue.Full:
+                local_logger.warning("Command output queue full; dropping output", True)
 
 
 # =================================================================================================

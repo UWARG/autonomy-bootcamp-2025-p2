@@ -4,6 +4,7 @@ Telemtry worker that gathers GPS data.
 
 import os
 import pathlib
+import queue as py_queue
 
 from pymavlink import mavutil
 
@@ -18,13 +19,16 @@ from ..common.modules.logger import logger
 # =================================================================================================
 def telemetry_worker(
     connection: mavutil.mavfile,
-    args,  # Place your own arguments here
-    # Add other necessary worker arguments here
+    output_queue: queue_proxy_wrapper.QueueProxyWrapper,
+    controller: worker_controller.WorkerController,
 ) -> None:
     """
     Worker process.
 
-    args... describe what the arguments are
+    connection: mavlink connection to drone
+    output_queue: output queue to send messages
+    controller: shared controller to signal to worker
+
     """
     # =============================================================================================
     #                          ↑ BOOTCAMPERS MODIFY ABOVE THIS COMMENT ↑
@@ -47,8 +51,26 @@ def telemetry_worker(
     #                          ↓ BOOTCAMPERS MODIFY BELOW THIS COMMENT ↓
     # =============================================================================================
     # Instantiate class object (telemetry.Telemetry)
+    result, telemetry_instance = telemetry.Telemetry.create(connection, local_logger)
+    if not result:
+        local_logger.error("Failed to create Telemetry instance")
+        return
+
+    assert telemetry_instance is not None
 
     # Main loop: do work.
+    while not controller.is_exit_requested():
+        controller.check_pause()
+        result, telemetry_data = telemetry_instance.run()
+        if not result:
+            local_logger.warning("Could not get telemetry data", True)
+            continue
+
+        try:
+            output_queue.queue.put(telemetry_data, timeout=0.1)
+        except py_queue.Full:
+            local_logger.warning("Telemetry output queue full; dropping sample", True)
+            continue
 
 
 # =================================================================================================
