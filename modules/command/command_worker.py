@@ -4,6 +4,7 @@ Command worker to make decisions based on Telemetry Data.
 
 import os
 import pathlib
+from queue import Empty
 
 from pymavlink import mavutil
 
@@ -19,13 +20,17 @@ from ..common.modules.logger import logger
 def command_worker(
     connection: mavutil.mavfile,
     target: command.Position,
-    args,  # Place your own arguments here
-    # Add other necessary worker arguments here
+    input_queue: queue_proxy_wrapper.QueueProxyWrapper,
+    output_queue: queue_proxy_wrapper.QueueProxyWrapper,
+    controller: worker_controller.WorkerController,
 ) -> None:
     """
     Worker process.
 
-    args... describe what the arguments are
+    connection is the MAV connection to which commands are sent
+    target is the point which the drone must always face and stay level with.
+    input_queue and output_queue are the data queues.
+    controller is how the main process communicates to this worker process.
     """
     # =============================================================================================
     #                          ↑ BOOTCAMPERS MODIFY ABOVE THIS COMMENT ↑
@@ -48,8 +53,21 @@ def command_worker(
     #                          ↓ BOOTCAMPERS MODIFY BELOW THIS COMMENT ↓
     # =============================================================================================
     # Instantiate class object (command.Command)
-
+    _, command_instance = command.Command.create(connection, target, local_logger)
     # Main loop: do work.
+    while not controller.is_exit_requested():
+        controller.check_pause()
+
+        try:
+            telemetry = input_queue.queue.get(timeout=1.0)
+        except Empty:
+            continue
+
+        altitude_delta, yaw_delta = command_instance.run(telemetry)
+        if altitude_delta is not None:
+            output_queue.queue.put(f"CHANGE ALTITUDE: {altitude_delta}")
+        if yaw_delta is not None:
+            output_queue.queue.put(f"CHANGE YAW: {yaw_delta}")
 
 
 # =================================================================================================

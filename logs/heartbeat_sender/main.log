@@ -1,0 +1,2 @@
+16:27:38: [INFO] [/workspace/modules/common/modules/logger/logger_main_setup.py | setup_main_logger | 62] main logger initialized
+16:27:39: [INFO] [/workspace/tests/integration/test_heartbeat_sender.py | main | 89] Connected!

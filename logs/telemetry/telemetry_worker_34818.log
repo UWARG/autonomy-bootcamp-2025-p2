@@ -1,0 +1,5 @@
+16:25:17: [INFO] [/workspace/modules/telemetry/telemetry_worker.py | telemetry_worker | 46] Logger initialized
+16:25:22: [ERROR] [/workspace/modules/telemetry/telemetry.py | run | 139] Incomplete telemetry data returned
+16:25:23: [ERROR] [/workspace/modules/telemetry/telemetry.py | run | 139] Incomplete telemetry data returned
+16:25:24: [ERROR] [/workspace/modules/telemetry/telemetry.py | run | 139] Incomplete telemetry data returned
+16:25:30: [ERROR] [/workspace/modules/telemetry/telemetry.py | run | 139] Incomplete telemetry data returned

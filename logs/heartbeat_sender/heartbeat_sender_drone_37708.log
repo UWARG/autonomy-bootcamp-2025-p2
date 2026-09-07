@@ -1,0 +1,2 @@
+16:27:38: [INFO] [/workspace/tests/integration/mock_drones/heartbeat_sender_drone.py | main | 40] Logger initialized
+16:27:40: [ERROR] [/workspace/tests/integration/mock_drones/heartbeat_sender_drone.py | main | 56] Drone: Sent incorrect message type or didn't recieve a message in time: None

@@ -76,37 +76,70 @@ class Telemetry:
     def create(
         cls,
         connection: mavutil.mavfile,
-        args,  # Put your own arguments here
         local_logger: logger.Logger,
-    ):
+    ) -> "tuple[True, Telemetry] | tuple[False, None]":
         """
         Falliable create (instantiation) method to create a Telemetry object.
         """
-        pass  # Create a Telemetry object
+        return True, Telemetry(
+            cls.__private_key, connection, local_logger
+        )  # Create a Telemetry object
 
     def __init__(
         self,
         key: object,
         connection: mavutil.mavfile,
-        args,  # Put your own arguments here
         local_logger: logger.Logger,
     ) -> None:
         assert key is Telemetry.__private_key, "Use create() method"
 
         # Do any intializiation here
+        self.__connection = connection
+        self.__logger = local_logger
 
     def run(
         self,
-        args,  # Put your own arguments here
-    ):
+    ) -> TelemetryData | None:
         """
         Receive LOCAL_POSITION_NED and ATTITUDE messages from the drone,
         combining them together to form a single TelemetryData object.
         """
-        # Read MAVLink message LOCAL_POSITION_NED (32)
-        # Read MAVLink message ATTITUDE (30)
-        # Return the most recent of both, and use the most recent message's timestamp
-        pass
+        deadline = time.monotonic() + 1.0
+
+        local_position_ned = None
+        attitude = None
+
+        while time.monotonic() < deadline:
+            message = self.__connection.recv_match(blocking=False)
+
+            if message is None:
+                time.sleep(0.01)
+                continue
+
+            if message.get_type() == "LOCAL_POSITION_NED":
+                local_position_ned = message
+            elif message.get_type() == "ATTITUDE":
+                attitude = message
+
+            if None not in (local_position_ned, attitude):
+                return TelemetryData(
+                    time_since_boot=min(local_position_ned.time_boot_ms, attitude.time_boot_ms),
+                    x=local_position_ned.x,
+                    y=local_position_ned.y,
+                    z=local_position_ned.z,
+                    x_velocity=local_position_ned.vx,
+                    y_velocity=local_position_ned.vy,
+                    z_velocity=local_position_ned.vz,
+                    roll=attitude.roll,
+                    pitch=attitude.pitch,
+                    yaw=attitude.yaw,
+                    roll_speed=attitude.rollspeed,
+                    pitch_speed=attitude.pitchspeed,
+                    yaw_speed=attitude.yawspeed,
+                )
+
+        self.__logger.error("Incomplete telemetry data returned")
+        return None
 
 
 # =================================================================================================
