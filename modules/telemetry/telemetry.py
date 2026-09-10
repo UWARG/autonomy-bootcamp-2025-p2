@@ -138,8 +138,15 @@ class Telemetry:
         deadline = time.time() + self.__timeout
         while attitude is None or position is None:
             remaining = deadline - time.time()
+
+            # Only part of the pair arrived in time, so there is nothing complete to report
             if remaining <= 0:
-                break
+                self.__logger.warning(
+                    f"Timed out after {self.__timeout}s before receiving both "
+                    f"{ATTITUDE_MESSAGE} and {LOCAL_POSITION_NED_MESSAGE}, restarting",
+                    True,
+                )
+                return False, None
 
             try:
                 message = self.__connection.recv_match(
@@ -153,24 +160,15 @@ class Telemetry:
                 self.__logger.error(f"Could not receive telemetry: {e}", True)
                 return False, None
 
-            # Timed out waiting for a message
+            # No message arrived before the deadline, so the next deadline check reports the timeout
             if message is None:
-                break
+                continue
 
             # Keep only the most recent of each message type
             if message.get_type() == ATTITUDE_MESSAGE:
                 attitude = message
             else:
                 position = message
-
-        # Only part of the pair arrived, so there is nothing complete to report
-        if attitude is None or position is None:
-            self.__logger.warning(
-                f"Timed out after {self.__timeout}s before receiving both "
-                f"{ATTITUDE_MESSAGE} and {LOCAL_POSITION_NED_MESSAGE}, restarting",
-                True,
-            )
-            return False, None
 
         telemetry_data = TelemetryData(
             # The timestamp is shared, so use the one from the more recent message
