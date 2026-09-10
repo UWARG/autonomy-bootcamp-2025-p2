@@ -65,6 +65,11 @@ class TelemetryData:  # pylint: disable=too-many-instance-attributes
 # =================================================================================================
 #                            ↓ BOOTCAMPERS MODIFY BELOW THIS COMMENT ↓
 # =================================================================================================
+# The two MAVLink messages that make up a single TelemetryData
+ATTITUDE_MESSAGE = "ATTITUDE"
+LOCAL_POSITION_NED_MESSAGE = "LOCAL_POSITION_NED"
+
+
 class Telemetry:
     """
     Telemetry class to read position and attitude (orientation).
@@ -76,37 +81,113 @@ class Telemetry:
     def create(
         cls,
         connection: mavutil.mavfile,
-        args,  # Put your own arguments here
+        timeout: float,
         local_logger: logger.Logger,
-    ):
+    ) -> "tuple[True, Telemetry] | tuple[False, None]":
         """
         Falliable create (instantiation) method to create a Telemetry object.
+
+        connection: MAVLink connection to the drone.
+        timeout: How long to wait for both messages before giving up, in seconds.
+        local_logger: Existing logger from the worker process.
+
+        Returns whether the object was created and the object itself.
         """
-        pass  # Create a Telemetry object
+        # Without a connection there are no messages to read
+        if connection is None:
+            local_logger.error("No connection was provided", True)
+            return False, None
+
+        # A non-positive timeout would expire before any message could be read
+        if timeout <= 0:
+            local_logger.error(f"Timeout must be positive, got {timeout}", True)
+            return False, None
+
+        return True, Telemetry(cls.__private_key, connection, timeout, local_logger)
 
     def __init__(
         self,
         key: object,
         connection: mavutil.mavfile,
-        args,  # Put your own arguments here
+        timeout: float,
         local_logger: logger.Logger,
     ) -> None:
         assert key is Telemetry.__private_key, "Use create() method"
 
         # Do any intializiation here
+        self.__connection = connection
+        self.__timeout = timeout
+        self.__logger = local_logger
 
     def run(
         self,
-        args,  # Put your own arguments here
-    ):
+    ) -> "tuple[bool, TelemetryData | None]":
         """
         Receive LOCAL_POSITION_NED and ATTITUDE messages from the drone,
         combining them together to form a single TelemetryData object.
+
+        Returns whether both messages arrived in time and the combined data.
         """
         # Read MAVLink message LOCAL_POSITION_NED (32)
         # Read MAVLink message ATTITUDE (30)
         # Return the most recent of both, and use the most recent message's timestamp
-        pass
+        attitude = None
+        position = None
+
+        # Both messages have to arrive within the timeout, so the deadline is shared between them
+        deadline = time.time() + self.__timeout
+        while attitude is None or position is None:
+            remaining = deadline - time.time()
+
+            # Only part of the pair arrived in time, so there is nothing complete to report
+            if remaining <= 0:
+                self.__logger.warning(
+                    f"Timed out after {self.__timeout}s before receiving both "
+                    f"{ATTITUDE_MESSAGE} and {LOCAL_POSITION_NED_MESSAGE}, restarting",
+                    True,
+                )
+                return False, None
+
+            try:
+                message = self.__connection.recv_match(
+                    type=[ATTITUDE_MESSAGE, LOCAL_POSITION_NED_MESSAGE],
+                    blocking=True,
+                    timeout=remaining,
+                )
+            # Catching all exceptions for library call
+            # pylint: disable-next=broad-exception-caught
+            except Exception as e:
+                self.__logger.error(f"Could not receive telemetry: {e}", True)
+                return False, None
+
+            # No message arrived before the deadline, so the next deadline check reports the timeout
+            if message is None:
+                continue
+
+            # Keep only the most recent of each message type
+            if message.get_type() == ATTITUDE_MESSAGE:
+                attitude = message
+            else:
+                position = message
+
+        telemetry_data = TelemetryData(
+            # The timestamp is shared, so use the one from the more recent message
+            time_since_boot=max(attitude.time_boot_ms, position.time_boot_ms),
+            x=position.x,
+            y=position.y,
+            z=position.z,
+            x_velocity=position.vx,
+            y_velocity=position.vy,
+            z_velocity=position.vz,
+            roll=attitude.roll,
+            pitch=attitude.pitch,
+            yaw=attitude.yaw,
+            roll_speed=attitude.rollspeed,
+            pitch_speed=attitude.pitchspeed,
+            yaw_speed=attitude.yawspeed,
+        )
+
+        return True, telemetry_data
 
 
 # =================================================================================================

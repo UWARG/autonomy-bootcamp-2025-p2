@@ -35,6 +35,8 @@ TURNING_SPEED = 5  # deg/s
 #                            ↓ BOOTCAMPERS MODIFY BELOW THIS COMMENT ↓
 # =================================================================================================
 # Add your own constants here
+# Must be greater than 0, otherwise the queues cannot be filled with sentinel values
+QUEUE_MAX_SIZE = 10
 
 # =================================================================================================
 #                            ↑ BOOTCAMPERS MODIFY ABOVE THIS COMMENT ↑
@@ -54,31 +56,51 @@ def start_drone() -> None:
 #                            ↓ BOOTCAMPERS MODIFY BELOW THIS COMMENT ↓
 # =================================================================================================
 def stop(
-    args,  # Add any necessary arguments
+    controller: worker_controller.WorkerController,
+    input_queue: queue_proxy_wrapper.QueueProxyWrapper,
+    output_queue: queue_proxy_wrapper.QueueProxyWrapper,
 ) -> None:
     """
     Stop the workers.
     """
-    pass  # Add logic to stop your worker
+    # Add logic to stop your worker
+    controller.request_exit()
+
+    # Unblock the worker's get() with sentinel values first, then the reader's,
+    # so both can finish instead of waiting on a queue that will never fill again
+    input_queue.fill_and_drain_queue()
+    output_queue.fill_and_drain_queue()
 
 
 def read_queue(
-    args,  # Add any necessary arguments
+    output_queue: queue_proxy_wrapper.QueueProxyWrapper,
     main_logger: logger.Logger,
 ) -> None:
     """
     Read and print the output queue.
     """
-    pass  # Add logic to read from your worker's output queue and print it using the logger
+    # Add logic to read from your worker's output queue and print it using the logger
+    while True:
+        message = output_queue.queue.get()
+
+        # Exit on sentinel
+        if message is None:
+            break
+
+        main_logger.info(f"Command worker reported: {message}", True)
 
 
 def put_queue(
-    args,  # Add any necessary arguments
+    input_queue: queue_proxy_wrapper.QueueProxyWrapper,
+    path: "list[telemetry.TelemetryData]",
 ) -> None:
     """
     Place mocked inputs into the input queue periodically with period TELEMETRY_PERIOD.
     """
-    pass  # Add logic to place the mocked inputs into your worker's input queue periodically
+    # Add logic to place the mocked inputs into your worker's input queue periodically
+    for telemetry_data in path:
+        input_queue.queue.put(telemetry_data)
+        time.sleep(TELEMETRY_PERIOD)
 
 
 # =================================================================================================
@@ -127,10 +149,14 @@ def main() -> int:
     # =============================================================================================
     # Mock starting a worker, since cannot actually start a new process
     # Create a worker controller for your worker
+    controller = worker_controller.WorkerController()
 
     # Create a multiprocess manager for synchronized queues
+    mp_manager = mp.Manager()
 
     # Create your queues
+    telemetry_to_command_queue = queue_proxy_wrapper.QueueProxyWrapper(mp_manager, QUEUE_MAX_SIZE)
+    command_to_main_queue = queue_proxy_wrapper.QueueProxyWrapper(mp_manager, QUEUE_MAX_SIZE)
 
     # Test cases, DO NOT EDIT!
     path = [
@@ -217,16 +243,29 @@ def main() -> int:
     ]
 
     # Just set a timer to stop the worker after a while, since the worker infinite loops
-    threading.Timer(TELEMETRY_PERIOD * len(path), stop, (args,)).start()
+    threading.Timer(
+        TELEMETRY_PERIOD * len(path),
+        stop,
+        (controller, telemetry_to_command_queue, command_to_main_queue),
+    ).start()
 
     # Put items into input queue
-    threading.Thread(target=put_queue, args=(args,)).start()
+    threading.Thread(target=put_queue, args=(telemetry_to_command_queue, path)).start()
 
     # Read the main queue (worker outputs)
-    threading.Thread(target=read_queue, args=(args, main_logger)).start()
+    threading.Thread(target=read_queue, args=(command_to_main_queue, main_logger)).start()
 
     command_worker.command_worker(
         # Place your own arguments here
+        connection,
+        TARGET,
+        HEIGHT_TOLERANCE,
+        ANGLE_TOLERANCE,
+        Z_SPEED,
+        TURNING_SPEED,
+        telemetry_to_command_queue,
+        command_to_main_queue,
+        controller,
     )
     # =============================================================================================
     #                          ↑ BOOTCAMPERS MODIFY ABOVE THIS COMMENT ↑
