@@ -1,0 +1,13 @@
+18:23:50: [INFO] [/Users/vivaan/WARG/WARG-bootcamp/autonomy-bootcamp-2025-p2/tests/integration/mock_drones/heartbeat_receiver_drone.py | main | 42] Logger initialized
+18:23:50: [INFO] [/Users/vivaan/WARG/WARG-bootcamp/autonomy-bootcamp-2025-p2/tests/integration/mock_drones/heartbeat_receiver_drone.py | send_heartbeats | 59] Drone: Sent a heartbeat
+18:23:51: [INFO] [/Users/vivaan/WARG/WARG-bootcamp/autonomy-bootcamp-2025-p2/tests/integration/mock_drones/heartbeat_receiver_drone.py | send_heartbeats | 59] Drone: Sent a heartbeat
+18:23:52: [INFO] [/Users/vivaan/WARG/WARG-bootcamp/autonomy-bootcamp-2025-p2/tests/integration/mock_drones/heartbeat_receiver_drone.py | send_heartbeats | 59] Drone: Sent a heartbeat
+18:23:53: [INFO] [/Users/vivaan/WARG/WARG-bootcamp/autonomy-bootcamp-2025-p2/tests/integration/mock_drones/heartbeat_receiver_drone.py | send_heartbeats | 59] Drone: Sent a heartbeat
+18:23:54: [INFO] [/Users/vivaan/WARG/WARG-bootcamp/autonomy-bootcamp-2025-p2/tests/integration/mock_drones/heartbeat_receiver_drone.py | send_heartbeats | 59] Drone: Sent a heartbeat
+18:24:03: [INFO] [/Users/vivaan/WARG/WARG-bootcamp/autonomy-bootcamp-2025-p2/tests/integration/mock_drones/heartbeat_receiver_drone.py | send_heartbeats | 59] Drone: Sent a heartbeat
+18:24:04: [INFO] [/Users/vivaan/WARG/WARG-bootcamp/autonomy-bootcamp-2025-p2/tests/integration/mock_drones/heartbeat_receiver_drone.py | send_heartbeats | 59] Drone: Sent a heartbeat
+18:24:05: [INFO] [/Users/vivaan/WARG/WARG-bootcamp/autonomy-bootcamp-2025-p2/tests/integration/mock_drones/heartbeat_receiver_drone.py | send_heartbeats | 59] Drone: Sent a heartbeat
+18:24:06: [INFO] [/Users/vivaan/WARG/WARG-bootcamp/autonomy-bootcamp-2025-p2/tests/integration/mock_drones/heartbeat_receiver_drone.py | send_heartbeats | 59] Drone: Sent a heartbeat
+18:24:07: [INFO] [/Users/vivaan/WARG/WARG-bootcamp/autonomy-bootcamp-2025-p2/tests/integration/mock_drones/heartbeat_receiver_drone.py | send_heartbeats | 59] Drone: Sent a heartbeat
+18:24:09: [INFO] [/Users/vivaan/WARG/WARG-bootcamp/autonomy-bootcamp-2025-p2/tests/integration/mock_drones/heartbeat_receiver_drone.py | send_heartbeats | 59] Drone: Sent a heartbeat
+18:24:10: [INFO] [/Users/vivaan/WARG/WARG-bootcamp/autonomy-bootcamp-2025-p2/tests/integration/mock_drones/heartbeat_receiver_drone.py | main | 79] Passesd!

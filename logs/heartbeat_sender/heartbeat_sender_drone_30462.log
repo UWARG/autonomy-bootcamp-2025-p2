@@ -1,0 +1,12 @@
+17:09:11: [INFO] [/Users/vivaan/WARG/WARG-bootcamp/autonomy-bootcamp-2025-p2/tests/integration/mock_drones/heartbeat_sender_drone.py | main | 40] Logger initialized
+17:09:27: [INFO] [/Users/vivaan/WARG/WARG-bootcamp/autonomy-bootcamp-2025-p2/tests/integration/mock_drones/heartbeat_sender_drone.py | main | 71] Drone: Recieved heartbeat!
+17:09:28: [INFO] [/Users/vivaan/WARG/WARG-bootcamp/autonomy-bootcamp-2025-p2/tests/integration/mock_drones/heartbeat_sender_drone.py | main | 71] Drone: Recieved heartbeat!
+17:09:29: [INFO] [/Users/vivaan/WARG/WARG-bootcamp/autonomy-bootcamp-2025-p2/tests/integration/mock_drones/heartbeat_sender_drone.py | main | 71] Drone: Recieved heartbeat!
+17:09:30: [INFO] [/Users/vivaan/WARG/WARG-bootcamp/autonomy-bootcamp-2025-p2/tests/integration/mock_drones/heartbeat_sender_drone.py | main | 71] Drone: Recieved heartbeat!
+17:09:31: [INFO] [/Users/vivaan/WARG/WARG-bootcamp/autonomy-bootcamp-2025-p2/tests/integration/mock_drones/heartbeat_sender_drone.py | main | 71] Drone: Recieved heartbeat!
+17:09:32: [INFO] [/Users/vivaan/WARG/WARG-bootcamp/autonomy-bootcamp-2025-p2/tests/integration/mock_drones/heartbeat_sender_drone.py | main | 71] Drone: Recieved heartbeat!
+17:09:33: [INFO] [/Users/vivaan/WARG/WARG-bootcamp/autonomy-bootcamp-2025-p2/tests/integration/mock_drones/heartbeat_sender_drone.py | main | 71] Drone: Recieved heartbeat!
+17:09:34: [INFO] [/Users/vivaan/WARG/WARG-bootcamp/autonomy-bootcamp-2025-p2/tests/integration/mock_drones/heartbeat_sender_drone.py | main | 71] Drone: Recieved heartbeat!
+17:09:35: [INFO] [/Users/vivaan/WARG/WARG-bootcamp/autonomy-bootcamp-2025-p2/tests/integration/mock_drones/heartbeat_sender_drone.py | main | 71] Drone: Recieved heartbeat!
+17:09:36: [INFO] [/Users/vivaan/WARG/WARG-bootcamp/autonomy-bootcamp-2025-p2/tests/integration/mock_drones/heartbeat_sender_drone.py | main | 71] Drone: Recieved heartbeat!
+17:09:37: [INFO] [/Users/vivaan/WARG/WARG-bootcamp/autonomy-bootcamp-2025-p2/tests/integration/mock_drones/heartbeat_sender_drone.py | main | 80] Passed!

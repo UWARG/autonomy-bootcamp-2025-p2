@@ -76,37 +76,80 @@ class Telemetry:
     def create(
         cls,
         connection: mavutil.mavfile,
-        args,  # Put your own arguments here
         local_logger: logger.Logger,
-    ):
+    ) -> "tuple[True, Telemetry] | tuple[False, None]":
         """
         Falliable create (instantiation) method to create a Telemetry object.
         """
-        pass  # Create a Telemetry object
+        return True, Telemetry(
+            cls.__private_key, connection, local_logger
+        )  # Create a Telemetry object
 
     def __init__(
         self,
         key: object,
         connection: mavutil.mavfile,
-        args,  # Put your own arguments here
         local_logger: logger.Logger,
     ) -> None:
         assert key is Telemetry.__private_key, "Use create() method"
 
         # Do any intializiation here
+        self.connection = connection
+        self.__logger = local_logger
 
     def run(
         self,
-        args,  # Put your own arguments here
-    ):
+    ) -> "tuple[bool, TelemetryData | None]":
         """
         Receive LOCAL_POSITION_NED and ATTITUDE messages from the drone,
         combining them together to form a single TelemetryData object.
         """
+        start_time = time.time()
+        position_data = None
+        attitude_data = None
         # Read MAVLink message LOCAL_POSITION_NED (32)
         # Read MAVLink message ATTITUDE (30)
         # Return the most recent of both, and use the most recent message's timestamp
-        pass
+        while attitude_data is None or position_data is None:
+            elapsed = time.time() - start_time
+            remaining = 1 - elapsed
+            if remaining <= 0:
+                self.__logger.warning("Telemetry timed out, restarting", True)
+                return False, None
+
+            message = self.connection.recv_match(
+                type=["ATTITUDE", "LOCAL_POSITION_NED"],
+                blocking=True,
+                timeout=remaining,
+            )
+
+            if message is None:
+                continue
+
+            if message.get_type == "ATTITUDE":
+                attitude_data = message
+            elif message.get_type() == "LOCAL_POSITION_NED":
+                position_data = message
+
+        most_recent_time = max(position_data.time_boot_ms, attitude_data.time_boot_ms)
+
+        telemetry_data = TelemetryData(
+            time_since_boot=most_recent_time,
+            x=position_data.x,
+            y=position_data.y,
+            z=position_data.z,
+            x_velocity=position_data.vx,
+            y_velocity=position_data.vy,
+            z_velocity=position_data.vz,
+            roll=attitude_data.roll,
+            pitch=attitude_data.pitch,
+            yaw=attitude_data.yaw,
+            roll_speed=attitude_data.rollspeed,
+            pitch_speed=attitude_data.pitch_speed,
+            yaw_speed=attitude_data.yaw_speed,
+        )
+
+        return True, telemetry_data
 
 
 # =================================================================================================
